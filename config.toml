@@ -2,7 +2,6 @@ baseURL = "https://jinyongp.github.io"
 languageCode = "en-us"
 title = "dev.jinyongp"
 theme = "minimal"
-disqusShortname = "jinyongp" # delete this to disable disqus comments
 googleAnalytics = ""
 
 [params]
@@ -24,12 +23,12 @@ googleAnalytics = ""
 
 [[menu.main]]
     url = "/post/"
-    name = "Posts"
+    name = "Post"
     weight = 2
 
 [[menu.main]]
     url = "/project/"
-    name = "Projects"
+    name = "Project"
     weight = 3
 
 [[menu.main]]
