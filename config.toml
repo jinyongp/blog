@@ -1,4 +1,4 @@
-baseURL = "http://jinyongp.github.io/blog/"
+baseURL = "https://jinyongp.github.io/blog/"
 languageCode = "en-us"
 title = "dev.jinyongp"
 theme = "minimal"
