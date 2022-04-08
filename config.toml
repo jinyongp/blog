@@ -15,6 +15,7 @@ googleAnalytics = ""
     favicon = "favicon.png"
     highlight = true
     highlightStyle = "default"
+    css = ["css/custom.css"]
 
 [[menu.main]]
     url = "/"
