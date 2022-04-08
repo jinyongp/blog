@@ -1,3 +1,22 @@
 {
-  "$schema": "https://frontmatter.codes/frontmatter.schema.json"
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Posts",
+      "path": "[[workspace]]/content/posts"
+    },
+    {
+      "title": "Projects",
+      "path": "[[workspace]]/content/projects"
+    },
+    {
+      "title": "TILs",
+      "path": "[[workspace]]/content/tils"
+    }
+  ],
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.framework.startCommand": "hugo server -D",
+  "frontMatter.preview.host": "http://localhost:1313/"
 }
