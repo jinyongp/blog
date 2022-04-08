@@ -1,0 +1,9 @@
+main {
+  width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+  .intro > h1 {
+    font-size: 15vmin;
+  }
+}
