@@ -7,12 +7,13 @@ googleAnalytics = ""
 
 [params]
     author = "jinyongp"
-    description = ""
+    description = "도전과 배움 그리고 성장"
     githubUsername = "jinyongp"
-    accent = "black"
+    accent = "DarkTurquoise"
     showBorder = true
     backgroundColor = "white"
     font = "Raleway" # should match the name on Google Fonts!
+    favicon = "favicon.png"
     highlight = true
     highlightStyle = "default"
 
