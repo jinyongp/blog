@@ -9,14 +9,19 @@ pluralizelisttitles = false
   author = "jinyongp"
   description = "도전하고 성장하는 개발 블로그"
   githubUsername = "jinyongp"
-  accent = "DarkTurquoise"
+  accent = "RoyalBlue"
   showBorder = true
   backgroundColor = "white"
   font = "Raleway"                 # should match the name on Google Fonts!
   favicon = "favicon.png"
   highlight = true
-  highlightStyle = "default"
+  highlightStyle = "Nord"
   css = ["css/custom.css"]
+
+[markup]
+[markup.highlight]
+  style = 'dracula'
+
 
 [[menu.main]]
   url = "/"
@@ -24,18 +29,18 @@ pluralizelisttitles = false
   weight = 1
 
 [[menu.main]]
-  url = "/post/"
-  name = "Post"
+  url = "/blog"
+  name = "Blog"
   weight = 2
 
 [[menu.main]]
-  url = "/project/"
-  name = "Project"
+  url = "/study"
+  name = "Study"
   weight = 3
 
 [[menu.main]]
-  url = "/what-i-learned/"
-  name = "What I Learned"
+  url = "/projects"
+  name = "Projects"
   weight = 4
 
   # Social icons to be shown on the right-hand side of the navigation bar.

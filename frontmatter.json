@@ -2,16 +2,16 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.content.pageFolders": [
     {
-      "title": "Post",
-      "path": "[[workspace]]/content/Post"
+      "title": "Blog",
+      "path": "[[workspace]]/content/blog"
     },
     {
-      "title": "Project",
-      "path": "[[workspace]]/content/Project"
+      "title": "Study",
+      "path": "[[workspace]]/content/study"
     },
     {
-      "title": "What I Learned",
-      "path": "[[workspace]]/content/What I Learned"
+      "title": "Projects",
+      "path": "[[workspace]]/content/projects"
     }
   ],
   "frontMatter.content.publicFolder": "static",
