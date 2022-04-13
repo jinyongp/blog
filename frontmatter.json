@@ -14,6 +14,7 @@
       "path": "[[workspace]]/content/projects"
     }
   ],
+  "frontMatter.content.autoUpdateDate": true,
   "frontMatter.content.publicFolder": "static",
   "frontMatter.dashboard.openOnStart": true,
   "frontMatter.framework.id": "hugo",
