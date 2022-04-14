@@ -11,3 +11,16 @@ main {
 .hljs {
   white-space: inherit;
 }
+
+.hljs::-webkit-scrollbar {
+  height: 3px;
+}
+
+.hljs::-webkit-scrollbar-thumb {
+  background-color: #7e7f83;
+  border-radius: 999px;
+}
+
+.hljs::-webkit-scrollbar-track {
+  background-color: transparent;
+}
