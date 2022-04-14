@@ -15,12 +15,8 @@ pluralizelisttitles = false
   font = "Raleway"                 # should match the name on Google Fonts!
   favicon = "favicon.png"
   highlight = true
-  highlightStyle = "Nord"
+  highlightStyle = "dracula"
   css = ["css/custom.css"]
-
-[markup]
-[markup.highlight]
-  style = 'dracula'
 
 
 [[menu.main]]
