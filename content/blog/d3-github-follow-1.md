@@ -1,10 +1,10 @@
 ---
 title: "d3-force : Simulation, Forces 살펴보기"
 slug: d3-force-simulation-forces-살펴보기
-description: null
+description: d3-force의 Simulation, Forces의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-14T14:20:46.840Z
-lastmod: 2022-04-15T13:14:08.034Z
+lastmod: 2022-04-16T03:24:57.065Z
 draft: false
 tags:
   - d3.js
