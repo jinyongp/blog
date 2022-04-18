@@ -14,10 +14,13 @@ pluralizelisttitles = false
   backgroundColor = "white"
   font = "Raleway"                 # should match the name on Google Fonts!
   favicon = "favicon.png"
-  highlight = true
-  highlightStyle = "dracula"
+  highlight = false
   css = ["css/custom.css"]
 
+[markup]
+[markup.highlight]
+  noHl = false
+  style = 'friendly'
 
 [[menu.main]]
   url = "/"
