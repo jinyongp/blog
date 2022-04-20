@@ -1,0 +1,186 @@
+---
+title: "d3-selection : DOM을 데이터로 조작하기"
+slug: d3-selection-dom을-데이터로-조작하기
+description: Data-Driven Document, d3-selection의 개념과 동작 방식을 코드와 함께 살펴봅니다.
+author: jinyongp
+date: 2022-04-16T02:47:11.774Z
+lastmod: 2022-04-20T20:15:03.217Z
+draft: false
+tags:
+  - d3.js
+  - series
+categories: []
+---
+
+[이전 시리즈: d3-force : Simulation, Forces 살펴보기](/blog/d3-force-simulation-forces-살펴보기)
+
+---
+
+# d3-selection 살펴보기
+
+[d3-selection](https://github.com/d3/d3-selection)은 데이터를 기반으로 DOM을 조작할 수 있는 다양한 기능을 제공합니다.
+
+이번 시리즈는 d3-force와 연계하여 Github Follower, Following 관계망 그리기를 목표로 하고 있으므로 구현 과정에서 필요한 부분에 대해서만 다루도록 하겠습니다.
+
+들어가기 전에 `Selection` 객체에 대해 알아봅시다. d3-selection으로 선택한 요소는 [`groups`와 `parents` property를 갖는 `Selection` 객체](https://github.com/d3/d3-selection/blob/main/src/selection/index.js)를 생성합니다. `Selection` 객체는 선택한 요소를 제어할 수 있는 다양한 메서드를 제공합니다.
+
+- 요소 선택: selection, select, selectAll, selectChild, selectChildren, filter, merge
+- 요소 변경: attr, classed, style, property, text, html, append, insert, remove, clone, sort, order, raise, lower
+- 데이터 연결: data, join, enter, exit, datum
+- 이벤트 핸들링: on, dispatch
+- 제어 흐름: each, call, empty, nodes, size, \[Symbol.iterator\]()
+
+d3-selection을 이용하여 선택한 요소에 데이터를 연결하고 그 데이터를 기반으로 요소를 제어할 수 있습니다.
+
+이제 코드와 함께 d3-selection을 이용하여 간단한 그래프를 그려보겠습니다.
+
+---
+
+## 요소 생성 및 편집하기
+
+관계망에 사용할 `nodes`와 `links`를 브라우저에 그려주기 위해 d3-selection으로 `svg`를 생성하고 크기를 설정해줍니다.
+
+```js
+const root = d3
+  .select('body') // === d3.select(document.body)
+  .append('svg')
+  .attr('width', '100%')
+  .attr('height', '100%')
+  .style('display', 'block');
+```
+
+`body` 요소를 선택하고 하위에 `svg` 요소를 추가했습니다. 그리고 `attr` 메서드와 `style` 메서드로 `svg`의 속성과 스타일을 지정했습니다. `root`엔 `svg` 요소를 담고 있는 `Selection` 객체가 할당됩니다.
+
+`root` 아래 `links`와 `nodes`를 각각 묶을 `g` 요소를 생성합니다. (`linkGroup`을 먼저 생성해야 뒤에 배치됩니다.)
+
+```js
+const linkGroup = root.append('g').attr('id', 'links');
+const nodeGroup = root.append('g').attr('id', 'nodes');
+```
+
+`id`는 별 다른 역할 없이 식별을 위해 추가해주었습니다.
+
+---
+
+## 데이터 연결하기
+
+이제 DOM 요소에 데이터를 연결해봅시다. `nodeGroup` 아래 `circle`을 배치하고 `nodes` 데이터를 연결합니다.
+
+```js
+const circles = nodeGroup
+  .selectAll('circle')
+  .data(nodes)
+  .join('circle')
+  .attr('r', 5)
+  .attr('fill', 'blue');
+```
+
+얼핏 보면 말이 되는 듯하지만 아직 생성도 하지 않은 `circle`을 왜 선택하고 있는지 의문이 생깁니다. 각 단계가 생성하는 `Selection` 객체를 보고 흐름을 이해해봅시다.
+
+### 연결 과정
+
+`nodeGroup.selectAll('circle')`은 당연히 빈 `Selection` 객체를 반환합니다.
+
+>💡 당연히 비어있는 `Selection` 객체를 받을건데 왜 `selectAll`을 쓸까요?
+>
+>`nodeGroup.selectAll('circle')`에서 `circle`이 아닌 다른 요소를 입력하더라도 빈 `Selection` 객체가 생성되므로 제대로 동작하긴 합니다. 하지만, 이후에 `node`를 추가하려고 한다면 기존에 생성되었던 `circle` 요소와 `nodes`를 비교하여 추가된 `node`의 개수만큼 `circle` 요소를 추가하므로 반드시 `circle`로 선택해야 합니다.
+
+```js
+_groups: [NodeList(0)]
+_parents: [g#nodes]
+```
+
+`.data(nodes)`는 빈 `Selection` 객체에 `nodes` 배열의 길이만큼 연결합니다. `jt` 객체는 `__data__` property에 `node` 정보를 갖고 있습니다.
+
+```js
+_enter: [Array(5)]
+  0: (5) [jt, jt, jt, jt, jt]
+_exit: [Array(0)]
+  0: []
+_groups: [Array(5)]
+  0: (5) [empty × 5]
+_parents: [g#nodes]
+```
+
+```js
+_enter: Array(1)
+  0: Array(5)
+  0: jt {...}
+  1: jt {...}
+  2: jt {...}
+  3: jt {...}
+  4: jt
+    namespaceURI: "http://www.w3.org/2000/svg"
+    ownerDocument: document
+    __data__: {id: 5, index: 4, x:...}
+_exit: [Array(0)]
+_groups: [Array(5)]
+_parents: [g#nodes]
+```
+
+`.join('circle')`은 `.enter().append('circle')`과 동일한 단축 표현입니다. `.enter()`까지 실행한 결과는 아래와 같습니다.
+
+```js
+_groups: Array(1)
+  0: (5) [jt, jt, jt, jt, jt]
+_parents: [g#nodes]
+```
+
+```js
+_groups: Array(1)
+  0: Array(5)
+    0: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+    1: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+    2: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+    3: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+    4: jt
+      namespaceURI: "http://www.w3.org/2000/svg"
+      ownerDocument: document
+      __data__: {id: 5, index: 4, x: ...}
+      ...
+_parents: [g#nodes]
+```
+
+`enter().append('circle')`까지 실행한 결과는 아래와 같습니다.
+
+```js
+_groups: Array(1)
+  0: Array(5)
+    0: circle
+    1: circle
+    2: circle
+    3: circle
+    4: circle
+      __data__: {id: 5, index: 4, x:...}
+      ...
+_parents: [g#nodes]
+```
+
+ `circle` 요소가 연결되었고 `circle` 내부에 `__data__`가 결합되었습니다.
+
+---
+
+## d3-force와 연결하기
+
+`ticked` 함수 내부에서 DOM 요소와 결합한 `node` 객체의 `x`, `y` 좌표 데이터를 이용해 요소를 화면 상에 그려보았습니다.
+
+<p class="codepen" data-height="600" data-default-tab="result" data-slug-hash="MWrxgPB" data-user="jinyongp" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jinyongp/pen/MWrxgPB">
+  D3 Force (w/  SVG)</a> by Park, Jinyong (<a href="https://codepen.io/jinyongp">@jinyongp</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+---
+
+## Conclusion
+
+d3-selection의 개념과 데이터 결합 방법과 흐름에 대해 살펴보았습니다. 저번과 달리 많은 개념에 대해 알아보진 않았지만, 요소를 선택하고 속성을 변경하고 데이터를 결합하는 정말 필요한 내용만 다루면서 d3-force와 연동하여 간단한 그래프를 그려볼 수 있었습니다.
+
+`node`의 데이터가 많아질수록 d3-selection을 더욱 적극적으로 이용할 예정이므로, 그 때를 위해 이번엔 이 정도로 하고 다음 시리즈에선 d3-zoom과 d3-drag를 이용하여 상호작용하는 방법에 대해 알아보겠습니다.
+
+## References
+
+- [d3-selection](https://github.com/d3/d3-selection)
+- [Thinking with Joins](https://bost.ocks.org/mike/join/)
+- [D3.js Tutorial - Data Binding](https://lucidar.me/en/d3.js/part-07-data-binding)
