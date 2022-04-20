@@ -18,6 +18,9 @@ pluralizelisttitles = false
   highlightStyle = "github-dark-dimmed"
   css = ["css/custom.css"]
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [[menu.main]]
   url = "/"
   name = "Home"
@@ -44,10 +47,10 @@ pluralizelisttitles = false
 
 [[menu.icon]]
   url = "mailto:dev.jinyongp@gmail.com"
-  name = "fas fa-envelope"
+  name = "fa-solid fa-square-envelope"
   weight = 1
 
 [[menu.icon]]
   url = "https://github.com/jinyongp/"
-  name = "fab fa-github"
+  name = "fa-brands fa-github-square"
   weight = 2
