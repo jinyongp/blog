@@ -2,7 +2,7 @@ baseURL = "https://jinyongp.github.io"
 languageCode = "en-us"
 title = "dev.jinyongp"
 theme = "minimal"
-googleAnalytics = ""
+googleAnalytics = "G-SH0YPW4E1C"
 pluralizelisttitles = false
 
 [params]
