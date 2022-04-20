@@ -8,19 +8,33 @@ main {
   }
 }
 
-.hljs {
+table {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table th {
+  border-bottom: 1px dotted #ddd;
+  padding: 0.2rem 0.6rem;
+}
+
+table td {
+  padding: 0.05rem 0.6rem;
+}
+
+.language-js {
   white-space: inherit;
 }
 
-.hljs::-webkit-scrollbar {
+.language-js::-webkit-scrollbar {
   height: 3px;
 }
 
-.hljs::-webkit-scrollbar-thumb {
-  background-color: #7e7f83;
+.language-js::-webkit-scrollbar-thumb {
+  background-color: #eee;
   border-radius: 999px;
 }
 
-.hljs::-webkit-scrollbar-track {
+.language-js::-webkit-scrollbar-track {
   background-color: transparent;
 }
