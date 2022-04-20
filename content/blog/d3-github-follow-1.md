@@ -4,12 +4,16 @@ slug: d3-force-simulation-forces-살펴보기
 description: d3-force의 Simulation, Forces의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-14T14:20:46.840Z
-lastmod: 2022-04-16T03:24:57.065Z
+lastmod: 2022-04-20T19:37:55.490Z
 draft: false
 tags:
   - d3.js
   - series
 categories: []
+---
+
+[다음 시리즈: d3-selection : DOM을 데이터로 조작하기](/blog/d3-selection-dom을-데이터로-조작하기)
+
 ---
 
 # d3-force 살펴보기
@@ -254,54 +258,13 @@ simulation.force('radial', forceRadial);
 
 ## Conclusion
 
-d3-force의 개념과 동작 방식을 코드와 함께 이해해보았습니다. 아직 d3-selection에 대해 다루지 않아 계산 결과값으로 그래프를 그리진 않았습니다만, 다음 시간에 SVG로 그래프를 그려보고 d3-zoom과 함께 d3-drag를 적용해보도록 하겠습니다. 여태까지 작성한 코드를 정리하는 것으로 작성을 마무리하겠습니다.
+d3-force의 개념과 동작 방식을 코드와 함께 살펴보았습니다. d3-force의 simulation, tick을 조절할 수 있는 alpha 그리고 force의 종류에 대해서 알아봤습니다. 처음 볼 땐 어려워보일 수 있겠지만 알아야 할 개념이 그리 많지 않고 이해하기 쉬운 코드와 패턴으로 금방 익힐 수 있었습니다.
 
-```js
-const nodes = [...Array(5)].map((_, i) => ({ id: i + 1 }));
+아직 d3-selection를 다루지 않아 계산 결과값으로 그래프를 그려보진 않았습니다만, 다음 시간에 d3-selection을 학습하면서 SVG로 그래프를 그려보고 이후 d3-zoom과 d3-drag를 적용해보도록 하겠습니다.
 
-const links = [
-  { source: 1, target: 4 },
-  { source: 3, target: 4 },
-  { source: 2, target: 5 },
-  { source: 4, target: 1 },
-  { source: 5, target: 4 },
-];
+---
 
-const simulation = d3
-  .forceSimulation()
-  .alpha(...)
-  .alphaMin(...)
-  .alphaDecay(...)
-  .alphaTarget(...)
-  .velocityDecay(...);
+## References
 
-const forceLink = d3
-  .forceLink(links)
-  .id(({ id }) => id)
-  .distance(100)
-  .strength(1);
-
-const forceManyBody = d3
-  .forceManyBody()
-  .strength(-300);
-
-const forceCenter = d3
-  .forceCenter(width / 2, height / 2)
-  .strength(0.1)
-
-const forceCollide = d3
-  .forceCollide()
-  .radius(5)
-  .strength(0.8)
-
-simulation
-  .nodes(nodes)
-  .force('link', forceLink)
-  .force('manyBody', forceManyBody)
-  .force('center', forceCenter)
-  .force('collide', forceCollide);
-
-simulation.on('tick', () => {
-  ...
-});
-```
+- [d3-force](https://github.com/d3/d3-force)
+- [What is the difference between alphaTarget and alphaMin?](https://stackoverflow.com/q/46426072/9735184)
