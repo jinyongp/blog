@@ -22,19 +22,28 @@ table td {
   padding: 0.05rem 0.6rem;
 }
 
-.language-js {
-  white-space: inherit;
+.content .highlight > pre {
+  padding: 0;
 }
 
-.language-js::-webkit-scrollbar {
+.content .hljs {
+  white-space: inherit;
+  overflow-x: overlay;
+}
+
+.content .hljs:hover::-webkit-scrollbar {
   height: 3px;
 }
 
-.language-js::-webkit-scrollbar-thumb {
+.content .hljs::-webkit-scrollbar {
+  height: 0px;
+}
+
+.content .hljs::-webkit-scrollbar-thumb {
   background-color: #eee;
   border-radius: 999px;
 }
 
-.language-js::-webkit-scrollbar-track {
+.content .hljs::-webkit-scrollbar-track {
   background-color: transparent;
 }

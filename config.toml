@@ -12,15 +12,11 @@ pluralizelisttitles = false
   accent = "RoyalBlue"
   showBorder = true
   backgroundColor = "white"
-  font = "Raleway"                 # should match the name on Google Fonts!
+  font = "Raleway"                      # should match the name on Google Fonts!
   favicon = "favicon.png"
-  highlight = false
+  highlight = true
+  highlightStyle = "github-dark-dimmed"
   css = ["css/custom.css"]
-
-[markup]
-[markup.highlight]
-  noHl = false
-  style = 'friendly'
 
 [[menu.main]]
   url = "/"
