@@ -4,8 +4,8 @@ slug: d3-zoom-d3-drag-panning-zooming-dragging
 description: d3-zoom과 d3-drag의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-21T11:16:27.486Z
-lastmod: 2022-04-22T08:11:36.449Z
-draft: true
+lastmod: 2022-04-22T08:21:44.876Z
+draft: false
 tags:
   - d3.js
   - series

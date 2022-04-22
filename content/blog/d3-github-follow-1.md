@@ -1,10 +1,10 @@
 ---
-title: "d3-force : Simulation, Forces 살펴보기"
-slug: d3-force-simulation-forces-살펴보기
-description: d3-force의 Simulation, Forces의 개념과 동작 방식을 코드와 함께 살펴봅니다.
+title: "d3-force : Simulating Physical Forces"
+slug: d3-force-simulating-physical-forces
+description: d3-force의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-14T14:20:46.840Z
-lastmod: 2022-04-20T19:37:55.490Z
+lastmod: 2022-04-22T08:11:39.717Z
 draft: false
 tags:
   - d3.js
@@ -12,7 +12,7 @@ tags:
 categories: []
 ---
 
-[다음 시리즈: d3-selection : DOM을 데이터로 조작하기](/blog/d3-selection-dom을-데이터로-조작하기)
+- 다음 시리즈: [d3-selection : Data Driven Transformation of DOM](/blog/d3-selection-data-driven-transformation-dom)
 
 ---
 

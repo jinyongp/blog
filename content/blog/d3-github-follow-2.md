@@ -1,10 +1,10 @@
 ---
-title: "d3-selection : DOM을 데이터로 조작하기"
-slug: d3-selection-dom을-데이터로-조작하기
-description: Data-Driven Document, d3-selection의 개념과 동작 방식을 코드와 함께 살펴봅니다.
+title: "d3-selection : Data Driven Transformation of DOM"
+slug: d3-selection-data-driven-transformation-dom
+description: d3-selection의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-16T02:47:11.774Z
-lastmod: 2022-04-20T20:15:03.217Z
+lastmod: 2022-04-22T08:11:30.414Z
 draft: false
 tags:
   - d3.js
@@ -12,7 +12,8 @@ tags:
 categories: []
 ---
 
-[이전 시리즈: d3-force : Simulation, Forces 살펴보기](/blog/d3-force-simulation-forces-살펴보기)
+- 이전 시리즈: [d3-force : Simulating Physical Forces](/blog/d3-force-simulating-physical-forces)
+- 다음 시리즈: [d3-zoom, d3-drag : Panning and Zooming and Dragging](/blog/d3-zoom-d3-drag-panning-zooming-dragging)
 
 ---
 
