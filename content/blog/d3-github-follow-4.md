@@ -4,8 +4,8 @@ slug: d3-js-canvas-api-성능-향상을-위한-refactoring
 description: d3-force 프로젝트의 성능 향상을 위해 Canvas API로 리팩토링해봅니다.
 author: jinyongp
 date: 2022-04-22T14:18:15.472Z
-lastmod: 2022-04-23T07:01:43.001Z
-draft: true
+lastmod: 2022-04-23T07:09:11.363Z
+draft: false
 tags:
   - d3.js
   - series
