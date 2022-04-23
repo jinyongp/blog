@@ -2,10 +2,20 @@ main {
   width: 100%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   .intro > h1 {
-    font-size: 15vmin;
+    font-size: 12vmin;
   }
+}
+
+img {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 table {
@@ -20,6 +30,47 @@ table th {
 
 table td {
   padding: 0.05rem 0.6rem;
+}
+
+.content a,
+main .item a {
+  position: relative;
+}
+
+.content a:hover,
+main .item a:hover {
+  text-decoration: none;
+}
+
+.content a::after,
+main .item a::after {
+  content: '';
+  background-color: var(--accent);
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  bottom: 1px;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  transform-origin: bottom right;
+}
+
+.content h2 a::after {
+  bottom: 3px;
+  height: 2px;
+}
+
+.content h3 a::after {
+  bottom: 2px;
+  height: 2px;
+}
+
+.content a:hover::after,
+main .item a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 .content blockquote {
