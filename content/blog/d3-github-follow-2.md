@@ -4,11 +4,10 @@ slug: d3-selection-data-driven-transformation-dom
 description: d3-selection의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-16T02:47:11.774Z
-lastmod: 2022-04-23T07:46:49.443Z
+lastmod: 2022-04-23T08:15:34.804Z
 draft: false
 tags:
   - d3.js
-  - series
 categories: []
 ---
 
