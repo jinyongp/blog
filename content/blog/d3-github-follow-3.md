@@ -1,10 +1,10 @@
 ---
-title: "d3-zoom, d3-drag : Panning and Zooming and Dragging"
+title: "d3-zoom, drag : Panning, Zooming and Dragging"
 slug: d3-zoom-d3-drag-panning-zooming-dragging
 description: d3-zoom과 d3-drag의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-21T11:16:27.486Z
-lastmod: 2022-04-23T07:03:10.566Z
+lastmod: 2022-04-23T07:55:01.291Z
 draft: false
 tags:
   - d3.js
@@ -17,7 +17,7 @@ categories: []
 
 ---
 
-# d3-zoom, d3-drag 살펴보기
+# Introduction
 
 [d3-zoom](https://github.com/d3/d3-zoom)과 [d3-drag](https://github.com/d3/d3-drag)는 사용자가 마우스 클릭 혹은 터치로 화면을 제어하거나 요소를 이동하는 기능을 제공합니다.
 
@@ -27,7 +27,7 @@ categories: []
 
 ## d3-zoom
 
-d3-zoom은 사용자가 화면을 드래그 혹은 스크롤하여 현재 보는 범위를 이동,확대,축소하는 기능을 제공합니다. 혹은, 특정 요소를 선택했을 때 그 위치로 이동하면서 포커스하는 효과를 줄 수도 있습니다.
+d3-zoom은 사용자가 화면을 드래그 혹은 스크롤하여 현재 보는 범위를 이동, 확대, 축소하는 기능을 제공합니다. 혹은, 특정 요소를 선택했을 때 그 위치로 이동하면서 포커스하는 효과를 줄 수도 있습니다.
 
 ### Panning and Zooming
 
@@ -168,7 +168,9 @@ circles.call(drag);
 
 클릭하여 드래그를 시작하면 `fx`와 `fy` 값을 현재 마우스의 위치로 설정합니다. 클릭을 종료하면 `null`로 설정하여 고정 위치를 제거합니다.
 
-## 프로젝트에 연결하기
+---
+
+## Impl.
 
 d3-zoom과 d3-drag를 추가해보았습니다. `Network` class를 작성하여 코드를 정리했고  실시간으로 `alpha`와 `zoom` 상태를 확인하고 제어할 수 있도록 구현하였습니다. `nodes`와 `links`를 추가할 수 있도록 구현하였습니다. 비어있는 채로 `ADD`를 클릭하면 새로운 요소가 임의의 요소에 연결됩니다. 그리고 `node`의 아이디를 DOM에 그려 `node`의 데이터를 어떻게 DOM에 적용할 수 있는지 보여줬습니다.
 

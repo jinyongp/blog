@@ -4,7 +4,7 @@ slug: d3-force-simulating-physical-forces
 description: d3-force의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-14T14:20:46.840Z
-lastmod: 2022-04-22T08:11:39.717Z
+lastmod: 2022-04-23T07:33:53.662Z
 draft: false
 tags:
   - d3.js
@@ -16,11 +16,11 @@ categories: []
 
 ---
 
-# d3-force 살펴보기
+# Introduction
 
 [d3-force](https://github.com/d3/d3-force)는 입자(`nodes`) 간에 가해지는 물리적 힘(forces)을 simulation하여 입자의 좌표값을 계산하고 제공합니다.
 
-그럼 코드와 함께 [Simulation](#simulation)과 [Forces](#forces)에 대해 이해해봅시다.
+코드와 함께 [Simulation](#simulation)과 [Forces](#forces)에 대해 이해해봅시다.
 
 ---
 

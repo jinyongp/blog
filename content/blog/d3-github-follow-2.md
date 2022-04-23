@@ -4,7 +4,7 @@ slug: d3-selection-data-driven-transformation-dom
 description: d3-selection의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-16T02:47:11.774Z
-lastmod: 2022-04-22T08:11:30.414Z
+lastmod: 2022-04-23T07:46:49.443Z
 draft: false
 tags:
   - d3.js
@@ -17,7 +17,7 @@ categories: []
 
 ---
 
-# d3-selection 살펴보기
+# Introduction
 
 [d3-selection](https://github.com/d3/d3-selection)은 데이터를 기반으로 DOM을 조작할 수 있는 다양한 기능을 제공합니다.
 
@@ -37,7 +37,7 @@ d3-selection을 이용하여 선택한 요소에 데이터를 연결하고 그 �
 
 ---
 
-## 요소 생성 및 편집하기
+## Creating and Editing
 
 관계망에 사용할 `nodes`와 `links`를 브라우저에 그려주기 위해 d3-selection으로 `svg`를 생성하고 크기를 설정해줍니다.
 
@@ -63,7 +63,7 @@ const nodeGroup = root.append('g').attr('id', 'nodes');
 
 ---
 
-## 데이터 연결하기
+## Joining Data
 
 이제 DOM 요소에 데이터를 연결해봅시다. `nodeGroup` 아래 `circle`을 배치하고 `nodes` 데이터를 연결합니다.
 
@@ -78,13 +78,11 @@ const circles = nodeGroup
 
 얼핏 보면 말이 되는 듯하지만 아직 생성도 하지 않은 `circle`을 왜 선택하고 있는지 의문이 생깁니다. 각 단계가 생성하는 `Selection` 객체를 보고 흐름을 이해해봅시다.
 
-### 연결 과정
-
 `nodeGroup.selectAll('circle')`은 당연히 빈 `Selection` 객체를 반환합니다.
 
 >💡 당연히 비어있는 `Selection` 객체를 받을건데 왜 `selectAll`을 쓸까요?
 >
->`nodeGroup.selectAll('circle')`에서 `circle`이 아닌 다른 요소를 입력하더라도 빈 `Selection` 객체가 생성되므로 제대로 동작하긴 합니다. 하지만, 이후에 `node`를 추가하려고 한다면 기존에 생성되었던 `circle` 요소와 `nodes`를 비교하여 추가된 `node`의 개수만큼 `circle` 요소를 추가하므로 반드시 `circle`로 선택해야 합니다.
+>이후에 `nodes`를 추가해야 할 상황이 생긴다면, 기존에 생성되었던 `circle` 요소와 `nodes`를 비교하여 추가된 `node`의 개수만큼 `circle` 요소를 추가합니다. 즉, 비교를 위해 선택하는 요소와 생성하는 요소는 동일해야 합니다.
 
 ```js
 _groups: [NodeList(0)]
@@ -161,7 +159,7 @@ _parents: [g#nodes]
 
 ---
 
-## d3-force와 연결하기
+## Impl.
 
 `ticked` 함수 내부에서 DOM 요소와 결합한 `node` 객체의 `x`, `y` 좌표 데이터를 이용해 요소를 화면 상에 그려보았습니다.
 
