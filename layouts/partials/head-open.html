@@ -1,16 +1,19 @@
 <link rel="canonical" href="https://jinyongp.dev">
 <meta name="naver-site-verification" content="c36f259891f25bc92e3884c1ceb626a0aaa76146" />
 
+<meta name="author" content="{{ .Site.Params.Author }}" />
+
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
 {{ if .Description }}
-<meta name="description" content="{{ .Description }}">
-<meta property="og:description" content="{{ .Description }}">
+<meta property="og:description" content="{{ .Description }}" />
+<meta name="description" content="{{ .Description }}" />
 {{ else }}
-<meta name="description" content="{{ .Site.Params.Description }}">
-<meta property="og:description" content="{{ .Site.Params.Description }}">
+<meta property="og:description" content="{{ .Site.Params.Description }}" />
+<meta name="description" content="{{ .Site.Params.Description }}" />
 {{ end }}
 
 <!-- Google Tag Manager -->
