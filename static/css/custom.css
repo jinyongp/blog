@@ -32,6 +32,10 @@ table td {
   padding: 0.05rem 0.6rem;
 }
 
+main .page-header {
+  margin: 40px 0 0;
+}
+
 .content a,
 main .item a {
   position: relative;
