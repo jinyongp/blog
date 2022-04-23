@@ -1,10 +1,10 @@
 ---
-title: D3.js Github Follow 관계망
-slug: d3-js-github-follow-관계망
-description: d3.js로 github follower, following 관계망 그리기
+title: D3.js Github Follow Network
+slug: d3-js-github-follow-network
+description: Drawing Github Follower & Following Network using D3.js
 author: jinyongp
 date: 2022-04-14T14:31:09.367Z
-lastmod: 2022-04-23T07:07:17.337Z
+lastmod: 2022-04-23T07:32:03.757Z
 draft: false
 tags:
   - d3.js
