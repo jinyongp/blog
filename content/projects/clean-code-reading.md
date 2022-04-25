@@ -4,7 +4,7 @@ slug: reading-clean-code
 description: Reading Clean Code Challenge w/ Nomad Coders
 author: jinyongp
 date: 2022-04-23T07:29:30.658Z
-lastmod: 2022-04-24T11:40:13.524Z
+lastmod: 2022-04-25T12:33:26.209Z
 draft: false
 tags:
   - book
@@ -18,3 +18,4 @@ tags:
 
 1. [Clean Code : 1장 깨끗한 코드](/blog/clean-code-1장-깨끗한-코드)
 2. [Clean Code : 2장 의미 있는 이름](/blog/clean-code-2장-의미-있는-이름)
+2. [Clean Code : TIL Review](/blog/clean-code-til-review)
