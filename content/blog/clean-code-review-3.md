@@ -4,8 +4,8 @@ slug: clean-code-til-review
 description: 최애 클린코드 TIL를 찾아서
 author: jinyongp
 date: 2022-04-25T09:52:56.542Z
-lastmod: 2022-04-25T12:32:56.351Z
-draft: false
+lastmod: 2022-05-02T10:09:24.920Z
+draft: true
 tags:
   - book
 categories: []

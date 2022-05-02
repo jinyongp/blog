@@ -4,8 +4,8 @@ slug: clean-code-1장-깨끗한-코드
 description: 클린코드 1장 깨끗한 코드를 읽고
 author: jinyongp
 date: 2022-04-23T07:59:51.629Z
-lastmod: 2022-04-23T12:55:47.643Z
-draft: false
+lastmod: 2022-05-02T10:09:07.380Z
+draft: true
 tags:
   - book
 categories: []

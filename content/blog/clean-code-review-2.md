@@ -4,8 +4,8 @@ slug: clean-code-2장-의미-있는-이름
 description: 클린코드 2장 의미 있는 이름을 읽고
 author: jinyongp
 date: 2022-04-24T08:14:59.084Z
-lastmod: 2022-04-25T10:12:08.785Z
-draft: false
+lastmod: 2022-05-02T10:09:12.769Z
+draft: true
 tags:
   - book
 categories: []
