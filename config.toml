@@ -1,5 +1,5 @@
 baseURL = "https://jinyongp.dev/"
-languageCode = "en-us"
+languageCode = "ko-kr"
 title = "jinyongp.dev"
 theme = "minimal"
 googleAnalytics = "G-SH0YPW4E1C"
@@ -18,11 +18,11 @@ githubUsername = "jinyongp"
 accent = "RoyalBlue"
 showBorder = true
 backgroundColor = "white"
-font = "Raleway"                      # should match the name on Google Fonts!
+font = "Raleway"
 favicon = "favicon.png"
 highlight = true
 highlightStyle = "github-dark-dimmed"
-css = ["css/custom.css"]
+css = ["css/custom.css", "css/content.css"]
 
 repo = "jinyongp/jinyongp.dev"
 repoId = "R_kgDOHJDtcg"
