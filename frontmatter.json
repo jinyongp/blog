@@ -19,5 +19,5 @@
   "frontMatter.dashboard.openOnStart": true,
   "frontMatter.framework.id": "hugo",
   "frontMatter.framework.startCommand": "hugo server -D",
-  "frontMatter.preview.host": "http://localhost:1313/"
+  "frontMatter.preview.host": "http://localhost:1313"
 }
