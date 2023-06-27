@@ -15,7 +15,6 @@ priority = 0.5
 author = "jinyongp"
 description = "도전하고 성장하는 개발 블로그"
 githubUsername = "jinyongp"
-repo = "jinyongp/jinyongp.dev"
 accent = "RoyalBlue"
 showBorder = true
 backgroundColor = "white"
@@ -24,6 +23,12 @@ favicon = "favicon.png"
 highlight = true
 highlightStyle = "github-dark-dimmed"
 css = ["css/custom.css"]
+
+repo = "jinyongp/jinyongp.dev"
+repoId = "R_kgDOHJDtcg"
+category = "Comments"
+categoryId = "DIC_kwDOHJDtcs4CXf7o"
+lang = "ko"
 
 [markup.goldmark.renderer]
 unsafe = true

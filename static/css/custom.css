@@ -88,6 +88,10 @@ main .item a:hover::after {
   padding: 0;
 }
 
+.content :is(ol, ul) {
+  padding-left: 2rem;
+}
+
 .content .hljs {
   white-space: inherit;
   overflow-x: overlay;
@@ -108,4 +112,8 @@ main .item a:hover::after {
 
 .content .hljs::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+.giscus {
+  margin-top: 40px;
 }
