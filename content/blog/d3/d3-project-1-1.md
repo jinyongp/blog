@@ -4,11 +4,10 @@ slug: d3-force-simulating-physical-forces
 description: d3-force의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-14T14:20:46.840Z
-lastmod: 2022-04-23T08:15:31.475Z
+lastmod: 2023-06-27T11:20:39.182Z
 draft: false
 tags:
   - d3.js
-categories: []
 ---
 
 - 다음 시리즈: [d3-selection : Data Driven Transformation of DOM](/blog/d3-selection-data-driven-transformation-dom)
