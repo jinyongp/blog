@@ -1,0 +1,9 @@
+{
+  "Insert dartpad iframe": {
+    "prefix": "insert-dartpad",
+    "body": [
+      "<iframe src=\"https://dartpad.dev/embed-flutter.html?id=$1&split=60&theme=dark\" style=\"width:100%; height: 500px;\"></iframe>"
+    ],
+    "description": "Insert dartpad iframe"
+  }
+}
