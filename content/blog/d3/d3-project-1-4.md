@@ -1,16 +1,16 @@
 ---
-title: "D3.js and Canvas API : 성능 향상을 위한 Refactoring"
+title: "D3.js and Canvas API : Refactoring for Performance"
 slug: d3-js-canvas-api-refactoring-for-performance
 description: d3-force 프로젝트의 성능 향상을 위해 Canvas API로 리팩토링해봅니다.
 author: jinyongp
 date: 2022-04-22T14:18:15.472Z
-lastmod: 2023-06-27T11:20:44.897Z
+lastmod: 2023-07-10T13:19:30.011Z
 draft: false
 tags:
   - d3.js
 ---
 
-- 이전 시리즈: [d3-zoom, d3-drag : Panning and Zooming and Dragging](/blog/d3-zoom-d3-drag-panning-zooming-dragging)
+- 이전 시리즈: [d3-zoom, d3-drag : Panning and Zooming and Dragging](/blog/d3/d3-zoom-d3-drag-panning-zooming-dragging)
 
 ---
 

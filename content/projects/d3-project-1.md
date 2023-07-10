@@ -4,7 +4,7 @@ slug: d3-js-network-simulation-in-depth
 description: null
 author: jinyongp
 date: 2022-04-14T14:31:09.367Z
-lastmod: 2023-06-27T11:14:29.990Z
+lastmod: 2023-07-10T13:16:39.784Z
 draft: false
 tags:
   - d3.js
@@ -19,4 +19,4 @@ tags:
 1. [d3-force : Simulating Physical Forces](/blog/d3/d3-force-simulating-physical-forces)
 2. [d3-selection : Data Driven Transformation of DOM](/blog/d3/d3-selection-data-driven-transformation-dom)
 3. [d3-zoom, d3-drag : Panning and Zooming and Dragging](/blog/d3/d3-zoom-d3-drag-panning-zooming-dragging)
-4. [D3.js and Canvas API : 성능 향상을 위한 Refactoring](/blog/d3/d3-js-canvas-api-refactoring-for-performance)
+4. [D3.js and Canvas API : Refactoring for Performance](/blog/d3/d3-js-canvas-api-refactoring-for-performance)

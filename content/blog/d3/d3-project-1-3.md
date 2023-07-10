@@ -4,14 +4,14 @@ slug: d3-zoom-d3-drag-panning-zooming-dragging
 description: d3-zoom과 d3-drag의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-21T11:16:27.486Z
-lastmod: 2023-06-27T11:20:43.129Z
+lastmod: 2023-07-10T13:19:17.632Z
 draft: false
 tags:
   - d3.js
 ---
 
-- 이전 시리즈: [d3-selection : Data Driven Transformation of DOM](/blog/d3-selection-data-driven-transformation-dom)
-- 다음 시리즈: [D3.js and Canvas API : 성능 향상을 위한 Refactoring](/blog/d3-js-canvas-api-성능-향상을-위한-refactoring)
+- 이전 시리즈: [d3-selection : Data Driven Transformation of DOM](/blog/d3/d3-selection-data-driven-transformation-dom)
+- 다음 시리즈: [D3.js and Canvas API : Refactoring for Performance](/blog/d3/d3-js-canvas-api-refactoring-for-performance)
 
 ---
 

@@ -4,14 +4,14 @@ slug: d3-selection-data-driven-transformation-dom
 description: d3-selection의 개념과 동작 방식을 코드와 함께 살펴봅니다.
 author: jinyongp
 date: 2022-04-16T02:47:11.774Z
-lastmod: 2023-06-27T11:20:40.994Z
+lastmod: 2023-07-10T13:19:09.266Z
 draft: false
 tags:
   - d3.js
 ---
 
-- 이전 시리즈: [d3-force : Simulating Physical Forces](/blog/d3-force-simulating-physical-forces)
-- 다음 시리즈: [d3-zoom, d3-drag : Panning and Zooming and Dragging](/blog/d3-zoom-d3-drag-panning-zooming-dragging)
+- 이전 시리즈: [d3-force : Simulating Physical Forces](/blog/d3/d3-force-simulating-physical-forces/)
+- 다음 시리즈: [d3-zoom, d3-drag : Panning and Zooming and Dragging](/blog/d3/d3-zoom-d3-drag-panning-zooming-dragging/)
 
 ---
 
