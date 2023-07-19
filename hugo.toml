@@ -1,3 +1,12 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://jinyongp.dev/"
+defaultContentLanguage = "ko"
+hasCJKLanguage = true
+title = "jinyongp.dev"
+# googleAnalytics = "G-SH0YPW4E1C"
+pluralizelisttitles = false
+enableRobotsTXT = true
+
+[params]
+author = "jinyongp"
+font = "Raleway"
+accent = "RoyalBlue"

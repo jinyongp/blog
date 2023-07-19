@@ -1,3 +1,13 @@
 @tailwind base;
+
+@layer base {
+  html,
+  body {
+    @apply antialiased;
+
+    font-family: var(--font), sans-serif;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;

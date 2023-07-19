@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ .Title }}</title>
+
+    {{ partial "css.html" . }}
+    {{ partial "script.html" . }}
+  </head>
+
+  <body>
+    <b>Here is top of baseof.html</b>
+    <hr />
+
+    {{ block "main" . }}
+    {{ end }}
+
+
+    <hr />
+    <b>Here is bottom of baseof.html</b>
+  </body>
+</html>
