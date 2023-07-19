@@ -8,5 +8,5 @@ enableRobotsTXT = true
 
 [params]
 author = "jinyongp"
-font = "Raleway"
+font = "Raleway"     # fonts.google.com
 accent = "RoyalBlue"
