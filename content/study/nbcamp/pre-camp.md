@@ -1,13 +1,14 @@
 ---
-title: "[내일배움캠프] 사전캠프"
-slug: 사전캠프
+title: "[내배캠] 사전캠프"
+slug: pre-camp
 description: 본 캠프에 앞서 앱 개발 전반의 이해를 위해 Dart와 Flutter를 학습합니다.
 date: 2023-06-27T11:16:56.190Z
-lastmod: 2023-07-10T13:14:09.307Z
+lastmod: 2023-07-19T01:27:35.594Z
 draft: false
 tags:
   - dart
   - flutter
+  - nbcamp
 ---
 
 ## 2023년 06월 30일
