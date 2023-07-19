@@ -8,5 +8,43 @@ enableRobotsTXT = true
 
 [params]
 author = "jinyongp"
-font = "Raleway"     # fonts.google.com
+favicon = "image/favicon.png"
+font = "Raleway"              # fonts.google.com
 accent = "RoyalBlue"
+highlight = "nord"
+
+[markup]
+[markup.highlight]
+tabWidth = 2
+codeFences = false
+
+[menu]
+[[menu.main]]
+name = "About"
+pageRef = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+pageRef = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Series"
+pageRef = "/series"
+weight = 3
+
+[[menu.main]]
+name = "Learn"
+pageRef = "/learn"
+weight = 4
+
+[[menu.icon]]
+url = "mailto:dev.jinyongp@gmail.com"
+name = "fa-solid fa-square-envelope"
+weight = 1
+
+[[menu.icon]]
+url = "https://github.com/jinyongp/"
+name = "fa-brands fa-github-square"
+weight = 2

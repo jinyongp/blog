@@ -1,3 +1,11 @@
 {{ define "main" }}
-  this is list.html
+  <div class="layout list">
+    <ul class="list-disc py-4">
+      {{ range .Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}

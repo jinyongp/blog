@@ -1,5 +1,10 @@
-{{ $style := resources.Get "/output.css" | minify }}
+<link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />
+
+{{ $style := resources.Get "/main.css" | minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ $style := resources.Get "/syntax.css" | minify }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}"

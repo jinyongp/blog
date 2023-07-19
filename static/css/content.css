@@ -1,23 +1,28 @@
 .content a,
-main .item a {
+.list a {
+  @apply text-accent;
+}
+
+.content a,
+.list a {
   position: relative;
 }
 
 .content a:hover,
-main .item a:hover {
+.list a:hover {
   text-decoration: none;
 }
 
 .content a::after,
-main .item a::after {
-  content: '';
+.list a::after {
+  content: "";
   background-color: var(--accent);
-  opacity: 0.8;
+  opacity: 0.6;
   position: absolute;
   left: 0;
   width: 100%;
   height: 1px;
-  bottom: 1px;
+  bottom: 0px;
   transform: scaleX(0);
   transition: transform 0.2s ease-in-out;
   transform-origin: bottom right;
@@ -34,68 +39,15 @@ main .item a::after {
 }
 
 .content a:hover::after,
-main .item a:hover::after {
+.list a:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
 
-.content blockquote {
-  font-size: 1.33rem;
-  color: rgb(0 0 0 / 60%);
-  padding: 10px;
-  background-color: rgba(0 0 0 / 1.5%);
-}
-
-.content pre {
-  padding: 0;
-}
-
-.content :is(ol, ul) {
-  padding-left: 2rem;
+.content code:not([class]) {
+  @apply bg-blue-200/30 border-blue-200/80 border text-accent px-0.5 rounded-sm text-[90%];
 }
 
 .content .hljs {
-  white-space: inherit;
-  overflow-x: overlay;
-}
-
-.content .hljs:hover::-webkit-scrollbar {
-  height: 3px;
-}
-
-.content .hljs::-webkit-scrollbar {
-  height: 0px;
-}
-
-.content .hljs::-webkit-scrollbar-thumb {
-  background-color: #eee;
-  border-radius: 999px;
-}
-
-.content .hljs::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.content :is(h1, h2, h3) {
-  scroll-margin-top: 7rem;
-}
-
-#TOC_Study {
-  margin: 2rem 0;
-}
-
-#TOC_Study span {
-  display: inline-block;
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-}
-
-#TOC_Study > nav > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#TOC_Study > nav > ul > li > ul {
-  display: none;
+  @apply rounded-md text-[13px] my-3 leading-snug;
 }
