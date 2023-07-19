@@ -1,13 +1,60 @@
 @tailwind base;
 
+@tailwind components;
+
+@tailwind utilities;
+
 @layer base {
+  html {
+    @apply text-sm leading-normal;
+  }
+
   html,
   body {
-    @apply antialiased;
+    @apply antialiased min-h-screen;
 
     font-family: var(--font), sans-serif;
   }
+
+  body {
+    @apply flex flex-col;
+  }
+
+  :is(h1, h2, h3) {
+    @apply font-medium;
+  }
+
+  h1 {
+    @apply text-4xl mt-7 mb-3;
+  }
+
+  h2 {
+    @apply text-3xl mt-6 mb-2;
+  }
+
+  h3 {
+    @apply text-2xl mt-5 mb-1;
+  }
+
+  h4 {
+    @apply text-xl mt-4 mb-0.5;
+  }
+
+  h5 {
+    @apply text-lg mt-2 mb-0.5;
+  }
+
+  h6 {
+    @apply text-base mt-1;
+  }
+
+  p {
+    @apply my-1;
+  }
 }
 
-@tailwind components;
-@tailwind utilities;
+@layer components {
+  .layout {
+    @apply w-full sm:w-xl md:w-3xl mx-auto px-4;
+  }
+}

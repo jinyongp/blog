@@ -2,21 +2,44 @@
 <html lang="ko">
   <head>
     {{ partial "meta" . }}
-    <title>{{ .Title }}</title>
+    {{ if eq .Title "jinyongp.dev" }}
+      <title>Home</title>
+    {{ else }}
+      <title>{{ .Title }}</title>
+    {{ end }}
 
     {{ partial "css" . }}
     {{ partial "script" . }}
   </head>
 
   <body>
-    <b>Here is top of baseof.html</b>
-    <hr />
+    <nav class="shadow-md">
+      {{ block "nav" . }}
+        <div class="layout">
+          <ul class="flex gap-4 py-4">
+            {{ range .Site.Menus.main }}
+              <li class="hover:text-accent">
+                <a href="{{ .PageRef }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </nav>
 
-    {{ block "main" . }}
-    {{ end }}
+    <main class="flex-1">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
 
-
-    <hr />
-    <b>Here is bottom of baseof.html</b>
+    <footer>
+      {{ block "footer" . }}
+        <div class="flex justify-center py-4">
+          <p class="[&_a]:text-accent">
+            {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io)." | markdownify }}
+          </p>
+        </div>
+      {{ end }}
+    </footer>
   </body>
 </html>

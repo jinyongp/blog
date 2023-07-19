@@ -8,6 +8,7 @@
   },
   "css.validate": false,
   "cSpell.words": [
+    "markdownify",
     "tailwindcss"
   ],
 }
