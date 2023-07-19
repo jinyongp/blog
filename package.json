@@ -1,0 +1,20 @@
+{
+  "name": "jinyongp.dev",
+  "version": "0.0.0",
+  "description": "My personal development blog",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "jinyongp",
+    "email": "dev.jinyongp@gmail.com",
+    "url": "https://jinyongp.dev"
+  },
+  "scripts": {
+    "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch",
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css",
+    "start:dev": "hugo server -D"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
