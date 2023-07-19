@@ -41,8 +41,8 @@ Temporary Items
 /public
 .hugo_build.lock
 .frontmatter
-resources/_gen
-output.css
+assets
+resources
 
 # Logs
 logs

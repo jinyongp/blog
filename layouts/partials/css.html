@@ -1,6 +1,9 @@
-{{ $style := resources.Get "/css/output.css" | minify }}
+{{ $style := resources.Get "/output.css" | minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}"
+/>
 
 <style>
   :root {
