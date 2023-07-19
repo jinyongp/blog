@@ -1,0 +1,227 @@
+---
+title: "[내배캠] 첫번째 팀 프로젝트"
+slug: project-1
+description: 첫번째 팀 프로젝트
+date: 2023-07-19T01:27:06.063Z
+lastmod: 2023-07-19T04:05:57.815Z
+tags:
+  - flutter
+  - nbcamp
+---
+
+사전캠프에서 학습한 Flutter를 활용하여 첫번째 팀 프로젝트를 진행했습니다.
+
+4일간 진행한 프로젝트로 목적은 앱 개발 전반의 과정을 익히기 위함이지만, 보다 팀원분들과의 소통과 협업 관점에 비중으로 두고 프로젝트를 진행하였습니다.
+
+프로젝트의 주제는 팀과 팀원의 소개를 담은 앱을 작성하는 것으로, 각자 자신의 소개를 담은 상세 페이지를 작성하고 합치기로 결정하였습니다.
+저는 상세 페이지와 더불어 메인 페이지와 각 상세 페이지에서 쓰일 댓글 관리 서비스를 맡았습니다.
+
+그 중에서도 댓글 관리 서비스를 어떻게 구현했는지 정리해보고자 합니다.
+
+[프로젝트 저장소](https://github.com/nbcamp/introduce-e1if)
+
+## CommentService
+
+### 인터페이스를 활용하여 `save`와 `load` 함수 구현 강제하기
+
+사전캠프에서도 다뤘지만, Service 단에서 `shared_preferences`를 사용하기 위해 서비스 파일 내에서 직접 불러와서 사용해주는 방식이 아니라 `main.dart`에서 `save`와 `load` 함수를 주입해주는 방식으로 구현했었습니다.
+
+허나, 아래처럼 `save` 혹은 `load` 둘 다 구현해야하는 걸 강제할 수 없었습니다. 또한, `shared_preferences`가 아니라 다른 걸로 수정하기 번거롭기도 합니다.
+
+```ts
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences pref await SharedPreferences.getInstance();
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (_) => MemoService(
+          save: (String payload) async => await pref.setString("memo", payload),
+          // load: () async => pref.getString("memo"), // 에러를 발생시키지 않음
+        ),
+      ),
+    ],
+    child: const MyApp(),
+  ));
+}
+```
+
+이를 해결하기 위해 `IO` 인터페이스를 구현했습니다.
+
+```ts
+abstract class IO {
+  Future<void> save(String payload);
+  Future<String?> load();
+}
+```
+
+dart에서는 인터페이스를 생성하기 위해 `abstract class` 키워드를 사용해야 합니다. `IO` 인터페이스는 `save`와 `load` 함수에 대한 명세를 제공합니다. 이를 `CommentService`에 적용합니다.
+
+```ts
+class CommentService extends ChangeNotifier {
+  final Map<String, List<Comment>> _comments = {};
+
+  IO? io;
+
+  CommentService({this.io}) {
+    //
+  }
+
+  ...
+}
+```
+
+이제 `io` 인스턴스를 외부에서 주입해줄 수 있습니다. `shared_preferences`를 사용할 예정이므로 `SharedPreferencesIO` 클래스를 생성합니다.
+
+```tsx
+class SharedPreferencesIO implements IO {
+  late Future<SharedPreferences> pref;
+
+  SharedPreferencesIO() {
+    pref = SharedPreferences.getInstance();
+  }
+
+  @override
+  Future<String?> load() {
+    return pref.then((pref) => pref.getString('comments'));
+  }
+
+  @override
+  Future<void> save(String payload) async {
+    pref.then((pref) => pref.setString('comments', payload));
+  }
+}
+```
+
+```ts
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (_) => CommentService(
+          io: SharedPreferencesIO(),
+        ),
+      ),
+    ],
+    child: MainApp(),
+  ));
+}
+```
+
+구현한 `SharedPreferencesIO` 클래스를 `main.dart`에서 `CommentService`에 주입해줍니다.
+
+이로써, `save`와 `load` 모두 구현해야 함을 강제할 수 있게 되었고, `IO` 인터페이스를 상속하는 클래스를 여러 개 추가하여 상황에 따라 교체할 수 있어 확장성을 높였습니다.
+
+### 데이터 송수신 로직 추상화하기
+
+`CommentService`에서 내부적으로 데이터를 저장하고 불러오는 `_save`와 `_load` 함수가 있었습니다.
+
+```ts
+Future<void> _save() {
+  if (save == null) return Future.value();
+
+  String payload = jsonEncode(_memos.map((m) => m.toJson()).toList());
+  return save!(payload);
+}
+
+Future<void> _load() async {
+  if (load == null) return;
+
+  String? payload = await load!();
+  if (payload == null) return;
+  _memos.clear();
+
+  _memos.addAll(jsonDecode(payload).map((e) => Memo.fromJson(e)));
+}
+```
+
+여기서 데이터를 String 타입의 payload로 만들거나, 반대로 payload를 데이터로 변환하는 작업을 수행했었습니다.
+언뜻보면 null 체크를 하고 종료하는 부분이나 payload를 처리하는 부분은 중복된 부분이기에 별도의 함수로 분리하고 싶었습니다.
+
+그래서 `DataHandler` 추상 클래스르 작성하였습니다.
+
+```ts
+mixin DataHandler {
+  IO? io;
+
+  Future<void> import(String payload);
+  Future<String> export();
+
+  Future<void> save() async {
+    if (io == null) return Future.value();
+    var payload = await export();
+    io?.save(payload);
+  }
+
+  Future<void> load() async {
+    if (io == null) return Future.value();
+    var payload = await io!.load();
+    if (payload == null) return;
+    import(payload);
+  }
+}
+```
+
+dart에서 mixin을 활용하여 추상 클래스를 작성할 수 있습니다.
+`save`와 `load` 함수는 이미 구현되어 있어 동일한 작업을 수행하지만, `import`와 `export` 함수는 재정의가 필요합니다. 이를 `CommentService`에 적용합니다.
+
+```ts
+class UseState {
+  final List<Comment> comments;
+  final void Function(List<Comment> Function()) setState;
+
+  UseState({
+    required this.comments,
+    required this.setState,
+  });
+}
+
+class CommentService extends ChangeNotifier with DataHandler {
+  final Map<String, List<Comment>> _comments = {};
+
+  CommentService({IO? io}) {
+    this.io = io;
+
+    try {
+      load().then((_) => notifyListeners());
+    } catch (error) {
+      // ignore
+    }
+  }
+
+  UseState useState(String name) {
+    return UseState(
+      comments: List.unmodifiable(_comments[name] ?? []),
+      setState: (newComments) {
+        _comments[name] = newComments();
+        notifyListeners();
+        save();
+      },
+    );
+  }
+
+  @override
+  Future<void> import(String payload) async {
+    jsonDecode(payload).forEach((key, values) {
+      if (values is! List) return;
+      _comments[key] = values.map((value) => Comment.fromJson(value)).toList();
+    });
+  }
+
+  @override
+  Future<String> export() async {
+    return jsonEncode(
+      _comments.map(
+        (key, values) => MapEntry(
+          key,
+          values.map((comment) => comment.toJson()).toList(),
+        ),
+      ),
+    );
+  }
+}
+```
+
+`mixin`을 상속하기 위해선 `with` 키워드를 사용해야 합니다. `DataHandler`를 상속하면서 `CommentService`에서 구현해야 하는 함수들을 재정의합니다.
+`import`와 `export` 함수는 단순히 JSON 형태의 stringify와 parse 작업을 수행합니다. 이로써 상속을 통해 중복 코드를 제거하고 함수의 역할을 분리할 수 있었습니다.
