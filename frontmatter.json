@@ -36,6 +36,12 @@
           "type": "string"
         },
         {
+          "title": "author",
+          "name": "author",
+          "type": "string",
+          "default": "jinyongp"
+        },
+        {
           "title": "date",
           "name": "date",
           "type": "datetime"
@@ -48,7 +54,8 @@
         {
           "title": "draft",
           "name": "draft",
-          "type": "datetime"
+          "type": "boolean",
+          "default": true
         },
         {
           "title": "tags",
