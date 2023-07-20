@@ -6,8 +6,7 @@
 
 @layer base {
   html {
-    @apply text-sm leading-normal antialiased;
-
+    @apply leading-normal antialiased text-[14px] md:text-[16px];
     font-family: var(--font), sans-serif;
   }
 
@@ -54,7 +53,7 @@
 
 @layer components {
   .layout {
-    @apply w-full sm:w-xl md:w-3xl mx-auto px-4;
+    @apply w-full md:w-3xl mx-auto px-4;
   }
 
   .back-to-top:not([class*="hide"]) {
