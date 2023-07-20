@@ -2,9 +2,14 @@ baseURL = "https://jinyongp.dev/"
 defaultContentLanguage = "ko"
 hasCJKLanguage = true
 title = "jinyongp.dev"
-# googleAnalytics = "G-SH0YPW4E1C"
+googleAnalytics = "G-SH0YPW4E1C"
 pluralizelisttitles = false
 enableRobotsTXT = true
+
+[sitemap]
+changefreq = "daily"
+filename = "sitemap.xml"
+priority = 0.5
 
 [params]
 author = "jinyongp"
