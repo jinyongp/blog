@@ -1,0 +1,7 @@
+{{ range .Params.tags }}
+  <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"
+    ><kbd class="text-sm bg-accent text-white rounded px-1 py-0.5"
+      >{{ . }}</kbd
+    ></a
+  >
+{{ end }}

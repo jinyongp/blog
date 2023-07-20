@@ -1,9 +1,21 @@
 {{ define "main" }}
   <div class="layout list">
-    <ul class="list-disc py-4">
+    <ul class="py-4 divide-y">
       {{ range .Pages }}
+        {{ .Date.Format "Jan 2, 2006" | $.Scratch.Set "description" }}
+        {{ with .Description }}{{ $.Scratch.Set "description" . }}{{ end }}
+
+
         <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <div class="p-5 flex flex-col gap-2">
+            <a class="font-medium text-xl w-fit" href="{{ .RelPermalink }}">
+              {{ .Title }}
+              {{ if .Draft }}
+                <i class="fa-solid fa-person-digging text-rose-500"></i>
+              {{ end }}
+            </a>
+            <span class="text-sm">{{ $.Scratch.Get "description" }}</span>
+          </div>
         </li>
       {{ end }}
     </ul>

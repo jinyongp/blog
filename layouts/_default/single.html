@@ -1,3 +1,16 @@
 {{ define "main" }}
-  <article class="layout content py-4 [&_hr]:my-4">{{ .Content }}</article>
+  <div class="layout">
+    <header class="text-center">
+      <h1 class="mt-16 mb-12">{{ .Title }}</h1>
+      <div class="flex justify-between items-center">
+        <div>
+          {{ partial "tags" . }}
+        </div>
+        <h6>Written on {{ .Date.Format "Jan 2, 2006" }}</h6>
+      </div>
+      <hr class="my-4" />
+    </header>
+    {{ partial "series" . }}
+    <article class="content [&_hr]:my-4">{{ .Content }}</article>
+  </div>
 {{ end }}
