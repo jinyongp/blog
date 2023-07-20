@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>d3.js on jinyongp.dev</title><link>https://jinyongp.dev/tags/d3.js/</link><description>Recent content in d3.js on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Fri, Apr 22 14:18:15 2022 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/d3.js/feed.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring for Performance (Canvas API)</title><link>https://jinyongp.dev/posts/d3js/4/</link><pubDate>Fri, Apr 22 14:18:15 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/4/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>저번 시리즈에서 필요한 기능은 전부 구현해보았지만, &lt;code>svg&lt;/code> 요소의 개수가 증가할수록 성능이 하락하는 모습을 확인했습니다. 50개의 &lt;code>nodes&lt;/code>에 대해 DevTools로 측정해본 결과, 렌더링 연산에 굉장히 많은 CPU, GPU 작업을 필요로 하고 있었습니다.&lt;/p>
+&lt;p>&lt;img src="https://jinyongp.dev/image/d3-force-svg-50-performance.png" alt="SVG 50 Performance">&lt;/p>
+&lt;p>이를 해결하기 위해서 &lt;a href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API">Canvas API&lt;/a>를 이용할 수 있습니다. Canvas API를 이용하면 d3-selection을 다룰 일은 거의 없습니다. 특히나 이번처럼 단순히 원과 선만 그리면 되는 작업에서는 그리기 더욱 쉽습니다. 대신 zoom과 drag는 구현 방식에 차이가 있어 다소 어려운 점도 있습니다. 그럼 바로 코드와 함께 저번 시간에 작성한 내용을 Canvas API로 리팩토링해보도록 하겠습니다.&lt;/p>
+&lt;p>이번 시리즈에선 저번 시리즈에서 완성했던 &lt;code>network&lt;/code> class를 이용합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="drawing-canvas">Drawing Canvas&lt;/h2>
+&lt;p>Canvas API는 말 그대로 &lt;a href="https://ko.wikipedia.org/wiki/%EC%BA%94%EB%B2%84%EC%8A%A4">캔버스&lt;/a>로 볼 수 있습니다. 그 위에 그림을 그리고 수정이 필요하다면 전부 지우고 다시 그리면 됩니다. 애니메이션이라면 매 프레임마다 지우고 그리기를 반복합니다. 이처럼 d3-force 또한 매 틱마다 반복하면 됩니다.&lt;/p>
+&lt;blockquote>
+&lt;p>d3.js에 대해서 중점적으로 다루는 프로젝트이므로 Canvas API에 대해 자세한 언급은 없습니다. 이에 대한 내용은 &lt;a href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API">공식 문서&lt;/a>를 참고 바랍니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>Svg 방식에서는 &lt;code>svg&lt;/code> 요소를 생성하고 &lt;code>tick&lt;/code>에서 위치를 변경하는 방식으로 구현했습니다. Canvas 방식에선 그냥 그려주기만 하면 됩니다. 이를 위해 &lt;code>canvas&lt;/code>와 &lt;code>ctx&lt;/code>를 생성하고 &lt;code>tick&lt;/code> 이벤트를 등록해봅시다.&lt;/p>
+&lt;pre>&lt;code class="language-js">class network {
+constructor() {
+this.canvas = d3.select(&amp;quot;body&amp;quot;)
+.append(&amp;quot;canvas&amp;quot;)
+.attr(&amp;quot;width&amp;quot;, this.size.w)
+.attr(&amp;quot;height&amp;quot;, this.size.h)
+.style(&amp;quot;display&amp;quot;, &amp;quot;block&amp;quot;);
+this.ctx = this.canvas.node().getContext(&amp;quot;2d&amp;quot;);
+this.nodeRadius = 8;
+this.simulation = d3
+.forceSimulation()
+.on(&amp;quot;tick&amp;quot;, this.drawCanvas.bind(this));
+}
+drawCanvas() {
+this.ctx.clearRect(0, 0, this.size.w, this.size.h);
+this.ctx.save();
+this.drawLinks();
+this.drawNodes();
+this.ctx.restore();
+}
+drawNodes() {
+console.log(&amp;quot;Drawing Nodes!&amp;quot;);
+}
+drawLinks() {
+console.log(&amp;quot;Drawing Links!&amp;quot;);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>drawCanvas()&lt;/code>, &lt;code>drawNodes()&lt;/code> 그리고 &lt;code>drawLinks()&lt;/code> 함수 내에선 이제 d3-selection 없이 &lt;code>ctx&lt;/code>만으로 그림을 그립니다. 먼저 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect">&lt;code>ctx.clearRect()&lt;/code>&lt;/a>로 &lt;code>canvas&lt;/code>를 전부 지워줍니다. 그리고 &lt;code>drawNodes()&lt;/code>와 &lt;code>drawLinks()&lt;/code>를 호출하여 &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 그려줍니다. 이 때, &lt;code>links&lt;/code>를 먼저 그려줘야만 &lt;code>nodes&lt;/code> 뒤에 그려집니다.&lt;/p>
+&lt;p>&lt;code>links&lt;/code>는 굉장히 간단하게 그릴 수 있습니다. &lt;code>links&lt;/code>를 순회하면서 선을 그려줍니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">drawLinks() {
+this.links.forEach(({ source, target }) =&amp;gt; {
+this.ctx.beginPath();
+this.ctx.moveTo(source.x, source.y);
+this.ctx.lineTo(target.x, target.y);
+this.ctx.stroke();
+});
+}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>nodes&lt;/code>는 저번 시리즈에서 그렸던 것처럼 원 중앙에 &lt;code>id&lt;/code>가 위치하도록 작성합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">drawNodes() {
+this.nodes.forEach(({ id, x, y }) =&amp;gt; {
+this.ctx.beginPath();
+this.ctx.arc(x, y, this.nodeRadius, 0, 2 * Math.PI);
+this.ctx.lineWidth = 3;
+this.ctx.strokeStyle = &amp;quot;blue&amp;quot;;
+this.ctx.stroke();
+this.ctx.fillStyle = &amp;quot;#fff&amp;quot;;
+this.ctx.fill();
+this.ctx.textAlign = &amp;quot;center&amp;quot;;
+this.ctx.textBaseline = &amp;quot;middle&amp;quot;;
+this.ctx.fillStyle = &amp;quot;#000&amp;quot;;
+this.ctx.fillText(id, x, y);
+});
+}
+&lt;/code>&lt;/pre>
+&lt;p>d3-selection 없이 오로지 canvas만 이용하므로 쉽게 그릴 수 있습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="panning-and-zooming">Panning and Zooming&lt;/h2>
+&lt;p>d3-zoom을 연결해서 화면을 이동하고 확대, 축소할 수 있도록 구현하겠습니다. Svg 방식에선 요소의 &lt;code>transform&lt;/code> 속성을 변경하여 직접 이동했다면, canvas 방식에선 전부 지우고 위치 이동 후 다시 그려주는 방식으로 구현합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">class network {
+constructor() {
+this.transform = d3.zoomIdentity;
+this.zoom = d3.zoom()
+.scaleExtent([0.1, 5])
+.on('zoom', ({ transform }) =&amp;gt; {
+this.transform = transform;
+this.drawCanvas();
+});
+this.canvas.call(this.zoom);
+}
+drawCanvas() {
+this.ctx.clearRect(0, 0, this.size.w, this.size.h);
+this.ctx.save();
+this.ctx.translate(this.transform.x, this.transform.y);
+this.ctx.scale(this.transform.k, this.transform.k);
+this.drawLinks();
+this.drawNodes();
+this.ctx.restore();
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;a href="https://github.com/d3/d3-zoom#zoomIdentity">&lt;code>d3.zoomIdentity&lt;/code>&lt;/a>는 &lt;code>{ k: 1, x: 0, y: 0 }&lt;/code>인 객체입니다. 이를 이용해 &lt;code>transform&lt;/code> 변수를 생성한 뒤, &lt;code>zoom&lt;/code> 이벤트로 얻은 &lt;code>transform&lt;/code>을 저장합니다. 그 후, &lt;code>drawCanvas()&lt;/code>를 호출하여 &lt;code>ctx.translate()&lt;/code>와 &lt;code>ctx.scale()&lt;/code> 함수를 이용해 변경한 위치에 그리도록 합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="focusing">Focusing&lt;/h2>
+&lt;p>특정 요소를 클릭했을 때, 해당 요소를 포커싱하는 동작을 구현해보도록 하겠습니다. Canvas는 개별 요소를 선택할 수 없어서 요소에 커서 스타일을 적용하거나 클릭 이벤트를 적용하는데 어려움이 있습니다. 하지만, d3.js에서 제공하는 기능의 조합으로 쉽게 구현할 수 있습니다.&lt;/p>
+&lt;p>개별 요소가 아닌 &lt;code>canvas&lt;/code> 자체에 클릭 이벤트를 등록합니다. 그렇게 얻은 &lt;code>event&lt;/code>로부터 클릭 좌표를 얻어 해당 위치에 존재하는 &lt;code>node&lt;/code>를 찾고, 해당 &lt;code>node&lt;/code>로 이동하고 확대합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">class network {
+constructor() {
+this.canvas.on(&amp;quot;click&amp;quot;, ({ x, y }) =&amp;gt; {
+const node = this.findNode(x, y);
+if (!node) return;
+this.canvas
+.transition()
+.duration(500)
+.call(this.zoom.translateTo, node.x, node.y)
+.transition()
+.call(this.zoom.scaleTo, 3);
+});
+}
+findNode(x, y) {
+const [ix, iy] = this.transform.invert([x, y]);
+return this.simulation.find(ix, iy, this.nodeRadius);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>canvas&lt;/code>에 &lt;code>click&lt;/code> 이벤트를 등록하여 &lt;code>event&lt;/code> 객체로부터 클릭한 위치인 &lt;code>x&lt;/code>, &lt;code>y&lt;/code> 좌표를 얻었습니다.&lt;/p>
+&lt;p>&lt;code>findNode()&lt;/code> 메서드는 주어진 좌표에 &lt;code>node&lt;/code>가 존재하는지 확인하고 해당 &lt;code>node&lt;/code>를 반환합니다. &lt;a href="https://github.com/d3/d3-zoom#transform_invert">&lt;code>transform.invert()&lt;/code>&lt;/a>는 주어진 절대 좌표에 현재 &lt;code>transform&lt;/code> 좌표값을 포함하여 계산하고 반환합니다. 이를 이용해야만 변경된 &lt;code>transform&lt;/code>을 적용한 좌표를 얻을 수 있습니다. &lt;a href="https://github.com/d3/d3-force#simulation_find">&lt;code>simulation.find()&lt;/code>&lt;/a>는 주어진 좌표에서 가장 가까이에 위치한 &lt;code>node&lt;/code>를 검색하여 반환합니다. &lt;code>node&lt;/code>의 반지름을 제공하여 해당 요소를 클릭해야만 &lt;code>node&lt;/code>를 찾을 수 있도록 하였습니다.&lt;/p>
+&lt;p>&lt;code>node&lt;/code>를 찾았다면, &lt;code>zoom.translate&lt;/code>로 해당 &lt;code>node&lt;/code> 위치로 이동한 후 확대합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="dragging">Dragging&lt;/h2>
+&lt;p>d3-drag를 연결하여 요소를 드래그하는 기능을 추가해보도록 하겠습니다. Svg 방식에서는 &lt;code>circles&lt;/code>에 drag를 부착하여 모든 요소에 대해 이벤트를 등록했습니다. Canvas 방식에서는 그런 방법이 불가능하기 때문에, &lt;code>canvas&lt;/code>에 등록하면서 동시에 클릭한 요소를 검색하는 &lt;code>subject&lt;/code>를 설정해야 합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">class network {
+constructor() {
+this.drag = d3
+.drag()
+.subject(({ x, y }) =&amp;gt; this.findNode(x, y))
+.on(&amp;quot;start&amp;quot;, () =&amp;gt; {
+this.canvas.style(&amp;quot;cursor&amp;quot;, &amp;quot;grabbing&amp;quot;);
+this.simulation.alphaTarget(0.1).restart();
+})
+.on(&amp;quot;drag&amp;quot;, (event) =&amp;gt; {
+const [x, y] = d3.pointer(event);
+event.subject.fx = this.transform.invertX(x);
+event.subject.fy = this.transform.invertY(y);
+})
+.on(&amp;quot;end&amp;quot;, ({ subject }) =&amp;gt; {
+this.canvas.style(&amp;quot;cursor&amp;quot;, &amp;quot;default&amp;quot;);
+this.simulation.alphaTarget(0);
+subject.fx = null;
+subject.fy = null;
+});
+this.canvas.call(this.drag);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;a href="https://github.com/d3/d3-drag#drag_subject">&lt;code>drag.subject()&lt;/code>&lt;/a>는 드래그하려는 주체 &lt;code>node&lt;/code>를 선택할 때 이용합니다. &lt;code>findNode()&lt;/code> 함수로 검색한 &lt;code>node&lt;/code>를 &lt;code>subject&lt;/code>로 설정합니다. 설정 이후, &lt;code>event&lt;/code> 객체에서 &lt;code>subject&lt;/code> property에 선택한 &lt;code>node&lt;/code>가 등록됩니다.&lt;/p>
+&lt;p>Drag 이벤트에 등록한 함수는 &lt;a href="https://github.com/d3/d3-drag#drag-events">첫 번째 인자로 &lt;code>event&lt;/code> 객체&lt;/a>를 가집니다. Canvas 방식의 경우 개별 요소가 아닌 canvas에 등록되었기 때문에 &lt;code>event.x&lt;/code>와 &lt;code>event.y&lt;/code>의 값이 canvas 기준으로 생성됩니다. 클릭 위치 기반으로 좌표를 가져오기 위해 &lt;code>event.sourceEvent&lt;/code> 객체를 이용해야하므로 &lt;a href="https://github.com/d3/d3-selection#pointer">&lt;code>d3.pointer()&lt;/code>를 이용&lt;/a>해 좌표를 가져옵니다. 그리고 &lt;code>transform&lt;/code>을 적용하여 &lt;code>subject&lt;/code>의 고정 좌표를 변경합니다.&lt;/p>
+&lt;p>&lt;code>start&lt;/code>와 &lt;code>end&lt;/code> 이벤트에서 &lt;code>cursor&lt;/code> 스타일을 변경해주고 있습니다. 다만, 요소에 마우스를 올렸을 때도 스타일을 변경해주기 위해 &lt;code>pointermove&lt;/code> 이벤트를 추가해주었습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">class network {
+constructor() {
+this.canvas.on(&amp;quot;pointermove&amp;quot;, ({ x, y, buttons }) =&amp;gt; {
+if (buttons) return;
+const node = this.findNode(x, y);
+this.canvas.style(&amp;quot;cursor&amp;quot;, node ? &amp;quot;pointer&amp;quot; : &amp;quot;default&amp;quot;);
+});
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>event.buttons&lt;/code>는 현재 마우스를 클릭한 상태인지 판별하여 드래그 중일 땐 무시하도록 합니다. &lt;code>node&lt;/code>가 위치하는 곳에서만 &lt;code>pointer&lt;/code> 스타일을 갖도록 합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="impl">Impl.&lt;/h2>
+&lt;p>저번 시리즈에서 작성한 코드를 Canvas로 작성해보았습니다. 이제 요소의 개수를 많이 추가하더라도 성능 하락의 모습을 보이지 않는 걸 확인할 수 있습니다.&lt;/p>
+&lt;p class="codepen" data-height="600" data-default-tab="result" data-slug-hash="qBpwbbR" data-editable="true" data-user="jinyongp" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+&lt;span>See the Pen &lt;a href="https://codepen.io/jinyongp/pen/qBpwbbR">
+D3 Force (w/ Canvas)&lt;/a> by Park, Jinyong (&lt;a href="https://codepen.io/jinyongp">@jinyongp&lt;/a>)
+on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
+&lt;/p>
+&lt;script async src="https://cpwebassets.codepen.io/assets/embed/ei.js">&lt;/script>
+&lt;hr>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>성능 향상을 위해 여태까지 작업했던 내용을 Canvas API로 다시 작성해보았습니다. 단순히 그려보는 건 쉬웠지만 zoom과 drag 기능을 적용하는 건 여러 시행착오를 거쳐야했고 다양한 함수를 적용할 필요가 있어 svg 구현 방식보다 어려움을 겪었습니다.&lt;/p>
+&lt;p>성능을 측정해보겠습니다. 50개의 &lt;code>node&lt;/code>를 테스트했던 svg 방식과 달리 200개의 &lt;code>node&lt;/code>를 생성하고 측정해봤음에도 굉장한 성능 향상을 보여줍니다. 대부분은 함수 실행 시간이고 랜더링 연산은 거의 영향을 미치지 않습니다.&lt;/p>
+&lt;p>&lt;img src="https://jinyongp.dev/image/d3-force-canvas-200-performance.png" alt="Canvas 200 Performance">&lt;/p>
+&lt;p>지금까지 d3-force, selection, zoom, drag 등 다양한 d3.js 모듈을 사용해보았고 Canvas API로 작성해보며 성능 향상 또한 진행해보았습니다. d3.js에는 이 외에도 무수히 많은 모듈이 있습니다. 데이터를 시각화하는데 무궁무궁진 잠재력을 지닌만큼 더 다양하게 활용해보며 여러 프로젝트에서 활용해보시면 좋을 듯 싶습니다. 긴 글 읽어주셔서 감사합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">MDN - CanvasRenderingContext2D&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Panning, Zooming and Dragging</title><link>https://jinyongp.dev/posts/d3js/3/</link><pubDate>Thu, Apr 21 11:16:27 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/3/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>&lt;a href="https://github.com/d3/d3-zoom">d3-zoom&lt;/a>과 &lt;a href="https://github.com/d3/d3-drag">d3-drag&lt;/a>는 사용자가 마우스 클릭 혹은 터치로 화면을 제어하거나 요소를 이동하는 기능을 제공합니다.&lt;/p>
+&lt;p>이번 시리즈 또한 마찬가지로 저번 시리즈에 구현했던 코드에 d3-zoom과 d3-drag를 결합하는 걸 목표로 하여 그에 필요한 부분만 다루도록 하겠습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="d3-zoom">d3-zoom&lt;/h2>
+&lt;p>d3-zoom은 사용자가 화면을 드래그 혹은 스크롤하여 현재 보는 범위를 이동, 확대, 축소하는 기능을 제공합니다. 혹은, 특정 요소를 선택했을 때 그 위치로 이동하면서 포커스하는 효과를 줄 수도 있습니다.&lt;/p>
+&lt;h3 id="panning-and-zooming">Panning and Zooming&lt;/h3>
+&lt;p>d3-zoom은 d3-selection과 연계하여 구현합니다. &lt;code>Selection&lt;/code> 객체에 zoom 기능을 제공하기 위해 &lt;code>d3.zoom()&lt;/code> 함수를 호출하여 전달합니다. 저번 시리즈에서 생성한 &lt;code>root&lt;/code> 요소를 가져와 zoom 기능을 추가해보겠습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const zoom = d3
+.zoom()
+.on('zoom', (event) =&amp;gt; {
+console.log('Zoom and Drag!');
+});
+root.call(zoom);
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>d3.zoom()&lt;/code> 함수는 &lt;code>Selection&lt;/code> 객체를 인자로 받는 함수를 생성하여 반환합니다. &lt;code>root.call(zoom)&lt;/code>을 호출함으로써 인자로 받은 &lt;a href="https://github.com/d3/d3-zoom/blob/1bccd3fd56ea24e9658bd7e7c24e9b89410c8967/src/zoom.js#L72-L83">객체에 여러 property와 event를 등록&lt;/a>하게 됩니다.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/d3/d3-selection#selection_call">selection.call()&lt;/a>은 &lt;code>Selection&lt;/code> 객체를 인자로 받는 함수를 인자로 받습니다. &lt;code>root.call(zoom)&lt;/code>은 다음 코드와 동일합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">zoom(root);
+&lt;/code>&lt;/pre>
+&lt;/blockquote>
+&lt;p>&lt;code>root&lt;/code> 요소를 드래그하거나 스크롤을 해보면 이벤트에 등록한 함수가 실행됩니다. &lt;code>zoom&lt;/code> 이벤트에 등록할 함수를 작성하여 요소를 이동시켜봅시다.&lt;/p>
+&lt;p>전달한 함수는 &lt;code>event&lt;/code> 객체를 매개변수로 가집니다. 클릭 이동인지 스크롤인지에 따라 종류가 달라집니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">// MouseEvent
+sourceEvent: MouseEvent {...}
+target: ƒ y(t)
+transform: Jx {k: x.xx, x: x.xx, y: x.xx}
+type: &amp;quot;zoom&amp;quot;
+// WheelEvent
+sourceEvent: WheelEvent {...}
+target: ƒ y(t)
+transform: Jx {k: x.xx, x: x.xx, y: x.xx}
+type: &amp;quot;zoom&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>이 중에서 scale factor인 &lt;code>k&lt;/code> 와 translation 값인 &lt;code>x&lt;/code>, &lt;code>y&lt;/code>를 얻을 수 있는 &lt;code>transform&lt;/code> 객체를 이용합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">.on('zoom', ({ transform }) =&amp;gt; {
+nodeGroup.attr('transform', transform);
+linkGroup.attr('transform', transform);
+});
+&lt;/code>&lt;/pre>
+&lt;p>저번 시리즈에서 생성한 &lt;code>nodeGroup&lt;/code>과 &lt;code>linkGroup&lt;/code>은 &lt;code>svg&lt;/code> 요소를 가지는 &lt;code>Selection&lt;/code> 객체로 &lt;code>transform&lt;/code> 속성을 변경하여 위치와 크기를 조절할 수 있습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>transform&lt;/code>은 객체인데 그대로 전달할 수 있는 이유는 적용될 때 &lt;a href="https://github.com/d3/d3-zoom#transform_toString">&lt;code>transform.toString()&lt;/code>함수가 호출되어 &lt;code>&amp;quot;translate(x,y) scale(k)&amp;quot;&lt;/code> 형태의 문자열로 변환&lt;/a>되기 때문입니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>화면을 드래그하여 이동하고 스크롤하여 확대, 축소할 수 있습니다.&lt;/p>
+&lt;h3 id="focusing">Focusing&lt;/h3>
+&lt;p>그럼 특정 요소를 클릭했을 때 해당 요소를 포커스하는 동작에 대해 구현해보겠습니다. 일단 &lt;code>Selection&lt;/code> 객체에 이벤트를 등록하기 위해선 &lt;code>selection.on()&lt;/code> 메서드를 호출합니다. 저번 시리즈에서 생성한 &lt;code>circles&lt;/code>를 가져오겠습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">circles.on('click', (event, node) =&amp;gt; {
+console.log('Click!');
+});
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>click&lt;/code> 이벤트에 등록한 함수는 &lt;code>event&lt;/code>와 &lt;code>node&lt;/code> 객체를 매개변수로 가집니다. &lt;code>node&lt;/code>의 현재 위치 &lt;code>x&lt;/code>, &lt;code>y&lt;/code> 좌표로 이동 및 확대해야 하므로 이를 이용합니다.&lt;/p>
+&lt;p>사용자의 조작이 아닌 코드를 통해 특정 좌표로 이동하고 확대하기 위해선 &lt;a href="https://github.com/d3/d3-zoom#zoom_translateTo">&lt;code>zoom.translateTo&lt;/code>&lt;/a>와 &lt;a href="https://github.com/d3/d3-zoom#zoom_scaleTo">&lt;code>zoom.scaleTo&lt;/code>&lt;/a> 함수를 이용합니다. 해당 함수는 첫 번째 인자로 &lt;code>Selection&lt;/code> 객체를 전달받으므로 &lt;code>selection.call()&lt;/code> 함수로 호출할 수 있습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">circles.on('click', (_, { x, y }) =&amp;gt; {
+root
+.transition()
+.duration(500)
+.call(zoom.translateTo, x, y)
+.transition()
+.call(zoom.scaleTo, 3);
+});
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>circles&lt;/code> 요소를 클릭하면 클릭한 &lt;code>circle&lt;/code>의 &lt;code>x&lt;/code>, &lt;code>y&lt;/code> 좌표를 가져옵니다. 그리고 &lt;code>zoom.translateTo&lt;/code>와 &lt;code>zoom.scaleTo&lt;/code>가 &lt;code>root&lt;/code> 요소의 zoom 상태를 변경합니다. &lt;code>transition&lt;/code>과 &lt;code>duration&lt;/code>은 zoom이 이동할 때 transition 효과를 주어 보다 자연스러운 움직임을 제공합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="d3-drag">d3-drag&lt;/h2>
+&lt;p>d3-drag는 요소를 클릭하여 드래그하는 기능을 제공합니다.&lt;/p>
+&lt;h3 id="dragging">Dragging&lt;/h3>
+&lt;p>d3-drag 또한 d3-selection에 기능을 제공합니다. &lt;code>d3.drag()&lt;/code> 함수는 &lt;code>Selection&lt;/code> 객체를 인자로 받는 함수를 생성하여 반환합니다. 추가로, 드래그하기 위해서 필요한 세 가지 이벤트를 등록해야 합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const drag = d3
+.drag()
+.on(&amp;quot;start&amp;quot;, (event, node) =&amp;gt; {
+console.log('Drag Start!');
+})
+.on(&amp;quot;drag&amp;quot;, (event, node) =&amp;gt; {
+console.log('Dragging!');
+})
+.on(&amp;quot;end&amp;quot;, (event, node) =&amp;gt; {
+console.log('Drag End!');
+});
+circles.call(drag);
+&lt;/code>&lt;/pre>
+&lt;p>요소를 클릭하면 &lt;code>start&lt;/code> 이벤트가 발생하고, 클릭 후 드래그하면 &lt;code>drag&lt;/code> 이벤트 그리고 클릭을 떼면 &lt;code>end&lt;/code> 이벤트가 발생합니다. 이벤트에 등록한 모든 함수는 클릭 이벤트 객체와 클릭한 요소의 정보를 매개변수로 가집니다.&lt;/p>
+&lt;p>요소를 클릭하여 드래그할 때 simulation은 계속 실행 중인 상태여야 합니다. d3-force 시리즈에서 언급한 내용으로 simulation을 종료하지 않고 계속 실행하려면 &lt;code>alphaTarget&lt;/code>을 이용해야 합니다.&lt;/p>
+&lt;p>또한, 요소가 다른 요소와 상관없이 &lt;a href="https://github.com/d3/d3-force#simulation_nodes">특정 고정 좌표에 위치하도록 하려면 &lt;code>fx&lt;/code>와 &lt;code>fy&lt;/code> 값을 설정&lt;/a>해야 합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const drag = d3
+.drag()
+.on('start', (event, node) =&amp;gt; {
+nodeGroup.style('cursor', 'grabbing');
+simulation.alphaTarget(0.1).restart();
+})
+.on('drag', (event, node) =&amp;gt; {
+node.fx = event.x;
+node.fy = event.y;
+})
+.on('end', (event, node) =&amp;gt; {
+nodeGroup.style('cursor', 'grab');
+simulation.alphaTarget(0);
+node.fx = null;
+node.fy = null;
+});
+circles.call(drag);
+&lt;/code>&lt;/pre>
+&lt;p>클릭할 때 &lt;code>alphaTarget&lt;/code>을 &lt;code>alphaMin&lt;/code>보다 크게 설정하여 simulation이 절대 종료되지 않도록 합니다. &lt;code>alphaTarget&lt;/code> 값이 클수록 다른 요소의 움직임이 커집니다. 클릭을 종료하면 다시 되돌려놓습니다.&lt;/p>
+&lt;p>클릭하여 드래그를 시작하면 &lt;code>fx&lt;/code>와 &lt;code>fy&lt;/code> 값을 현재 마우스의 위치로 설정합니다. 클릭을 종료하면 &lt;code>null&lt;/code>로 설정하여 고정 위치를 제거합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="impl">Impl.&lt;/h2>
+&lt;p>d3-zoom과 d3-drag를 추가해보았습니다. &lt;code>Network&lt;/code> class를 작성하여 코드를 정리했고 실시간으로 &lt;code>alpha&lt;/code>와 &lt;code>zoom&lt;/code> 상태를 확인하고 제어할 수 있도록 구현하였습니다. &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 추가할 수 있도록 구현하였습니다. 비어있는 채로 &lt;code>ADD&lt;/code>를 클릭하면 새로운 요소가 임의의 요소에 연결됩니다. 그리고 &lt;code>node&lt;/code>의 아이디를 DOM에 그려 &lt;code>node&lt;/code>의 데이터를 어떻게 DOM에 적용할 수 있는지 보여줬습니다.&lt;/p>
+&lt;p class="codepen" data-height="600" data-default-tab="result" data-slug-hash="mdpoWxa" data-user="jinyongp" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+&lt;span>See the Pen &lt;a href="https://codepen.io/jinyongp/pen/mdpoWxa">
+D3 Force, Zoom, Drag (w/ SVG)&lt;/a> by Park, Jinyong (&lt;a href="https://codepen.io/jinyongp">@jinyongp&lt;/a>)
+on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
+&lt;/p>
+&lt;script async src="https://cpwebassets.codepen.io/assets/embed/ei.js">&lt;/script>
+&lt;hr>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>d3-zoom과 d3-drag를 기존 프로젝트에 연결하는 코드를 작성해보면서 개념과 구현 방법에 대해 알아보았습니다. 여기서 사용해본 기능 말고도 d3는 정말 많은 기능을 제공합니다. 공식 문서에 예시가 살짝 아쉽긴 하지만, 직접 사용해보면서 그 유틸성을 확인해보았으면 합니다.&lt;/p>
+&lt;p>&lt;code>ADD&lt;/code> 버튼을 눌러 계속 요소를 추가하다보면 점점 프레임이 떨어지면서 성능이 하락하는 모습을 볼 수 있습니다. 이 문제는 HTML5 Canvas API가 해결할 수 있습니다. 허나, 이 방법도 그리기엔 쉬울지 몰라도 오늘 적용한 zoom과 drag 기능을 추가하는데엔 어려움이 있습니다. 다음 시리즈는 지금까지 구현한 내용을 Canvas API로 리팩토링하면서 전부 알아보도록 하겠습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/d3/d3-zoom">d3-zoom&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/d3/d3-drag">d3-drag&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/d3/d3-transition">d3-transition&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Data Driven Transformation of DOM</title><link>https://jinyongp.dev/posts/d3js/2/</link><pubDate>Sat, Apr 16 02:47:11 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/2/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>&lt;a href="https://github.com/d3/d3-selection">d3-selection&lt;/a>은 데이터를 기반으로 DOM을 조작할 수 있는 다양한 기능을 제공합니다.&lt;/p>
+&lt;p>이번 시리즈는 d3-force와 연계하여 Github Follower, Following 관계망 그리기를 목표로 하고 있으므로 구현 과정에서 필요한 부분에 대해서만 다루도록 하겠습니다.&lt;/p>
+&lt;p>들어가기 전에 &lt;code>Selection&lt;/code> 객체에 대해 알아봅시다. d3-selection으로 선택한 요소는 &lt;a href="https://github.com/d3/d3-selection/blob/main/src/selection/index.js">&lt;code>groups&lt;/code>와 &lt;code>parents&lt;/code> property를 갖는 &lt;code>Selection&lt;/code> 객체&lt;/a>를 생성합니다. &lt;code>Selection&lt;/code> 객체는 선택한 요소를 제어할 수 있는 다양한 메서드를 제공합니다.&lt;/p>
+&lt;ul>
+&lt;li>요소 선택: selection, select, selectAll, selectChild, selectChildren, filter, merge&lt;/li>
+&lt;li>요소 변경: attr, classed, style, property, text, html, append, insert, remove, clone, sort, order, raise, lower&lt;/li>
+&lt;li>데이터 연결: data, join, enter, exit, datum&lt;/li>
+&lt;li>이벤트 핸들링: on, dispatch&lt;/li>
+&lt;li>제어 흐름: each, call, empty, nodes, size, [Symbol.iterator]()&lt;/li>
+&lt;/ul>
+&lt;p>d3-selection을 이용하여 선택한 요소에 데이터를 연결하고 그 데이터를 기반으로 요소를 제어할 수 있습니다.&lt;/p>
+&lt;p>이제 코드와 함께 d3-selection을 이용하여 간단한 그래프를 그려보겠습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="creating-and-editing">Creating and Editing&lt;/h2>
+&lt;p>관계망에 사용할 &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 브라우저에 그려주기 위해 d3-selection으로 &lt;code>svg&lt;/code>를 생성하고 크기를 설정해줍니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const root = d3
+.select('body') // === d3.select(document.body)
+.append('svg')
+.attr('width', '100%')
+.attr('height', '100%')
+.style('display', 'block');
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>body&lt;/code> 요소를 선택하고 하위에 &lt;code>svg&lt;/code> 요소를 추가했습니다. 그리고 &lt;code>attr&lt;/code> 메서드와 &lt;code>style&lt;/code> 메서드로 &lt;code>svg&lt;/code>의 속성과 스타일을 지정했습니다. &lt;code>root&lt;/code>엔 &lt;code>svg&lt;/code> 요소를 담고 있는 &lt;code>Selection&lt;/code> 객체가 할당됩니다.&lt;/p>
+&lt;p>&lt;code>root&lt;/code> 아래 &lt;code>links&lt;/code>와 &lt;code>nodes&lt;/code>를 각각 묶을 &lt;code>g&lt;/code> 요소를 생성합니다. (&lt;code>linkGroup&lt;/code>을 먼저 생성해야 뒤에 배치됩니다.)&lt;/p>
+&lt;pre>&lt;code class="language-js">const linkGroup = root.append('g').attr('id', 'links');
+const nodeGroup = root.append('g').attr('id', 'nodes');
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>id&lt;/code>는 별 다른 역할 없이 식별을 위해 추가해주었습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="joining-data">Joining Data&lt;/h2>
+&lt;p>이제 DOM 요소에 데이터를 연결해봅시다. &lt;code>nodeGroup&lt;/code> 아래 &lt;code>circle&lt;/code>을 배치하고 &lt;code>nodes&lt;/code> 데이터를 연결합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const circles = nodeGroup
+.selectAll('circle')
+.data(nodes)
+.join('circle')
+.attr('r', 5)
+.attr('fill', 'blue');
+&lt;/code>&lt;/pre>
+&lt;p>얼핏 보면 말이 되는 듯하지만 아직 생성도 하지 않은 &lt;code>circle&lt;/code>을 왜 선택하고 있는지 의문이 생깁니다. 각 단계가 생성하는 &lt;code>Selection&lt;/code> 객체를 보고 흐름을 이해해봅시다.&lt;/p>
+&lt;p>&lt;code>nodeGroup.selectAll('circle')&lt;/code>은 당연히 빈 &lt;code>Selection&lt;/code> 객체를 반환합니다.&lt;/p>
+&lt;blockquote>
+&lt;p>💡 당연히 비어있는 &lt;code>Selection&lt;/code> 객체를 받을건데 왜 &lt;code>selectAll&lt;/code>을 쓸까요?&lt;/p>
+&lt;p>이후에 &lt;code>nodes&lt;/code>를 추가해야 할 상황이 생긴다면, 기존에 생성되었던 &lt;code>circle&lt;/code> 요소와 &lt;code>nodes&lt;/code>를 비교하여 추가된 &lt;code>node&lt;/code>의 개수만큼 &lt;code>circle&lt;/code> 요소를 추가합니다. 즉, 비교를 위해 선택하는 요소와 생성하는 요소는 동일해야 합니다.&lt;/p>
+&lt;/blockquote>
+&lt;pre>&lt;code class="language-js">_groups: [NodeList(0)]
+_parents: [g#nodes]
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>.data(nodes)&lt;/code>는 빈 &lt;code>Selection&lt;/code> 객체에 &lt;code>nodes&lt;/code> 배열의 길이만큼 연결합니다. &lt;code>jt&lt;/code> 객체는 &lt;code>__data__&lt;/code> property에 &lt;code>node&lt;/code> 정보를 갖고 있습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">_enter: [Array(5)]
+0: (5) [jt, jt, jt, jt, jt]
+_exit: [Array(0)]
+0: []
+_groups: [Array(5)]
+0: (5) [empty × 5]
+_parents: [g#nodes]
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-js">_enter: Array(1)
+0: Array(5)
+0: jt {...}
+1: jt {...}
+2: jt {...}
+3: jt {...}
+4: jt
+namespaceURI: &amp;quot;http://www.w3.org/2000/svg&amp;quot;
+ownerDocument: document
+__data__: {id: 5, index: 4, x:...}
+_exit: [Array(0)]
+_groups: [Array(5)]
+_parents: [g#nodes]
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>.join('circle')&lt;/code>은 &lt;code>.enter().append('circle')&lt;/code>과 동일한 단축 표현입니다. &lt;code>.enter()&lt;/code>까지 실행한 결과는 아래와 같습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">_groups: Array(1)
+0: (5) [jt, jt, jt, jt, jt]
+_parents: [g#nodes]
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-js">_groups: Array(1)
+0: Array(5)
+0: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+1: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+2: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+3: jt {ownerDocument: document, namespaceURI: 'http://www.w3.org/2000/svg', ...}
+4: jt
+namespaceURI: &amp;quot;http://www.w3.org/2000/svg&amp;quot;
+ownerDocument: document
+__data__: {id: 5, index: 4, x: ...}
+...
+_parents: [g#nodes]
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>enter().append('circle')&lt;/code>까지 실행한 결과는 아래와 같습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">_groups: Array(1)
+0: Array(5)
+0: circle
+1: circle
+2: circle
+3: circle
+4: circle
+__data__: {id: 5, index: 4, x:...}
+...
+_parents: [g#nodes]
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>circle&lt;/code> 요소가 연결되었고 &lt;code>circle&lt;/code> 내부에 &lt;code>__data__&lt;/code>가 결합되었습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="impl">Impl.&lt;/h2>
+&lt;p>&lt;code>ticked&lt;/code> 함수 내부에서 DOM 요소와 결합한 &lt;code>node&lt;/code> 객체의 &lt;code>x&lt;/code>, &lt;code>y&lt;/code> 좌표 데이터를 이용해 요소를 화면 상에 그려보았습니다.&lt;/p>
+&lt;p class="codepen" data-height="600" data-default-tab="result" data-slug-hash="MWrxgPB" data-user="jinyongp" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+&lt;span>See the Pen &lt;a href="https://codepen.io/jinyongp/pen/MWrxgPB">
+D3 Force (w/ SVG)&lt;/a> by Park, Jinyong (&lt;a href="https://codepen.io/jinyongp">@jinyongp&lt;/a>)
+on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
+&lt;/p>
+&lt;script async src="https://cpwebassets.codepen.io/assets/embed/ei.js">&lt;/script>
+&lt;hr>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>d3-selection의 개념과 데이터 결합 방법과 흐름에 대해 살펴보았습니다. 저번과 달리 많은 개념에 대해 알아보진 않았지만, 요소를 선택하고 속성을 변경하고 데이터를 결합하는 정말 필요한 내용만 다루면서 d3-force와 연동하여 간단한 그래프를 그려볼 수 있었습니다.&lt;/p>
+&lt;p>&lt;code>node&lt;/code>의 데이터가 많아질수록 d3-selection을 더욱 적극적으로 이용할 예정이므로, 그 때를 위해 이번엔 이 정도로 하고 다음 시리즈에선 d3-zoom과 d3-drag를 이용하여 상호작용하는 방법에 대해 알아보겠습니다.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/d3/d3-selection">d3-selection&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bost.ocks.org/mike/join/">Thinking with Joins&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://lucidar.me/en/d3.js/part-07-data-binding">D3.js Tutorial - Data Binding&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;p>원티드 프리온보딩에서 주어진 과제 중 하나인 &lt;a href="https://github.com/Pre-Onboarding-FE-Team07/wanted-codestates-project-7-7-2">D3.js를 이용한 Github Starred Repo 관계망 그리기 프로젝트&lt;/a>를 진행하면서 d3.js에 큰 흥미를 가지게 되었습니다. 처음 다뤄보는 시각화 라이브러리이라 기능 하나를 추가할 때마다 많은 자료와 문서를 찾아봐야 했습니다. 어찌어찌하긴 해내긴 했지만 코드와 동작을 보며 느껴지는 부족함에 아쉬움이 생겼습니다. 아무래도 짧은 시간 내에 구현해내느라 이해하는데 어려움이 있었기 때문에, 그 어려움을 극복하고자 문서를 톺아보며 살펴보고 정리해보고자 합니다.&lt;/p>
+&lt;p>사용하는 라이브러리는 &lt;a href="https://github.com/d3/d3">d3.js&lt;/a>입니다. d3가 가진 수많은 라이브러리 중에서도 &lt;code>d3-force&lt;/code>, &lt;code>d3-zoom&lt;/code>, &lt;code>d3-selection&lt;/code>, &lt;code>d3-drag&lt;/code> 등 추가로 필요한 모듈이라면 전부 활용해볼 예정이고 성능 향상을 위해 Canvas API로 구현해보려고 합니다.&lt;/p></description></item><item><title>Simulating Physical Forces</title><link>https://jinyongp.dev/posts/d3js/1/</link><pubDate>Thu, Apr 14 14:20:46 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/1/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>&lt;a href="https://github.com/d3/d3-force">d3-force&lt;/a>는 입자(&lt;code>nodes&lt;/code>) 간에 가해지는 물리적 힘(forces)을 simulation하여 입자의 좌표값을 계산하고 제공합니다.&lt;/p>
+&lt;p>코드와 함께 &lt;a href="#simulation">Simulation&lt;/a>과 &lt;a href="#forces">Forces&lt;/a>에 대해 이해해봅시다.&lt;/p>
+&lt;hr>
+&lt;h2 id="simulationhttpsgithubcomd3d3-forcesimulation">&lt;a href="https://github.com/d3/d3-force#simulation">Simulation&lt;/a>&lt;/h2>
+&lt;p>Simulation은 &lt;code>nodes&lt;/code>에 가해지는 물리적 힘을 계산합니다. &lt;code>d3.forceSimulation()&lt;/code> 함수로 simulation을 생성합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const simulation = d3.forceSimulation();
+&lt;/code>&lt;/pre>
+&lt;p>Simulation에 그래프의 정점 목록인 &lt;code>nodes&lt;/code>와 간선 목록인 &lt;code>links&lt;/code>를 등록할 수 있습니다.&lt;/p>
+&lt;h3 id="nodes">Nodes&lt;/h3>
+&lt;p>먼저 &lt;code>nodes&lt;/code>에 대해 알아봅시다. Simulation은 입력한 &lt;code>node&lt;/code> 객체에 계산 결과값을 추가합니다. &lt;code>nodes&lt;/code> 배열에서 각 &lt;code>node&lt;/code>를 인덱스로 관리해도 되지만, 보기 어려우므로 고유 식별자 &lt;code>id&lt;/code>를 추가하겠습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const nodes = [...Array(5)].map((_, i) =&amp;gt; ({ id: i + 1 }));
+// [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }]
+simulation.nodes(nodes);
+// nodes [
+// {
+// id: 1,
+// index: 0,
+// vx: x.xx,
+// vy: x.xx,
+// x: x.xx,
+// y: x.xx,
+// }
+// , ...
+// ]
+&lt;/code>&lt;/pre>
+&lt;p>Simulation은 &lt;code>node&lt;/code>에 &lt;code>index&lt;/code>와 함께 좌표값인 &lt;code>x&lt;/code>, &lt;code>y&lt;/code> 그리고 속도값인 &lt;code>vx&lt;/code>, &lt;code>vy&lt;/code>를 추가합니다. 원본 &lt;code>node&lt;/code> 객체 자체를 수정해야하므로 &lt;a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions">non-extensible한 객체&lt;/a>는 사용할 수 없습니다. 만약 불변성 유지가 필요하다면 객체를 복사하여 전달해야 합니다.&lt;/p>
+&lt;h3 id="links">Links&lt;/h3>
+&lt;p>그럼 이제 &lt;code>links&lt;/code>를 등록해봅시다. d3-force에서 &lt;code>link&lt;/code> 객체는 방향성을 지닌 간선이므로 &lt;code>source&lt;/code>와 &lt;code>target&lt;/code>을 가진 객체로 선언합니다. &lt;code>nodes&lt;/code>와 달리 각 property는 객체가 아닌 &lt;code>node&lt;/code>를 식별할 &lt;code>id&lt;/code>를 갖습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const links = [
+{ source: 1, target: 4 },
+{ source: 3, target: 4 },
+{ source: 2, target: 5 },
+{ source: 4, target: 1 },
+{ source: 5, target: 4 },
+];
+simulation.force('link', d3.forceLink(links).id(({ id }) =&amp;gt; id));
+// links [
+// {
+// index: 1,
+// source: {
+// id: 3
+// index: 2
+// vx: x.xx,
+// vy: x.xx,
+// x: x.xx,
+// y: x.xx,
+// },
+// target: {
+// ...
+// },
+// }, ...
+// ]
+&lt;/code>&lt;/pre>
+&lt;p>나중에 &lt;a href="#forces">Forces&lt;/a> 챕터에서 다시 만나겠지만, &lt;code>links&lt;/code>는 &lt;code>nodes&lt;/code>에 작용할 힘을 제공하므로 &lt;code>force&lt;/code>로 추가합니다. &lt;code>links&lt;/code>를 simulation에 추가하면 &lt;code>source&lt;/code>, &lt;code>target&lt;/code>에 설정된 &lt;code>id&lt;/code>를 동일한 &lt;code>id&lt;/code>를 가진 &lt;code>node&lt;/code> 객체로 대체합니다. (코드에 나와 있듯 &lt;a href="https://github.com/d3/d3-force#link_id">link.id()&lt;/a> 함수로 지정해야 합니다.)&lt;/p>
+&lt;h3 id="tick">Tick&lt;/h3>
+&lt;p>Simulation에 &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 등록해봤습니다. &lt;code>tick&lt;/code> 이벤트에 핸들러 함수를 등록하여 매 &lt;code>tick&lt;/code>마다 실행할 코드를 작성할 수 있습니다. Simulation은 생성 직후 곧바로 실행됩니다. 필요하다면 &lt;a href="https://github.com/d3/d3-force#simulation_stop">&lt;code>simulation.stop()&lt;/code>&lt;/a> 함수로 정지하거나 &lt;a href="https://github.com/d3/d3-force#simulation_restart">&lt;code>simulation.restart()&lt;/code>&lt;/a>로 재시작할 수 있습니다.&lt;/p>
+&lt;p>&lt;code>tick&lt;/code> 이벤트 핸들러를 등록하여 &lt;code>node&lt;/code>에 저장된 결과값을 확인해봅시다.&lt;/p>
+&lt;pre>&lt;code class="language-js">simulation.on('tick', () =&amp;gt; {
+console.log(nodes[0]);
+});
+// 첫 번째 tick: {id: 1, index: 0, x: 5.826695986913618, y: -4.292216192303559, vy: -4.292216192303559, …}
+// 두 번째 tick: {id: 1, index: 0, x: 4.820993020602418, y: -8.04960224695047, vy: -3.7573860546469113, …}
+// 세 번째 tick: {id: 1, index: 0, x: 4.188865598751164, y: -10.465829270778734, vy: -2.4162270238282635, …}
+// 네 번째 tick: {id: 1, index: 0, x: 3.823314491169919, y: -11.82585404923582, vy: -1.3600247784570867, …}
+// ...
+&lt;/code>&lt;/pre>
+&lt;p>Simulation은 &lt;code>tick&lt;/code> 단위마다 좌표값을 계산합니다. 우린 simulation에 의해 &lt;code>tick&lt;/code>마다 계산된 절대 좌표값(x, y)를 화면에 그려주기만 하면 됩니다. 그리는 건 나중에 d3-selection과 함께 알아보겠습니다.&lt;/p>
+&lt;h3 id="alpha">Alpha&lt;/h3>
+&lt;p>Simulation을 얼마나 진행할 지 결정하는 &lt;code>alpha&lt;/code>, &lt;code>alphaMin&lt;/code>, &lt;code>alphaDecay&lt;/code>, &lt;code>alphaTarget&lt;/code>, &lt;code>velocityDecay&lt;/code> 속성에 대해 알아보겠습니다. 문서에 주어진 &lt;code>alpha&lt;/code>의 정의는 설명도 부실하고 이해하기 꽤 어려우니 &lt;a href="https://github.com/d3/d3-force/blob/main/src/simulation.js">구현 코드&lt;/a>를 보며 동작 방식을 알아봅시다. 주어진 속성의 초기값은 다음과 같습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">var simulation,
+alpha = 1,
+alphaMin = 0.001,
+alphaDecay = 1 - Math.pow(alphaMin, 1 / 300) // 0.02276277904418933
+alphaTarget = 0,
+velocityDecay = 0.6,
+// ...
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>alpha&lt;/code>는 매 &lt;code>tick&lt;/code>마다 &lt;code>alpha += (alphaTarget - alpha) * alphaDecay&lt;/code>로 계산되어 감소합니다. 또한, 매 &lt;code>tick&lt;/code>마다 &lt;code>alpha&lt;/code>와 &lt;code>alphaMin&lt;/code>를 비교합니다. &lt;code>alpha&lt;/code>가 &lt;code>alphaMin&lt;/code>보다 작아질 때까지 simulation을 실행합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">simulation.on('tick', () =&amp;gt; {
+console.log(simulation.alpha());
+// 001: 0.9772372209558107 = 1 + (0 - 1) * 0.02276277904418933;
+// 002: 0.9549925860214359 = alpha + (alphaTarget - alpha) * alphaDecay
+// ...
+// 300: 0.0009999999999999966 종료: alphaMin(0.001) 미만
+});
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>alphaTarget&lt;/code>은 &lt;code>alpha&lt;/code>의 도달 목표입니다. &lt;code>alpha&lt;/code>는 &lt;code>alphaTarget&lt;/code>에 도달할 때까지 감소합니다. &lt;code>alphaTarget&lt;/code>이 &lt;code>alphaMin&lt;/code>보다 크다면 &lt;code>alpha&lt;/code>가 &lt;code>alphaMin&lt;/code>에 도달할 수 없으므로 simulation은 종료되지 않고 계속 실행됩니다. 나중에 d3-drag를 적용할 때 이용할 수 있습니다.&lt;/p>
+&lt;p>아래 코드에서 &lt;code>alphaTarget&lt;/code>으로 &lt;code>alpha&lt;/code>가 &lt;code>1&lt;/code>부터 &lt;code>0.5&lt;/code>까지 감소하도록 설정했습니다. 하지만 &lt;code>alpha&lt;/code>가 &lt;code>0.6&lt;/code> 미만으로 감소했을 때 simulation이 종료되므로 &lt;code>0.5&lt;/code>까지 감소할 일은 없습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">simulation.alphaMin(0.6).alphaTarget(0.5);
+simulation.on('tick', () =&amp;gt; {
+console.log(simulation.alpha());
+// 001: 0.9886186104779053
+// 002: 0.9774962930107179
+// ...
+// 070: 0.5997631157484438 종료: alphaMin(0.6) 미만
+});
+&lt;/code>&lt;/pre>
+&lt;p>아래 코드에선 &lt;code>alpha&lt;/code>가 &lt;code>0.4&lt;/code> 이하로 감소해야만 종료됩니다. 하지만, &lt;code>alphaTarget&lt;/code>에 의해 &lt;code>0.4&lt;/code>보다 작아질 수 없습니다. 고로, simulation이 종료되지 않습니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">simulation.alphaMin(0.4).alphaTarget(0.5);
+simulation.on('tick', () =&amp;gt; {
+console.log(simulation.alpha());
+// 001: 0.9886186104779053
+// 002: 0.9774962930107179
+// ...
+// 300: 0.5005000000000002
+// 301: 진행 중...
+});
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>alphaDecay&lt;/code>는 &lt;code>alpha&lt;/code>의 감소량입니다. 수가 클수록 &lt;code>alpha&lt;/code>는 &lt;code>alphaMin&lt;/code>에 빠르게 도달합니다.&lt;/p>
+&lt;p>&lt;code>velocityDecay&lt;/code>는 &lt;code>node.vx&lt;/code>, &lt;code>node.vy&lt;/code> 값의 감소량입니다. 구현 코드에선 &lt;code>node.x += node.vx *= velocityDecay;&lt;/code>로 작성되어 있는데, &lt;code>node.vx *= velocityDecay&lt;/code>를 먼저 연산하고 &lt;code>node.x += node.vx&lt;/code>를 연산합니다. &lt;code>0&lt;/code>으로 설정하면 simulation이 종료될 때까지 속도를 계속 유지합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="forceshttpsgithubcomd3d3-forceforces">&lt;a href="https://github.com/d3/d3-force#forces">Forces&lt;/a>&lt;/h2>
+&lt;p>Forces는 simulation에서 &lt;code>node&lt;/code>에 적용할 물리적 힘입니다. 척력 혹은 인력을 적용하거나, 일정 거리를 유지하게끔 합니다. 몇가지 모듈을 이용해 force를 적용할 수 있습니다. Links, many-body, centering, collision, positioning에 대해 알아봅시다.&lt;/p>
+&lt;h3 id="linkshttpsgithubcomd3d3-forcelinks">&lt;a href="https://github.com/d3/d3-force#links">Links&lt;/a>&lt;/h3>
+&lt;p>Link force는 &lt;code>node&lt;/code>를 연결하고 일정 거리를 유지하는 힘입니다. 위에서 언급했듯 &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceLink()&lt;/code>로 생성합니다. 이 과정에서 &lt;code>distance&lt;/code>와 &lt;code>strength&lt;/code>를 이용해 거리와 거리를 유지할 힘을 결정합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const forceLink = d3
+.forceLink(links)
+.id(({ id }) =&amp;gt; id)
+.distance(100)
+.strength(1);
+simulation.force('link', forceLink);
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>strength&lt;/code>는 &lt;code>distance&lt;/code>로 설정한 일정 거리를 유지하는 힘입니다. &lt;code>0&lt;/code>부터 &lt;code>1&lt;/code> 사이를 추천합니다&lt;/p>
+&lt;h3 id="many-bodyhttpsgithubcomd3d3-forcemany-body">&lt;a href="https://github.com/d3/d3-force#many-body">Many-Body&lt;/a>&lt;/h3>
+&lt;p>Many Body force는 &lt;code>nodes&lt;/code>에 척력 혹은 인력을 적용합니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceManyBody()&lt;/code>로 생성합니다. 이 또한, &lt;code>strength&lt;/code>로 적용할 힘을 결정합니다. 전달한 수가 양수라면 인력, 음수라면 척력입니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const forceManyBody = d3
+.forceManyBody()
+.strength(-300);
+simulation.force('manyBody', forceManyBody);
+&lt;/code>&lt;/pre>
+&lt;p>참고로 많은 예시에서 &lt;code>force('manyBody', forceManyBody)&lt;/code>가 아닌 &lt;code>force('charge', forceCharge)&lt;/code>로 되어있지만 이름은 전혀 중요하지 않습니다. 단순히 식별자 역할을 수행하므로 다른 force와 구분만 가능하면 됩니다.&lt;/p>
+&lt;h3 id="centeringhttpsgithubcomd3d3-forcecentering">&lt;a href="https://github.com/d3/d3-force#centering">Centering&lt;/a>&lt;/h3>
+&lt;p>Centering force는 &lt;code>nodes&lt;/code>의 중심이 지정한 좌표(x, y)에 위치하도록 합니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceCenter()&lt;/code>로 생성합니다. Viewport 상에서 정중앙에 위치해야 할 때 적용합니다. &lt;code>strength&lt;/code>를 이용하면 부드러운 움직임이 가능합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const forceCenter = d3
+.forceCenter(width / 2, height / 2)
+.strength(0.1);
+simulation.force('center', forceCenter);
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>resize&lt;/code> 이벤트 혹은 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver">ResizeObserver&lt;/a>로 크기 변경을 감지하고 &lt;code>nodes&lt;/code>가 항상 중앙에 위치하도록 할 수 있습니다.&lt;/p>
+&lt;h3 id="collisionhttpsgithubcomd3d3-forcecollision">&lt;a href="https://github.com/d3/d3-force#collision">Collision&lt;/a>&lt;/h3>
+&lt;p>Collision force는 &lt;code>nodes&lt;/code>가 서로 겹치는 것을 방지하는 힘입니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceCollide()&lt;/code>로 생성합니다. &lt;code>node&lt;/code>를 점이 아닌 원으로 취급하여 충돌 여부를 확인하고 &lt;code>radius&lt;/code>로 원의 반지름을 결정합니다. &lt;code>strength&lt;/code>로 겹칠 때 서로 밀어낼 힘을 결정합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const forceCollide = d3
+.forceCollide()
+.radius(5)
+.strength(0.8);
+simulation.force('collide', forceCollide);
+&lt;/code>&lt;/pre>
+&lt;h3 id="positioninghttpsgithubcomd3d3-forcepositioning">&lt;a href="https://github.com/d3/d3-force#positioning">Positioning&lt;/a>&lt;/h3>
+&lt;p>Positioning force는 지정한 좌표(x, y)로 &lt;code>nodes&lt;/code>를 밀어내는 힘입니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceX()&lt;/code> 그리고 &lt;code>d3.forceY()&lt;/code>로 생성합니다. &lt;code>strength&lt;/code>로 밀어내는 힘을 결정합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const forceX = d3.forceX().strength(1);
+const forceY = d3.forceY(height / 2);
+simulation.force('x', forceX).force('y', forceY);
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>d3.forceRadial()&lt;/code> 함수는 원형을 기준으로 밀어내는 힘을 생성합니다. &lt;code>strength&lt;/code>로 밀어내는 힘을 결정합니다.&lt;/p>
+&lt;pre>&lt;code class="language-js">const forceRadial = d3
+.forceRadial(100, width / 2, height / 2)
+.strength(0.5);
+simulation.force('radial', forceRadial);
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>d3-force의 개념과 동작 방식을 코드와 함께 살펴보았습니다. d3-force의 simulation, tick을 조절할 수 있는 alpha 그리고 force의 종류에 대해서 알아봤습니다. 처음 볼 땐 어려워보일 수 있겠지만 알아야 할 개념이 그리 많지 않고 이해하기 쉬운 코드와 패턴으로 금방 익힐 수 있었습니다.&lt;/p>
+&lt;p>아직 d3-selection를 다루지 않아 계산 결과값으로 그래프를 그려보진 않았습니다만, 다음 시간에 d3-selection을 학습하면서 SVG로 그래프를 그려보고 이후 d3-zoom과 d3-drag를 적용해보도록 하겠습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/d3/d3-force">d3-force&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://stackoverflow.com/q/46426072/9735184">What is the difference between alphaTarget and alphaMin?&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
