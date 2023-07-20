@@ -1,5 +1,6 @@
 title = "jinyongp.dev"
 baseURL = "https://jinyongp.dev/"
+copyright = "Copyright 2023. Jinyong Park. All rights reserved."
 
 defaultContentLanguage = "ko"
 hasCJKLanguage = true
@@ -68,3 +69,11 @@ weight = 1
 url = "https://github.com/jinyongp/"
 name = "github"
 weight = 2
+
+[outputs]
+home = ['HTML', 'RSS']
+page = ['HTML', 'RSS']
+
+[outputFormats.RSS]
+mediaType = "application/rss+xml"
+baseName = "feed"

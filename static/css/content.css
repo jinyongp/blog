@@ -53,8 +53,8 @@
   }
 
   & blockquote {
-    @apply border-l-4 border-accent/70 bg-accent/10;
-    @apply pl-3 py-1 text-gray-800 text-sm;
+    @apply border-l-[6px] border-accent/50 bg-accent/5;
+    @apply pl-3 pr-5 py-1 text-gray-800 text-sm;
   }
 
   & .hljs {

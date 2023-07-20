@@ -7,6 +7,10 @@
   content="c36f259891f25bc92e3884c1ceb626a0aaa76146"
 />
 
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type (printf `%sfeed.xml` $.Site.BaseURL) $.Site.Title | safeHTML }}
+{{ end -}}
+
 {{ with .Site.Params.author }}
   <meta name="author" content="{{ .username }} <{{ .email }}>" />
 {{ end }}
