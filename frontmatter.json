@@ -61,6 +61,31 @@
           "title": "tags",
           "name": "tags",
           "type": "tags"
+        },
+        {
+          "title": "series",
+          "name": "series",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "list",
+              "name": "list",
+              "type": "string",
+              "default": null
+            },
+            {
+              "title": "prev",
+              "name": "prev",
+              "type": "string",
+              "default": null
+            },
+            {
+              "title": "next",
+              "name": "next",
+              "type": "string",
+              "default": null
+            }
+          ]
         }
       ]
     }

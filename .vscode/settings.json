@@ -3,11 +3,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": [
-    "markdownify",
-    "tailwindcss",
+    "datetime",
     "jinyongp",
     "lastmod",
-    "nbcamp"
+    "markdownify",
+    "nbcamp",
+    "tailwindcss"
   ],
   "css.validate": false,
   "editor.formatOnSave": true,

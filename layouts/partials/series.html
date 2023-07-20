@@ -1,33 +1,60 @@
-{{ if or .Params.prevSeries .Params.nextSeries }}
-  <div class="grid grid-cols-1 gap-2 md:gap-20 md:grid-cols-2 text-slate-700">
-    <div>
-      {{ with .GetPage (.Params.prevSeries | default "void") }}
-        <a
-          href="{{ .RelPermalink }}"
-          class="flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent"
-        >
-          <div class="flex items-center gap-1">
-            {{ partial "svg" (dict "name" "arrow-left" "class" "mb-1") }}
-            <span class="font-bold">PREV</span>
-          </div>
-          <span class="truncate whitespace-nowrap">{{ .Title }}</span>
-        </a>
-      {{ end }}
+{{ $style := (dict
+  "anchor" "flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent"
+  "icon" "flex items-center gap-1 [&_span]:font-bold"
+  "title" "truncate whitespace-nowrap"
+  )
+}}
+
+{{ with .Params.series }}
+  {{ if or .prev .next }}
+    {{ $prev := $.Site.GetPage (or (string .prev) "void") }}
+    {{ $next := $.Site.GetPage (or (string .next) "void") }}
+    <div class="grid grid-cols-1 gap-2 md:gap-20 md:grid-cols-2 text-slate-600">
+      <div>
+        {{ with $prev }}
+          <a href="{{ .RelPermalink }}" class="{{ $style.anchor }}">
+            <div class="{{ $style.icon }}">
+              {{ partial "svg" (dict "name" "arrow-left" "class" "mb-1") }}
+              <span>PREV</span>
+            </div>
+            <span class="{{ $style.title }}">{{ .Title }}</span>
+          </a>
+        {{ end }}
+      </div>
+      <div>
+        {{ with $next }}
+          <a href="{{ .RelPermalink }}" class="{{ $style.anchor }} text-right">
+            <div class="{{ $style.icon }} justify-end">
+              <span>NEXT</span>
+              {{ partial "svg" (dict "name" "arrow-right" "class" "mb-1") }}
+            </div>
+            <span class="{{ $style.title }}">{{ .Title }}</span>
+          </a>
+        {{ end }}
+      </div>
     </div>
-    <div>
-      {{ with .GetPage (.Params.nextSeries | default "void") }}
-        <a
-          href="{{ .RelPermalink }}"
-          class="flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent text-right"
-        >
-          <div class="flex items-center gap-1 justify-end">
-            <span class="font-bold">NEXT</span>
-            {{ partial "svg" (dict "name" "arrow-right" "class" "mb-1") }}
-          </div>
-          <span class="truncate whitespace-nowrap">{{ .Title }}</span>
-        </a>
-      {{ end }}
+  {{ end }}
+
+  {{ with .list }}
+    <div class="p-4 border rounded-md border-current text-slate-600 mb-4">
+      <h2 class="mb-4">Series</h2>
+      <div class="list">
+        <ol style="counter-reset: series;">
+          {{ range . }}
+            {{ with $.GetPage . }}
+              <li
+                style="counter-increment: series;"
+                class="before:content-[counter(series)'._'] before:inline-block before:-translate-y-px"
+              >
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ol>
+      </div>
     </div>
-  </div>
-  <hr class="mt-4" />
+  {{ end }}
+
+
+  <hr class="my-4" />
 {{ end }}
