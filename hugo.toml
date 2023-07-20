@@ -8,10 +8,17 @@ enableRobotsTXT = true
 
 [params]
 author = "jinyongp"
-favicon = "image/favicon.png"
-font = "Raleway"              # fonts.google.com
+favicon = "favicon.png"
+font = "Raleway"        # fonts.google.com
 accent = "RoyalBlue"
 highlight = "nord"
+
+[params.giscus]
+repo = "jinyongp/jinyongp.dev"
+repoId = "R_kgDOHJDtcg"
+category = "Comments"
+categoryId = "DIC_kwDOHJDtcs4CXf7o"
+lang = "ko"
 
 [markup]
 [markup.highlight]

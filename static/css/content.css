@@ -43,6 +43,14 @@
   @apply bg-blue-200/30 border-blue-200/80 border text-accent px-0.5 rounded-sm text-[90%];
 }
 
+.content img {
+  @apply rounded-md my-4;
+}
+
 .content .hljs {
   @apply rounded-md text-[13px] my-3 leading-snug;
+}
+
+.giscus {
+  @apply mt-24;
 }
