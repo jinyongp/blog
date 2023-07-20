@@ -22,11 +22,16 @@
 
     <nav class="shadow-md">
       {{ block "nav" . }}
+
         <div class="layout flex justify-between text-gray-600">
           <ul class="flex gap-4 py-4">
             {{ range .Site.Menus.main }}
               <li class="hover:text-accent">
-                <a href="{{ .PageRef }}">{{ .Name }}</a>
+                {{ if and (not (eq .PageRef "/")) (hasPrefix $.RelPermalink .PageRef) }}
+                  <a href="{{ .PageRef }}" class="text-accent">{{ .Name }}</a>
+                {{ else }}
+                  <a href="{{ .PageRef }}">{{ .Name }}</a>
+                {{ end }}
               </li>
             {{ end }}
           </ul>
@@ -43,12 +48,12 @@
       {{ end }}
     </nav>
 
-    <main class="flex-auto">
+    <main class="pb-24">
       {{ block "main" . }}
       {{ end }}
     </main>
 
-    <footer>
+    <footer class="absolute bottom-0 w-full">
       {{ block "footer" . }}
         <div class="flex justify-center py-8">
           <p class="[&_a]:text-accent">
