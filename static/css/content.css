@@ -16,11 +16,11 @@
 
 .content {
   & h1 {
-    @apply mt-7 mb-3;
+    @apply mt-8 mb-4;
   }
 
   & h2 {
-    @apply mt-6 mb-2;
+    @apply mt-7 mb-3;
 
     & a::after {
       @apply bottom-1 h-[2px];
@@ -28,7 +28,7 @@
   }
 
   & h3 {
-    @apply mt-5 mb-1;
+    @apply mt-6 mb-2;
 
     & a::after {
       @apply bottom-2 h-[2px];
@@ -36,27 +36,27 @@
   }
 
   & h4 {
-    @apply mt-4 mb-0.5;
+    @apply mt-5 mb-1;
   }
 
   & h5 {
-    @apply mt-2 mb-0.5;
+    @apply mt-3 mb-1;
   }
 
   & h6 {
-    @apply mt-1;
+    @apply mt-2;
   }
 
   & code:not([class]) {
     @apply bg-blue-200/30 border-blue-200/80 border text-accent px-0.5 rounded-sm text-[90%];
   }
 
-  & img {
-    @apply rounded-md my-4;
+  & .hljs {
+    @apply text-[13px] leading-snug;
   }
 
-  & .hljs {
-    @apply rounded-md text-[13px] my-3 leading-snug;
+  & :is(img, iframe, .hljs) {
+    @apply rounded-md my-4;
   }
 }
 

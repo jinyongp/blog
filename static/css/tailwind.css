@@ -6,18 +6,13 @@
 
 @layer base {
   html {
-    @apply text-sm leading-normal;
-  }
-
-  html,
-  body {
-    @apply antialiased min-h-screen;
+    @apply text-sm leading-normal antialiased;
 
     font-family: var(--font), sans-serif;
   }
 
   body {
-    @apply flex flex-col;
+    @apply relative min-h-screen;
   }
 
   :is(h1, h2, h3) {
