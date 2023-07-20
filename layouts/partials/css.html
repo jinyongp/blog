@@ -3,14 +3,16 @@
 {{ $style := resources.Get "/main.css" | minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}"
-/>
+{{ with .Site.Params.style }}
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family={{ .font }}"
+  />
 
 <style>
   :root {
-    --accent: {{ .Site.Params.accent | default "black" }};
-    --font: {{ .Site.Params.font | default "Raleway" }};
+    --accent: {{ .accent | default "black" }};
+    --font: {{ .font | default "Raleway" }};
   }
 </style>
+{{ end }}

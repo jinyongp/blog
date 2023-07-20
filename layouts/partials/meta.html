@@ -7,7 +7,10 @@
   content="c36f259891f25bc92e3884c1ceb626a0aaa76146"
 />
 
-<meta name="author" content="{{ .Site.Params.Author }}" />
+{{ with .Site.Params.author }}
+  <meta name="author" content="{{ .username }} <{{ .email }}>" />
+{{ end }}
+
 
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:title" content="{{ .Title }}" />

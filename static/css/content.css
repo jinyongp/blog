@@ -1,18 +1,16 @@
-:is(.content, .list) {
-  & a {
-    @apply text-accent relative;
+.content a,
+.underline-lsre {
+  @apply text-accent relative;
 
-    &::after {
-      @apply absolute content-[""] bg-accent opacity-60 left-0 w-full h-px bottom-px;
-      @apply scale-x-0 transition-transform duration-200 ease-in-out origin-bottom-right;
-    }
+  &::after {
+    @apply absolute content-[""] bg-current opacity-60 left-0 w-full h-px bottom-px;
+    @apply scale-x-0 transition-transform duration-200 ease-in-out origin-bottom-right;
+  }
 
-    &:hover::after {
-      @apply origin-bottom-left scale-x-100;
-    }
+  &:hover::after {
+    @apply origin-bottom-left scale-x-100;
   }
 }
-
 .content {
   & h1 {
     @apply mt-8 mb-4;

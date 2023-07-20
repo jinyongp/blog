@@ -1,7 +1,9 @@
+title = "jinyongp.dev"
 baseURL = "https://jinyongp.dev/"
+
 defaultContentLanguage = "ko"
 hasCJKLanguage = true
-title = "jinyongp.dev"
+
 googleAnalytics = "G-SH0YPW4E1C"
 enableRobotsTXT = true
 
@@ -11,11 +13,17 @@ filename = "sitemap.xml"
 priority = 0.5
 
 [params]
-author = "jinyongp"
 favicon = "favicon.png"
-font = "Raleway"        # https://fonts.google.com
-highlight = "nord"      # https://highlightjs.org/static/demo
-accent = "65 105 225"   # "R G B"
+
+[params.style]
+font = "Raleway"      # https://fonts.google.com
+highlight = "nord"    # https://highlightjs.org/static/demo
+accent = "65 105 225" # "R G B"
+
+[params.author]
+name = "Jinyong Park"
+username = "jinyongp"
+email = "dev.jinyongp@gmail.com"
 
 [params.giscus]
 repo = "jinyongp/jinyongp.dev"
@@ -24,7 +32,6 @@ category = "Comments"
 categoryId = "DIC_kwDOHJDtcs4CXf7o"
 lang = "ko"
 
-[markup]
 [markup.highlight]
 tabWidth = 2
 codeFences = false
@@ -32,7 +39,6 @@ codeFences = false
 [markup.goldmark.renderer]
 unsafe = true
 
-[menu]
 [[menu.main]]
 name = "Home"
 pageRef = "/"

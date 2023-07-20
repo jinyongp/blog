@@ -9,7 +9,10 @@
         <li>
           <div class="py-5">
             <div class="px-2 flex flex-col gap-2">
-              <a class="font-medium text-xl w-fit" href="{{ .RelPermalink }}">
+              <a
+                class="underline-lsre font-medium text-xl w-fit"
+                href="{{ .RelPermalink }}"
+              >
                 {{ .Title }}
                 {{ if .Draft }}
                   {{ partial "svg" (dict "name" "person-digging" "class" "text-rose-500 float-right pl-2 mt-0.5") }}

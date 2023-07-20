@@ -1,4 +1,5 @@
 {{ $style := (dict
+  "theme" "text-slate-500"
   "anchor" "flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent"
   "icon" "flex items-center gap-1 [&_span]:font-bold"
   "title" "truncate whitespace-nowrap"
@@ -9,7 +10,9 @@
   {{ if or .prev .next }}
     {{ $prev := $.Site.GetPage (or (string .prev) "void") }}
     {{ $next := $.Site.GetPage (or (string .next) "void") }}
-    <div class="grid grid-cols-1 gap-2 md:gap-20 md:grid-cols-2 text-slate-600">
+    <div
+      class="{{ $style.theme }} grid grid-cols-1 gap-2 md:gap-20 md:grid-cols-2"
+    >
       <div>
         {{ with $prev }}
           <a href="{{ .RelPermalink }}" class="{{ $style.anchor }}">
@@ -36,7 +39,7 @@
   {{ end }}
 
   {{ with .list }}
-    <div class="p-4 border rounded-md border-current text-slate-600 mb-4">
+    <div class="{{ $style.theme }} p-4 border rounded-md border-current mb-4">
       <h2 class="mb-2">Series</h2>
       <div class="list">
         <ol style="counter-reset: series;">
@@ -46,7 +49,9 @@
                 style="counter-increment: series;"
                 class="before:content-[counter(series)'._'] before:inline-block before:-translate-y-px"
               >
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <a class="underline-lsre" href="{{ .RelPermalink }}"
+                  >{{ .Title }}</a
+                >
               </li>
             {{ end }}
           {{ end }}
