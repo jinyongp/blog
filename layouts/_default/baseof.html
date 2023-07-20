@@ -13,6 +13,10 @@
   </head>
 
   <body>
+    {{ block "body-start" . }}
+    {{ end }}
+
+
     <nav class="shadow-md">
       {{ block "nav" . }}
         <div class="layout">
@@ -41,5 +45,8 @@
         </div>
       {{ end }}
     </footer>
+
+    {{ block "body-end" . }}
+    {{ end }}
   </body>
 </html>
