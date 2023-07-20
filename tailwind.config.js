@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "accent": "var(--accent)",
+        "accent": "rgb(var(--accent) / <alpha-value>)",
       },
       width: (theme) => theme("maxWidth"),
       height: (theme) => theme("maxHeight"),
