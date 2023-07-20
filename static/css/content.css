@@ -47,15 +47,32 @@
     @apply mt-2;
   }
 
+  & :is(ol, ul) {
+    @apply pl-6 leading-relaxed;
+  }
+
+  & ol {
+    @apply list-decimal;
+  }
+
+  & ul {
+    @apply list-disc;
+  }
+
   & code:not([class]) {
-    @apply bg-blue-200/30 border-blue-200/80 border text-accent px-0.5 rounded-sm text-[90%];
+    @apply bg-accent/10 border-accent/40 border text-accent px-0.5 rounded-sm text-[80%] align-text-top;
+  }
+
+  & blockquote {
+    @apply border-l-4 border-accent/70 bg-accent/10;
+    @apply pl-3 py-1 text-gray-800 text-sm;
   }
 
   & .hljs {
     @apply text-[13px] leading-snug;
   }
 
-  & :is(img, iframe, .hljs) {
+  & :is(blockquote, img, iframe, .hljs) {
     @apply rounded-md my-4;
   }
 }

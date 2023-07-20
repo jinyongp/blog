@@ -3,7 +3,6 @@ defaultContentLanguage = "ko"
 hasCJKLanguage = true
 title = "jinyongp.dev"
 googleAnalytics = "G-SH0YPW4E1C"
-pluralizelisttitles = false
 enableRobotsTXT = true
 
 [sitemap]
@@ -15,7 +14,7 @@ priority = 0.5
 author = "jinyongp"
 favicon = "favicon.png"
 font = "Raleway"        # fonts.google.com
-accent = "RoyalBlue"
+accent = "65 105 225"   # "R G B"
 highlight = "rainbow"
 
 [params.giscus]
