@@ -12,7 +12,12 @@
               <a class="font-medium text-xl w-fit" href="{{ .RelPermalink }}">
                 {{ .Title }}
                 {{ if .Draft }}
-                  <i class="fa-solid fa-person-digging text-rose-500"></i>
+                  <i
+                    class="text-rose-500 float-right pl-2 mt-0.5"
+                    title="WORK IN PROGRESS"
+                  >
+                    {{ partial "svg/person-digging.svg" . }}
+                  </i>
                 {{ end }}
               </a>
               <span class="text-sm">{{ $.Scratch.Get "description" }}</span>

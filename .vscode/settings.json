@@ -12,7 +12,8 @@
   "css.validate": false,
   "editor.formatOnSave": true,
   "files.associations": {
-    "*.css": "postcss"
+    "*.css": "postcss",
+    "*.svg": "html"
   },
   "tailwindCSS.rootFontSize": 14
 }

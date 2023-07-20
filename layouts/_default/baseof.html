@@ -38,8 +38,8 @@
           <ul class="flex gap-4 py-4">
             {{ range .Site.Menus.icon }}
               <li class="hover:text-accent">
-                <a href="{{ .URL }}">
-                  <i class="{{ .Name }} text-xl"></i>
+                <a class="text-lg" href="{{ .URL }}">
+                  {{ partial (replace "svg/name.svg" "name" .Name) . }}
                 </a>
               </li>
             {{ end }}

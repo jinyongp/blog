@@ -1,5 +1,5 @@
 {{ if or .Params.prevSeries .Params.nextSeries }}
-  <div class="grid grid-cols-1 gap-2 md:gap-10 md:grid-cols-2 text-slate-700">
+  <div class="grid grid-cols-1 gap-2 md:gap-20 md:grid-cols-2 text-slate-700">
     <div>
       {{ with .GetPage (.Params.prevSeries | default "void") }}
         <a
@@ -7,8 +7,8 @@
           class="flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent"
         >
           <div class="flex items-center gap-1">
-            <i class="fa-solid fa-arrow-left"></i>
-            <span class="font-bold">PREVIOUS SERIES</span>
+            {{ partial "svg/arrow-left.svg" . }}
+            <span class="font-bold">PREV</span>
           </div>
           <span class="truncate whitespace-nowrap">{{ .Title }}</span>
         </a>
@@ -21,8 +21,8 @@
           class="flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent text-right"
         >
           <div class="flex items-center gap-1 justify-end">
-            <span class="font-bold">NEXT SERIES</span>
-            <i class="fa-solid fa-arrow-right"></i>
+            <span class="font-bold">NEXT</span>
+            {{ partial "svg/arrow-right.svg" . }}
           </div>
           <span class="truncate whitespace-nowrap">{{ .Title }}</span>
         </a>

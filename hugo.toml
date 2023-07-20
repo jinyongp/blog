@@ -13,9 +13,9 @@ priority = 0.5
 [params]
 author = "jinyongp"
 favicon = "favicon.png"
-font = "Raleway"        # fonts.google.com
+font = "Raleway"        # https://fonts.google.com
+highlight = "hybrid"    # https://highlightjs.org/static/demo
 accent = "65 105 225"   # "R G B"
-highlight = "rainbow"
 
 [params.giscus]
 repo = "jinyongp/jinyongp.dev"
@@ -55,10 +55,10 @@ weight = 4
 
 [[menu.icon]]
 url = "mailto:dev.jinyongp@gmail.com"
-name = "fa-solid fa-square-envelope"
+name = "envelope"
 weight = 1
 
 [[menu.icon]]
 url = "https://github.com/jinyongp/"
-name = "fa-brands fa-github-square"
+name = "github"
 weight = 2
