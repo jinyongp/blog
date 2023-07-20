@@ -1,0 +1,17 @@
+@keyframes pop {
+  0% {
+    @apply opacity-0;
+
+    transform: rotate(180deg) scale(0);
+  }
+  50 % {
+    @apply opacity-30;
+
+    transform: rotate(180deg) scale(0.5);
+  }
+  100% {
+    @apply opacity-100;
+
+    transform: rotate(0deg) scale(1);
+  }
+}
