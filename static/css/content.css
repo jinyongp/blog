@@ -1,10 +1,9 @@
-.content,
-.list {
+:is(.content, .list) {
   & a {
     @apply text-accent relative;
 
     &::after {
-      @apply absolute content-[""] bg-[var(--accent)] opacity-60 left-0 w-full h-px bottom-px;
+      @apply absolute content-[""] bg-accent opacity-60 left-0 w-full h-px bottom-px;
       @apply scale-x-0 transition-transform duration-200 ease-in-out origin-bottom-right;
     }
 
