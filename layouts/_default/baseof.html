@@ -39,7 +39,7 @@
             {{ range .Site.Menus.icon }}
               <li class="hover:text-accent">
                 <a class="text-lg" href="{{ .URL }}">
-                  {{ partial (replace "svg/name.svg" "name" .Name) . }}
+                  {{ partial "svg" (dict "name" .Name) }}
                 </a>
               </li>
             {{ end }}

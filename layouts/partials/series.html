@@ -7,7 +7,7 @@
           class="flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent"
         >
           <div class="flex items-center gap-1">
-            {{ partial "svg/arrow-left.svg" . }}
+            {{ partial "svg" (dict "name" "arrow-left" "class" "mb-1") }}
             <span class="font-bold">PREV</span>
           </div>
           <span class="truncate whitespace-nowrap">{{ .Title }}</span>
@@ -22,7 +22,7 @@
         >
           <div class="flex items-center gap-1 justify-end">
             <span class="font-bold">NEXT</span>
-            {{ partial "svg/arrow-right.svg" . }}
+            {{ partial "svg" (dict "name" "arrow-right" "class" "mb-1") }}
           </div>
           <span class="truncate whitespace-nowrap">{{ .Title }}</span>
         </a>

@@ -12,12 +12,7 @@
               <a class="font-medium text-xl w-fit" href="{{ .RelPermalink }}">
                 {{ .Title }}
                 {{ if .Draft }}
-                  <i
-                    class="text-rose-500 float-right pl-2 mt-0.5"
-                    title="WORK IN PROGRESS"
-                  >
-                    {{ partial "svg/person-digging.svg" . }}
-                  </i>
+                  {{ partial "svg" (dict "name" "person-digging" "class" "text-rose-500 float-right pl-2 mt-0.5") }}
                 {{ end }}
               </a>
               <span class="text-sm">{{ $.Scratch.Get "description" }}</span>

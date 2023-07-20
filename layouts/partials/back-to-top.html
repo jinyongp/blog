@@ -2,7 +2,5 @@
   id="js-scroll-back-to-top"
   class="back-to-top hide fixed bottom-10 right-10 rounded-full w-10 h-10 bg-accent grid place-items-center cursor-pointer"
 >
-  <i class="text-white">
-    {{ partial "svg/arrow-up.svg" . }}
-  </i>
+  {{ partial "svg" (dict "name" "arrow-up" "class" "text-white") }}
 </div>

@@ -48,7 +48,7 @@
   }
 
   svg {
-    @apply fill-current mb-0.5;
+    @apply fill-current;
   }
 }
 

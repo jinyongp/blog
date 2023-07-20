@@ -1,0 +1,9 @@
+{
+  "Partial SVG": {
+    "prefix": "partial-svg",
+    "body": [
+      "{{ partial \"svg\" (dict \"name\" \"$1\" \"class\" \"$2\") }}"
+    ],
+    "description": "Insert Partial SVG"
+  }
+}
