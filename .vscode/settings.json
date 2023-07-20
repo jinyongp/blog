@@ -11,4 +11,5 @@
     "markdownify",
     "tailwindcss"
   ],
+  "tailwindCSS.rootFontSize": 14
 }
