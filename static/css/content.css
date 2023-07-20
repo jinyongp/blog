@@ -4,7 +4,7 @@
     @apply text-accent relative;
 
     &::after {
-      @apply absolute content-[""] bg-[var(--accent)] opacity-60 left-0 w-full h-px b-px;
+      @apply absolute content-[""] bg-[var(--accent)] opacity-60 left-0 w-full h-px bottom-px;
       @apply scale-x-0 transition-transform duration-200 ease-in-out origin-bottom-right;
     }
 
@@ -15,16 +15,36 @@
 }
 
 .content {
+  & h1 {
+    @apply mt-7 mb-3;
+  }
+
   & h2 {
+    @apply mt-6 mb-2;
+
     & a::after {
       @apply bottom-1 h-[2px];
     }
   }
 
   & h3 {
+    @apply mt-5 mb-1;
+
     & a::after {
       @apply bottom-2 h-[2px];
     }
+  }
+
+  & h4 {
+    @apply mt-4 mb-0.5;
+  }
+
+  & h5 {
+    @apply mt-2 mb-0.5;
+  }
+
+  & h6 {
+    @apply mt-1;
   }
 
   & code:not([class]) {
