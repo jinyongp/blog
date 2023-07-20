@@ -2,8 +2,6 @@
 
 {{ $style := resources.Get "/main.css" | minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
-{{ $style := resources.Get "/syntax.css" | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 <link
   rel="stylesheet"

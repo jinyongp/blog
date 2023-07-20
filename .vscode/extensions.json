@@ -1,5 +1,10 @@
 {
   "recommendations": [
-    "eliostruyf.vscode-front-matter"
+    "bradlc.vscode-tailwindcss",
+    "cpylua.language-postcss",
+    "esbenp.prettier-vscode",
+    "eliostruyf.vscode-front-matter",
+    "budparr.language-hugo-vscode",
+    "eliostruyf.vscode-hugo-themer"
   ]
 }

@@ -18,6 +18,9 @@ highlight = "nord"
 tabWidth = 2
 codeFences = false
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [menu]
 [[menu.main]]
 name = "About"

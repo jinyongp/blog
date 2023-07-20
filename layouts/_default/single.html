@@ -14,3 +14,7 @@
     <article class="content [&_hr]:my-4">{{ .Content }}</article>
   </div>
 {{ end }}
+
+{{ define "body-end" }}
+  {{ partial "back-to-top" . }}
+{{ end }}
