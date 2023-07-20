@@ -7,14 +7,16 @@
 
 
         <li>
-          <div class="p-5 flex flex-col gap-2">
-            <a class="font-medium text-xl w-fit" href="{{ .RelPermalink }}">
-              {{ .Title }}
-              {{ if .Draft }}
-                <i class="fa-solid fa-person-digging text-rose-500"></i>
-              {{ end }}
-            </a>
-            <span class="text-sm">{{ $.Scratch.Get "description" }}</span>
+          <div class="py-5">
+            <div class="px-2 flex flex-col gap-2">
+              <a class="font-medium text-xl w-fit" href="{{ .RelPermalink }}">
+                {{ .Title }}
+                {{ if .Draft }}
+                  <i class="fa-solid fa-person-digging text-rose-500"></i>
+                {{ end }}
+              </a>
+              <span class="text-sm">{{ $.Scratch.Get "description" }}</span>
+            </div>
           </div>
         </li>
       {{ end }}

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    {{ block "head-begin" . }}{{ end }}
+
     {{ partial "meta" . }}
     {{ if eq .Title "jinyongp.dev" }}
       <title>Home</title>
@@ -10,20 +12,30 @@
 
     {{ partial "css" . }}
     {{ partial "script" . }}
+
+    {{ block "head-end" . }}{{ end }}
   </head>
 
   <body>
-    {{ block "body-start" . }}
-    {{ end }}
+    {{ block "body-begin" . }}{{ end }}
 
 
     <nav class="shadow-md">
       {{ block "nav" . }}
-        <div class="layout">
+        <div class="layout flex justify-between text-gray-600">
           <ul class="flex gap-4 py-4">
             {{ range .Site.Menus.main }}
               <li class="hover:text-accent">
                 <a href="{{ .PageRef }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
+          <ul class="flex gap-4 py-4">
+            {{ range .Site.Menus.icon }}
+              <li class="hover:text-accent">
+                <a href="{{ .URL }}">
+                  <i class="{{ .Name }} text-xl"></i>
+                </a>
               </li>
             {{ end }}
           </ul>
@@ -46,7 +58,6 @@
       {{ end }}
     </footer>
 
-    {{ block "body-end" . }}
-    {{ end }}
+    {{ block "body-end" . }}{{ end }}
   </body>
 </html>

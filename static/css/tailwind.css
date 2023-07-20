@@ -51,10 +51,6 @@
   p {
     @apply my-1;
   }
-
-  a {
-    @apply text-accent;
-  }
 }
 
 @layer components {

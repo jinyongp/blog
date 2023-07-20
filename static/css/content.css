@@ -1,6 +1,6 @@
 .content a,
 .list a {
-  @apply relative;
+  @apply text-accent relative;
 }
 
 .content a:hover,
