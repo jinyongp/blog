@@ -46,6 +46,10 @@
   p {
     @apply my-1;
   }
+
+  svg {
+    @apply fill-current mb-0.5;
+  }
 }
 
 @layer components {
