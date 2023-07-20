@@ -69,6 +69,10 @@
 
   & .hljs {
     @apply text-[13px] leading-snug;
+
+    & .hljs-comment {
+      color: #a5abb9;
+    }
   }
 
   & :is(blockquote, img, iframe, .hljs) {

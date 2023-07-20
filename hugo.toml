@@ -14,7 +14,7 @@ priority = 0.5
 author = "jinyongp"
 favicon = "favicon.png"
 font = "Raleway"        # https://fonts.google.com
-highlight = "hybrid"    # https://highlightjs.org/static/demo
+highlight = "nord"      # https://highlightjs.org/static/demo
 accent = "65 105 225"   # "R G B"
 
 [params.giscus]
