@@ -29,7 +29,7 @@
 &lt;h3 id="implementation">Implementation&lt;/h3>
 &lt;h4 id="setup">Setup&lt;/h4>
 &lt;p>과제에서는 단순히 연산 후 출력하는 걸 요구하고 있지만, 저는 &lt;code>readLine&lt;/code> 함수를 활용하여 사용자로부터 입력을 받아 계속 연산이 가능하도록 구현했습니다.&lt;/p>
-&lt;p>실행 가능한 파일로 작성하기 위해 &lt;code>https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode&lt;/code> 문서를 참고하여 프로젝트를 생성했습니다.&lt;/p>
+&lt;p>실행 가능한 파일로 작성하기 위해 &lt;a href="https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode">해당 문서&lt;/a>를 참고하여 프로젝트를 생성했습니다.&lt;/p>
 &lt;pre>&lt;code class="language-sh">$ swift package init --type executable
 &lt;/code>&lt;/pre>
 &lt;p>위 명령어를 실행하면 현재 위치한 폴더에 &lt;code>Package.swift&lt;/code> 파일을 생성합니다.&lt;/p>
@@ -124,7 +124,7 @@ operators: [
 )
 calculator.calculate(10, name: &amp;quot;+&amp;quot;)
 &lt;/code>&lt;/pre>
-&lt;p>이로써 &lt;code>Calculator&lt;/code>가 더이상 구체적인 클래스가 아닌 추상화된 프로토콜에 의존합니다. (DIP. 의존성 역전 원칙)&lt;/p>
+&lt;p>이로써 &lt;code>Calculator&lt;/code>는 구체적인 클래스가 아닌 추상화된 프로토콜에 의존합니다. (DIP. 의존성 역전 원칙)&lt;/p>
 &lt;h3 id="trouble-shooting">Trouble Shooting&lt;/h3>
 &lt;h4 id="1-0으로-초기화할-때-제네릭-타입으로-변환할-수-없는-문제">1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제&lt;/h4>
 &lt;p>계산기이니 &lt;code>clear&lt;/code> 메서드를 작성했고, 이는 결과를 0으로 초기화하는 단순한 작업을 수행합니다. &lt;code>Int&lt;/code> 타입은 0으로 초기화하는 반면에 &lt;code>Double&lt;/code>은 0.0으로 초기화해야 했기 때문입니다. 제네릭 타입으로부터 이를 확인할 수 있는 방법은 없었지만, 0과 0.0 이외에 경우는 없다고 가정하고 nullish coalescing operator를 사용하여 해결했습니다.&lt;/p>
