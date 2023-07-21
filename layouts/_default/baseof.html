@@ -56,8 +56,11 @@
     <footer class="absolute bottom-0 w-full">
       {{ block "footer" . }}
         <div class="flex justify-center py-8">
-          <p class="[&_a]:text-accent">
-            {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io)." | markdownify }}
+          <p class="[&_a]:text-accent text-center text-sm">
+            {{ .Site.Copyright }}<br />
+            <span class="text-xs"
+              >{{ "Powered by [Hugo](https://gohugo.io)." | markdownify }}</span
+            >
           </p>
         </div>
       {{ end }}
