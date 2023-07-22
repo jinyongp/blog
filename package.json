@@ -16,6 +16,7 @@
     "start:dev": "hugo server -D"
   },
   "devDependencies": {
+    "@csstools/postcss-is-pseudo-class": "^4.0.0",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",
     "postcss-import": "^15.1.0",
