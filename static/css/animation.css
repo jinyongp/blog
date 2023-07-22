@@ -1,4 +1,4 @@
-@keyframes pop {
+@keyframes clockwise-pop {
   0% {
     @apply opacity-0;
 

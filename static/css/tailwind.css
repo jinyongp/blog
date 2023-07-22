@@ -1,7 +1,5 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 @layer base {
@@ -58,11 +56,36 @@
 
   .back-to-top {
     &:not([class*="hide"]) {
-      @apply animate-[pop_0.5s_cubic-bezier(0.34,1.56,0.64,1)];
+      @apply animate-[clockwise-pop_0.5s_cubic-bezier(0.34,1.56,0.64,1)];
     }
 
     &.hide {
       @apply opacity-0 transition-all scale-50 duration-300;
+    }
+  }
+}
+
+@layer utilities {
+  .underline-lsre {
+    @apply relative;
+
+    &::before {
+      @apply absolute content-[""] bg-current opacity-60 left-0 w-full h-[0.07em] bottom-[0.05em];
+      @apply scale-x-0 transition-transform duration-200 ease-in-out origin-bottom-right;
+    }
+
+    &:hover::before {
+      @apply origin-bottom-left scale-x-100;
+    }
+  }
+
+  .underline-fade {
+    text-decoration: underline 0.08em theme(colors.accent/0);
+    transition: text-decoration-color 0.15s ease-in-out;
+
+    &:hover,
+    &:focus {
+      text-decoration-color: theme(colors.accent/70%);
     }
   }
 }
