@@ -9,10 +9,10 @@
     href="https://fonts.googleapis.com/css?family={{ .font }}"
   />
 
-<style>
-  :root {
-    --accent: {{ .accent | default "black" }};
-    --font: {{ .font | default "Raleway" }};
-  }
-</style>
+  <style>
+    :root {
+      --accent: {{ .accent | default "black" }};
+      --font: {{ .font | default "Raleway" }};
+    }
+  </style>
 {{ end }}
