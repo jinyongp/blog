@@ -1,71 +1,62 @@
-.content a,
-.underline-lsre {
-  @apply text-accent relative;
-
-  &::after {
-    @apply absolute content-[""] bg-current opacity-60 left-0 w-full h-px bottom-px;
-    @apply scale-x-0 transition-transform duration-200 ease-in-out origin-bottom-right;
-  }
-
-  &:hover::after {
-    @apply origin-bottom-left scale-x-100;
-  }
-}
 .content {
-  & h1 {
+  h1 {
     @apply mt-8 mb-4;
   }
 
-  & h2 {
+  h2 {
     @apply mt-7 mb-3;
   }
 
-  & h3 {
+  h3 {
     @apply mt-6 mb-2;
   }
 
-  & h4 {
+  h4 {
     @apply mt-5 mb-1;
   }
 
-  & h5 {
+  h5 {
     @apply mt-3 mb-1;
   }
 
-  & h6 {
+  h6 {
     @apply mt-2;
   }
 
-  & :is(ol, ul) {
+  a {
+    @apply text-accent;
+  }
+
+  :is(ol, ul) {
     @apply pl-6 leading-relaxed;
   }
 
-  & ol {
+  ol {
     @apply list-decimal;
   }
 
-  & ul {
+  ul {
     @apply list-disc;
   }
 
-  & code:not([class]) {
+  code:not([class]) {
     @apply bg-accent/5 text-accent px-1 py-0.5 rounded-sm text-[80%] align-text-top;
   }
 
-  & blockquote {
+  blockquote {
     @apply border-l-[6px] border-accent/50 bg-accent/5;
     @apply pl-3 pr-5 py-1 text-gray-800 text-sm;
   }
 
-  & .hljs {
+  .hljs {
     @apply text-[13px] leading-snug;
 
-    & .hljs-comment {
+    .hljs-comment {
       color: #a5abb9;
     }
   }
 
-  & :is(blockquote, img, iframe, .hljs) {
+  :is(blockquote, img, iframe, .hljs) {
     @apply rounded-md my-4;
   }
 }
