@@ -10,52 +10,134 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/icon/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/16.png",
+      "size": "16x16",
+      "type": "image/png"
     },
     {
-      "src": "/icon/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/20.png",
+      "size": "20x20",
+      "type": "image/png"
     },
     {
-      "src": "/icon/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/29.png",
+      "size": "29x29",
+      "type": "image/png"
     },
     {
-      "src": "/icon/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/32.png",
+      "size": "32x32",
+      "type": "image/png"
     },
     {
-      "src": "/icon/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/40.png",
+      "size": "40x40",
+      "type": "image/png"
     },
     {
-      "src": "/icon/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/50.png",
+      "size": "50x50",
+      "type": "image/png"
     },
     {
-      "src": "/icon/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/57.png",
+      "size": "57x57",
+      "type": "image/png"
     },
     {
-      "src": "/icon/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/icon/ios/58.png",
+      "size": "58x58",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/60.png",
+      "size": "60x60",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/64.png",
+      "size": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/72.png",
+      "size": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/76.png",
+      "size": "76x76",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/80.png",
+      "size": "80x80",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/87.png",
+      "size": "87x87",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/100.png",
+      "size": "100x100",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/114.png",
+      "size": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/120.png",
+      "size": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/128.png",
+      "size": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/144.png",
+      "size": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/152.png",
+      "size": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/167.png",
+      "size": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/180.png",
+      "size": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/192.png",
+      "size": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/256.png",
+      "size": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/512.png",
+      "size": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/ios/1024.png",
+      "size": "1024x1024",
+      "type": "image/png"
     }
   ]
 }

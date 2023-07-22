@@ -10,9 +10,9 @@
     "url": "https://jinyongp.dev"
   },
   "scripts": {
-    "watch:css": "npm run build:tailwind -- --watch",
-    "build:css": "npm run build:tailwind -- --minify",
-    "build:tailwind": "tailwindcss -i ./static/css/main.css -o ./assets/main.css --postcss",
+    "watch:css": "npm run build:tw -- --watch",
+    "build:css": "npm run build:tw -- --minify",
+    "build:tw": "tailwindcss -i ./static/css/main.css -o ./assets/main.css --postcss",
     "start:dev": "hugo server -D"
   },
   "devDependencies": {

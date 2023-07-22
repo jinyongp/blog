@@ -36,8 +36,8 @@
           </ul>
           <ul class="flex gap-4 py-4">
             {{ range .Site.Menus.icon }}
-              <li class="hover:text-accent">
-                <a class="text-lg" href="{{ .URL }}">
+              <li class="hover:text-accent grid place-items-center">
+                <a class="text-xl" href="{{ .URL }}">
                   {{ partial "svg" (dict "name" .Name) }}
                 </a>
               </li>
