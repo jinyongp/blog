@@ -1,5 +1,9 @@
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+<meta name="HandheldFriendly" content="true" />
 
 <link rel="canonical" href="https://jinyongp.dev" />
 <meta
@@ -13,6 +17,10 @@
 
 {{ with .Site.Params.author }}
   <meta name="author" content="{{ .username }} <{{ .email }}>" />
+{{ end }}
+
+{{ with delimit (union .Params.keywords .Params.tags) ", " }}
+  <meta name="keywords" content="{{ . }}" />
 {{ end }}
 
 

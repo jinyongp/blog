@@ -4,7 +4,7 @@
     href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/{{ . }}.min.css"
   />
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <script>
+  <script async>
     hljs.highlightAll();
     hljs.configure({
       ignoreUnescapedHTML: true,
@@ -13,7 +13,7 @@
 {{ end }}
 
 {{ with .Site.Config.Services.GoogleAnalytics.ID }}
-  <script>
+  <script async>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
@@ -31,7 +31,7 @@
 {{ end }}
 
 
-<script>
+<script async>
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/js/sw.js")
@@ -47,4 +47,4 @@
   }
 </script>
 
-<script src="/js/main.js"></script>
+<script async src="/js/main.js"></script>
