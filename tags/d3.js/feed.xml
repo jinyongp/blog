@@ -4,6 +4,8 @@
 &lt;p>이를 해결하기 위해서 &lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Canvas API&lt;/a
 >
 를 이용할 수 있습니다. Canvas API를 이용하면 d3-selection을 다룰 일은 거의 없습니다. 특히나 이번처럼 단순히 원과 선만 그리면 되는 작업에서는 그리기 더욱 쉽습니다. 대신 zoom과 drag는 구현 방식에 차이가 있어 다소 어려운 점도 있습니다. 그럼 바로 코드와 함께 저번 시간에 작성한 내용을 Canvas API로 리팩토링해보도록 하겠습니다.&lt;/p>
@@ -13,6 +15,8 @@ href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API"
 &lt;p>Canvas API는 말 그대로 &lt;a
 class="underline-lsre"
 href="https://ko.wikipedia.org/wiki/%EC%BA%94%EB%B2%84%EC%8A%A4"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >캔버스&lt;/a
 >
 로 볼 수 있습니다. 그 위에 그림을 그리고 수정이 필요하다면 전부 지우고 다시 그리면 됩니다. 애니메이션이라면 매 프레임마다 지우고 그리기를 반복합니다. 이처럼 d3-force 또한 매 틱마다 반복하면 됩니다.&lt;/p>
@@ -20,6 +24,8 @@ href="https://ko.wikipedia.org/wiki/%EC%BA%94%EB%B2%84%EC%8A%A4"
 &lt;p>d3.js에 대해서 중점적으로 다루는 프로젝트이므로 Canvas API에 대해 자세한 언급은 없습니다. 이에 대한 내용은 &lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >공식 문서&lt;/a
 >
 를 참고 바랍니다.&lt;/p>
@@ -56,6 +62,8 @@ console.log(&amp;quot;Drawing Links!&amp;quot;);
 &lt;p>&lt;code>drawCanvas()&lt;/code>, &lt;code>drawNodes()&lt;/code> 그리고 &lt;code>drawLinks()&lt;/code> 함수 내에선 이제 d3-selection 없이 &lt;code>ctx&lt;/code>만으로 그림을 그립니다. 먼저 &lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>ctx.clearRect()&lt;/code>&lt;/a
 >
 로 &lt;code>canvas&lt;/code>를 전부 지워줍니다. 그리고 &lt;code>drawNodes()&lt;/code>와 &lt;code>drawLinks()&lt;/code>를 호출하여 &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 그려줍니다. 이 때, &lt;code>links&lt;/code>를 먼저 그려줘야만 &lt;code>nodes&lt;/code> 뒤에 그려집니다.&lt;/p>
@@ -115,6 +123,8 @@ this.ctx.restore();
 &lt;p>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom#zoomIdentity"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>d3.zoomIdentity&lt;/code>&lt;/a
 >
 는 &lt;code>{ k: 1, x: 0, y: 0 }&lt;/code>인 객체입니다. 이를 이용해 &lt;code>transform&lt;/code> 변수를 생성한 뒤, &lt;code>zoom&lt;/code> 이벤트로 얻은 &lt;code>transform&lt;/code>을 저장합니다. 그 후, &lt;code>drawCanvas()&lt;/code>를 호출하여 &lt;code>ctx.translate()&lt;/code>와 &lt;code>ctx.scale()&lt;/code> 함수를 이용해 변경한 위치에 그리도록 합니다.&lt;/p>
@@ -145,11 +155,15 @@ return this.simulation.find(ix, iy, this.nodeRadius);
 &lt;p>&lt;code>findNode()&lt;/code> 메서드는 주어진 좌표에 &lt;code>node&lt;/code>가 존재하는지 확인하고 해당 &lt;code>node&lt;/code>를 반환합니다. &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom#transform_invert"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>transform.invert()&lt;/code>&lt;/a
 >
 는 주어진 절대 좌표에 현재 &lt;code>transform&lt;/code> 좌표값을 포함하여 계산하고 반환합니다. 이를 이용해야만 변경된 &lt;code>transform&lt;/code>을 적용한 좌표를 얻을 수 있습니다. &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#simulation_find"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>simulation.find()&lt;/code>&lt;/a
 >
 는 주어진 좌표에서 가장 가까이에 위치한 &lt;code>node&lt;/code>를 검색하여 반환합니다. &lt;code>node&lt;/code>의 반지름을 제공하여 해당 요소를 클릭해야만 &lt;code>node&lt;/code>를 찾을 수 있도록 하였습니다.&lt;/p>
@@ -184,17 +198,23 @@ this.canvas.call(this.drag);
 &lt;p>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-drag#drag_subject"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>drag.subject()&lt;/code>&lt;/a
 >
 는 드래그하려는 주체 &lt;code>node&lt;/code>를 선택할 때 이용합니다. &lt;code>findNode()&lt;/code> 함수로 검색한 &lt;code>node&lt;/code>를 &lt;code>subject&lt;/code>로 설정합니다. 설정 이후, &lt;code>event&lt;/code> 객체에서 &lt;code>subject&lt;/code> property에 선택한 &lt;code>node&lt;/code>가 등록됩니다.&lt;/p>
 &lt;p>Drag 이벤트에 등록한 함수는 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-drag#drag-events"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >첫 번째 인자로 &lt;code>event&lt;/code> 객체&lt;/a
 >
 를 가집니다. Canvas 방식의 경우 개별 요소가 아닌 canvas에 등록되었기 때문에 &lt;code>event.x&lt;/code>와 &lt;code>event.y&lt;/code>의 값이 canvas 기준으로 생성됩니다. 클릭 위치 기반으로 좌표를 가져오기 위해 &lt;code>event.sourceEvent&lt;/code> 객체를 이용해야하므로 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-selection#pointer"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>d3.pointer()&lt;/code>를 이용&lt;/a
 >
 해 좌표를 가져옵니다. 그리고 &lt;code>transform&lt;/code>을 적용하여 &lt;code>subject&lt;/code>의 고정 좌표를 변경합니다.&lt;/p>
@@ -231,6 +251,8 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >MDN - CanvasRenderingContext2D&lt;/a
 >
 &lt;/li>
@@ -238,11 +260,15 @@ href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D"
 &lt;p>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-zoom&lt;/a
 >
 과 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-drag"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-drag&lt;/a
 >
 는 사용자가 마우스 클릭 혹은 터치로 화면을 제어하거나 요소를 이동하는 기능을 제공합니다.&lt;/p>
@@ -262,6 +288,8 @@ root.call(zoom);
 &lt;p>&lt;code>d3.zoom()&lt;/code> 함수는 &lt;code>Selection&lt;/code> 객체를 인자로 받는 함수를 생성하여 반환합니다. &lt;code>root.call(zoom)&lt;/code>을 호출함으로써 인자로 받은 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom/blob/1bccd3fd56ea24e9658bd7e7c24e9b89410c8967/src/zoom.js#L72-L83"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >객체에 여러 property와 event를 등록&lt;/a
 >
 하게 됩니다.&lt;/p>
@@ -269,6 +297,8 @@ href="https://github.com/d3/d3-zoom/blob/1bccd3fd56ea24e9658bd7e7c24e9b89410c896
 &lt;p>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-selection#selection_call"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >selection.call()&lt;/a
 >
 은 &lt;code>Selection&lt;/code> 객체를 인자로 받는 함수를 인자로 받습니다. &lt;code>root.call(zoom)&lt;/code>은 다음 코드와 동일합니다.&lt;/p>
@@ -299,6 +329,8 @@ linkGroup.attr('transform', transform);
 &lt;p>&lt;code>transform&lt;/code>은 객체인데 그대로 전달할 수 있는 이유는 적용될 때 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom#transform_toString"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>transform.toString()&lt;/code>함수가 호출되어 &lt;code>&amp;quot;translate(x,y) scale(k)&amp;quot;&lt;/code> 형태의 문자열로 변환&lt;/a
 >
 되기 때문입니다.&lt;/p>
@@ -314,11 +346,15 @@ console.log('Click!');
 &lt;p>사용자의 조작이 아닌 코드를 통해 특정 좌표로 이동하고 확대하기 위해선 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom#zoom_translateTo"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>zoom.translateTo&lt;/code>&lt;/a
 >
 와 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom#zoom_scaleTo"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>zoom.scaleTo&lt;/code>&lt;/a
 >
 함수를 이용합니다. 해당 함수는 첫 번째 인자로 &lt;code>Selection&lt;/code> 객체를 전달받으므로 &lt;code>selection.call()&lt;/code> 함수로 호출할 수 있습니다.&lt;/p>
@@ -355,6 +391,8 @@ circles.call(drag);
 &lt;p>또한, 요소가 다른 요소와 상관없이 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#simulation_nodes"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >특정 고정 좌표에 위치하도록 하려면 &lt;code>fx&lt;/code>와 &lt;code>fy&lt;/code> 값을 설정&lt;/a
 >
 해야 합니다.&lt;/p>
@@ -397,18 +435,24 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-zoom&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-drag"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-drag&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-transition"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-transition&lt;/a
 >
 &lt;/li>
@@ -416,6 +460,8 @@ href="https://github.com/d3/d3-transition"
 &lt;p>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-selection"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-selection&lt;/a
 >
 은 데이터를 기반으로 DOM을 조작할 수 있는 다양한 기능을 제공합니다.&lt;/p>
@@ -423,6 +469,8 @@ href="https://github.com/d3/d3-selection"
 &lt;p>들어가기 전에 &lt;code>Selection&lt;/code> 객체에 대해 알아봅시다. d3-selection으로 선택한 요소는 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-selection/blob/main/src/selection/index.js"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>groups&lt;/code>와 &lt;code>parents&lt;/code> property를 갖는 &lt;code>Selection&lt;/code> 객체&lt;/a
 >
 를 생성합니다. &lt;code>Selection&lt;/code> 객체는 선택한 요소를 제어할 수 있는 다양한 메서드를 제공합니다.&lt;/p>
@@ -542,47 +590,63 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-selection"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-selection&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://bost.ocks.org/mike/join/"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Thinking with Joins&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://lucidar.me/en/d3.js/part-07-data-binding"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >D3.js Tutorial - Data Binding&lt;/a
 >
 &lt;/li>
 &lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;p>원티드 프리온보딩에서 주어진 과제 중 하나인 &lt;a
 class="underline-lsre"
 href="https://github.com/Pre-Onboarding-FE-Team07/wanted-codestates-project-7-7-2"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >D3.js를 이용한 Github Starred Repo 관계망 그리기 프로젝트&lt;/a
 >
 를 진행하면서 d3.js에 큰 흥미를 가지게 되었습니다. 처음 다뤄보는 시각화 라이브러리이라 기능 하나를 추가할 때마다 많은 자료와 문서를 찾아봐야 했습니다. 어찌어찌하긴 해내긴 했지만 코드와 동작을 보며 느껴지는 부족함에 아쉬움이 생겼습니다. 아무래도 짧은 시간 내에 구현해내느라 이해하는데 어려움이 있었기 때문에, 그 어려움을 극복하고자 문서를 톺아보며 살펴보고 정리해보고자 합니다.&lt;/p>
 &lt;p>사용하는 라이브러리는 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3.js&lt;/a
 >
 입니다. d3가 가진 수많은 라이브러리 중에서도 &lt;code>d3-force&lt;/code>, &lt;code>d3-zoom&lt;/code>, &lt;code>d3-selection&lt;/code>, &lt;code>d3-drag&lt;/code> 등 추가로 필요한 모듈이라면 전부 활용해볼 예정이고 성능 향상을 위해 Canvas API로 구현해보려고 합니다.&lt;/p></description></item><item><title>Simulating Physical Forces</title><link>https://jinyongp.dev/posts/d3js/1/</link><pubDate>Thu, Apr 14 14:20:46 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/1/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
 &lt;p>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-force&lt;/a
 >
 는 입자(&lt;code>nodes&lt;/code>) 간에 가해지는 물리적 힘(forces)을 simulation하여 입자의 좌표값을 계산하고 제공합니다.&lt;/p>
 &lt;p>코드와 함께 &lt;a
 class="underline-lsre"
 href="#simulation"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Simulation&lt;/a
 >
 과 &lt;a
 class="underline-lsre"
 href="#forces"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Forces&lt;/a
 >
 에 대해 이해해봅시다.&lt;/p>
@@ -590,6 +654,8 @@ href="#forces"
 &lt;h2 id="simulationhttpsgithubcomd3d3-forcesimulation">&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#simulation"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Simulation&lt;/a
 >
 &lt;/h2>
@@ -617,6 +683,8 @@ simulation.nodes(nodes);
 &lt;p>Simulation은 &lt;code>node&lt;/code>에 &lt;code>index&lt;/code>와 함께 좌표값인 &lt;code>x&lt;/code>, &lt;code>y&lt;/code> 그리고 속도값인 &lt;code>vx&lt;/code>, &lt;code>vy&lt;/code>를 추가합니다. 원본 &lt;code>node&lt;/code> 객체 자체를 수정해야하므로 &lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >non-extensible한 객체&lt;/a
 >
 는 사용할 수 없습니다. 만약 불변성 유지가 필요하다면 객체를 복사하여 전달해야 합니다.&lt;/p>
@@ -650,11 +718,15 @@ simulation.force('link', d3.forceLink(links).id(({ id }) =&amp;gt; id));
 &lt;p>나중에 &lt;a
 class="underline-lsre"
 href="#forces"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Forces&lt;/a
 >
 챕터에서 다시 만나겠지만, &lt;code>links&lt;/code>는 &lt;code>nodes&lt;/code>에 작용할 힘을 제공하므로 &lt;code>force&lt;/code>로 추가합니다. &lt;code>links&lt;/code>를 simulation에 추가하면 &lt;code>source&lt;/code>, &lt;code>target&lt;/code>에 설정된 &lt;code>id&lt;/code>를 동일한 &lt;code>id&lt;/code>를 가진 &lt;code>node&lt;/code> 객체로 대체합니다. (코드에 나와 있듯 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#link_id"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >link.id()&lt;/a
 >
 함수로 지정해야 합니다.)&lt;/p>
@@ -662,11 +734,15 @@ href="https://github.com/d3/d3-force#link_id"
 &lt;p>Simulation에 &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 등록해봤습니다. &lt;code>tick&lt;/code> 이벤트에 핸들러 함수를 등록하여 매 &lt;code>tick&lt;/code>마다 실행할 코드를 작성할 수 있습니다. Simulation은 생성 직후 곧바로 실행됩니다. 필요하다면 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#simulation_stop"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>simulation.stop()&lt;/code>&lt;/a
 >
 함수로 정지하거나 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#simulation_restart"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >&lt;code>simulation.restart()&lt;/code>&lt;/a
 >
 로 재시작할 수 있습니다.&lt;/p>
@@ -685,6 +761,8 @@ console.log(nodes[0]);
 &lt;p>Simulation을 얼마나 진행할 지 결정하는 &lt;code>alpha&lt;/code>, &lt;code>alphaMin&lt;/code>, &lt;code>alphaDecay&lt;/code>, &lt;code>alphaTarget&lt;/code>, &lt;code>velocityDecay&lt;/code> 속성에 대해 알아보겠습니다. 문서에 주어진 &lt;code>alpha&lt;/code>의 정의는 설명도 부실하고 이해하기 꽤 어려우니 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force/blob/main/src/simulation.js"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >구현 코드&lt;/a
 >
 를 보며 동작 방식을 알아봅시다. 주어진 속성의 초기값은 다음과 같습니다.&lt;/p>
@@ -733,6 +811,8 @@ console.log(simulation.alpha());
 &lt;h2 id="forceshttpsgithubcomd3d3-forceforces">&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#forces"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Forces&lt;/a
 >
 &lt;/h2>
@@ -740,6 +820,8 @@ href="https://github.com/d3/d3-force#forces"
 &lt;h3 id="linkshttpsgithubcomd3d3-forcelinks">&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#links"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Links&lt;/a
 >
 &lt;/h3>
@@ -755,6 +837,8 @@ simulation.force('link', forceLink);
 &lt;h3 id="many-bodyhttpsgithubcomd3d3-forcemany-body">&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#many-body"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Many-Body&lt;/a
 >
 &lt;/h3>
@@ -768,6 +852,8 @@ simulation.force('manyBody', forceManyBody);
 &lt;h3 id="centeringhttpsgithubcomd3d3-forcecentering">&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#centering"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Centering&lt;/a
 >
 &lt;/h3>
@@ -780,12 +866,16 @@ simulation.force('center', forceCenter);
 &lt;p>&lt;code>resize&lt;/code> 이벤트 혹은 &lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >ResizeObserver&lt;/a
 >
 로 크기 변경을 감지하고 &lt;code>nodes&lt;/code>가 항상 중앙에 위치하도록 할 수 있습니다.&lt;/p>
 &lt;h3 id="collisionhttpsgithubcomd3d3-forcecollision">&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#collision"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Collision&lt;/a
 >
 &lt;/h3>
@@ -799,6 +889,8 @@ simulation.force('collide', forceCollide);
 &lt;h3 id="positioninghttpsgithubcomd3d3-forcepositioning">&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force#positioning"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >Positioning&lt;/a
 >
 &lt;/h3>
@@ -823,12 +915,16 @@ simulation.force('radial', forceRadial);
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >d3-force&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://stackoverflow.com/q/46426072/9735184"
+target="_blank"
+rel="noopener noreferrer nofollow"
 >What is the difference between alphaTarget and alphaMin?&lt;/a
 >
 &lt;/li>

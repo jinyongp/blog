@@ -69,12 +69,12 @@
   .underline-lsre {
     @apply relative;
 
-    &::before {
+    &::after {
       @apply absolute content-[""] bg-current opacity-60 left-0 w-full h-[0.07em] bottom-[0.05em];
       @apply scale-x-0 transition-transform duration-200 ease-in-out origin-bottom-right;
     }
 
-    &:hover::before {
+    &:hover::after {
       @apply origin-bottom-left scale-x-100;
     }
   }

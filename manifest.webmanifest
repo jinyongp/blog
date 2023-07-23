@@ -3,141 +3,169 @@
   "name": "jinyongp.dev",
   "short_name": "jinyongp.dev",
   "description": "jinyongp.dev : developer blog",
+  "id": "/?utm_source=pwa",
   "start_url": "/?utm_source=pwa",
   "scope": "/",
   "theme_color": "#4169e1",
   "background_color": "#ffffff",
   "display": "standalone",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "/icon/ios/16.png",
-      "size": "16x16",
-      "type": "image/png"
+      "src": "/icon/16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/20.png",
-      "size": "20x20",
-      "type": "image/png"
+      "src": "/icon/20.png",
+      "sizes": "20x20",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/29.png",
-      "size": "29x29",
-      "type": "image/png"
+      "src": "/icon/29.png",
+      "sizes": "29x29",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/32.png",
-      "size": "32x32",
-      "type": "image/png"
+      "src": "/icon/32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/40.png",
-      "size": "40x40",
-      "type": "image/png"
+      "src": "/icon/40.png",
+      "sizes": "40x40",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/50.png",
-      "size": "50x50",
-      "type": "image/png"
+      "src": "/icon/50.png",
+      "sizes": "50x50",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/57.png",
-      "size": "57x57",
-      "type": "image/png"
+      "src": "/icon/57.png",
+      "sizes": "57x57",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/58.png",
-      "size": "58x58",
-      "type": "image/png"
+      "src": "/icon/58.png",
+      "sizes": "58x58",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/60.png",
-      "size": "60x60",
-      "type": "image/png"
+      "src": "/icon/60.png",
+      "sizes": "60x60",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/64.png",
-      "size": "64x64",
-      "type": "image/png"
+      "src": "/icon/64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/72.png",
-      "size": "72x72",
-      "type": "image/png"
+      "src": "/icon/72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/76.png",
-      "size": "76x76",
-      "type": "image/png"
+      "src": "/icon/76.png",
+      "sizes": "76x76",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/80.png",
-      "size": "80x80",
-      "type": "image/png"
+      "src": "/icon/80.png",
+      "sizes": "80x80",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/87.png",
-      "size": "87x87",
-      "type": "image/png"
+      "src": "/icon/87.png",
+      "sizes": "87x87",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/100.png",
-      "size": "100x100",
-      "type": "image/png"
+      "src": "/icon/100.png",
+      "sizes": "100x100",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/114.png",
-      "size": "114x114",
-      "type": "image/png"
+      "src": "/icon/114.png",
+      "sizes": "114x114",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/120.png",
-      "size": "120x120",
-      "type": "image/png"
+      "src": "/icon/120.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/128.png",
-      "size": "128x128",
-      "type": "image/png"
+      "src": "/icon/128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/144.png",
-      "size": "144x144",
-      "type": "image/png"
+      "src": "/icon/144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/152.png",
-      "size": "152x152",
-      "type": "image/png"
+      "src": "/icon/152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/167.png",
-      "size": "167x167",
-      "type": "image/png"
+      "src": "/icon/167.png",
+      "sizes": "167x167",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/180.png",
-      "size": "180x180",
-      "type": "image/png"
+      "src": "/icon/180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/192.png",
-      "size": "192x192",
-      "type": "image/png"
+      "src": "/icon/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/256.png",
-      "size": "256x256",
-      "type": "image/png"
+      "src": "/icon/256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/512.png",
-      "size": "512x512",
-      "type": "image/png"
+      "src": "/icon/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "/icon/ios/1024.png",
-      "size": "1024x1024",
-      "type": "image/png"
+      "src": "/icon/1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable any"
     }
   ]
 }
