@@ -37,7 +37,12 @@
           <ul class="flex gap-4 py-4">
             {{ range .Site.Menus.icon }}
               <li class="hover:text-accent grid place-items-center">
-                <a class="text-xl" href="{{ .URL }}">
+                <a
+                  class="text-xl"
+                  href="{{ .URL }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {{ partial "svg" (dict "name" .Name) }}
                 </a>
               </li>
