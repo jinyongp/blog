@@ -22,5 +22,13 @@
     "*.css": "postcss",
     "*.svg": "html"
   },
-  "tailwindCSS.rootFontSize": 14
+  "tailwindCSS.rootFontSize": 14,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "manifest.webmanifest"
+      ],
+      "url": "https://json.schemastore.org/web-manifest"
+    }
+  ]
 }
