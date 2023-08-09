@@ -43,6 +43,10 @@
     @apply list-disc;
   }
 
+  :is(blockquote, img, iframe, .hljs) {
+    @apply rounded-md my-4;
+  }
+
   code:not([class]) {
     @apply bg-accent/5 text-accent px-1 py-0.5 rounded-sm text-[80%] align-text-top;
   }
@@ -58,10 +62,6 @@
     .hljs-comment {
       color: #a5abb9;
     }
-  }
-
-  :is(blockquote, img, iframe, .hljs) {
-    @apply rounded-md my-4;
   }
 }
 

@@ -1,0 +1,52 @@
+{{ $style := (dict
+  "button" "inline-block w-8 aspect-square flex items-center justify-center rounded-md shadow cursor-pointer"
+  )
+}}
+
+{{- with .Paginator }}
+  {{- $currentPageNumber := .PageNumber }}
+  {{- $url := .URL }}
+
+
+  <ul class="flex items-center justify-between gap-4 py-4 w-full">
+    {{- with .First }}
+      <li disabled="{{ eq $currentPageNumber .PageNumber }}">
+        <a href="{{ .URL }}">
+          <div class="{{ $style.button }}">
+            {{ partial "svg" (dict "name" "angles-left" "class" "") }}
+          </div>
+        </a>
+      </li>
+    {{- end }}
+
+
+    <li disabled="{{ eq .Prev nil }}">
+      <a href="{{ with .Prev }}{{ .URL }}{{ end }}">
+        <div class="{{ $style.button }}">
+          {{ partial "svg" (dict "name" "angle-left" "class" "") }}
+        </div>
+      </a>
+    </li>
+
+    <div class="grow text-center">Page {{ .PageNumber }}</div>
+
+    <li disabled="{{ eq .Next nil }}">
+      <a href="{{ with .Next }}{{ .URL }}{{ end }}">
+        <div class="{{ $style.button }}">
+          {{ partial "svg" (dict "name" "angle-right" "class" "") }}
+        </div>
+      </a>
+    </li>
+
+    {{- with .Last }}
+      <li disabled="{{ eq $currentPageNumber .PageNumber }}">
+        <a href="{{ .URL }}">
+          <div class="{{ $style.button }}">
+            {{ partial "svg" (dict "name" "angles-right" "class" "") }}
+          </div>
+        </a>
+      </li>
+    {{- end }}
+
+  </ul>
+{{- end }}

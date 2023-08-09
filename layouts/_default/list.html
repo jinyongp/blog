@@ -1,28 +1,33 @@
 {{ define "main" }}
-  <div class="layout list">
-    <ul class="py-4 divide-y">
-      {{ range .Pages }}
-        {{ .Date.Format "Jan 2, 2006" | $.Scratch.Set "description" }}
-        {{ with .Description }}{{ $.Scratch.Set "description" . }}{{ end }}
+  <div class="layout list pb-24">
+    <div class="flex flex-col justify-between">
+      {{ partial "paginator" . }}
+      {{ with .Paginator }}
+        <ul class="divide-y">
+          {{ range .Pages }}
+            {{ .Date.Format "Jan 2, 2006" | $.Scratch.Set "description" }}
+            {{ with .Description }}{{ $.Scratch.Set "description" . }}{{ end }}
 
 
-        <li>
-          <div class="py-5">
-            <div class="px-2 flex flex-col gap-2">
-              <a
-                class="text-accent underline-fade font-medium text-xl w-fit"
-                href="{{ .RelPermalink }}"
-              >
-                {{ .Title }}
-                {{ if .Draft }}
-                  {{ partial "svg" (dict "name" "person-digging" "class" "text-rose-500 float-right pl-2 mt-0.5") }}
-                {{ end }}
-              </a>
-              <span class="text-sm">{{ $.Scratch.Get "description" }}</span>
-            </div>
-          </div>
-        </li>
+            <li>
+              <div class="py-5">
+                <div class="px-2 flex flex-col gap-2">
+                  <a
+                    class="text-accent underline-fade font-medium text-xl w-fit"
+                    href="{{ .RelPermalink }}"
+                  >
+                    {{ .Title }}
+                    {{ if .Draft }}
+                      {{ partial "svg" (dict "name" "person-digging" "class" "text-rose-500 float-right pl-2 mt-0.5") }}
+                    {{ end }}
+                  </a>
+                  <span class="text-sm">{{ $.Scratch.Get "description" }}</span>
+                </div>
+              </div>
+            </li>
+          {{ end }}
+        </ul>
       {{ end }}
-    </ul>
+    </div>
   </div>
 {{ end }}
