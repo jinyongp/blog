@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    {{ block "head-begin" . }}{{ end }}
-
+    {{ block "opening/head" . }}{{ end }}
     {{ partial "meta" . }}
-    {{ if eq .Title "jinyongp.dev" }}
-      <title>Home</title>
-    {{ else }}
-      <title>{{ .Title }}</title>
-    {{ end }}
+    <title>
+      {{ if eq .Title "jinyongp.dev" }}
+        Home
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+    </title>
 
     {{ partial "css" . }}
     {{ partial "script" . }}
-
-    {{ block "head-end" . }}{{ end }}
+    {{ block "closing/head" . }}{{ end }}
   </head>
 
   <body>
-    {{ block "body-begin" . }}{{ end }}
-
-
+    {{ block "opening/body" . }}{{ end }}
     <nav class="shadow-md">
       {{ block "nav" . }}
         <div class="layout flex justify-between text-gray-600">
@@ -52,7 +50,7 @@
       {{ end }}
     </nav>
 
-    <main class="pb-24">
+    <main>
       {{ block "main" . }}
       {{ end }}
     </main>
@@ -69,7 +67,6 @@
         </div>
       {{ end }}
     </footer>
-
-    {{ block "body-end" . }}{{ end }}
+    {{ block "closing/body" . }}{{ end }}
   </body>
 </html>

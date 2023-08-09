@@ -26,9 +26,12 @@
     <article class="content [&_hr]:my-4">{{ .Content }}</article>
 
     {{ partial "giscus" . }}
+
+
+    <div class="h-24"></div>
   </div>
 {{ end }}
 
-{{ define "body-end" }}
+{{ define "closing/body" }}
   {{ partial "back-to-top" . }}
 {{ end }}

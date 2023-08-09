@@ -40,10 +40,6 @@
     @apply text-base md:text-base;
   }
 
-  p {
-    @apply my-1;
-  }
-
   svg {
     @apply fill-current;
   }
