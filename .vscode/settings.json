@@ -12,9 +12,12 @@
     "jinyongp",
     "lastmod",
     "markdownify",
+    "naver",
     "nbcamp",
     "outfile",
-    "tailwindcss"
+    "sfeed",
+    "tailwindcss",
+    "uikit"
   ],
   "css.validate": false,
   "editor.formatOnSave": true,
@@ -22,7 +25,6 @@
     "*.css": "postcss",
     "*.svg": "html"
   },
-  "tailwindCSS.rootFontSize": 14,
   "json.schemas": [
     {
       "fileMatch": [

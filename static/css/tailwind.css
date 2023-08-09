@@ -48,7 +48,7 @@
     @apply fill-current;
   }
 
-  [disabled="true"] {
+  [disabled] {
     @apply !opacity-50 !cursor-not-allowed;
 
     * {

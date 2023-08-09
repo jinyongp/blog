@@ -2,9 +2,6 @@
   <div class="layout list pb-24">
     <div class="flex flex-col justify-between">
       {{ $paginator :=.Paginator }}
-      {{ if hugo.IsProduction }}
-        {{ $paginator := .Paginate (where .Pages "Draft" false) }}
-      {{ end }}
       {{ partial "paginator" (dict "paginator" $paginator) }}
       {{ with $paginator }}
         <ul class="divide-y">

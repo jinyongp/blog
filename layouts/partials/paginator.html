@@ -10,7 +10,7 @@
 
   <ul class="flex items-center justify-between gap-4 py-4 w-full">
     {{- with .First }}
-      <li disabled="{{ eq $currentPageNumber .PageNumber }}">
+      <li {{ if eq $currentPageNumber .PageNumber }}disabled{{ end }}>
         <a href="{{ .URL }}">
           <div class="{{ $style.button }}">
             {{ partial "svg" (dict "name" "angles-left" "class" "") }}
@@ -20,7 +20,7 @@
     {{- end }}
 
 
-    <li disabled="{{ eq .Prev nil }}">
+    <li {{ if eq .Prev nil }}disabled{{ end }}>
       <a href="{{ with .Prev }}{{ .URL }}{{ end }}">
         <div class="{{ $style.button }}">
           {{ partial "svg" (dict "name" "angle-left" "class" "") }}
@@ -28,9 +28,9 @@
       </a>
     </li>
 
-    <div class="grow text-center">Page {{ .PageNumber }}</div>
+    <li class="grow text-center">Page {{ .PageNumber }}</li>
 
-    <li disabled="{{ eq .Next nil }}">
+    <li {{ if eq .Next nil }}disabled{{ end }}>
       <a href="{{ with .Next }}{{ .URL }}{{ end }}">
         <div class="{{ $style.button }}">
           {{ partial "svg" (dict "name" "angle-right" "class" "") }}
@@ -39,7 +39,7 @@
     </li>
 
     {{- with .Last }}
-      <li disabled="{{ eq $currentPageNumber .PageNumber }}">
+      <li {{ if eq $currentPageNumber .PageNumber }}disabled{{ end }}>
         <a href="{{ .URL }}">
           <div class="{{ $style.button }}">
             {{ partial "svg" (dict "name" "angles-right" "class" "") }}
