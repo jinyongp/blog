@@ -23,6 +23,10 @@
     @apply mt-2;
   }
 
+  p {
+    @apply my-2;
+  }
+
   a {
     @apply text-accent;
   }
@@ -37,6 +41,10 @@
 
   ul {
     @apply list-disc;
+  }
+
+  :is(blockquote, img, iframe, .hljs) {
+    @apply rounded-md my-4;
   }
 
   code:not([class]) {
@@ -54,10 +62,6 @@
     .hljs-comment {
       color: #a5abb9;
     }
-  }
-
-  :is(blockquote, img, iframe, .hljs) {
-    @apply rounded-md my-4;
   }
 }
 
