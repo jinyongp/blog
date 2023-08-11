@@ -6,6 +6,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": [
+    "Adaptee",
     "associatedtype",
     "csstools",
     "datetime",
@@ -30,9 +31,7 @@
   },
   "json.schemas": [
     {
-      "fileMatch": [
-        "manifest.webmanifest"
-      ],
+      "fileMatch": ["manifest.webmanifest"],
       "url": "https://json.schemastore.org/web-manifest"
     }
   ]
