@@ -1,4 +1,182 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jinyongp.dev</title><link>https://jinyongp.dev/</link><description>Recent content on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Jul 19 04:26:26 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jinyongp.dev</title><link>https://jinyongp.dev/</link><description>Recent content on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Aug 09 09:45:38 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/feed.xml" rel="self" type="application/rss+xml"/><item><title>Learning Software Design Pattern (Swift)</title><link>https://jinyongp.dev/series/design-pattern/1/</link><pubDate>Wed, Aug 09 09:45:38 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/design-pattern/1/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>소프트웨어 디자인 패턴은 소프트웨어 개발 과정에서 자주 발생하고 직면하는 문제에 대한 해결책입니다. 반복적으로 마주하는 문제에 대한 해결책을 청사진처럼 만들어두고 필요할 때마다 재사용할 수 있습니다.&lt;/p>
+&lt;p>각 디자인 패턴마다 어떤 문제를 마주했을 때 적용할 법한 패턴인지 알아보고 Swift 언어를 활용하여 어떻게 구현할 수 있는지 알아보았습니다. 그러므로 Swift의 문법이 포함되어 있습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>⚠️ 디자인 패턴을 갓 배운 많은 개발자는 문제를 더 간단히 해결할 수 있는 상황임에도 모든 곳에 패턴을 적용해보려는 실수를 범한다고 합니다. 문제를 해결하는데 더 간단한 방법이 있다면 굳이 디자인 패턴을 적용할 필요가 없습니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>본 시리즈는 &lt;a
+class="underline-lsre"
+href="https://product.kyobobook.co.kr/detail/S000200311846"
+target="_blank" rel="noopener noreferrer nofollow"
+>Java 언어로 배우는 디자인 패턴 입문&lt;/a
+>
+을 참고하여 작성했습니다. 본 서적에선 GoF의 23가지 디자인 패턴을 다루고 있습니다. 하지만 GoF의 분류 체계(생성, 구조, 행위)를 따르지 않고, 다른 관점으로 분류하고 있으므로 이를 따라서 작성했습니다.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://refactoring.guru/ko/design-patterns"
+target="_blank" rel="noopener noreferrer nofollow"
+>Design pattern - Refactoring Guru&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://product.kyobobook.co.kr/detail/S000200311846"
+target="_blank" rel="noopener noreferrer nofollow"
+>Java 언어로 배우는 디자인 패턴 입문 : 쉽게 배우는 GoF의 23가지 디자인 패턴&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://refactoring.guru/ko/design-patterns/swift"
+target="_blank" rel="noopener noreferrer nofollow"
+>Design Pattern in Swift&lt;/a
+>
+&lt;/li>
+&lt;/ul></description></item><item><title>Iterator Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/1/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/1/</guid><description>&lt;h2 id="why-to-use">Why to Use&lt;/h2>
+&lt;p>Iterator Pattern은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.&lt;/p>
+&lt;p>예를 들어, 자료구조 중 배열은 메모리 구조의 특징 덕분에 0..&amp;lt;배열크기 범위로 인덱스를 증가시키며 요소에 접근할 수 있습니다. 허나 리스트의 경우엔 순회 로직을 직접 구현하지 않는 한 인덱스를 이용한 순회가 불가능합니다. 리스트 클래스를 순회 가능한 객체로 만들기 위해선 별도의 구현을 추가해야 합니다. 여기서 Iterator Pattern을 적용한다면 리스트 클래스의 세부 구현을 변경하지 않고도 순회 가능한 객체로 확장할 수 있습니다.&lt;/p>
+&lt;p>Iterator Pattern을 구현하기 위해 필요한 객체는 다음과 같습니다.&lt;/p>
+&lt;ul>
+&lt;li>Iterator(반복자): 순회 로직을 추상화한 인터페이스입니다. 다음 요소를 반환하는 &lt;code>next()&lt;/code> 메서드와 현재 요소가 마지막 요소인지 확인하는 &lt;code>hasNext()&lt;/code> 메서드를 포함합니다.&lt;/li>
+&lt;li>ConcreteIterator(구체적인 반복자): Iterator 인터페이스를 구현한 객체입니다.&lt;/li>
+&lt;li>Aggregate(집합체): 순회 가능한 객체임을 나타내는 인터페이스입니다. ConcreteIterator 객체를 생성하여 반환하는 &lt;code>makeIterator()&lt;/code> 메서드를 포함하기도 합니다. (aka. Iterable)&lt;/li>
+&lt;li>ConcreteAggregate(구체적인 집합체): Aggregate 인터페이스를 구현한 객체입니다.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://product.kyobobook.co.kr/detail/S000200311846"
+target="_blank" rel="noopener noreferrer nofollow"
+>Java 언어로 배우는 디자인 패턴 입문&lt;/a
+>
+의 Iterator Pattern 예제를 Swift로 작성해보았습니다.&lt;/p>
+&lt;pre>&lt;code class="language-swift">protocol Iterable&amp;lt;Element&amp;gt; {
+associatedtype Element where Element == Iter.Element
+associatedtype Iter: Iterator
+func makeIterator() -&amp;gt; Iter;
+}
+protocol Iterator&amp;lt;Element&amp;gt; {
+associatedtype Element
+mutating func next() -&amp;gt; Element?
+}
+struct Book {
+private(set) var name: String
+}
+struct BookShelf {
+private var books: [Book] = []
+var count: Int { books.count }
+func book(at index: Int) -&amp;gt; Book {
+return books[index]
+}
+mutating func add(book: Book) {
+books.append(book)
+}
+}
+extension BookShelf: Iterable {
+typealias Element = Book
+typealias Iter = BookShelfIterator
+func makeIterator() -&amp;gt; Iter {
+return BookShelfIterator(self)
+}
+}
+struct BookShelfIterator: Iterator {
+typealias Element = Book
+private let bookShelf: BookShelf
+private var index: Int
+init(_ bookShelf: BookShelf) {
+self.bookShelf = bookShelf
+index = 0
+}
+mutating func next() -&amp;gt; Element? {
+if bookShelf.count &amp;gt; index {
+defer { index += 1 }
+return bookShelf.book(at: index)
+}
+return nil
+}
+}
+var bookShelf = BookShelf()
+bookShelf.add(book: Book(name: &amp;quot;Book1&amp;quot;))
+bookShelf.add(book: Book(name: &amp;quot;Book2&amp;quot;))
+bookShelf.add(book: Book(name: &amp;quot;Book3&amp;quot;))
+bookShelf.add(book: Book(name: &amp;quot;Book4&amp;quot;))
+var iterator = bookShelf.makeIterator()
+while let book = iterator.next() {
+print(book.name)
+}
+// output:
+// Book1
+// Book2
+// Book3
+// Book4
+&lt;/code>&lt;/pre>
+&lt;blockquote>
+&lt;p>Swift에서는 &lt;code>nil&lt;/code> 값을 제공하므로 &lt;code>hasNext()&lt;/code> 메서드 대신 &lt;code>next()&lt;/code> 메서드가 &lt;code>nil&lt;/code>을 반환하면 순회를 종료하도록 구현합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>코드에 따르면 각 구조체는 다음 역할을 따릅니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Iterator&lt;/code>: Iterator&lt;/li>
+&lt;li>&lt;code>BookShelfIterator&lt;/code>: ConcreteIterator&lt;/li>
+&lt;li>&lt;code>Iterable&lt;/code>: Aggregate&lt;/li>
+&lt;li>&lt;code>BookShelf&lt;/code>: ConcreteAggregate&lt;/li>
+&lt;/ul>
+&lt;p>이렇게 순회를 담당하는 로직을 별도의 클래스로 분리하여 확장성을 높이는 것이 Iterator Pattern의 핵심입니다. 인터페이스를 활용한 이러한 확장성 및 다형성 덕분에 &lt;code>Iterator&lt;/code> 인터페이스만 구현하고 있으면 모든 순회가 필요한 로직에 적용할 수 있습니다.&lt;/p>
+&lt;h2 id="in-swift">In Swift&lt;/h2>
+&lt;p>이미 Swift에서는 &lt;a
+class="underline-lsre"
+href="https://developer.apple.com/documentation/swift/iteratorprotocol"
+target="_blank" rel="noopener noreferrer nofollow"
+>IteratorProtocol&lt;/a
+>
+프로토콜을 제공하여 어떠한 클래스든 &lt;code>IteratorProtocol&lt;/code>을 채택하여 &lt;code>for in&lt;/code> 구문에 활용할 수 있습니다. (Aggregate 역할을 &lt;code>Sequence&lt;/code> 프로토콜이 수행합니다.)&lt;/p>
+&lt;p>Apple 공식 문서의 예제를 가져왔습니다.&lt;/p>
+&lt;pre>&lt;code class="language-swift">struct Countdown: Sequence {
+let start: Int
+func makeIterator() -&amp;gt; CountdownIterator {
+return CountdownIterator(self)
+}
+}
+struct CountdownIterator: IteratorProtocol {
+let countdown: Countdown
+var times = 0
+init(_ countdown: Countdown) {
+self.countdown = countdown
+}
+mutating func next() -&amp;gt; Int? {
+let nextNumber = countdown.start - times
+guard nextNumber &amp;gt; 0 else { return nil }
+times += 1
+return nextNumber
+}
+}
+let countdown3 = Countdown(start: 3)
+for count in countdown3 {
+print(&amp;quot;\(count)...&amp;quot;)
+}
+// output:
+// 3..
+// 2..
+// 1..
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>CountDown&lt;/code>은 ConcreteAggregate 역할을 수행하며, &lt;code>CountdownIterator&lt;/code>는 ConcreteIterator 역할을 수행합니다. 이렇게 순회 로직을 분리하는 방식으로 Collection 형식이 아니라 하더라도 순회 로직을 추가함으로서 순회 가능한 객체를 만들 수 있다는 장점이 있습니다.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://refactoring.guru/design-patterns/iterator"
+target="_blank" rel="noopener noreferrer nofollow"
+>Iterator Pattern : Refactoring Guru&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://developer.apple.com/documentation/swift/iteratorprotocol"
+target="_blank" rel="noopener noreferrer nofollow"
+>IteratorProtocol : Apple&lt;/a
+>
+&lt;/li>
+&lt;/ul></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
 &lt;p>이번 주차에선 Swift를 학습하고 간단한 연산 기능을 제공하는 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
 &lt;p>캠프에서는 자기주도적 학습 방식을 추구하기 때문에 주어지는 학습 자료 외에도 스스로 조사하고 학습해야 합니다.
 주어지는 학습자료만으로는 깊게 학습할 수 없었기에 공식 문서와 다른 강의를 병행하며 부족한 부분을 채워야 합니다.&lt;/p>

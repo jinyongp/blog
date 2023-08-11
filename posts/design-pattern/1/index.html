@@ -1,0 +1,115 @@
+<!doctype html><html lang=ko><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=HandheldFriendly content="true"><link rel=canonical href=https://jinyongp.dev><meta name=naver-site-verification content="c36f259891f25bc92e3884c1ceb626a0aaa76146"><link rel=alternate type=application/rss+xml href=https://jinyongp.dev/feed.xml title=jinyongp.dev><meta name=author content="jinyongp <dev.jinyongp@gmail.com>"><meta name=keywords content="design-pattern"><link rel=manifest href=/manifest.webmanifest><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-title content="jinyongp.dev"><meta name=apple-mobile-web-app-status-bar-style content="default"><meta property="og:site_name" content="jinyongp.dev"><meta property="og:title" content="Iterator Pattern in Swift"><meta property="og:type" content="website"><meta property="og:url" content="https://jinyongp.dev/posts/design-pattern/1/"><meta property="og:description" content="Iterator Pattern에 대해 알아보고 Swift로 구현해봅니다."><meta name=description content="Iterator Pattern에 대해 알아보고 Swift로 구현해봅니다."><title>Iterator Pattern in Swift</title><link rel=icon href=https://jinyongp.dev/favicon.png><link rel=stylesheet href=https://jinyongp.dev/main.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Raleway"><style>:root{--accent:65 105 225;--font:Raleway}</style><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/nord.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js></script>
+<script async>hljs.highlightAll(),hljs.configure({ignoreUnescapedHTML:!0})</script><script async>(function(e,t,n,s,o){e[s]=e[s]||[],e[s].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=t.getElementsByTagName(n)[0],i=t.createElement(n),r=s!="dataLayer"?"&l="+s:"";i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id="+o+r,a.parentNode.insertBefore(i,a)})(window,document,"script","dataLayer","GTM-PFTW4CN")</script><script async>"serviceWorker"in navigator&&navigator.serviceWorker.register("/js/sw.js")</script><script async src=/js/main.js></script></head><body><nav class=shadow-md><div class="layout flex justify-between text-gray-600"><ul class="flex gap-4 py-4"><li class=hover:text-accent><a href=/>Home</a></li><li class=hover:text-accent><a href=/posts class=text-accent>Posts</a></li><li class=hover:text-accent><a href=/learn>Learn</a></li><li class=hover:text-accent><a href=/series>Series</a></li></ul><ul class="flex gap-4 py-4"><li class="hover:text-accent grid place-items-center"><a class=text-xl href=mailto:dev.jinyongp@gmail.com target=_blank rel="noopener noreferrer"><i><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 112c-8.8.0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1.0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8.0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3.0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3.0-64-28.7-64-64V128z"/></svg></i></a></li><li class="hover:text-accent grid place-items-center"><a class=text-xl href=https://github.com/jinyongp/ target=_blank rel="noopener noreferrer"><i><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></i></a></li></ul></div></nav><main><div class=layout><header class="relative text-center flex flex-col items-stretch justify-center"><h1 class="mt-16 mb-12">Iterator Pattern in Swift</h1><div class="flex justify-between items-center"><div><a href=https://jinyongp.dev/tags/design-pattern><kbd class="text-xs bg-accent text-white rounded px-1 py-0.5">design-pattern</kbd></a></div><h6>Written on Aug 9, 2023</h6></div><hr class="my-4 w-full"></header><article class="content [&_hr]:my-4"><h2 id=why-to-use>Why to Use</h2><p>Iterator Pattern은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.</p><p>예를 들어, 자료구조 중 배열은 메모리 구조의 특징 덕분에 0..&lt;배열크기 범위로 인덱스를 증가시키며 요소에 접근할 수 있습니다. 허나 리스트의 경우엔 순회 로직을 직접 구현하지 않는 한 인덱스를 이용한 순회가 불가능합니다. 리스트 클래스를 순회 가능한 객체로 만들기 위해선 별도의 구현을 추가해야 합니다. 여기서 Iterator Pattern을 적용한다면 리스트 클래스의 세부 구현을 변경하지 않고도 순회 가능한 객체로 확장할 수 있습니다.</p><p>Iterator Pattern을 구현하기 위해 필요한 객체는 다음과 같습니다.</p><ul><li>Iterator(반복자): 순회 로직을 추상화한 인터페이스입니다. 다음 요소를 반환하는 <code>next()</code> 메서드와 현재 요소가 마지막 요소인지 확인하는 <code>hasNext()</code> 메서드를 포함합니다.</li><li>ConcreteIterator(구체적인 반복자): Iterator 인터페이스를 구현한 객체입니다.</li><li>Aggregate(집합체): 순회 가능한 객체임을 나타내는 인터페이스입니다. ConcreteIterator 객체를 생성하여 반환하는 <code>makeIterator()</code> 메서드를 포함하기도 합니다. (aka. Iterable)</li><li>ConcreteAggregate(구체적인 집합체): Aggregate 인터페이스를 구현한 객체입니다.</li></ul><p><a class=underline-lsre href=https://product.kyobobook.co.kr/detail/S000200311846 target=_blank rel="noopener noreferrer nofollow">Java 언어로 배우는 디자인 패턴 입문</a>
+의 Iterator Pattern 예제를 Swift로 작성해보았습니다.</p><pre><code class=language-swift>protocol Iterable&lt;Element&gt; {
+    associatedtype Element where Element == Iter.Element
+    associatedtype Iter: Iterator
+
+    func makeIterator() -&gt; Iter;
+}
+
+protocol Iterator&lt;Element&gt; {
+    associatedtype Element
+
+    mutating func next() -&gt; Element?
+}
+
+struct Book {
+    private(set) var name: String
+}
+
+struct BookShelf {
+    private var books: [Book] = []
+    var count: Int { books.count }
+
+    func book(at index: Int) -&gt; Book {
+        return books[index]
+    }
+
+    mutating func add(book: Book) {
+        books.append(book)        
+    }
+}
+
+extension BookShelf: Iterable {
+    typealias Element = Book
+    typealias Iter = BookShelfIterator
+
+    func makeIterator() -&gt; Iter {
+        return BookShelfIterator(self)
+    }
+}
+
+struct BookShelfIterator: Iterator {
+    typealias Element = Book
+
+    private let bookShelf: BookShelf
+    private var index: Int
+
+    init(_ bookShelf: BookShelf) {
+        self.bookShelf = bookShelf
+        index = 0
+    }
+
+    mutating func next() -&gt; Element? {
+        if bookShelf.count &gt; index {
+            defer { index += 1 }
+            return bookShelf.book(at: index)
+        }
+        return nil
+    }
+}
+
+var bookShelf = BookShelf()
+bookShelf.add(book: Book(name: &quot;Book1&quot;))
+bookShelf.add(book: Book(name: &quot;Book2&quot;))
+bookShelf.add(book: Book(name: &quot;Book3&quot;))
+bookShelf.add(book: Book(name: &quot;Book4&quot;))
+
+var iterator = bookShelf.makeIterator()
+
+while let book = iterator.next() {
+    print(book.name)
+}
+
+// output:
+// Book1
+// Book2
+// Book3
+// Book4
+</code></pre><blockquote><p>Swift에서는 <code>nil</code> 값을 제공하므로 <code>hasNext()</code> 메서드 대신 <code>next()</code> 메서드가 <code>nil</code>을 반환하면 순회를 종료하도록 구현합니다.</p></blockquote><p>코드에 따르면 각 구조체는 다음 역할을 따릅니다.</p><ul><li><code>Iterator</code>: Iterator</li><li><code>BookShelfIterator</code>: ConcreteIterator</li><li><code>Iterable</code>: Aggregate</li><li><code>BookShelf</code>: ConcreteAggregate</li></ul><p>이렇게 순회를 담당하는 로직을 별도의 클래스로 분리하여 확장성을 높이는 것이 Iterator Pattern의 핵심입니다. 인터페이스를 활용한 이러한 확장성 및 다형성 덕분에 <code>Iterator</code> 인터페이스만 구현하고 있으면 모든 순회가 필요한 로직에 적용할 수 있습니다.</p><h2 id=in-swift>In Swift</h2><p>이미 Swift에서는 <a class=underline-lsre href=https://developer.apple.com/documentation/swift/iteratorprotocol target=_blank rel="noopener noreferrer nofollow">IteratorProtocol</a>
+프로토콜을 제공하여 어떠한 클래스든 <code>IteratorProtocol</code>을 채택하여 <code>for in</code> 구문에 활용할 수 있습니다. (Aggregate 역할을 <code>Sequence</code> 프로토콜이 수행합니다.)</p><p>Apple 공식 문서의 예제를 가져왔습니다.</p><pre><code class=language-swift>struct Countdown: Sequence {
+    let start: Int
+
+    func makeIterator() -&gt; CountdownIterator {
+        return CountdownIterator(self)
+    }
+}
+
+struct CountdownIterator: IteratorProtocol {
+    let countdown: Countdown
+    var times = 0
+
+    init(_ countdown: Countdown) {
+        self.countdown = countdown
+    }
+
+    mutating func next() -&gt; Int? {
+        let nextNumber = countdown.start - times
+        guard nextNumber &gt; 0 else { return nil }
+
+        times += 1
+        return nextNumber
+    }
+}
+
+let countdown3 = Countdown(start: 3)
+for count in countdown3 {
+    print(&quot;\(count)...&quot;)
+}
+
+// output:
+// 3..
+// 2..
+// 1..
+</code></pre><p><code>CountDown</code>은 ConcreteAggregate 역할을 수행하며, <code>CountdownIterator</code>는 ConcreteIterator 역할을 수행합니다. 이렇게 순회 로직을 분리하는 방식으로 Collection 형식이 아니라 하더라도 순회 로직을 추가함으로서 순회 가능한 객체를 만들 수 있다는 장점이 있습니다.</p><h2 id=references>References</h2><ul><li><a class=underline-lsre href=https://refactoring.guru/design-patterns/iterator target=_blank rel="noopener noreferrer nofollow">Iterator Pattern : Refactoring Guru</a></li><li><a class=underline-lsre href=https://developer.apple.com/documentation/swift/iteratorprotocol target=_blank rel="noopener noreferrer nofollow">IteratorProtocol : Apple</a></li></ul></article><script src=https://giscus.app/client.js data-repo=jinyongp/jinyongp.dev data-repo-id=R_kgDOHJDtcg data-category=Comments data-category-id=DIC_kwDOHJDtcs4CXf7o data-mapping=title data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=ko crossorigin=anonymous async></script><div class=h-24></div></div></main><footer class="absolute bottom-0 w-full"><div class="flex justify-center py-8"><p class="[&_a]:text-accent text-center text-sm">Copyright 2023. Jinyong Park. All rights reserved.<br><span class=text-xs>Powered by <a class=underline-lsre href=https://gohugo.io target=_blank rel="noopener noreferrer nofollow">Hugo</a>
+.</span></p></div></footer><div id=js-scroll-back-to-top class="back-to-top hide fixed bottom-10 right-10 rounded-full w-10 h-10 bg-white border border-accent grid place-items-center cursor-pointer"><i class=text-accent><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M288 0c17.7.0 32 14.3 32 32V49.7C451.8 63.4 557.7 161 573.9 285.9c2 15.6-17.3 24.4-27.8 12.7C532.1 283 504.8 272 480 272c-38.7.0-71 27.5-78.4 64.1-1.7 8.7-8.7 15.9-17.6 15.9s-15.8-7.2-17.6-15.9C359 299.5 326.7 272 288 272s-71 27.5-78.4 64.1c-1.7 8.7-8.7 15.9-17.6 15.9s-15.8-7.2-17.6-15.9C167 299.5 134.7 272 96 272c-24.8.0-52.1 11-66.1 26.7C19.4 310.4.1 301.5 2.1 285.9 18.3 161 124.2 63.4 256 49.7V32c0-17.7 14.3-32 32-32zm0 304c12.3.0 23.5 4.6 32 12.2V430.6c0 45-36.5 81.4-81.4 81.4-30.8.0-59-17.4-72.8-45l-2.3-4.7c-7.9-15.8-1.5-35 14.3-42.9s35-1.5 42.9 14.3l2.3 4.7c3 5.9 9 9.6 15.6 9.6 9.6.0 17.4-7.8 17.4-17.4V316.2c8.5-7.6 19.7-12.2 32-12.2z"/></svg></i></div></body></html>
