@@ -8,7 +8,7 @@
   {{- $url := .URL }}
 
 
-  <ul class="flex items-center justify-between gap-4 py-4 w-full">
+  <ul class="flex items-center justify-between py-4 w-full">
     {{- with .First }}
       <li {{ if eq $currentPageNumber .PageNumber }}disabled{{ end }}>
         <a href="{{ .URL }}">
