@@ -140,7 +140,7 @@ logger.log(level: .error, message: message)
 &lt;pre>&lt;code class="language-swift">let app = App(logger: ExternalLoggerAdapter())
 app.doSomething()
 &lt;/code>&lt;/pre>
-&lt;p>이렇게 Adapter 역할을 수행하는 중간자 클래스를 추가하여 세부 구현에 어떠한 변경도 없이 세부 구현에 어떠한 변경도 없이 확정에 성공하였습니다. 이런 식으로 Adapter 구조체를 추가하면 변경이 아닌 확장(OCP - 개방 폐쇄 원칙)이 되어 Side Effect도 없을 뿐더러 Unit Test를 작성하기도 쉬워집니다.&lt;/p></description></item><item><title>Iterator Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/1/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/1/</guid><description>&lt;p>&lt;strong>Iterator Pattern&lt;/strong>은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.&lt;/p>
+&lt;p>이렇게 Adapter 역할을 수행하는 중간자 클래스를 추가하여 세부 구현에 어떠한 변경도 없이 세부 구현에 어떠한 변경도 없이 확장에 성공하였습니다. 이런 식으로 Adapter 구조체를 추가하면 변경이 아닌 확장(OCP - 개방 폐쇄 원칙)이 되어 Side Effect도 없을 뿐더러 Unit Test를 작성하기도 쉬워집니다.&lt;/p></description></item><item><title>Iterator Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/1/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/1/</guid><description>&lt;p>&lt;strong>Iterator Pattern&lt;/strong>은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>Iterator Pattern&lt;/code>은 GoF의 분류 체계에서 행위(Behavioral) 패턴에 속합니다.&lt;/p>
 &lt;/blockquote>
