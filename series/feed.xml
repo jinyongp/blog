@@ -1,5 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Series on jinyongp.dev</title><link>https://jinyongp.dev/series/</link><description>Recent content in Series on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Aug 09 09:45:38 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/series/feed.xml" rel="self" type="application/rss+xml"/><item><title>Learning Software Design Pattern (Swift)</title><link>https://jinyongp.dev/series/design-pattern/1/</link><pubDate>Wed, Aug 09 09:45:38 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/design-pattern/1/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>소프트웨어 디자인 패턴은 소프트웨어 개발 과정에서 자주 발생하고 직면하는 문제에 대한 해결책입니다. 반복적으로 마주하는 문제에 대한 해결책을 청사진처럼 만들어두고 필요할 때마다 재사용할 수 있습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Series on jinyongp.dev</title><link>https://jinyongp.dev/series/</link><description>Recent content in Series on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Aug 09 09:45:38 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/series/feed.xml" rel="self" type="application/rss+xml"/><item><title>Learning Software Design Pattern (Swift)</title><link>https://jinyongp.dev/series/design-pattern/1/</link><pubDate>Wed, Aug 09 09:45:38 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/design-pattern/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+class="transition opacity-10 hover:opacity-100 -rotate-45 hover:-rotate-90"
+>&lt;a href="#introduction"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>소프트웨어 디자인 패턴은 소프트웨어 개발 과정에서 자주 발생하고 직면하는 문제에 대한 해결책입니다. 반복적으로 마주하는 문제에 대한 해결책을 청사진처럼 만들어두고 필요할 때마다 재사용할 수 있습니다.&lt;/p>
 &lt;p>각 디자인 패턴마다 어떤 문제를 마주했을 때 적용할 법한 패턴인지 알아보고 Swift 언어를 활용하여 어떻게 구현할 수 있는지 알아보았습니다. 그러므로 Swift의 문법이 포함되어 있습니다.&lt;/p>
 &lt;blockquote>
 &lt;p>⚠️ 디자인 패턴을 갓 배운 많은 개발자는 문제를 더 간단히 해결할 수 있는 상황임에도 모든 곳에 패턴을 적용해보려는 실수를 범한다고 합니다. 문제를 해결하는데 더 간단한 방법이 있다면 굳이 디자인 패턴을 적용할 필요가 없습니다.&lt;/p>
@@ -9,74 +21,100 @@ class="underline-lsre"
 href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문&lt;/a
+>을 참고하여 작성했습니다. 본 서적에선 GoF의 23가지 디자인 패턴을 다루고 있습니다. 하지만 GoF의 분류 체계(생성, 구조, 행위)를 따르지 않고, 다른 관점으로 분류하고 있으므로 이를 따라서 작성했습니다.&lt;/p>
+&lt;h2 id="references" class="flex items-center gap-3">References &lt;i
+class="transition opacity-10 hover:opacity-100 -rotate-45 hover:-rotate-90"
+>&lt;a href="#references"
 >
-을 참고하여 작성했습니다. 본 서적에선 GoF의 23가지 디자인 패턴을 다루고 있습니다. 하지만 GoF의 분류 체계(생성, 구조, 행위)를 따르지 않고, 다른 관점으로 분류하고 있으므로 이를 따라서 작성했습니다.&lt;/p>
-&lt;h2 id="references">References&lt;/h2>
-&lt;ul>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;ul>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://refactoring.guru/ko/design-patterns"
 target="_blank" rel="noopener noreferrer nofollow"
 >Design pattern - Refactoring Guru&lt;/a
->
-&lt;/li>
+>&lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문 : 쉽게 배우는 GoF의 23가지 디자인 패턴&lt;/a
->
-&lt;/li>
+>&lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://refactoring.guru/ko/design-patterns/swift"
 target="_blank" rel="noopener noreferrer nofollow"
 >Design Pattern in Swift&lt;/a
+>&lt;/li>
+&lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+class="transition opacity-10 hover:opacity-100 -rotate-45 hover:-rotate-90"
+>&lt;a href="#introduction"
 >
-&lt;/li>
-&lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>원티드 프리온보딩에서 주어진 과제 중 하나인 &lt;a
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>원티드 프리온보딩에서 주어진 과제 중 하나인 &lt;a
 class="underline-lsre"
 href="https://github.com/Pre-Onboarding-FE-Team07/wanted-codestates-project-7-7-2"
 target="_blank" rel="noopener noreferrer nofollow"
 >D3.js를 이용한 Github Starred Repo 관계망 그리기 프로젝트&lt;/a
->
-를 진행하면서 d3.js에 큰 흥미를 가지게 되었습니다. 처음 다뤄보는 시각화 라이브러리이라 기능 하나를 추가할 때마다 많은 자료와 문서를 찾아봐야 했습니다. 어찌어찌하긴 해내긴 했지만 코드와 동작을 보며 느껴지는 부족함에 아쉬움이 생겼습니다. 아무래도 짧은 시간 내에 구현해내느라 이해하는데 어려움이 있었기 때문에, 그 어려움을 극복하고자 문서를 톺아보며 살펴보고 정리해보고자 합니다.&lt;/p>
+>를 진행하면서 d3.js에 큰 흥미를 가지게 되었습니다. 처음 다뤄보는 시각화 라이브러리이라 기능 하나를 추가할 때마다 많은 자료와 문서를 찾아봐야 했습니다. 어찌어찌하긴 해내긴 했지만 코드와 동작을 보며 느껴지는 부족함에 아쉬움이 생겼습니다. 아무래도 짧은 시간 내에 구현해내느라 이해하는데 어려움이 있었기 때문에, 그 어려움을 극복하고자 문서를 톺아보며 살펴보고 정리해보고자 합니다.&lt;/p>
 &lt;p>사용하는 라이브러리는 &lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3"
 target="_blank" rel="noopener noreferrer nofollow"
 >d3.js&lt;/a
+>입니다. d3가 가진 수많은 라이브러리 중에서도 &lt;code>d3-force&lt;/code>, &lt;code>d3-zoom&lt;/code>, &lt;code>d3-selection&lt;/code>, &lt;code>d3-drag&lt;/code> 등 추가로 필요한 모듈이라면 전부 활용해볼 예정이고 성능 향상을 위해 Canvas API로 구현해보려고 합니다.&lt;/p>
+&lt;h2 id="references" class="flex items-center gap-3">References &lt;i
+class="transition opacity-10 hover:opacity-100 -rotate-45 hover:-rotate-90"
+>&lt;a href="#references"
 >
-입니다. d3가 가진 수많은 라이브러리 중에서도 &lt;code>d3-force&lt;/code>, &lt;code>d3-zoom&lt;/code>, &lt;code>d3-selection&lt;/code>, &lt;code>d3-drag&lt;/code> 등 추가로 필요한 모듈이라면 전부 활용해볼 예정이고 성능 향상을 위해 Canvas API로 구현해보려고 합니다.&lt;/p>
-&lt;h2 id="references">References&lt;/h2>
-&lt;ul>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;ul>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force"
 target="_blank" rel="noopener noreferrer nofollow"
 >d3-force&lt;/a
->
-&lt;/li>
+>&lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-zoom"
 target="_blank" rel="noopener noreferrer nofollow"
 >d3-zoom&lt;/a
->
-&lt;/li>
+>&lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-selection"
 target="_blank" rel="noopener noreferrer nofollow"
 >d3-selection&lt;/a
->
-&lt;/li>
+>&lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-drag"
 target="_blank" rel="noopener noreferrer nofollow"
 >d3-drag&lt;/a
->
-&lt;/li>
+>&lt;/li>
 &lt;/ul></description></item></channel></rss>
