@@ -6,6 +6,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": [
+    "associatedtype",
     "csstools",
     "datetime",
     "giscus",
@@ -16,7 +17,9 @@
     "nbcamp",
     "outfile",
     "sfeed",
+    "struct",
     "tailwindcss",
+    "typealias",
     "uikit"
   ],
   "css.validate": false,
