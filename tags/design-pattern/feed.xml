@@ -34,10 +34,99 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Design Pattern in Swift&lt;/a
 >
 &lt;/li>
-&lt;/ul></description></item><item><title>Iterator Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/1/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/1/</guid><description>&lt;h2 id="why-to-use">Why to Use&lt;/h2>
-&lt;p>Iterator Pattern은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.&lt;/p>
+&lt;/ul></description></item><item><title>Adapter Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/2/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/2/</guid><description>&lt;p>&lt;strong>Adapter Pattern&lt;/strong>을 활용하면 외부 라이브러리의 인터페이스와 내가 사용하고자 하는 인터페이스가 호환되지 않을 때, 중간에 Adapter를 추가하는 방법으로 호환성을 확보할 수 있습니다. Wrapper Pattern으로 불리기도 합니다.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Adapter Pattern&lt;/code>은 GoF의 분류 체계에서 구조(Structural) 패턴에 속합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>Adapter Pattern을 구현하기 위해 필요한 역할은 다음과 같습니다.&lt;/p>
+&lt;ul>
+&lt;li>Target(대상): 서비스 내에서 사용 중인 인터페이스입니다.&lt;/li>
+&lt;li>Client(의뢰자): Target을 사용하는 클래스입니다.&lt;/li>
+&lt;li>Adaptee(적응 대상자): Target과 호환되지 않는 인터페이스입니다.&lt;/li>
+&lt;li>Adapter(적응자): Adaptee를 Target으로 변환하는 클래스입니다.&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Adapter를 구현하는 방법은 상속을 이용한 방법과 위임(인스턴스)을 이용한 방법으로 나뉘지만 &lt;code>Is-A&lt;/code>보단 &lt;code>Has-A&lt;/code>가 더 좋은 방법이므로 위임을 이용한 방법을 사용하도록 합니다. &lt;a
+class="underline-lsre"
+href="https://www.google.com/search?q=is-a&amp;#43;has-a&amp;#43;relationship"
+target="_blank" rel="noopener noreferrer nofollow"
+>Is-A Has-A Relationship&lt;/a
+>
+&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>예시를 통해 자세히 알아보겠습니다. 시스템 내에서 사용 중인 로깅 인터페이스가 있다고 가정해봅시다.&lt;/p>
+&lt;pre>&lt;code class="language-swift">protocol Logger {
+func log(message: String)
+func warn(message: String)
+func error(message: String)
+}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>Logger&lt;/code>는 Adapter Pattern의 구성 요소 중 Target 역할을 수행합니다. 이를 채택하는 클래스 &lt;code>MyLogger&lt;/code>를 구현합니다. &lt;code>MyLogger&lt;/code>는 Swift의 &lt;code>print()&lt;/code>함수를 이용하여 Termianl 환경에서 로그를 출력합니다.&lt;/p>
+&lt;pre>&lt;code class="language-swift">struct MyLogger {
+func log(message: String) {
+print(&amp;quot;[LOG] \(message)&amp;quot;)
+}
+func warn(message: String) {
+print(&amp;quot;[WARN] \(message)&amp;quot;)
+}
+func error(message: String) {
+print(&amp;quot;[ERROR] \(message)&amp;quot;)
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>Client 역할을 수행하는 &lt;code>App&lt;/code> 클래스에서 Logger 구현체를 주입받아 시스템 전체에 걸쳐 사용합니다.&lt;/p>
+&lt;pre>&lt;code class="language-swift">// App.swift
+final class App {
+private let logger: Logger
+init(logger: Logger) {
+self.logger = logger
+}
+func doSomething() {
+logger.log(message: &amp;quot;doSomething&amp;quot;)
+}
+}
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-swift">// main.swift
+let app = App(logger: MyLogger())
+app.doSomething()
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>MyLogger&lt;/code>는 swift의 &lt;code>print()&lt;/code> 함수에 의존하고 있습니다. 이제 외부 라이브러리를 통해 terminal 환경이 아닌 외부로 로그 정보를 보내려고 합니다. 외부 라이브러리 &lt;code>ExternalLogger&lt;/code>는 다음 인터페이스를 제공합니다.&lt;/p>
+&lt;pre>&lt;code class="language-swift">enum LogLevel {
+case debug
+case info
+case warn
+case error
+}
+struct ExternalLogger {
+func log(level: LogLevel, message: String) {
+// 로그를 외부로 전송합니다.
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>언뜻 보기에도 &lt;code>ExternalLogger&lt;/code>는 &lt;code>Logger&lt;/code>와 호환되지 않는 것을 알 수 있습니다. 이럴 때 Adapter 클래스를 추가하여 호환성을 확보할 수 있습니다.&lt;/p>
+&lt;pre>&lt;code class="language-swift">struct ExternalLoggerAdapter: Logger {
+private let logger = ExternalLogger()
+func log(message: String) {
+logger.log(level: .info, message: message)
+}
+func warn(message: String) {
+logger.log(level: .warn, message: message)
+}
+func error(message: String) {
+logger.log(level: .error, message: message)
+}
+}
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-swift">let app = App(logger: ExternalLoggerAdapter())
+app.doSomething()
+&lt;/code>&lt;/pre>
+&lt;p>이렇게 Adapter 역할을 수행하는 중간자 클래스를 추가하여 세부 구현에 어떠한 변경도 없이 세부 구현에 어떠한 변경도 없이 확정에 성공하였습니다. 이런 식으로 Adapter 구조체를 추가하면 변경이 아닌 확장(OCP - 개방 폐쇄 원칙)이 되어 Side Effect도 없을 뿐더러 Unit Test를 작성하기도 쉬워집니다.&lt;/p></description></item><item><title>Iterator Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/1/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/1/</guid><description>&lt;p>&lt;strong>Iterator Pattern&lt;/strong>은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Iterator Pattern&lt;/code>은 GoF의 분류 체계에서 행위(Behavioral) 패턴에 속합니다.&lt;/p>
+&lt;/blockquote>
 &lt;p>예를 들어, 자료구조 중 배열은 메모리 구조의 특징 덕분에 0..&amp;lt;배열크기 범위로 인덱스를 증가시키며 요소에 접근할 수 있습니다. 허나 리스트의 경우엔 순회 로직을 직접 구현하지 않는 한 인덱스를 이용한 순회가 불가능합니다. 리스트 클래스를 순회 가능한 객체로 만들기 위해선 별도의 구현을 추가해야 합니다. 여기서 Iterator Pattern을 적용한다면 리스트 클래스의 세부 구현을 변경하지 않고도 순회 가능한 객체로 확장할 수 있습니다.&lt;/p>
-&lt;p>Iterator Pattern을 구현하기 위해 필요한 객체는 다음과 같습니다.&lt;/p>
+&lt;p>Iterator Pattern을 구현하기 위해 필요한 역할은 다음과 같습니다.&lt;/p>
 &lt;ul>
 &lt;li>Iterator(반복자): 순회 로직을 추상화한 인터페이스입니다. 다음 요소를 반환하는 &lt;code>next()&lt;/code> 메서드와 현재 요소가 마지막 요소인지 확인하는 &lt;code>hasNext()&lt;/code> 메서드를 포함합니다.&lt;/li>
 &lt;li>ConcreteIterator(구체적인 반복자): Iterator 인터페이스를 구현한 객체입니다.&lt;/li>
@@ -122,7 +211,7 @@ print(book.name)
 &lt;li>&lt;code>BookShelf&lt;/code>: ConcreteAggregate&lt;/li>
 &lt;/ul>
 &lt;p>이렇게 순회를 담당하는 로직을 별도의 클래스로 분리하여 확장성을 높이는 것이 Iterator Pattern의 핵심입니다. 인터페이스를 활용한 이러한 확장성 및 다형성 덕분에 &lt;code>Iterator&lt;/code> 인터페이스만 구현하고 있으면 모든 순회가 필요한 로직에 적용할 수 있습니다.&lt;/p>
-&lt;h2 id="in-swift">In Swift&lt;/h2>
+&lt;hr>
 &lt;p>이미 Swift에서는 &lt;a
 class="underline-lsre"
 href="https://developer.apple.com/documentation/swift/iteratorprotocol"
@@ -159,7 +248,7 @@ print(&amp;quot;\(count)...&amp;quot;)
 // 2..
 // 1..
 &lt;/code>&lt;/pre>
-&lt;p>&lt;code>CountDown&lt;/code>은 ConcreteAggregate 역할을 수행하며, &lt;code>CountdownIterator&lt;/code>는 ConcreteIterator 역할을 수행합니다. 이렇게 순회 로직을 분리하는 방식으로 Collection 형식이 아니라 하더라도 순회 로직을 추가함으로서 순회 가능한 객체를 만들 수 있다는 장점이 있습니다.&lt;/p>
+&lt;p>&lt;code>Countdown&lt;/code>은 ConcreteAggregate 역할을 수행하며, &lt;code>CountdownIterator&lt;/code>는 ConcreteIterator 역할을 수행합니다. 이렇게 순회 로직을 분리하는 방식으로 Collection 형식이 아니라 하더라도 순회 로직을 추가함으로서 순회 가능한 객체를 만들 수 있습니다.&lt;/p>
 &lt;h2 id="references">References&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a

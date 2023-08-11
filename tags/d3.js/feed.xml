@@ -584,7 +584,8 @@ target="_blank" rel="noopener noreferrer nofollow"
 >D3.js Tutorial - Data Binding&lt;/a
 >
 &lt;/li>
-&lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;p>원티드 프리온보딩에서 주어진 과제 중 하나인 &lt;a
+&lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>원티드 프리온보딩에서 주어진 과제 중 하나인 &lt;a
 class="underline-lsre"
 href="https://github.com/Pre-Onboarding-FE-Team07/wanted-codestates-project-7-7-2"
 target="_blank" rel="noopener noreferrer nofollow"
@@ -597,7 +598,38 @@ href="https://github.com/d3/d3"
 target="_blank" rel="noopener noreferrer nofollow"
 >d3.js&lt;/a
 >
-입니다. d3가 가진 수많은 라이브러리 중에서도 &lt;code>d3-force&lt;/code>, &lt;code>d3-zoom&lt;/code>, &lt;code>d3-selection&lt;/code>, &lt;code>d3-drag&lt;/code> 등 추가로 필요한 모듈이라면 전부 활용해볼 예정이고 성능 향상을 위해 Canvas API로 구현해보려고 합니다.&lt;/p></description></item><item><title>Simulating Physical Forces</title><link>https://jinyongp.dev/posts/d3js/1/</link><pubDate>Thu, Apr 14 14:20:46 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/1/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+입니다. d3가 가진 수많은 라이브러리 중에서도 &lt;code>d3-force&lt;/code>, &lt;code>d3-zoom&lt;/code>, &lt;code>d3-selection&lt;/code>, &lt;code>d3-drag&lt;/code> 등 추가로 필요한 모듈이라면 전부 활용해볼 예정이고 성능 향상을 위해 Canvas API로 구현해보려고 합니다.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://github.com/d3/d3-force"
+target="_blank" rel="noopener noreferrer nofollow"
+>d3-force&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://github.com/d3/d3-zoom"
+target="_blank" rel="noopener noreferrer nofollow"
+>d3-zoom&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://github.com/d3/d3-selection"
+target="_blank" rel="noopener noreferrer nofollow"
+>d3-selection&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://github.com/d3/d3-drag"
+target="_blank" rel="noopener noreferrer nofollow"
+>d3-drag&lt;/a
+>
+&lt;/li>
+&lt;/ul></description></item><item><title>Simulating Physical Forces</title><link>https://jinyongp.dev/posts/d3js/1/</link><pubDate>Thu, Apr 14 14:20:46 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/1/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
 &lt;p>&lt;a
 class="underline-lsre"
 href="https://github.com/d3/d3-force"
