@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on jinyongp.dev</title><link>https://jinyongp.dev/posts/</link><description>Recent content in Posts on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Aug 09 06:35:34 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/posts/feed.xml" rel="self" type="application/rss+xml"/><item><title>Adapter Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/2/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/2/</guid><description>&lt;p>&lt;strong>Adapter Pattern&lt;/strong>을 활용하면 외부 라이브러리의 인터페이스와 내가 사용하고자 하는 인터페이스가 호환되지 않을 때, 중간에 Adapter를 추가하는 방법으로 호환성을 확보할 수 있습니다. Wrapper Pattern으로 불리기도 합니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on jinyongp.dev</title><link>https://jinyongp.dev/posts/</link><description>Recent content in Posts on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Sat, Aug 12 09:52:24 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/posts/feed.xml" rel="self" type="application/rss+xml"/><item><title>Template Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/3/</link><pubDate>Sat, Aug 12 09:52:24 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/3/</guid><description>&lt;p>&lt;strong>Template Method Pattern&lt;/strong>은 특정 알고리즘을 반복적으로 사용하고 있을 때 중복을 제거하기 위하여 적용해볼 수 있습니다. 공통 알고리즘을 묶을 템플릿 메서드를 포함할 추상 클래스를 정의하고, 하위 클래스에서 구체적인 내용을 작성하는 패턴입니다. 해당 패턴을 통해 코드 중복을 제거하고 공통된 알고리즘을 재사용할 수 있습니다. 템플릿 메서드의 변경이 필요하다면 하위 클래스에서 재정의를 통해 인터페이스의 변경 없이 세부 구현을 변경할 수도 있습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Template Method Pattern&lt;/code>은 GoF의 분류 체계에서 행위(Behavioral) 패턴에 속합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>Template Method Pattern을 구현하기 위해 필요한 역할은 다음과 같습니다.&lt;/p>
+&lt;ul>
+&lt;li>AbstractClass(추상 클래스): 템플릿 메서드를 정의하고 하위 클래스에서 구현할 메서드를 정의합니다.&lt;/li>
+&lt;li>ConcreteClass(구현 클래스): 추상 클래스에서 정의한 추상 메서드를 구현합니다.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://product.kyobobook.co.kr/detail/S000200311846"
+target="_blank" rel="noopener noreferrer nofollow"
+>Java 언어로 배우는 디자인 패턴 입문&lt;/a
+>의 예제를 Swift 코드로 작성해봅시다. AbstractClass 역할을 수행하는 &lt;code>AbstractDisplay&lt;/code> 클래스를 정의합니다. &lt;code>AbstractDisplay&lt;/code> 클래스는 템플릿 메서드인 &lt;code>display&lt;/code> 메서드를 정의하고 있습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4">
+&lt;pre>&lt;code>protocol AbstractDisplay {
+func open()
+func write()
+func close()
+}
+extension AbstractDisplay {
+func display() {
+open()
+for _ in 0..&amp;lt;5 {
+write()
+}
+close()
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>AbstractClass&lt;/code>는 추상 클래스이므로 구현되어 있는 메서드가 존재하고 인스턴스를 생성할 수 없어야 합니다. &lt;code>protocol&lt;/code>과 &lt;code>extension&lt;/code> 키워드를 활용하여 추상 클래스를 정의하였습니다. &lt;code>display&lt;/code> 탬플릿 메서드를 사용하고 싶다면, &lt;code>AbstractClass&lt;/code>를 채택하고 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현해야 합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4">
+&lt;pre>&lt;code>final class CharDisplay: AbstractDisplay {
+private let char: Character
+init(char: Character) {
+self.char = char
+}
+func open() {
+print(&amp;#34;&amp;lt;&amp;lt;&amp;#34;, terminator: &amp;#34;&amp;#34;)
+}
+func write() {
+print(char, terminator: &amp;#34;&amp;#34;)
+}
+func close() {
+print(&amp;#34;&amp;gt;&amp;gt;&amp;#34;)
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="relative rounded-md overflow-hidden my-4">
+&lt;pre>&lt;code>let display: AbstractDisplay = CharDisplay(char: &amp;#34;H&amp;#34;)
+display.display()
+// output:
+// &amp;lt;&amp;lt;HHHHH&amp;gt;&amp;gt;&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>AbstractDisplay&lt;/code>를 채택하고 있습니다. &lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현하고 있습니다. &lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>display&lt;/code> 메서드를 구현하지 않았지만, &lt;code>AbstractDisplay&lt;/code>의 &lt;code>display&lt;/code> 메서드를 사용할 수 있습니다.&lt;/p>
+&lt;p>또 다른 클래스를 정의해봅니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4">
+&lt;pre>&lt;code>final class StringDisplay: AbstractDisplay {
+private let string: String
+private let width: Int
+init(string: String) {
+self.string = string
+self.width = string.count
+}
+func open() {
+printLine()
+}
+func write() {
+print(&amp;#34;|\(string)|&amp;#34;)
+}
+func close() {
+printLine()
+}
+private func printLine() {
+print(&amp;#34;&amp;#43;\(String(repeating: &amp;#34;-&amp;#34;, count: width))&amp;#43;&amp;#34;)
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="relative rounded-md overflow-hidden my-4">
+&lt;pre>&lt;code>let display: AbstractDisplay = StringDisplay(string: &amp;#34;Hello, World&amp;#34;)
+display.display()
+// output:
+// &amp;#43;-------------&amp;#43;
+// |Hello, World|
+// |Hello, World|
+// |Hello, World|
+// |Hello, World|
+// |Hello, World|
+// &amp;#43;-------------&amp;#43;&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>이렇듯 하나의 공통적인 로직을 템플릿화하여 코드의 중복을 없앨 수 있고, 추상 클래스를 상속(채택)하는 방식으로 인하여 상위 클래스 형식의 변수에 하위 클래스 인스턴스 중 어느 것을 대입해도 제대로 동작해야 한다는 원칙인 &lt;code>리스코프 치환 원칙(LSP, Liskov Substitution Principle)&lt;/code>을 만족합니다.&lt;/p>
+&lt;p>Swift에서는 &lt;code>extension&lt;/code> 키워드의 존재로 인터페이스를 변경하지 않고도 쉽게 새로운 공통 로직을 언제든 추가할 수 있습니다.&lt;/p></description></item><item><title>Adapter Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/2/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/2/</guid><description>&lt;p>&lt;strong>Adapter Pattern&lt;/strong>을 활용하면 외부 라이브러리의 인터페이스와 내가 사용하고자 하는 인터페이스가 호환되지 않을 때, 중간에 Adapter를 추가하는 방법으로 호환성을 확보할 수 있습니다. Wrapper Pattern으로 불리기도 합니다.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>Adapter Pattern&lt;/code>은 GoF의 분류 체계에서 구조(Structural) 패턴에 속합니다.&lt;/p>
 &lt;/blockquote>
