@@ -43,7 +43,11 @@
     @apply list-disc;
   }
 
-  :is(blockquote, img, iframe, .hljs) {
+  img {
+    @apply cursor-zoom-in;
+  }
+
+  :is(blockquote, img, iframe) {
     @apply rounded-md my-4;
   }
 
