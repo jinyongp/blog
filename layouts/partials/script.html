@@ -1,14 +1,10 @@
-{{ with .Site.Params.style.highlight }}
-  <link
-    rel="stylesheet"
-    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/{{ . }}.min.css"
-  />
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <script defer>
+{{ with .Site.Params.highlight }}
+  {{ $cdn := printf "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@%s/build" .version }}
+  <link rel="stylesheet" href="{{ $cdn }}/styles/{{ .theme }}.min.css" />
+  <script defer type="module">
+    import hljs from "{{ $cdn }}/es/highlight.min.js";
+    hljs.configure({ })
     hljs.highlightAll();
-    hljs.configure({
-      ignoreUnescapedHTML: true,
-    });
   </script>
 {{ end }}
 

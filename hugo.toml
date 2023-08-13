@@ -21,8 +21,11 @@ favicon = "favicon.png"
 
 [params.style]
 font = "Raleway"      # https://fonts.google.com
-highlight = "nord"    # https://highlightjs.org/static/demo
 accent = "65 105 225" # "R G B"
+
+[params.highlight]
+theme = "nord"     # https://highlightjs.org/static/demo
+version = "11.8.0" # https://cdnjs.cloudflare.com/ajax/libs/highlight.js/x.y.z
 
 [params.author]
 name = "Jinyong Park"
