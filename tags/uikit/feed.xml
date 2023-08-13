@@ -29,7 +29,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>TodoApp/
 ├── LaunchScreen.storyboard
 ├── Main.storyboard
@@ -98,7 +98,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoItem {
 var id: String
 var content: String
@@ -126,7 +126,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoService {
 static var shared: TodoService = .init()
 private init() {}
@@ -163,7 +163,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>&lt;code>ViewController&lt;/code>의 경우 Main Page의 View와 Logic을 담당합니다. UI 관련 로직은 생략했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class ViewController: UIViewController {
 @IBOutlet weak var titleLabel: UILabel!
 @IBOutlet weak var tableView: UITableView!
@@ -239,7 +239,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoTableViewCell: UITableViewCell {
 @IBOutlet weak var todoLabel: UILabel!
 @IBOutlet weak var completeButton: UIButton!
@@ -295,7 +295,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>메인 페이지에서 &lt;code>completes&lt;/code> 버튼을 누르면 해당 페이지를 표시합니다. 버튼에 직접 등록하는 Segue 방식으로 연결하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class CompletesViewController: UIViewController {
 @IBOutlet weak var tableView: UITableView!
 private let todoService = TodoService.shared
@@ -346,7 +346,7 @@ return cell
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>CompletesViewController&lt;/code>에서도 &lt;code>UITableView&lt;/code>를 사용하므로 &lt;code>ViewController&lt;/code>와 동일한 방식으로 구현하였습니다. 완료 버튼을 눌러 완료를 취소할 수 있도록 하였습니다. 완료를 취소한 후, 변경 내용이 메인 페이지에도 반영되어야 하므로 페이지가 닫힐 때 호출할 &lt;code>onDismissed&lt;/code> 클로저를 추가하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension ViewController {
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 if segue.identifier == &amp;#34;CompletesVC&amp;#34; {
@@ -374,7 +374,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h5>&lt;p>클로저 전달 방식 대신 Delegate 패턴을 적용해보았습니다. &lt;code>onDismissed&lt;/code> 클로저를 전달하는 대신 &lt;code>CompletesViewControllerDelegate&lt;/code> 프로토콜을 정의하여 &lt;code>onDismissed&lt;/code> 메서드 동작을 위임하도록 해보았습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>@objc protocol CompletesViewControllerDelegate {
 @objc optional func onDismissed()
 }
@@ -386,7 +386,7 @@ delegate?.onDismissed?()
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension ViewController {
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 if segue.identifier == &amp;#34;CompletesVC&amp;#34; {
@@ -430,7 +430,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>&lt;code>TodoService&lt;/code>에서 &lt;code>TodoItem&lt;/code>의 속성을 변경할 때 제대로 변경되지 않는 문제가 있었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>func toggle(id: String) {
 guard let item = (items.first { $0.id == id }) else { return }
 item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
@@ -490,7 +490,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>예를 들어 &lt;code>UITextField&lt;/code>의 경우, 사용자가 입력창을 눌렀을 때 OS에게 키보드를 열 것을 명령하며 사용자가 입력한 값을 &lt;code>UITextField&lt;/code>에 전달하는 동작이 구현되어 있을 것입니다. 하지만 ViewController에선 이러한 세부 동작은 알 필요 없이 특정 상황이 발생했을 때만 데이터를 전달 받아 이용하면 됩니다.&lt;/p>
 &lt;p>UIkit에서는 이렇게 세부 구현은 숨긴 채로 특정 상황이 발생했음을 알리거나 동작의 제어를 위임하기 위해 Delegate Pattern을 활용하고 있습니다. &lt;code>UITextField&lt;/code>는 &lt;code>UITextFieldDelegate&lt;/code> 프로토콜을 통해 이를 구현하고 있으며, 이를 채택한 ViewController는 다음의 메서드를 구현하여 데이터를 전달받고 동작을 제어할 수 있습니다.&lt;/p>
 &lt;p>&lt;code>UITextFieldDelegate&lt;/code>를 채택하여 구현할 수 있는 메서드 목록은 다음과 같습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// 편집을 시작할 때 호출합니다. Bool 값을 반환하여 편집을 허용할지 여부를 결정할 수 있습니다.
 optional func textFieldShouldBeginEditing(_:) -&amp;gt; Bool
 // 편집이 시작된 직후 호출됩니다.
@@ -512,7 +512,7 @@ optional func textFieldShouldReturn(_:) -&amp;gt; Bool&lt;/code>&lt;/pre>
 &lt;p>&lt;code>optional&lt;/code> 키워드로 정의되어 있으니 ViewController는 이 중에서 필요한 메서드만 구현하면 됩니다.&lt;/p>
 &lt;/blockquote>
 &lt;p>정의한 메서드가 호출되려면 &lt;code>UITextField&lt;/code> 인스턴스의 &lt;code>delegate&lt;/code> 프로퍼티에 ViewController를 할당해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class ViewController: UIViewController {
 private let textField = UITextField()
 override func viewDidLoad() {
@@ -544,7 +544,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>그렇다면 Delegate Pattern은 어떤 식으로 동작하기에 다른 객체에게 동작의 제어권을 위임할 수 있는걸까요? 간단한 &lt;code>Delegate&lt;/code> 프로토콜을 구현하여 동작을 확인해보겠습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>protocol UITextFieldDelegate {
 func textFieldShouldBeginEditing(_ textField: UITextField) -&amp;gt; Bool
 func textFieldDidBeginEditing(_ textField: UITextField)

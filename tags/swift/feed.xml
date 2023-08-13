@@ -29,7 +29,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>TodoApp/
 ├── LaunchScreen.storyboard
 ├── Main.storyboard
@@ -98,7 +98,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoItem {
 var id: String
 var content: String
@@ -126,7 +126,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoService {
 static var shared: TodoService = .init()
 private init() {}
@@ -163,7 +163,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>&lt;code>ViewController&lt;/code>의 경우 Main Page의 View와 Logic을 담당합니다. UI 관련 로직은 생략했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class ViewController: UIViewController {
 @IBOutlet weak var titleLabel: UILabel!
 @IBOutlet weak var tableView: UITableView!
@@ -239,7 +239,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoTableViewCell: UITableViewCell {
 @IBOutlet weak var todoLabel: UILabel!
 @IBOutlet weak var completeButton: UIButton!
@@ -295,7 +295,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>메인 페이지에서 &lt;code>completes&lt;/code> 버튼을 누르면 해당 페이지를 표시합니다. 버튼에 직접 등록하는 Segue 방식으로 연결하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class CompletesViewController: UIViewController {
 @IBOutlet weak var tableView: UITableView!
 private let todoService = TodoService.shared
@@ -346,7 +346,7 @@ return cell
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>CompletesViewController&lt;/code>에서도 &lt;code>UITableView&lt;/code>를 사용하므로 &lt;code>ViewController&lt;/code>와 동일한 방식으로 구현하였습니다. 완료 버튼을 눌러 완료를 취소할 수 있도록 하였습니다. 완료를 취소한 후, 변경 내용이 메인 페이지에도 반영되어야 하므로 페이지가 닫힐 때 호출할 &lt;code>onDismissed&lt;/code> 클로저를 추가하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension ViewController {
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 if segue.identifier == &amp;#34;CompletesVC&amp;#34; {
@@ -374,7 +374,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h5>&lt;p>클로저 전달 방식 대신 Delegate 패턴을 적용해보았습니다. &lt;code>onDismissed&lt;/code> 클로저를 전달하는 대신 &lt;code>CompletesViewControllerDelegate&lt;/code> 프로토콜을 정의하여 &lt;code>onDismissed&lt;/code> 메서드 동작을 위임하도록 해보았습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>@objc protocol CompletesViewControllerDelegate {
 @objc optional func onDismissed()
 }
@@ -386,7 +386,7 @@ delegate?.onDismissed?()
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension ViewController {
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 if segue.identifier == &amp;#34;CompletesVC&amp;#34; {
@@ -430,7 +430,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>&lt;code>TodoService&lt;/code>에서 &lt;code>TodoItem&lt;/code>의 속성을 변경할 때 제대로 변경되지 않는 문제가 있었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>func toggle(id: String) {
 guard let item = (items.first { $0.id == id }) else { return }
 item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
@@ -546,7 +546,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>예를 들어 &lt;code>UITextField&lt;/code>의 경우, 사용자가 입력창을 눌렀을 때 OS에게 키보드를 열 것을 명령하며 사용자가 입력한 값을 &lt;code>UITextField&lt;/code>에 전달하는 동작이 구현되어 있을 것입니다. 하지만 ViewController에선 이러한 세부 동작은 알 필요 없이 특정 상황이 발생했을 때만 데이터를 전달 받아 이용하면 됩니다.&lt;/p>
 &lt;p>UIkit에서는 이렇게 세부 구현은 숨긴 채로 특정 상황이 발생했음을 알리거나 동작의 제어를 위임하기 위해 Delegate Pattern을 활용하고 있습니다. &lt;code>UITextField&lt;/code>는 &lt;code>UITextFieldDelegate&lt;/code> 프로토콜을 통해 이를 구현하고 있으며, 이를 채택한 ViewController는 다음의 메서드를 구현하여 데이터를 전달받고 동작을 제어할 수 있습니다.&lt;/p>
 &lt;p>&lt;code>UITextFieldDelegate&lt;/code>를 채택하여 구현할 수 있는 메서드 목록은 다음과 같습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// 편집을 시작할 때 호출합니다. Bool 값을 반환하여 편집을 허용할지 여부를 결정할 수 있습니다.
 optional func textFieldShouldBeginEditing(_:) -&amp;gt; Bool
 // 편집이 시작된 직후 호출됩니다.
@@ -568,7 +568,7 @@ optional func textFieldShouldReturn(_:) -&amp;gt; Bool&lt;/code>&lt;/pre>
 &lt;p>&lt;code>optional&lt;/code> 키워드로 정의되어 있으니 ViewController는 이 중에서 필요한 메서드만 구현하면 됩니다.&lt;/p>
 &lt;/blockquote>
 &lt;p>정의한 메서드가 호출되려면 &lt;code>UITextField&lt;/code> 인스턴스의 &lt;code>delegate&lt;/code> 프로퍼티에 ViewController를 할당해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class ViewController: UIViewController {
 private let textField = UITextField()
 override func viewDidLoad() {
@@ -600,7 +600,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>그렇다면 Delegate Pattern은 어떤 식으로 동작하기에 다른 객체에게 동작의 제어권을 위임할 수 있는걸까요? 간단한 &lt;code>Delegate&lt;/code> 프로토콜을 구현하여 동작을 확인해보겠습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>protocol UITextFieldDelegate {
 func textFieldShouldBeginEditing(_ textField: UITextField) -&amp;gt; Bool
 func textFieldDidBeginEditing(_ textField: UITextField)
@@ -686,7 +686,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>.
 ├── Sources/
 │ ├── Operators/
@@ -734,11 +734,11 @@ href="https://developer.apple.com/documentation/xcode/creating-a-standalone-swif
 target="_blank" rel="noopener noreferrer nofollow"
 >해당 문서&lt;/a
 >를 참고하여 프로젝트를 생성했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ swift package init --type executable&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>위 명령어를 실행하면 현재 위치한 폴더에 &lt;code>Package.swift&lt;/code> 파일을 생성합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// swift-tools-version: 5.8
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
@@ -770,13 +770,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>각 연산에 대한 클래스의 명세를 정하기 위해 &lt;code>Operator&lt;/code> 프로토콜을 작성했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>protocol Operator {
 func operate&amp;lt;Operand&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이를 토대로 덧셈, 뺄셈, 곱셈, 나눗셈, 나머지 연산 클래스를 작성했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class AddOperator: Operator {
 func operate&amp;lt;Operand&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand {
 return lhs &amp;#43; rhs
@@ -785,7 +785,7 @@ return lhs &amp;#43; rhs
 &lt;/div>
 &lt;p>여기서 &lt;code>lhs + rhs&lt;/code> 에서 &lt;code>Binary operator '+' cannot be applied to two 'Operand' operands&lt;/code> 에러가 발생합니다. &lt;code>Operand&lt;/code> 타입이 덧셈 기능을 제공하는지 모르기 때문입니다.&lt;/p>
 &lt;p>이를 해결하려면 &lt;code>Operand&lt;/code> 타입이 연산 가능한 타입만 올 수 있도록 제약을 걸 필요가 있습니다. &lt;code>Calculable&lt;/code> 프로토콜을 추가하여 이를 준수하는 타입만 올 수 있도록 제약을 걸었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>protocol Operator {
 func operate&amp;lt;Operand: Calculable&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand
 }
@@ -800,14 +800,14 @@ extension Int: Calculable {}&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>Calculable&lt;/code> 프로토콜을 추가하고 &lt;code>Int&lt;/code> 타입이 이를 준수하도록 확장(extension)했습니다.&lt;/p>
 &lt;p>하지만, 위와 같은 방식으로 &lt;code>Double&lt;/code> 타입을 확장했을 때, &lt;code>Type 'Double' does not conform to protocol 'Calculable'&lt;/code> 에러가 발생합니다. 실수 타입인 &lt;code>Double&lt;/code>은 나머지 연산에 대한 동작이 정의되어 있지 않기 때문입니다. 단순히 정수 타입으로 동작하도록 확장해줍니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension Double: Calculable {
 static func %(lhs: Self, rhs: Self) -&amp;gt; Self {
 return Double(Int(lhs) % Int(rhs))
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class ModOperator: Operator {
 func operate&amp;lt;Operand&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand where Operand : Calculable {
 return lhs % rhs
@@ -830,7 +830,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h4>&lt;p>작성한 연산자를 언제든 사용할 수 있는 형태로 하여 Dictionary 형태로 외부에서 주입할 수 있도록 작성했습니다.&lt;/p>
 &lt;p>&lt;code>_result&lt;/code>는 여태까지 연산한 결과를 갖고 있는 저장 프로퍼티이고, &lt;code>calculate&lt;/code> 메서드를 호출하여 연산을 수행합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>import Foundation
 class Calculator&amp;lt;T: Calculable&amp;gt; {
 private var _result: T
@@ -849,7 +849,7 @@ return _result
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>let calculator = Calculator&amp;lt;Double&amp;gt;(
 operators: [
 &amp;#34;&amp;#43;&amp;#34;: AddOperator(),
@@ -889,7 +889,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>계산기이니 &lt;code>clear&lt;/code> 메서드를 작성했고, 이는 결과를 0으로 초기화하는 단순한 작업을 수행합니다. &lt;code>Int&lt;/code> 타입은 0으로 초기화하는 반면에 &lt;code>Double&lt;/code>은 0.0으로 초기화해야 했기 때문입니다. 제네릭 타입으로부터 이를 확인할 수 있는 방법은 없었지만, 0과 0.0 이외에 경우는 없다고 가정하고 nullish coalescing operator를 사용하여 해결했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>private static func zero() -&amp;gt; T {
 return 0 as? T ?? 0.0 as! T
 }&lt;/code>&lt;/pre>
@@ -909,7 +909,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h4>&lt;p>Swift에서 문자열을 조작하기란 다른 언어에 비해 번거로운 점이 많았습니다&amp;hellip; index 또한 단순히 숫자가 아니라 String.Index를 생성하여 전달해야했고, 주어진 Index로부터 어느정도 떨어졌는지하는 방식으로 문자열을 가져와야했습니다.&lt;/p>
 &lt;p>첫 문자를 제외하고 문자열을 가져오려면 다음 방식으로 가져와야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>let input: String = &amp;#34;Hello, World!&amp;#34;
 input[input.index(input.startIndex, offsetBy: 1)...] // ello, World!&lt;/code>&lt;/pre>
 &lt;/div>
@@ -923,7 +923,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 > 문법을 활용하여 해당 인덱스부터 문자열을 가져옵니다.&lt;/li>
 &lt;/ol>
 &lt;p>나중에 알게된 내용인데 단순하게 &lt;code>dropFirst&lt;/code> 메서드를 활용해도 됩니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>input.dropFirst() // ello, World!&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>문자열 관련 메서드는 대개 &lt;code>Self.SubSequence&lt;/code> 타입을 반환합니다. 잘라낸 문자열을 저장하기 위헤 새로운 메모리 공간을 할당하는 것이 아닌 기존의 문자열에서 필요한 부분에 직접 접근하기 때문입니다. 따라서, 문자열로서 사용하고 싶다면 &lt;code>String&lt;/code>으로 변환해야 합니다.&lt;/p>

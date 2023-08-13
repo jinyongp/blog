@@ -24,7 +24,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h2>&lt;p>사전캠프에서도 다뤘지만, Service 단에서 &lt;code>shared_preferences&lt;/code>를 사용하기 위해 서비스 파일 내에서 직접 불러와서 사용해주는 방식이 아니라 &lt;code>main.dart&lt;/code>에서 &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 함수를 주입해주는 방식으로 구현했었습니다.&lt;/p>
 &lt;p>허나, 아래처럼 &lt;code>save&lt;/code> 혹은 &lt;code>load&lt;/code> 둘 다 구현해야하는 걸 강제할 수 없었습니다. 또한, &lt;code>shared_preferences&lt;/code>외에 다른 걸로 변경할 때도 번거롭습니다&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>void main() async {
 WidgetsFlutterBinding.ensureInitialized();
 SharedPreferences pref await SharedPreferences.getInstance();
@@ -42,14 +42,14 @@ child: const MyApp(),
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이를 해결하기 위해 &lt;code>IO&lt;/code> 인터페이스를 구현했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>abstract class IO {
 Future&amp;lt;void&amp;gt; save(String payload);
 Future&amp;lt;String?&amp;gt; load();
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>dart에서는 인터페이스를 생성하기 위해 &lt;code>abstract class&lt;/code> 키워드를 사용해야 합니다. &lt;code>IO&lt;/code> 인터페이스는 &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 함수에 대한 명세를 제공합니다. 이를 &lt;code>CommentService&lt;/code>에 적용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class CommentService extends ChangeNotifier {
 final Map&amp;lt;String, List&amp;lt;Comment&amp;gt;&amp;gt; _comments = {};
 IO? io;
@@ -60,7 +60,7 @@ CommentService({this.io}) {
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이제 &lt;code>io&lt;/code> 인스턴스를 외부에서 주입해줄 수 있습니다. &lt;code>shared_preferences&lt;/code>를 사용할 예정이므로 &lt;code>SharedPreferencesIO&lt;/code> 클래스를 생성합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class SharedPreferencesIO implements IO {
 late Future&amp;lt;SharedPreferences&amp;gt; pref;
 SharedPreferencesIO() {
@@ -76,7 +76,7 @@ pref.then((pref) =&amp;gt; pref.setString(&amp;#39;comments&amp;#39;, payload));
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>void main() async {
 WidgetsFlutterBinding.ensureInitialized();
 runApp(MultiProvider(
@@ -107,7 +107,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>&lt;code>CommentService&lt;/code>에서 내부적으로 데이터를 저장하고 불러오는 &lt;code>_save&lt;/code>와 &lt;code>_load&lt;/code> 함수가 있었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>Future&amp;lt;void&amp;gt; _save() {
 if (save == null) return Future.value();
 String payload = jsonEncode(_memos.map((m) =&amp;gt; m.toJson()).toList());
@@ -124,7 +124,7 @@ _memos.addAll(jsonDecode(payload).map((e) =&amp;gt; Memo.fromJson(e)));
 &lt;p>여기서 데이터를 String 타입의 payload로 만들거나, 반대로 payload를 데이터로 변환하는 작업을 수행했었습니다.
 언뜻보면 null 체크를 하고 종료하는 부분이나 payload를 처리하는 부분은 중복된 부분이기에 별도의 함수로 분리하고 싶었습니다.&lt;/p>
 &lt;p>그래서 &lt;code>DataHandler&lt;/code> 추상 클래스르 작성하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>mixin DataHandler {
 IO? io;
 Future&amp;lt;void&amp;gt; import(String payload);
@@ -144,7 +144,7 @@ import(payload);
 &lt;/div>
 &lt;p>dart에서 mixin을 활용하여 추상 클래스를 작성할 수 있습니다.
 &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 함수는 이미 구현되어 있어 동일한 작업을 수행하지만, &lt;code>import&lt;/code>와 &lt;code>export&lt;/code> 함수는 재정의가 필요합니다. 이를 &lt;code>CommentService&lt;/code>에 적용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class UseState {
 final List&amp;lt;Comment&amp;gt; comments;
 final void Function(List&amp;lt;Comment&amp;gt; Function()) setState;
@@ -228,7 +228,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >dio&lt;/a
 > 패키지를 활용했습니다. &lt;br>
 책 정보를 불러올 수 있는 Google API를 활용하여 Watcha Pedia 서비스를 구현했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// main.dart
 void main() async {
 late SharedPreferences pref;
@@ -258,7 +258,7 @@ child: const MainApp(),
 ));
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// services/book.dart
 final Future&amp;lt;T&amp;gt; Function&amp;lt;T&amp;gt;(String url) get;
 final FutureOr Function(String payload)? save;
@@ -283,7 +283,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;p>앱 상에서 외부 웹 링크 페이지를 띄우기 위해선 &lt;code>webview_flutter&lt;/code> 패키지를 사용해야 합니다. &lt;br>
 책 목록에서 책을 클릭하면 해당 책의 정보를 보여주는 페이지를 띄웁니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// screens/webview.dart
 class WebViewScreen extends StatelessWidget {
 WebViewScreen({
@@ -303,7 +303,7 @@ body: WebView(initialUrl: url),
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// widgets/book_tile.dart
 onTap: () {
 Navigator.push(
@@ -352,7 +352,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;li>services: 서비스 (비즈니스 로직)&lt;/li>
 &lt;li>widgets: 위젯 (컴포넌트)&lt;/li>
 &lt;/ul>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>lib/
 ├── models/
 │ └── book.dart
@@ -398,7 +398,7 @@ href="https://pub.dev/"
 target="_blank" rel="noopener noreferrer nofollow"
 >pub.dev&lt;/a
 >에서 조회할 수 있습니다. 패키지를 설치하기 위해서도 &lt;code>flutter pub&lt;/code> 명령어를 사용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ flutter pub add provider shared_preferences&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;h3 id="provider" class="flex items-center gap-3">Provider &lt;i
@@ -415,7 +415,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Provider는 flutter의 상태 관리 패키지로 전역에서 데이터를 쥐고 제어할 수 있는 서비스를 관리해줍니다. &lt;code>Memo&lt;/code> 클래스와 함께 &lt;code>MemoService&lt;/code>를 추가해보았습니다. &lt;code>MemoService&lt;/code>는 메모 목록을 관리하고 CRUD 기능을 제공합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// lib/services/memo.dart
 class Memo {
 Memo({ required this.content });
@@ -429,7 +429,7 @@ void delete(int index) { ... }
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>main.dart&lt;/code>의 &lt;code>runApp&lt;/code>에 Provider를 통해 &lt;code>MemoService&lt;/code>를 등록해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// lib/main.dart
 void main() {
 runApp(
@@ -443,7 +443,7 @@ child: const MyApp(),
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이제 위젯트리 전체를 &lt;code>Consumer&amp;lt;MemoService&amp;gt;&lt;/code>로 감싸주면 &lt;code>MemoService&lt;/code> 내에서 &lt;code>notifyListeners()&lt;/code>가 호출될 때마다 전체 화면을 다시 그립니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>Widget build(BuildContext context) {
 return Consumer&amp;lt;MemoService&amp;gt;(builder: (context, memoService, child) {
 return Scaffold(
@@ -468,7 +468,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;p>&lt;code>SharedPreferences&lt;/code>는 앱을 껐다 켜도 데이터를 유지할 수 있는 기능을 제공합니다. 다만 &lt;code>SharedPreferences&lt;/code>와 같이 데이터를 유지해줄 수 있는 방법은 다양하므로 언제든 교체할 수 있도록 외부에서 주입해주는 방식으로 구현했습니다.&lt;/p>
 &lt;p>&lt;code>MemoService&lt;/code>에 데이터를 저장하고 불러오는 함수를 매개변수를 받을 수 있게끔 추가합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class MemoService extends ChangeNotifier {
 final List&amp;lt;Memo&amp;gt; _memos = [];
 final Future&amp;lt;void&amp;gt; Function(String payload)? save;
@@ -482,7 +482,7 @@ this.load,
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>main.dart&lt;/code>에서 &lt;code>SharedPreferences&lt;/code>의 인스턴스를 생성한 후 데이터를 저장하고 불러오는 함수를 전달합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>void main() async {
 WidgetsFlutterBinding.ensureInitialized();
 SharedPreferences pref = await SharedPreferences.getInstance();
@@ -500,11 +500,11 @@ child: const MyApp(),
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>MemoService&lt;/code>에서 이를 적절하게 저장하고 불러올 때 호출합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>String payload = jsonEncode(_memos.map((m) =&amp;gt; m.toJson()).toList());
 return save!(payload);&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>String? payload = await load!();
 if (payload == null) return;
 _memos.clear();
@@ -734,11 +734,11 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>전 brew로 설치 가능하면 전부 brew로 설치하는 편입니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ brew install --cask flutter&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>설치 후 &lt;code>flutter&lt;/code> 명령어를 사용할 수 있습니다. &lt;code>doctor&lt;/code> 명령어로 정상적으로 설치됐는지 확인할 수 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ flutter doctor -v
 Doctor summary (to see all details, run flutter doctor -v):
 [✓] Flutter (Channel stable, 3.10.5, on macOS 13.4.1 22F82 darwin-arm64, locale en-KR)
@@ -775,7 +775,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul>
 &lt;p>Command Palette를 열고 &lt;code>Dart: Use Recommended Settings&lt;/code> 명령어를 수행합니다. 추천하는 다트 설정을 vscode 전역 설정에 추가되는데 전 그게 싫어서 Workspace에 &lt;code>.vscode/settings.json&lt;/code> 생성 후 옮겼습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ flutter create hello_flutter --empty
 $ cd hello_flutter &amp;amp;&amp;amp; code .&lt;/code>&lt;/pre>
 &lt;/div>

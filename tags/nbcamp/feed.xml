@@ -29,7 +29,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>TodoApp/
 ├── LaunchScreen.storyboard
 ├── Main.storyboard
@@ -98,7 +98,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoItem {
 var id: String
 var content: String
@@ -126,7 +126,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoService {
 static var shared: TodoService = .init()
 private init() {}
@@ -163,7 +163,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>&lt;code>ViewController&lt;/code>의 경우 Main Page의 View와 Logic을 담당합니다. UI 관련 로직은 생략했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class ViewController: UIViewController {
 @IBOutlet weak var titleLabel: UILabel!
 @IBOutlet weak var tableView: UITableView!
@@ -239,7 +239,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class TodoTableViewCell: UITableViewCell {
 @IBOutlet weak var todoLabel: UILabel!
 @IBOutlet weak var completeButton: UIButton!
@@ -295,7 +295,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>메인 페이지에서 &lt;code>completes&lt;/code> 버튼을 누르면 해당 페이지를 표시합니다. 버튼에 직접 등록하는 Segue 방식으로 연결하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>final class CompletesViewController: UIViewController {
 @IBOutlet weak var tableView: UITableView!
 private let todoService = TodoService.shared
@@ -346,7 +346,7 @@ return cell
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>CompletesViewController&lt;/code>에서도 &lt;code>UITableView&lt;/code>를 사용하므로 &lt;code>ViewController&lt;/code>와 동일한 방식으로 구현하였습니다. 완료 버튼을 눌러 완료를 취소할 수 있도록 하였습니다. 완료를 취소한 후, 변경 내용이 메인 페이지에도 반영되어야 하므로 페이지가 닫힐 때 호출할 &lt;code>onDismissed&lt;/code> 클로저를 추가하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension ViewController {
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 if segue.identifier == &amp;#34;CompletesVC&amp;#34; {
@@ -374,7 +374,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h5>&lt;p>클로저 전달 방식 대신 Delegate 패턴을 적용해보았습니다. &lt;code>onDismissed&lt;/code> 클로저를 전달하는 대신 &lt;code>CompletesViewControllerDelegate&lt;/code> 프로토콜을 정의하여 &lt;code>onDismissed&lt;/code> 메서드 동작을 위임하도록 해보았습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>@objc protocol CompletesViewControllerDelegate {
 @objc optional func onDismissed()
 }
@@ -386,7 +386,7 @@ delegate?.onDismissed?()
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension ViewController {
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 if segue.identifier == &amp;#34;CompletesVC&amp;#34; {
@@ -430,7 +430,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>&lt;code>TodoService&lt;/code>에서 &lt;code>TodoItem&lt;/code>의 속성을 변경할 때 제대로 변경되지 않는 문제가 있었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>func toggle(id: String) {
 guard let item = (items.first { $0.id == id }) else { return }
 item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
@@ -516,7 +516,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>.
 ├── Sources/
 │ ├── Operators/
@@ -564,11 +564,11 @@ href="https://developer.apple.com/documentation/xcode/creating-a-standalone-swif
 target="_blank" rel="noopener noreferrer nofollow"
 >해당 문서&lt;/a
 >를 참고하여 프로젝트를 생성했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ swift package init --type executable&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>위 명령어를 실행하면 현재 위치한 폴더에 &lt;code>Package.swift&lt;/code> 파일을 생성합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// swift-tools-version: 5.8
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
@@ -600,13 +600,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>각 연산에 대한 클래스의 명세를 정하기 위해 &lt;code>Operator&lt;/code> 프로토콜을 작성했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>protocol Operator {
 func operate&amp;lt;Operand&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이를 토대로 덧셈, 뺄셈, 곱셈, 나눗셈, 나머지 연산 클래스를 작성했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class AddOperator: Operator {
 func operate&amp;lt;Operand&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand {
 return lhs &amp;#43; rhs
@@ -615,7 +615,7 @@ return lhs &amp;#43; rhs
 &lt;/div>
 &lt;p>여기서 &lt;code>lhs + rhs&lt;/code> 에서 &lt;code>Binary operator '+' cannot be applied to two 'Operand' operands&lt;/code> 에러가 발생합니다. &lt;code>Operand&lt;/code> 타입이 덧셈 기능을 제공하는지 모르기 때문입니다.&lt;/p>
 &lt;p>이를 해결하려면 &lt;code>Operand&lt;/code> 타입이 연산 가능한 타입만 올 수 있도록 제약을 걸 필요가 있습니다. &lt;code>Calculable&lt;/code> 프로토콜을 추가하여 이를 준수하는 타입만 올 수 있도록 제약을 걸었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>protocol Operator {
 func operate&amp;lt;Operand: Calculable&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand
 }
@@ -630,14 +630,14 @@ extension Int: Calculable {}&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>Calculable&lt;/code> 프로토콜을 추가하고 &lt;code>Int&lt;/code> 타입이 이를 준수하도록 확장(extension)했습니다.&lt;/p>
 &lt;p>하지만, 위와 같은 방식으로 &lt;code>Double&lt;/code> 타입을 확장했을 때, &lt;code>Type 'Double' does not conform to protocol 'Calculable'&lt;/code> 에러가 발생합니다. 실수 타입인 &lt;code>Double&lt;/code>은 나머지 연산에 대한 동작이 정의되어 있지 않기 때문입니다. 단순히 정수 타입으로 동작하도록 확장해줍니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>extension Double: Calculable {
 static func %(lhs: Self, rhs: Self) -&amp;gt; Self {
 return Double(Int(lhs) % Int(rhs))
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class ModOperator: Operator {
 func operate&amp;lt;Operand&amp;gt;(_ lhs: Operand, _ rhs: Operand) -&amp;gt; Operand where Operand : Calculable {
 return lhs % rhs
@@ -660,7 +660,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h4>&lt;p>작성한 연산자를 언제든 사용할 수 있는 형태로 하여 Dictionary 형태로 외부에서 주입할 수 있도록 작성했습니다.&lt;/p>
 &lt;p>&lt;code>_result&lt;/code>는 여태까지 연산한 결과를 갖고 있는 저장 프로퍼티이고, &lt;code>calculate&lt;/code> 메서드를 호출하여 연산을 수행합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>import Foundation
 class Calculator&amp;lt;T: Calculable&amp;gt; {
 private var _result: T
@@ -679,7 +679,7 @@ return _result
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>let calculator = Calculator&amp;lt;Double&amp;gt;(
 operators: [
 &amp;#34;&amp;#43;&amp;#34;: AddOperator(),
@@ -719,7 +719,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h4>&lt;p>계산기이니 &lt;code>clear&lt;/code> 메서드를 작성했고, 이는 결과를 0으로 초기화하는 단순한 작업을 수행합니다. &lt;code>Int&lt;/code> 타입은 0으로 초기화하는 반면에 &lt;code>Double&lt;/code>은 0.0으로 초기화해야 했기 때문입니다. 제네릭 타입으로부터 이를 확인할 수 있는 방법은 없었지만, 0과 0.0 이외에 경우는 없다고 가정하고 nullish coalescing operator를 사용하여 해결했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>private static func zero() -&amp;gt; T {
 return 0 as? T ?? 0.0 as! T
 }&lt;/code>&lt;/pre>
@@ -739,7 +739,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h4>&lt;p>Swift에서 문자열을 조작하기란 다른 언어에 비해 번거로운 점이 많았습니다&amp;hellip; index 또한 단순히 숫자가 아니라 String.Index를 생성하여 전달해야했고, 주어진 Index로부터 어느정도 떨어졌는지하는 방식으로 문자열을 가져와야했습니다.&lt;/p>
 &lt;p>첫 문자를 제외하고 문자열을 가져오려면 다음 방식으로 가져와야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>let input: String = &amp;#34;Hello, World!&amp;#34;
 input[input.index(input.startIndex, offsetBy: 1)...] // ello, World!&lt;/code>&lt;/pre>
 &lt;/div>
@@ -753,7 +753,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 > 문법을 활용하여 해당 인덱스부터 문자열을 가져옵니다.&lt;/li>
 &lt;/ol>
 &lt;p>나중에 알게된 내용인데 단순하게 &lt;code>dropFirst&lt;/code> 메서드를 활용해도 됩니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>input.dropFirst() // ello, World!&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>문자열 관련 메서드는 대개 &lt;code>Self.SubSequence&lt;/code> 타입을 반환합니다. 잘라낸 문자열을 저장하기 위헤 새로운 메모리 공간을 할당하는 것이 아닌 기존의 문자열에서 필요한 부분에 직접 접근하기 때문입니다. 따라서, 문자열로서 사용하고 싶다면 &lt;code>String&lt;/code>으로 변환해야 합니다.&lt;/p>
@@ -797,7 +797,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h2>&lt;p>사전캠프에서도 다뤘지만, Service 단에서 &lt;code>shared_preferences&lt;/code>를 사용하기 위해 서비스 파일 내에서 직접 불러와서 사용해주는 방식이 아니라 &lt;code>main.dart&lt;/code>에서 &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 함수를 주입해주는 방식으로 구현했었습니다.&lt;/p>
 &lt;p>허나, 아래처럼 &lt;code>save&lt;/code> 혹은 &lt;code>load&lt;/code> 둘 다 구현해야하는 걸 강제할 수 없었습니다. 또한, &lt;code>shared_preferences&lt;/code>외에 다른 걸로 변경할 때도 번거롭습니다&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>void main() async {
 WidgetsFlutterBinding.ensureInitialized();
 SharedPreferences pref await SharedPreferences.getInstance();
@@ -815,14 +815,14 @@ child: const MyApp(),
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이를 해결하기 위해 &lt;code>IO&lt;/code> 인터페이스를 구현했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>abstract class IO {
 Future&amp;lt;void&amp;gt; save(String payload);
 Future&amp;lt;String?&amp;gt; load();
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>dart에서는 인터페이스를 생성하기 위해 &lt;code>abstract class&lt;/code> 키워드를 사용해야 합니다. &lt;code>IO&lt;/code> 인터페이스는 &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 함수에 대한 명세를 제공합니다. 이를 &lt;code>CommentService&lt;/code>에 적용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class CommentService extends ChangeNotifier {
 final Map&amp;lt;String, List&amp;lt;Comment&amp;gt;&amp;gt; _comments = {};
 IO? io;
@@ -833,7 +833,7 @@ CommentService({this.io}) {
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이제 &lt;code>io&lt;/code> 인스턴스를 외부에서 주입해줄 수 있습니다. &lt;code>shared_preferences&lt;/code>를 사용할 예정이므로 &lt;code>SharedPreferencesIO&lt;/code> 클래스를 생성합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class SharedPreferencesIO implements IO {
 late Future&amp;lt;SharedPreferences&amp;gt; pref;
 SharedPreferencesIO() {
@@ -849,7 +849,7 @@ pref.then((pref) =&amp;gt; pref.setString(&amp;#39;comments&amp;#39;, payload));
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>void main() async {
 WidgetsFlutterBinding.ensureInitialized();
 runApp(MultiProvider(
@@ -880,7 +880,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>&lt;code>CommentService&lt;/code>에서 내부적으로 데이터를 저장하고 불러오는 &lt;code>_save&lt;/code>와 &lt;code>_load&lt;/code> 함수가 있었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>Future&amp;lt;void&amp;gt; _save() {
 if (save == null) return Future.value();
 String payload = jsonEncode(_memos.map((m) =&amp;gt; m.toJson()).toList());
@@ -897,7 +897,7 @@ _memos.addAll(jsonDecode(payload).map((e) =&amp;gt; Memo.fromJson(e)));
 &lt;p>여기서 데이터를 String 타입의 payload로 만들거나, 반대로 payload를 데이터로 변환하는 작업을 수행했었습니다.
 언뜻보면 null 체크를 하고 종료하는 부분이나 payload를 처리하는 부분은 중복된 부분이기에 별도의 함수로 분리하고 싶었습니다.&lt;/p>
 &lt;p>그래서 &lt;code>DataHandler&lt;/code> 추상 클래스르 작성하였습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>mixin DataHandler {
 IO? io;
 Future&amp;lt;void&amp;gt; import(String payload);
@@ -917,7 +917,7 @@ import(payload);
 &lt;/div>
 &lt;p>dart에서 mixin을 활용하여 추상 클래스를 작성할 수 있습니다.
 &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 함수는 이미 구현되어 있어 동일한 작업을 수행하지만, &lt;code>import&lt;/code>와 &lt;code>export&lt;/code> 함수는 재정의가 필요합니다. 이를 &lt;code>CommentService&lt;/code>에 적용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class UseState {
 final List&amp;lt;Comment&amp;gt; comments;
 final void Function(List&amp;lt;Comment&amp;gt; Function()) setState;
@@ -1001,7 +1001,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >dio&lt;/a
 > 패키지를 활용했습니다. &lt;br>
 책 정보를 불러올 수 있는 Google API를 활용하여 Watcha Pedia 서비스를 구현했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// main.dart
 void main() async {
 late SharedPreferences pref;
@@ -1031,7 +1031,7 @@ child: const MainApp(),
 ));
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// services/book.dart
 final Future&amp;lt;T&amp;gt; Function&amp;lt;T&amp;gt;(String url) get;
 final FutureOr Function(String payload)? save;
@@ -1056,7 +1056,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;p>앱 상에서 외부 웹 링크 페이지를 띄우기 위해선 &lt;code>webview_flutter&lt;/code> 패키지를 사용해야 합니다. &lt;br>
 책 목록에서 책을 클릭하면 해당 책의 정보를 보여주는 페이지를 띄웁니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// screens/webview.dart
 class WebViewScreen extends StatelessWidget {
 WebViewScreen({
@@ -1076,7 +1076,7 @@ body: WebView(initialUrl: url),
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// widgets/book_tile.dart
 onTap: () {
 Navigator.push(
@@ -1125,7 +1125,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;li>services: 서비스 (비즈니스 로직)&lt;/li>
 &lt;li>widgets: 위젯 (컴포넌트)&lt;/li>
 &lt;/ul>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>lib/
 ├── models/
 │ └── book.dart
@@ -1171,7 +1171,7 @@ href="https://pub.dev/"
 target="_blank" rel="noopener noreferrer nofollow"
 >pub.dev&lt;/a
 >에서 조회할 수 있습니다. 패키지를 설치하기 위해서도 &lt;code>flutter pub&lt;/code> 명령어를 사용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ flutter pub add provider shared_preferences&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;h3 id="provider" class="flex items-center gap-3">Provider &lt;i
@@ -1188,7 +1188,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Provider는 flutter의 상태 관리 패키지로 전역에서 데이터를 쥐고 제어할 수 있는 서비스를 관리해줍니다. &lt;code>Memo&lt;/code> 클래스와 함께 &lt;code>MemoService&lt;/code>를 추가해보았습니다. &lt;code>MemoService&lt;/code>는 메모 목록을 관리하고 CRUD 기능을 제공합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// lib/services/memo.dart
 class Memo {
 Memo({ required this.content });
@@ -1202,7 +1202,7 @@ void delete(int index) { ... }
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>main.dart&lt;/code>의 &lt;code>runApp&lt;/code>에 Provider를 통해 &lt;code>MemoService&lt;/code>를 등록해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>// lib/main.dart
 void main() {
 runApp(
@@ -1216,7 +1216,7 @@ child: const MyApp(),
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이제 위젯트리 전체를 &lt;code>Consumer&amp;lt;MemoService&amp;gt;&lt;/code>로 감싸주면 &lt;code>MemoService&lt;/code> 내에서 &lt;code>notifyListeners()&lt;/code>가 호출될 때마다 전체 화면을 다시 그립니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>Widget build(BuildContext context) {
 return Consumer&amp;lt;MemoService&amp;gt;(builder: (context, memoService, child) {
 return Scaffold(
@@ -1241,7 +1241,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;p>&lt;code>SharedPreferences&lt;/code>는 앱을 껐다 켜도 데이터를 유지할 수 있는 기능을 제공합니다. 다만 &lt;code>SharedPreferences&lt;/code>와 같이 데이터를 유지해줄 수 있는 방법은 다양하므로 언제든 교체할 수 있도록 외부에서 주입해주는 방식으로 구현했습니다.&lt;/p>
 &lt;p>&lt;code>MemoService&lt;/code>에 데이터를 저장하고 불러오는 함수를 매개변수를 받을 수 있게끔 추가합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>class MemoService extends ChangeNotifier {
 final List&amp;lt;Memo&amp;gt; _memos = [];
 final Future&amp;lt;void&amp;gt; Function(String payload)? save;
@@ -1255,7 +1255,7 @@ this.load,
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>main.dart&lt;/code>에서 &lt;code>SharedPreferences&lt;/code>의 인스턴스를 생성한 후 데이터를 저장하고 불러오는 함수를 전달합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>void main() async {
 WidgetsFlutterBinding.ensureInitialized();
 SharedPreferences pref = await SharedPreferences.getInstance();
@@ -1273,11 +1273,11 @@ child: const MyApp(),
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>MemoService&lt;/code>에서 이를 적절하게 저장하고 불러올 때 호출합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>String payload = jsonEncode(_memos.map((m) =&amp;gt; m.toJson()).toList());
 return save!(payload);&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>String? payload = await load!();
 if (payload == null) return;
 _memos.clear();
@@ -1507,11 +1507,11 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>전 brew로 설치 가능하면 전부 brew로 설치하는 편입니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ brew install --cask flutter&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>설치 후 &lt;code>flutter&lt;/code> 명령어를 사용할 수 있습니다. &lt;code>doctor&lt;/code> 명령어로 정상적으로 설치됐는지 확인할 수 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ flutter doctor -v
 Doctor summary (to see all details, run flutter doctor -v):
 [✓] Flutter (Channel stable, 3.10.5, on macOS 13.4.1 22F82 darwin-arm64, locale en-KR)
@@ -1548,7 +1548,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul>
 &lt;p>Command Palette를 열고 &lt;code>Dart: Use Recommended Settings&lt;/code> 명령어를 수행합니다. 추천하는 다트 설정을 vscode 전역 설정에 추가되는데 전 그게 싫어서 Workspace에 &lt;code>.vscode/settings.json&lt;/code> 생성 후 옮겼습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden">
+&lt;div class="relative rounded-md overflow-hidden my-4">
 &lt;pre>&lt;code>$ flutter create hello_flutter --empty
 $ cd hello_flutter &amp;amp;&amp;amp; code .&lt;/code>&lt;/pre>
 &lt;/div>
