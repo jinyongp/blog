@@ -3,7 +3,9 @@
   <link rel="stylesheet" href="{{ $cdn }}/styles/{{ .theme }}.min.css" />
   <script defer type="module">
     import hljs from "{{ $cdn }}/es/highlight.min.js";
-    hljs.configure({ })
+    import dart from "{{ $cdn }}/es/languages/dart.min.js";
+    hljs.configure({})
+    hljs.registerLanguage("dart", dart);
     hljs.highlightAll();
   </script>
 {{ end }}

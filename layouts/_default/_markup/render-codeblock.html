@@ -1,3 +1,8 @@
-<div class="relative rounded-md overflow-hidden my-4">
+<div class="relative rounded-md overflow-hidden my-4 group">
+  <small
+    class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+  >
+    <span class="sr-only">Language:</span>{{ .Type }}
+  </small>
   <pre><code class="hljs language-{{ .Type }}">{{ .Inner }}</code></pre>
 </div>
