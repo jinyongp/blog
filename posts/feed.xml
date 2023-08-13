@@ -14,8 +14,13 @@ href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문&lt;/a
 >의 예제를 Swift 코드로 작성해봅시다. AbstractClass 역할을 수행하는 &lt;code>AbstractDisplay&lt;/code> 클래스를 정의합니다. &lt;code>AbstractDisplay&lt;/code> 클래스는 템플릿 메서드인 &lt;code>display&lt;/code> 메서드를 정의하고 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol AbstractDisplay {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol AbstractDisplay {
 func open()
 func write()
 func close()
@@ -31,8 +36,13 @@ close()
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>AbstractClass&lt;/code>는 추상 클래스이므로 구현되어 있는 메서드가 존재하고 인스턴스를 생성할 수 없어야 합니다. &lt;code>protocol&lt;/code>과 &lt;code>extension&lt;/code> 키워드를 활용하여 추상 클래스를 정의하였습니다. &lt;code>display&lt;/code> 탬플릿 메서드를 사용하고 싶다면, &lt;code>AbstractClass&lt;/code>를 채택하고 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>final class CharDisplay: AbstractDisplay {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class CharDisplay: AbstractDisplay {
 private let char: Character
 init(char: Character) {
 self.char = char
@@ -48,16 +58,26 @@ print(&amp;#34;&amp;gt;&amp;gt;&amp;#34;)
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>let display: AbstractDisplay = CharDisplay(char: &amp;#34;H&amp;#34;)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">let display: AbstractDisplay = CharDisplay(char: &amp;#34;H&amp;#34;)
 display.display()
 // output:
 // &amp;lt;&amp;lt;HHHHH&amp;gt;&amp;gt;&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>AbstractDisplay&lt;/code>를 채택하고 있습니다. &lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현하고 있습니다. &lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>display&lt;/code> 메서드를 구현하지 않았지만, &lt;code>AbstractDisplay&lt;/code>의 &lt;code>display&lt;/code> 메서드를 사용할 수 있습니다.&lt;/p>
 &lt;p>또 다른 클래스를 정의해봅니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>final class StringDisplay: AbstractDisplay {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class StringDisplay: AbstractDisplay {
 private let string: String
 private let width: Int
 init(string: String) {
@@ -78,8 +98,13 @@ print(&amp;#34;&amp;#43;\(String(repeating: &amp;#34;-&amp;#34;, count: width))&
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>let display: AbstractDisplay = StringDisplay(string: &amp;#34;Hello, World&amp;#34;)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">let display: AbstractDisplay = StringDisplay(string: &amp;#34;Hello, World&amp;#34;)
 display.display()
 // output:
 // &amp;#43;-------------&amp;#43;
@@ -112,16 +137,26 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/blockquote>
 &lt;hr>
 &lt;p>예시를 통해 자세히 알아보겠습니다. 시스템 내에서 사용 중인 로깅 인터페이스가 있다고 가정해봅시다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol Logger {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol Logger {
 func log(message: String)
 func warn(message: String)
 func error(message: String)
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>Logger&lt;/code>는 Adapter Pattern의 구성 요소 중 Target 역할을 수행합니다. 이를 채택하는 클래스 &lt;code>MyLogger&lt;/code>를 구현합니다. &lt;code>MyLogger&lt;/code>는 Swift의 &lt;code>print()&lt;/code>함수를 이용하여 Termianl 환경에서 로그를 출력합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>struct MyLogger: Logger {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct MyLogger: Logger {
 func log(message: String) {
 print(&amp;#34;[LOG] \(message)&amp;#34;)
 }
@@ -134,8 +169,13 @@ print(&amp;#34;[ERROR] \(message)&amp;#34;)
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>Client 역할을 수행하는 &lt;code>App&lt;/code> 클래스에서 Logger 구현체를 주입받아 시스템 전체에 걸쳐 사용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>// App.swift
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// App.swift
 final class App {
 private let logger: Logger
 init(logger: Logger) {
@@ -146,16 +186,26 @@ logger.log(message: &amp;#34;doSomething&amp;#34;)
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>// main.swift
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// main.swift
 let app = App(logger: MyLogger())
 app.doSomething()
 // output:
 // [LOG] doSomething&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>MyLogger&lt;/code>는 swift의 &lt;code>print()&lt;/code> 함수에 의존하고 있습니다. 이제 외부 라이브러리를 통해 terminal 환경이 아닌 외부로 로그 정보를 보내려고 합니다. 외부 라이브러리 &lt;code>ExternalLogger&lt;/code>는 다음 인터페이스를 제공합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>enum LogLevel {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">enum LogLevel {
 case debug
 case info
 case warn
@@ -168,8 +218,13 @@ func log(level: LogLevel, message: String) {
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>언뜻 보기에도 &lt;code>ExternalLogger&lt;/code>는 &lt;code>Logger&lt;/code>와 호환되지 않는 것을 알 수 있습니다. 이럴 때 Adapter 클래스를 추가하여 호환성을 확보할 수 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>struct ExternalLoggerAdapter: Logger {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct ExternalLoggerAdapter: Logger {
 private let logger = ExternalLogger()
 func log(message: String) {
 logger.log(level: .info, message: message)
@@ -182,8 +237,13 @@ logger.log(level: .error, message: message)
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>let app = App(logger: ExternalLoggerAdapter())
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">let app = App(logger: ExternalLoggerAdapter())
 app.doSomething()&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이렇게 Adapter 역할을 수행하는 중간자 클래스를 추가하여 세부 구현에 어떠한 변경도 없이 세부 구현에 어떠한 변경도 없이 확장에 성공하였습니다. 이런 식으로 Adapter 구조체를 추가하면 변경이 아닌 확장(OCP - 개방 폐쇄 원칙)이 되어 Side Effect도 없을 뿐더러 Unit Test를 작성하기도 쉬워집니다.&lt;/p></description></item><item><title>Iterator Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/1/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/1/</guid><description>&lt;p>&lt;strong>Iterator Pattern&lt;/strong>은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.&lt;/p>
@@ -204,8 +264,13 @@ href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문&lt;/a
 >의 Iterator Pattern 예제를 Swift로 작성해보았습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol Iterable&amp;lt;Element&amp;gt; {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol Iterable&amp;lt;Element&amp;gt; {
 associatedtype Element where Element == Iter.Element
 associatedtype Iter: Iterator
 func makeIterator() -&amp;gt; Iter;
@@ -284,8 +349,13 @@ target="_blank" rel="noopener noreferrer nofollow"
 >IteratorProtocol&lt;/a
 > 프로토콜을 제공하여 어떠한 클래스든 &lt;code>IteratorProtocol&lt;/code>을 채택하여 &lt;code>for in&lt;/code> 구문에 활용할 수 있습니다. (Aggregate 역할을 &lt;code>Sequence&lt;/code> 프로토콜이 수행합니다.)&lt;/p>
 &lt;p>Apple 공식 문서의 예제를 가져왔습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>struct Countdown: Sequence {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct Countdown: Sequence {
 let start: Int
 func makeIterator() -&amp;gt; CountdownIterator {
 return CountdownIterator(self)
@@ -357,8 +427,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>예를 들어 &lt;code>UITextField&lt;/code>의 경우, 사용자가 입력창을 눌렀을 때 OS에게 키보드를 열 것을 명령하며 사용자가 입력한 값을 &lt;code>UITextField&lt;/code>에 전달하는 동작이 구현되어 있을 것입니다. 하지만 ViewController에선 이러한 세부 동작은 알 필요 없이 특정 상황이 발생했을 때만 데이터를 전달 받아 이용하면 됩니다.&lt;/p>
 &lt;p>UIkit에서는 이렇게 세부 구현은 숨긴 채로 특정 상황이 발생했음을 알리거나 동작의 제어를 위임하기 위해 Delegate Pattern을 활용하고 있습니다. &lt;code>UITextField&lt;/code>는 &lt;code>UITextFieldDelegate&lt;/code> 프로토콜을 통해 이를 구현하고 있으며, 이를 채택한 ViewController는 다음의 메서드를 구현하여 데이터를 전달받고 동작을 제어할 수 있습니다.&lt;/p>
 &lt;p>&lt;code>UITextFieldDelegate&lt;/code>를 채택하여 구현할 수 있는 메서드 목록은 다음과 같습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>// 편집을 시작할 때 호출합니다. Bool 값을 반환하여 편집을 허용할지 여부를 결정할 수 있습니다.
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// 편집을 시작할 때 호출합니다. Bool 값을 반환하여 편집을 허용할지 여부를 결정할 수 있습니다.
 optional func textFieldShouldBeginEditing(_:) -&amp;gt; Bool
 // 편집이 시작된 직후 호출됩니다.
 optional func textFieldDidBeginEditing(_:)
@@ -379,8 +454,13 @@ optional func textFieldShouldReturn(_:) -&amp;gt; Bool&lt;/code>&lt;/pre>
 &lt;p>&lt;code>optional&lt;/code> 키워드로 정의되어 있으니 ViewController는 이 중에서 필요한 메서드만 구현하면 됩니다.&lt;/p>
 &lt;/blockquote>
 &lt;p>정의한 메서드가 호출되려면 &lt;code>UITextField&lt;/code> 인스턴스의 &lt;code>delegate&lt;/code> 프로퍼티에 ViewController를 할당해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>final class ViewController: UIViewController {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class ViewController: UIViewController {
 private let textField = UITextField()
 override func viewDidLoad() {
 super.viewDidLoad()
@@ -411,8 +491,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>그렇다면 Delegate Pattern은 어떤 식으로 동작하기에 다른 객체에게 동작의 제어권을 위임할 수 있는걸까요? 간단한 &lt;code>Delegate&lt;/code> 프로토콜을 구현하여 동작을 확인해보겠습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol UITextFieldDelegate {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol UITextFieldDelegate {
 func textFieldShouldBeginEditing(_ textField: UITextField) -&amp;gt; Bool
 func textFieldDidBeginEditing(_ textField: UITextField)
 }
@@ -505,8 +590,13 @@ target="_blank" rel="noopener noreferrer nofollow"
 >를 참고 바랍니다.&lt;/p>
 &lt;/blockquote>
 &lt;p>Svg 방식에서는 &lt;code>svg&lt;/code> 요소를 생성하고 &lt;code>tick&lt;/code>에서 위치를 변경하는 방식으로 구현했습니다. Canvas 방식에선 그냥 그려주기만 하면 됩니다. 이를 위해 &lt;code>canvas&lt;/code>와 &lt;code>ctx&lt;/code>를 생성하고 &lt;code>tick&lt;/code> 이벤트를 등록해봅시다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>class network {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">class network {
 constructor() {
 this.canvas = d3.select(&amp;#34;body&amp;#34;)
 .append(&amp;#34;canvas&amp;#34;)
@@ -541,8 +631,13 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;code>ctx.clearRect()&lt;/code>&lt;/a
 >로 &lt;code>canvas&lt;/code>를 전부 지워줍니다. 그리고 &lt;code>drawNodes()&lt;/code>와 &lt;code>drawLinks()&lt;/code>를 호출하여 &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 그려줍니다. 이 때, &lt;code>links&lt;/code>를 먼저 그려줘야만 &lt;code>nodes&lt;/code> 뒤에 그려집니다.&lt;/p>
 &lt;p>&lt;code>links&lt;/code>는 굉장히 간단하게 그릴 수 있습니다. &lt;code>links&lt;/code>를 순회하면서 선을 그려줍니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>drawLinks() {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">drawLinks() {
 this.links.forEach(({ source, target }) =&amp;gt; {
 this.ctx.beginPath();
 this.ctx.moveTo(source.x, source.y);
@@ -552,8 +647,13 @@ this.ctx.stroke();
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>nodes&lt;/code>는 저번 시리즈에서 그렸던 것처럼 원 중앙에 &lt;code>id&lt;/code>가 위치하도록 작성합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>drawNodes() {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">drawNodes() {
 this.nodes.forEach(({ id, x, y }) =&amp;gt; {
 this.ctx.beginPath();
 this.ctx.arc(x, y, this.nodeRadius, 0, 2 * Math.PI);
@@ -585,8 +685,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>d3-zoom을 연결해서 화면을 이동하고 확대, 축소할 수 있도록 구현하겠습니다. Svg 방식에선 요소의 &lt;code>transform&lt;/code> 속성을 변경하여 직접 이동했다면, canvas 방식에선 전부 지우고 위치 이동 후 다시 그려주는 방식으로 구현합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>class network {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">class network {
 constructor() {
 this.transform = d3.zoomIdentity;
 this.zoom = d3.zoom()
@@ -630,8 +735,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h2>&lt;p>특정 요소를 클릭했을 때, 해당 요소를 포커싱하는 동작을 구현해보도록 하겠습니다. Canvas는 개별 요소를 선택할 수 없어서 요소에 커서 스타일을 적용하거나 클릭 이벤트를 적용하는데 어려움이 있습니다. 하지만, d3.js에서 제공하는 기능의 조합으로 쉽게 구현할 수 있습니다.&lt;/p>
 &lt;p>개별 요소가 아닌 &lt;code>canvas&lt;/code> 자체에 클릭 이벤트를 등록합니다. 그렇게 얻은 &lt;code>event&lt;/code>로부터 클릭 좌표를 얻어 해당 위치에 존재하는 &lt;code>node&lt;/code>를 찾고, 해당 &lt;code>node&lt;/code>로 이동하고 확대합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>class network {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">class network {
 constructor() {
 this.canvas.on(&amp;#34;click&amp;#34;, ({ x, y }) =&amp;gt; {
 const node = this.findNode(x, y);
@@ -678,8 +788,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>d3-drag를 연결하여 요소를 드래그하는 기능을 추가해보도록 하겠습니다. Svg 방식에서는 &lt;code>circles&lt;/code>에 drag를 부착하여 모든 요소에 대해 이벤트를 등록했습니다. Canvas 방식에서는 그런 방법이 불가능하기 때문에, &lt;code>canvas&lt;/code>에 등록하면서 동시에 클릭한 요소를 검색하는 &lt;code>subject&lt;/code>를 설정해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>class network {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">class network {
 constructor() {
 this.drag = d3
 .drag()
@@ -721,8 +836,13 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;code>d3.pointer()&lt;/code>를 이용&lt;/a
 >해 좌표를 가져옵니다. 그리고 &lt;code>transform&lt;/code>을 적용하여 &lt;code>subject&lt;/code>의 고정 좌표를 변경합니다.&lt;/p>
 &lt;p>&lt;code>start&lt;/code>와 &lt;code>end&lt;/code> 이벤트에서 &lt;code>cursor&lt;/code> 스타일을 변경해주고 있습니다. 다만, 요소에 마우스를 올렸을 때도 스타일을 변경해주기 위해 &lt;code>pointermove&lt;/code> 이벤트를 추가해주었습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>class network {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">class network {
 constructor() {
 this.canvas.on(&amp;#34;pointermove&amp;#34;, ({ x, y, buttons }) =&amp;gt; {
 if (buttons) return;
@@ -847,8 +967,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>d3-zoom은 d3-selection과 연계하여 구현합니다. &lt;code>Selection&lt;/code> 객체에 zoom 기능을 제공하기 위해 &lt;code>d3.zoom()&lt;/code> 함수를 호출하여 전달합니다. 저번 시리즈에서 생성한 &lt;code>root&lt;/code> 요소를 가져와 zoom 기능을 추가해보겠습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const zoom = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const zoom = d3
 .zoom()
 .on(&amp;#39;zoom&amp;#39;, (event) =&amp;gt; {
 console.log(&amp;#39;Zoom and Drag!&amp;#39;);
@@ -868,14 +993,24 @@ href="https://github.com/d3/d3-selection#selection_call"
 target="_blank" rel="noopener noreferrer nofollow"
 >selection.call()&lt;/a
 >은 &lt;code>Selection&lt;/code> 객체를 인자로 받는 함수를 인자로 받습니다. &lt;code>root.call(zoom)&lt;/code>은 다음 코드와 동일합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>zoom(root);&lt;/code>&lt;/pre>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">zoom(root);&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;/blockquote>
 &lt;p>&lt;code>root&lt;/code> 요소를 드래그하거나 스크롤을 해보면 이벤트에 등록한 함수가 실행됩니다. &lt;code>zoom&lt;/code> 이벤트에 등록할 함수를 작성하여 요소를 이동시켜봅시다.&lt;/p>
 &lt;p>전달한 함수는 &lt;code>event&lt;/code> 객체를 매개변수로 가집니다. 클릭 이동인지 스크롤인지에 따라 종류가 달라집니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>// MouseEvent
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">// MouseEvent
 sourceEvent: MouseEvent {...}
 target: ƒ y(t)
 transform: Jx {k: x.xx, x: x.xx, y: x.xx}
@@ -887,8 +1022,13 @@ transform: Jx {k: x.xx, x: x.xx, y: x.xx}
 type: &amp;#34;zoom&amp;#34;&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이 중에서 scale factor인 &lt;code>k&lt;/code> 와 translation 값인 &lt;code>x&lt;/code>, &lt;code>y&lt;/code>를 얻을 수 있는 &lt;code>transform&lt;/code> 객체를 이용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>.on(&amp;#39;zoom&amp;#39;, ({ transform }) =&amp;gt; {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">.on(&amp;#39;zoom&amp;#39;, ({ transform }) =&amp;gt; {
 nodeGroup.attr(&amp;#39;transform&amp;#39;, transform);
 linkGroup.attr(&amp;#39;transform&amp;#39;, transform);
 });&lt;/code>&lt;/pre>
@@ -917,8 +1057,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>그럼 특정 요소를 클릭했을 때 해당 요소를 포커스하는 동작에 대해 구현해보겠습니다. 일단 &lt;code>Selection&lt;/code> 객체에 이벤트를 등록하기 위해선 &lt;code>selection.on()&lt;/code> 메서드를 호출합니다. 저번 시리즈에서 생성한 &lt;code>circles&lt;/code>를 가져오겠습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>circles.on(&amp;#39;click&amp;#39;, (event, node) =&amp;gt; {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">circles.on(&amp;#39;click&amp;#39;, (event, node) =&amp;gt; {
 console.log(&amp;#39;Click!&amp;#39;);
 });&lt;/code>&lt;/pre>
 &lt;/div>
@@ -934,8 +1079,13 @@ href="https://github.com/d3/d3-zoom#zoom_scaleTo"
 target="_blank" rel="noopener noreferrer nofollow"
 >&lt;code>zoom.scaleTo&lt;/code>&lt;/a
 > 함수를 이용합니다. 해당 함수는 첫 번째 인자로 &lt;code>Selection&lt;/code> 객체를 전달받으므로 &lt;code>selection.call()&lt;/code> 함수로 호출할 수 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>circles.on(&amp;#39;click&amp;#39;, (_, { x, y }) =&amp;gt; {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">circles.on(&amp;#39;click&amp;#39;, (_, { x, y }) =&amp;gt; {
 root
 .transition()
 .duration(500)
@@ -974,8 +1124,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>d3-drag 또한 d3-selection에 기능을 제공합니다. &lt;code>d3.drag()&lt;/code> 함수는 &lt;code>Selection&lt;/code> 객체를 인자로 받는 함수를 생성하여 반환합니다. 추가로, 드래그하기 위해서 필요한 세 가지 이벤트를 등록해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const drag = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const drag = d3
 .drag()
 .on(&amp;#34;start&amp;#34;, (event, node) =&amp;gt; {
 console.log(&amp;#39;Drag Start!&amp;#39;);
@@ -996,8 +1151,13 @@ href="https://github.com/d3/d3-force#simulation_nodes"
 target="_blank" rel="noopener noreferrer nofollow"
 >특정 고정 좌표에 위치하도록 하려면 &lt;code>fx&lt;/code>와 &lt;code>fy&lt;/code> 값을 설정&lt;/a
 >해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const drag = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const drag = d3
 .drag()
 .on(&amp;#39;start&amp;#39;, (event, node) =&amp;gt; {
 nodeGroup.style(&amp;#39;cursor&amp;#39;, &amp;#39;grabbing&amp;#39;);
@@ -1137,8 +1297,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>관계망에 사용할 &lt;code>nodes&lt;/code>와 &lt;code>links&lt;/code>를 브라우저에 그려주기 위해 d3-selection으로 &lt;code>svg&lt;/code>를 생성하고 크기를 설정해줍니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const root = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const root = d3
 .select(&amp;#39;body&amp;#39;) // === d3.select(document.body)
 .append(&amp;#39;svg&amp;#39;)
 .attr(&amp;#39;width&amp;#39;, &amp;#39;100%&amp;#39;)
@@ -1147,8 +1312,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/div>
 &lt;p>&lt;code>body&lt;/code> 요소를 선택하고 하위에 &lt;code>svg&lt;/code> 요소를 추가했습니다. 그리고 &lt;code>attr&lt;/code> 메서드와 &lt;code>style&lt;/code> 메서드로 &lt;code>svg&lt;/code>의 속성과 스타일을 지정했습니다. &lt;code>root&lt;/code>엔 &lt;code>svg&lt;/code> 요소를 담고 있는 &lt;code>Selection&lt;/code> 객체가 할당됩니다.&lt;/p>
 &lt;p>&lt;code>root&lt;/code> 아래 &lt;code>links&lt;/code>와 &lt;code>nodes&lt;/code>를 각각 묶을 &lt;code>g&lt;/code> 요소를 생성합니다. (&lt;code>linkGroup&lt;/code>을 먼저 생성해야 뒤에 배치됩니다.)&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const linkGroup = root.append(&amp;#39;g&amp;#39;).attr(&amp;#39;id&amp;#39;, &amp;#39;links&amp;#39;);
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const linkGroup = root.append(&amp;#39;g&amp;#39;).attr(&amp;#39;id&amp;#39;, &amp;#39;links&amp;#39;);
 const nodeGroup = root.append(&amp;#39;g&amp;#39;).attr(&amp;#39;id&amp;#39;, &amp;#39;nodes&amp;#39;);&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>id&lt;/code>는 별 다른 역할 없이 식별을 위해 추가해주었습니다.&lt;/p>
@@ -1167,8 +1337,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>이제 DOM 요소에 데이터를 연결해봅시다. &lt;code>nodeGroup&lt;/code> 아래 &lt;code>circle&lt;/code>을 배치하고 &lt;code>nodes&lt;/code> 데이터를 연결합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const circles = nodeGroup
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const circles = nodeGroup
 .selectAll(&amp;#39;circle&amp;#39;)
 .data(nodes)
 .join(&amp;#39;circle&amp;#39;)
@@ -1181,13 +1356,23 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>💡 당연히 비어있는 &lt;code>Selection&lt;/code> 객체를 받을건데 왜 &lt;code>selectAll&lt;/code>을 쓸까요?&lt;/p>
 &lt;p>이후에 &lt;code>nodes&lt;/code>를 추가해야 할 상황이 생긴다면, 기존에 생성되었던 &lt;code>circle&lt;/code> 요소와 &lt;code>nodes&lt;/code>를 비교하여 추가된 &lt;code>node&lt;/code>의 개수만큼 &lt;code>circle&lt;/code> 요소를 추가합니다. 즉, 비교를 위해 선택하는 요소와 생성하는 요소는 동일해야 합니다.&lt;/p>
 &lt;/blockquote>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>_groups: [NodeList(0)]
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">_groups: [NodeList(0)]
 _parents: [g#nodes]&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>.data(nodes)&lt;/code>는 빈 &lt;code>Selection&lt;/code> 객체에 &lt;code>nodes&lt;/code> 배열의 길이만큼 연결합니다. &lt;code>jt&lt;/code> 객체는 &lt;code>__data__&lt;/code> property에 &lt;code>node&lt;/code> 정보를 갖고 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>_enter: [Array(5)]
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">_enter: [Array(5)]
 0: (5) [jt, jt, jt, jt, jt]
 _exit: [Array(0)]
 0: []
@@ -1195,8 +1380,13 @@ _groups: [Array(5)]
 0: (5) [empty × 5]
 _parents: [g#nodes]&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>_enter: Array(1)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">_enter: Array(1)
 0: Array(5)
 0: jt {...}
 1: jt {...}
@@ -1211,13 +1401,23 @@ _groups: [Array(5)]
 _parents: [g#nodes]&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>.join('circle')&lt;/code>은 &lt;code>.enter().append('circle')&lt;/code>과 동일한 단축 표현입니다. &lt;code>.enter()&lt;/code>까지 실행한 결과는 아래와 같습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>_groups: Array(1)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">_groups: Array(1)
 0: (5) [jt, jt, jt, jt, jt]
 _parents: [g#nodes]&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>_groups: Array(1)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">_groups: Array(1)
 0: Array(5)
 0: jt {ownerDocument: document, namespaceURI: &amp;#39;http://www.w3.org/2000/svg&amp;#39;, ...}
 1: jt {ownerDocument: document, namespaceURI: &amp;#39;http://www.w3.org/2000/svg&amp;#39;, ...}
@@ -1231,8 +1431,13 @@ __data__: {id: 5, index: 4, x: ...}
 _parents: [g#nodes]&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>enter().append('circle')&lt;/code>까지 실행한 결과는 아래와 같습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>_groups: Array(1)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">_groups: Array(1)
 0: Array(5)
 0: circle
 1: circle
@@ -1361,8 +1566,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>Simulation은 &lt;code>nodes&lt;/code>에 가해지는 물리적 힘을 계산합니다. &lt;code>d3.forceSimulation()&lt;/code> 함수로 simulation을 생성합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const simulation = d3.forceSimulation();&lt;/code>&lt;/pre>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const simulation = d3.forceSimulation();&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>Simulation에 그래프의 정점 목록인 &lt;code>nodes&lt;/code>와 간선 목록인 &lt;code>links&lt;/code>를 등록할 수 있습니다.&lt;/p>
 &lt;h3 id="nodes" class="flex items-center gap-3">Nodes &lt;i
@@ -1379,8 +1589,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>먼저 &lt;code>nodes&lt;/code>에 대해 알아봅시다. Simulation은 입력한 &lt;code>node&lt;/code> 객체에 계산 결과값을 추가합니다. &lt;code>nodes&lt;/code> 배열에서 각 &lt;code>node&lt;/code>를 인덱스로 관리해도 되지만, 보기 어려우므로 고유 식별자 &lt;code>id&lt;/code>를 추가하겠습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const nodes = [...Array(5)].map((_, i) =&amp;gt; ({ id: i &amp;#43; 1 }));
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const nodes = [...Array(5)].map((_, i) =&amp;gt; ({ id: i &amp;#43; 1 }));
 // [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }]
 simulation.nodes(nodes);
 // nodes [
@@ -1415,8 +1630,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>그럼 이제 &lt;code>links&lt;/code>를 등록해봅시다. d3-force에서 &lt;code>link&lt;/code> 객체는 방향성을 지닌 간선이므로 &lt;code>source&lt;/code>와 &lt;code>target&lt;/code>을 가진 객체로 선언합니다. &lt;code>nodes&lt;/code>와 달리 각 property는 객체가 아닌 &lt;code>node&lt;/code>를 식별할 &lt;code>id&lt;/code>를 갖습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const links = [
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const links = [
 { source: 1, target: 4 },
 { source: 3, target: 4 },
 { source: 2, target: 5 },
@@ -1476,8 +1696,13 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;code>simulation.restart()&lt;/code>&lt;/a
 >로 재시작할 수 있습니다.&lt;/p>
 &lt;p>&lt;code>tick&lt;/code> 이벤트 핸들러를 등록하여 &lt;code>node&lt;/code>에 저장된 결과값을 확인해봅시다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>simulation.on(&amp;#39;tick&amp;#39;, () =&amp;gt; {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">simulation.on(&amp;#39;tick&amp;#39;, () =&amp;gt; {
 console.log(nodes[0]);
 });
 // 첫 번째 tick: {id: 1, index: 0, x: 5.826695986913618, y: -4.292216192303559, vy: -4.292216192303559, …}
@@ -1506,8 +1731,13 @@ href="https://github.com/d3/d3-force/blob/main/src/simulation.js"
 target="_blank" rel="noopener noreferrer nofollow"
 >구현 코드&lt;/a
 >를 보며 동작 방식을 알아봅시다. 주어진 속성의 초기값은 다음과 같습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>var simulation,
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">var simulation,
 alpha = 1,
 alphaMin = 0.001,
 alphaDecay = 1 - Math.pow(alphaMin, 1 / 300) // 0.02276277904418933
@@ -1516,8 +1746,13 @@ velocityDecay = 0.6,
 // ...&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>alpha&lt;/code>는 매 &lt;code>tick&lt;/code>마다 &lt;code>alpha += (alphaTarget - alpha) * alphaDecay&lt;/code>로 계산되어 감소합니다. 또한, 매 &lt;code>tick&lt;/code>마다 &lt;code>alpha&lt;/code>와 &lt;code>alphaMin&lt;/code>를 비교합니다. &lt;code>alpha&lt;/code>가 &lt;code>alphaMin&lt;/code>보다 작아질 때까지 simulation을 실행합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>simulation.on(&amp;#39;tick&amp;#39;, () =&amp;gt; {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">simulation.on(&amp;#39;tick&amp;#39;, () =&amp;gt; {
 console.log(simulation.alpha());
 // 001: 0.9772372209558107 = 1 &amp;#43; (0 - 1) * 0.02276277904418933;
 // 002: 0.9549925860214359 = alpha &amp;#43; (alphaTarget - alpha) * alphaDecay
@@ -1527,8 +1762,13 @@ console.log(simulation.alpha());
 &lt;/div>
 &lt;p>&lt;code>alphaTarget&lt;/code>은 &lt;code>alpha&lt;/code>의 도달 목표입니다. &lt;code>alpha&lt;/code>는 &lt;code>alphaTarget&lt;/code>에 도달할 때까지 감소합니다. &lt;code>alphaTarget&lt;/code>이 &lt;code>alphaMin&lt;/code>보다 크다면 &lt;code>alpha&lt;/code>가 &lt;code>alphaMin&lt;/code>에 도달할 수 없으므로 simulation은 종료되지 않고 계속 실행됩니다. 나중에 d3-drag를 적용할 때 이용할 수 있습니다.&lt;/p>
 &lt;p>아래 코드에서 &lt;code>alphaTarget&lt;/code>으로 &lt;code>alpha&lt;/code>가 &lt;code>1&lt;/code>부터 &lt;code>0.5&lt;/code>까지 감소하도록 설정했습니다. 하지만 &lt;code>alpha&lt;/code>가 &lt;code>0.6&lt;/code> 미만으로 감소했을 때 simulation이 종료되므로 &lt;code>0.5&lt;/code>까지 감소할 일은 없습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>simulation.alphaMin(0.6).alphaTarget(0.5);
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">simulation.alphaMin(0.6).alphaTarget(0.5);
 simulation.on(&amp;#39;tick&amp;#39;, () =&amp;gt; {
 console.log(simulation.alpha());
 // 001: 0.9886186104779053
@@ -1538,8 +1778,13 @@ console.log(simulation.alpha());
 });&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>아래 코드에선 &lt;code>alpha&lt;/code>가 &lt;code>0.4&lt;/code> 이하로 감소해야만 종료됩니다. 하지만, &lt;code>alphaTarget&lt;/code>에 의해 &lt;code>0.4&lt;/code>보다 작아질 수 없습니다. 고로, simulation이 종료되지 않습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>simulation.alphaMin(0.4).alphaTarget(0.5);
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">simulation.alphaMin(0.4).alphaTarget(0.5);
 simulation.on(&amp;#39;tick&amp;#39;, () =&amp;gt; {
 console.log(simulation.alpha());
 // 001: 0.9886186104779053
@@ -1590,8 +1835,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Link force는 &lt;code>node&lt;/code>를 연결하고 일정 거리를 유지하는 힘입니다. 위에서 언급했듯 &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceLink()&lt;/code>로 생성합니다. 이 과정에서 &lt;code>distance&lt;/code>와 &lt;code>strength&lt;/code>를 이용해 거리와 거리를 유지할 힘을 결정합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const forceLink = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const forceLink = d3
 .forceLink(links)
 .id(({ id }) =&amp;gt; id)
 .distance(100)
@@ -1618,8 +1868,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Many Body force는 &lt;code>nodes&lt;/code>에 척력 혹은 인력을 적용합니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceManyBody()&lt;/code>로 생성합니다. 이 또한, &lt;code>strength&lt;/code>로 적용할 힘을 결정합니다. 전달한 수가 양수라면 인력, 음수라면 척력입니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const forceManyBody = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const forceManyBody = d3
 .forceManyBody()
 .strength(-300);
 simulation.force(&amp;#39;manyBody&amp;#39;, forceManyBody);&lt;/code>&lt;/pre>
@@ -1644,8 +1899,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Centering force는 &lt;code>nodes&lt;/code>의 중심이 지정한 좌표(x, y)에 위치하도록 합니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceCenter()&lt;/code>로 생성합니다. Viewport 상에서 정중앙에 위치해야 할 때 적용합니다. &lt;code>strength&lt;/code>를 이용하면 부드러운 움직임이 가능합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const forceCenter = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const forceCenter = d3
 .forceCenter(width / 2, height / 2)
 .strength(0.1);
 simulation.force(&amp;#39;center&amp;#39;, forceCenter);&lt;/code>&lt;/pre>
@@ -1675,8 +1935,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Collision force는 &lt;code>nodes&lt;/code>가 서로 겹치는 것을 방지하는 힘입니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceCollide()&lt;/code>로 생성합니다. &lt;code>node&lt;/code>를 점이 아닌 원으로 취급하여 충돌 여부를 확인하고 &lt;code>radius&lt;/code>로 원의 반지름을 결정합니다. &lt;code>strength&lt;/code>로 겹칠 때 서로 밀어낼 힘을 결정합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const forceCollide = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const forceCollide = d3
 .forceCollide()
 .radius(5)
 .strength(0.8);
@@ -1701,14 +1966,24 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Positioning force는 지정한 좌표(x, y)로 &lt;code>nodes&lt;/code>를 밀어내는 힘입니다. &lt;code>simulation.force()&lt;/code>와 &lt;code>d3.forceX()&lt;/code> 그리고 &lt;code>d3.forceY()&lt;/code>로 생성합니다. &lt;code>strength&lt;/code>로 밀어내는 힘을 결정합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const forceX = d3.forceX().strength(1);
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const forceX = d3.forceX().strength(1);
 const forceY = d3.forceY(height / 2);
 simulation.force(&amp;#39;x&amp;#39;, forceX).force(&amp;#39;y&amp;#39;, forceY);&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>d3.forceRadial()&lt;/code> 함수는 원형을 기준으로 밀어내는 힘을 생성합니다. &lt;code>strength&lt;/code>로 밀어내는 힘을 결정합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>const forceRadial = d3
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>javascript
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-javascript">const forceRadial = d3
 .forceRadial(100, width / 2, height / 2)
 .strength(0.5);
 simulation.force(&amp;#39;radial&amp;#39;, forceRadial);&lt;/code>&lt;/pre>

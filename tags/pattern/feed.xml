@@ -15,8 +15,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>예를 들어 &lt;code>UITextField&lt;/code>의 경우, 사용자가 입력창을 눌렀을 때 OS에게 키보드를 열 것을 명령하며 사용자가 입력한 값을 &lt;code>UITextField&lt;/code>에 전달하는 동작이 구현되어 있을 것입니다. 하지만 ViewController에선 이러한 세부 동작은 알 필요 없이 특정 상황이 발생했을 때만 데이터를 전달 받아 이용하면 됩니다.&lt;/p>
 &lt;p>UIkit에서는 이렇게 세부 구현은 숨긴 채로 특정 상황이 발생했음을 알리거나 동작의 제어를 위임하기 위해 Delegate Pattern을 활용하고 있습니다. &lt;code>UITextField&lt;/code>는 &lt;code>UITextFieldDelegate&lt;/code> 프로토콜을 통해 이를 구현하고 있으며, 이를 채택한 ViewController는 다음의 메서드를 구현하여 데이터를 전달받고 동작을 제어할 수 있습니다.&lt;/p>
 &lt;p>&lt;code>UITextFieldDelegate&lt;/code>를 채택하여 구현할 수 있는 메서드 목록은 다음과 같습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>// 편집을 시작할 때 호출합니다. Bool 값을 반환하여 편집을 허용할지 여부를 결정할 수 있습니다.
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// 편집을 시작할 때 호출합니다. Bool 값을 반환하여 편집을 허용할지 여부를 결정할 수 있습니다.
 optional func textFieldShouldBeginEditing(_:) -&amp;gt; Bool
 // 편집이 시작된 직후 호출됩니다.
 optional func textFieldDidBeginEditing(_:)
@@ -37,8 +42,13 @@ optional func textFieldShouldReturn(_:) -&amp;gt; Bool&lt;/code>&lt;/pre>
 &lt;p>&lt;code>optional&lt;/code> 키워드로 정의되어 있으니 ViewController는 이 중에서 필요한 메서드만 구현하면 됩니다.&lt;/p>
 &lt;/blockquote>
 &lt;p>정의한 메서드가 호출되려면 &lt;code>UITextField&lt;/code> 인스턴스의 &lt;code>delegate&lt;/code> 프로퍼티에 ViewController를 할당해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>final class ViewController: UIViewController {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class ViewController: UIViewController {
 private let textField = UITextField()
 override func viewDidLoad() {
 super.viewDidLoad()
@@ -69,8 +79,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>그렇다면 Delegate Pattern은 어떤 식으로 동작하기에 다른 객체에게 동작의 제어권을 위임할 수 있는걸까요? 간단한 &lt;code>Delegate&lt;/code> 프로토콜을 구현하여 동작을 확인해보겠습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol UITextFieldDelegate {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol UITextFieldDelegate {
 func textFieldShouldBeginEditing(_ textField: UITextField) -&amp;gt; Bool
 func textFieldDidBeginEditing(_ textField: UITextField)
 }

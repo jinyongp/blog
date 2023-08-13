@@ -14,8 +14,13 @@ href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문&lt;/a
 >의 예제를 Swift 코드로 작성해봅시다. AbstractClass 역할을 수행하는 &lt;code>AbstractDisplay&lt;/code> 클래스를 정의합니다. &lt;code>AbstractDisplay&lt;/code> 클래스는 템플릿 메서드인 &lt;code>display&lt;/code> 메서드를 정의하고 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol AbstractDisplay {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol AbstractDisplay {
 func open()
 func write()
 func close()
@@ -31,8 +36,13 @@ close()
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>AbstractClass&lt;/code>는 추상 클래스이므로 구현되어 있는 메서드가 존재하고 인스턴스를 생성할 수 없어야 합니다. &lt;code>protocol&lt;/code>과 &lt;code>extension&lt;/code> 키워드를 활용하여 추상 클래스를 정의하였습니다. &lt;code>display&lt;/code> 탬플릿 메서드를 사용하고 싶다면, &lt;code>AbstractClass&lt;/code>를 채택하고 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현해야 합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>final class CharDisplay: AbstractDisplay {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class CharDisplay: AbstractDisplay {
 private let char: Character
 init(char: Character) {
 self.char = char
@@ -48,16 +58,26 @@ print(&amp;#34;&amp;gt;&amp;gt;&amp;#34;)
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>let display: AbstractDisplay = CharDisplay(char: &amp;#34;H&amp;#34;)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">let display: AbstractDisplay = CharDisplay(char: &amp;#34;H&amp;#34;)
 display.display()
 // output:
 // &amp;lt;&amp;lt;HHHHH&amp;gt;&amp;gt;&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>AbstractDisplay&lt;/code>를 채택하고 있습니다. &lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현하고 있습니다. &lt;code>CharDisplay&lt;/code> 클래스는 &lt;code>display&lt;/code> 메서드를 구현하지 않았지만, &lt;code>AbstractDisplay&lt;/code>의 &lt;code>display&lt;/code> 메서드를 사용할 수 있습니다.&lt;/p>
 &lt;p>또 다른 클래스를 정의해봅니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>final class StringDisplay: AbstractDisplay {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class StringDisplay: AbstractDisplay {
 private let string: String
 private let width: Int
 init(string: String) {
@@ -78,8 +98,13 @@ print(&amp;#34;&amp;#43;\(String(repeating: &amp;#34;-&amp;#34;, count: width))&
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>let display: AbstractDisplay = StringDisplay(string: &amp;#34;Hello, World&amp;#34;)
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">let display: AbstractDisplay = StringDisplay(string: &amp;#34;Hello, World&amp;#34;)
 display.display()
 // output:
 // &amp;#43;-------------&amp;#43;
@@ -168,16 +193,26 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/blockquote>
 &lt;hr>
 &lt;p>예시를 통해 자세히 알아보겠습니다. 시스템 내에서 사용 중인 로깅 인터페이스가 있다고 가정해봅시다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol Logger {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol Logger {
 func log(message: String)
 func warn(message: String)
 func error(message: String)
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>Logger&lt;/code>는 Adapter Pattern의 구성 요소 중 Target 역할을 수행합니다. 이를 채택하는 클래스 &lt;code>MyLogger&lt;/code>를 구현합니다. &lt;code>MyLogger&lt;/code>는 Swift의 &lt;code>print()&lt;/code>함수를 이용하여 Termianl 환경에서 로그를 출력합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>struct MyLogger: Logger {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct MyLogger: Logger {
 func log(message: String) {
 print(&amp;#34;[LOG] \(message)&amp;#34;)
 }
@@ -190,8 +225,13 @@ print(&amp;#34;[ERROR] \(message)&amp;#34;)
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>Client 역할을 수행하는 &lt;code>App&lt;/code> 클래스에서 Logger 구현체를 주입받아 시스템 전체에 걸쳐 사용합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>// App.swift
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// App.swift
 final class App {
 private let logger: Logger
 init(logger: Logger) {
@@ -202,16 +242,26 @@ logger.log(message: &amp;#34;doSomething&amp;#34;)
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>// main.swift
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// main.swift
 let app = App(logger: MyLogger())
 app.doSomething()
 // output:
 // [LOG] doSomething&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>MyLogger&lt;/code>는 swift의 &lt;code>print()&lt;/code> 함수에 의존하고 있습니다. 이제 외부 라이브러리를 통해 terminal 환경이 아닌 외부로 로그 정보를 보내려고 합니다. 외부 라이브러리 &lt;code>ExternalLogger&lt;/code>는 다음 인터페이스를 제공합니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>enum LogLevel {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">enum LogLevel {
 case debug
 case info
 case warn
@@ -224,8 +274,13 @@ func log(level: LogLevel, message: String) {
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>언뜻 보기에도 &lt;code>ExternalLogger&lt;/code>는 &lt;code>Logger&lt;/code>와 호환되지 않는 것을 알 수 있습니다. 이럴 때 Adapter 클래스를 추가하여 호환성을 확보할 수 있습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>struct ExternalLoggerAdapter: Logger {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct ExternalLoggerAdapter: Logger {
 private let logger = ExternalLogger()
 func log(message: String) {
 logger.log(level: .info, message: message)
@@ -238,8 +293,13 @@ logger.log(level: .error, message: message)
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>let app = App(logger: ExternalLoggerAdapter())
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">let app = App(logger: ExternalLoggerAdapter())
 app.doSomething()&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이렇게 Adapter 역할을 수행하는 중간자 클래스를 추가하여 세부 구현에 어떠한 변경도 없이 세부 구현에 어떠한 변경도 없이 확장에 성공하였습니다. 이런 식으로 Adapter 구조체를 추가하면 변경이 아닌 확장(OCP - 개방 폐쇄 원칙)이 되어 Side Effect도 없을 뿐더러 Unit Test를 작성하기도 쉬워집니다.&lt;/p></description></item><item><title>Iterator Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/1/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/1/</guid><description>&lt;p>&lt;strong>Iterator Pattern&lt;/strong>은 순회 로직을 순회자(Iterator) 객체로 분리합니다. 이러한 추상화 작업을 통해 순회 불가능한 객체더라도 인터페이스만 구현한다면 순회 가능한 객체로 만들 수 있습니다.&lt;/p>
@@ -260,8 +320,13 @@ href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문&lt;/a
 >의 Iterator Pattern 예제를 Swift로 작성해보았습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>protocol Iterable&amp;lt;Element&amp;gt; {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol Iterable&amp;lt;Element&amp;gt; {
 associatedtype Element where Element == Iter.Element
 associatedtype Iter: Iterator
 func makeIterator() -&amp;gt; Iter;
@@ -340,8 +405,13 @@ target="_blank" rel="noopener noreferrer nofollow"
 >IteratorProtocol&lt;/a
 > 프로토콜을 제공하여 어떠한 클래스든 &lt;code>IteratorProtocol&lt;/code>을 채택하여 &lt;code>for in&lt;/code> 구문에 활용할 수 있습니다. (Aggregate 역할을 &lt;code>Sequence&lt;/code> 프로토콜이 수행합니다.)&lt;/p>
 &lt;p>Apple 공식 문서의 예제를 가져왔습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4">
-&lt;pre>&lt;code>struct Countdown: Sequence {
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct Countdown: Sequence {
 let start: Int
 func makeIterator() -&amp;gt; CountdownIterator {
 return CountdownIterator(self)
