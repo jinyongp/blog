@@ -1,0 +1,9 @@
+.pswp {
+  .pswp__top-bar {
+    @apply p-safe;
+  }
+
+  .pswp__img {
+    @apply p-safe md:p-safe-offset-8 object-contain;
+  }
+}

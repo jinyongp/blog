@@ -11,12 +11,12 @@
       {{ end }}
     </title>
 
-    {{ partial "css" . }}
     {{ partial "script" . }}
+    {{ partial "css" . }}
     {{ block "closing/head" . }}{{ end }}
   </head>
 
-  <body>
+  <body class="debug-screens">
     {{ block "opening/body" . }}{{ end }}
     <nav class="shadow-md">
       {{ block "nav" . }}

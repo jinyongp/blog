@@ -7,6 +7,11 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  html,
+  body {
+    height: -webkit-fill-available;
+  }
+
   html {
     @apply leading-normal antialiased text-[14px] md:text-[16px];
     font-family: var(--font), sans-serif;

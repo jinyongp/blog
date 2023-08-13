@@ -10,5 +10,8 @@ module.exports = {
       height: (theme) => theme("maxHeight"),
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-debug-screens"),
+    require("tailwindcss-safe-area"),
+  ],
 };
