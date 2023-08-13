@@ -36,10 +36,6 @@ category = "Comments"
 categoryId = "DIC_kwDOHJDtcs4CXf7o"
 lang = "ko"
 
-[markup.highlight]
-tabWidth = 2
-codeFences = false
-
 [markup.goldmark.renderer]
 unsafe = true
 
