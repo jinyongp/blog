@@ -56,7 +56,7 @@
   }
 
   blockquote {
-    @apply border-l-[6px] border-accent/50 bg-accent/5;
+    @apply border-l-[6px] border-accent/80 bg-accent/5;
     @apply pl-3 pr-5 py-1 text-gray-800 text-sm;
   }
 
