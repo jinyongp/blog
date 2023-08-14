@@ -1,0 +1,16 @@
+{{ $attributes := "" }}
+
+{{ if isset . "attributes" }}
+  {{ range $key, $value := .attributes }}
+    {{ $attributes = printf "%s %s=\"%s\"" $attributes $key $value }}
+  {{ end }}
+{{ end }}
+
+
+<link
+  rel="preload"
+  href="{{ .url }}"
+  as="style"
+  {{ $attributes | safeHTMLAttr }}
+/>
+<link rel="stylesheet" href="{{ .url }}" {{ $attributes | safeHTMLAttr }} />

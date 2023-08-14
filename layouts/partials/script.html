@@ -1,6 +1,6 @@
 {{ with .Site.Params.highlight }}
   {{ $cdn := printf "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@%s/build" .version }}
-  <link rel="stylesheet" href="{{ $cdn }}/styles/{{ .theme }}.min.css" />
+  {{ partial "load-style" (dict "url" (printf "%s/styles/%s.min.css" $cdn .theme)) }}
   <script defer type="module">
     import hljs from "{{ $cdn }}/es/highlight.min.js";
     import dart from "{{ $cdn }}/es/languages/dart.min.js";
@@ -35,11 +35,6 @@
   }
 </script>
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css"
-  integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+{{ $attributes := (dict "integrity" "sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA==" "crossorigin" "anonymous" "referrerpolicy" "no-referrer") }}
+{{ partial "load-style" (dict "url" "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css" "attributes" $attributes) }}
 <script defer type="module" src="/js/main.js"></script>

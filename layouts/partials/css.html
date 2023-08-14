@@ -4,11 +4,7 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 {{ with .Site.Params.style }}
-  <link rel="preload" as="font" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family={{ .font }}&display=swap"
-  />
+  {{ partial "load-style" (dict "url" (printf "https://fonts.googleapis.com/css?family=%s&display=swap" .Font)) }}
 
   <style>
     :root {
