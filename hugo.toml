@@ -18,6 +18,7 @@ priority = 0.5
 
 [params]
 favicon = "favicon.png"
+description = "Jinyong Park's Personal Dev Blog"
 
 [params.style]
 font = "Raleway"      # https://fonts.google.com
