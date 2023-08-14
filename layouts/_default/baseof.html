@@ -26,9 +26,14 @@
             {{ range .Site.Menus.main }}
               <li class="hover:text-accent">
                 {{ if and (not (eq .PageRef "/")) (hasPrefix $.RelPermalink .PageRef) }}
-                  <a href="{{ .PageRef }}" class="text-accent">{{ .Name }}</a>
+                  <a
+                    title="{{ .Name }}"
+                    href="{{ .PageRef }}"
+                    class="text-accent"
+                    >{{ .Name }}</a
+                  >
                 {{ else }}
-                  <a href="{{ .PageRef }}">{{ .Name }}</a>
+                  <a title="{{ .Name }}" href="{{ .PageRef }}">{{ .Name }}</a>
                 {{ end }}
               </li>
             {{ end }}
@@ -38,6 +43,7 @@
               <li class="hover:text-accent grid place-items-center">
                 <a
                   class="text-xl"
+                  title="{{ .Name }}"
                   href="{{ .URL }}"
                   target="_blank"
                   rel="noopener noreferrer"
