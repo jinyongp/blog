@@ -17,7 +17,7 @@ filename = "sitemap.xml"
 priority = 0.5
 
 [params]
-favicon = "favicon.png"
+favicon = "favicon.ico"
 description = "Jinyong Park's Personal Dev Blog"
 
 [params.style]
