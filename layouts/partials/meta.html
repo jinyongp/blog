@@ -6,11 +6,20 @@
 />
 <meta name="HandheldFriendly" content="true" />
 
-<link rel="canonical" href="https://jinyongp.dev" />
+<link rel="canonical" href="{{ .Permalink }}" />
 <meta
   name="naver-site-verification"
   content="c36f259891f25bc92e3884c1ceb626a0aaa76146"
 />
+
+{{- if .Paginator -}}
+  {{- if .Paginator.HasPrev -}}
+    <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
+  {{- end -}}
+  {{- if .Paginator.HasNext -}}
+    <link rel="prev" href="{{ .Paginator.Next.URL | absURL }}" />
+  {{- end -}}
+{{- end }}
 
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type (printf `%sfeed.xml` $.Site.BaseURL) $.Site.Title | safeHTML }}

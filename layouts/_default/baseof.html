@@ -4,11 +4,11 @@
     {{ block "opening/head" . }}{{ end }}
     {{ partial "meta" . }}
     <title>
-      {{ if eq .Title "jinyongp.dev" }}
+      {{- if .IsHome -}}
         Home
-      {{ else }}
-        {{ .Title }}
-      {{ end }}
+      {{- else -}}
+        {{- .Title -}}
+      {{- end -}}
     </title>
 
     {{ partial "script" . }}
