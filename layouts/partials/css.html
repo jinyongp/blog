@@ -4,9 +4,10 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 {{ with .Site.Params.style }}
+  <link rel="preload" as="font" />
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family={{ .font }}"
+    href="https://fonts.googleapis.com/css?family={{ .font }}&display=swap"
   />
 
   <style>
