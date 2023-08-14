@@ -1,7 +1,7 @@
 <link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />
 
 {{ $style := resources.Get "/main.css" | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ partial "load-style" (dict "url" $style.Permalink ) }}
 
 {{ with .Site.Params.style }}
   {{ partial "load-style" (dict "url" (printf "https://fonts.googleapis.com/css?family=%s&display=swap" .Font)) }}
