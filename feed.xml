@@ -136,7 +136,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/ul>
 &lt;h3 id="project-structure" class="flex items-center gap-3">Project Structure &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#project-structure"
+>&lt;a title="Project Structure" href="#project-structure"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -177,7 +177,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;/blockquote>
 &lt;h3 id="storyboard" class="flex items-center gap-3">Storyboard &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#storyboard"
+>&lt;a title="Storyboard" href="#storyboard"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -197,7 +197,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/div>
 &lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#implementation"
+>&lt;a title="Implementation" href="#implementation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -210,7 +210,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="todoitem" class="flex items-center gap-3">TodoItem &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#todoitem"
+>&lt;a title="TodoItem" href="#todoitem"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -243,7 +243,7 @@ self.createdAt = UInt(Date().timeIntervalSince1970)
 &lt;p>배열에서 인스턴스를 가져오는 과정에서 값의 복사가 아닌 참조를 가져오길 원했습니다. 그런 이유로 &lt;code>struct&lt;/code> 대신 &lt;code>class&lt;/code>를 사용했고, 상속할 여지가 없으므로 &lt;code>final&lt;/code> 키워드를 붙여 Dynamic Dispatch 대신 Static Dispatch 방식을 채택하였습니다.&lt;/p>
 &lt;h4 id="todoservice" class="flex items-center gap-3">TodoService &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#todoservice"
+>&lt;a title="TodoService" href="#todoservice"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -284,7 +284,7 @@ item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
 &lt;p>&lt;code>TodoService&lt;/code>의 경우, 대부분의 &lt;code>Views&lt;/code>에서 사용될 예정이므로 하나의 &lt;code>Items&lt;/code>만 생성되어야 함을 보장하기 위해 Singleton 패턴을 적용하였습니다.&lt;/p>
 &lt;h4 id="viewcontroller" class="flex items-center gap-3">ViewController &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#viewcontroller"
+>&lt;a title="ViewController" href="#viewcontroller"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -366,7 +366,7 @@ return cell
 &lt;p>완료 버튼을 눌렀을 땐 애니메이션과 함께 목록에서 제거하도록 작성하였고, 라벨을 눌렀을 땐 Alert을 띄워 내용을 수정할 수 있도록 작성하였습니다.&lt;/p>
 &lt;h3 id="todotableviewcell" class="flex items-center gap-3">TodoTableViewCell &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#todotableviewcell"
+>&lt;a title="TodoTableViewCell" href="#todotableviewcell"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -426,7 +426,7 @@ onCompleted?(self)
 &lt;p>라벨에 Touch Action을 등록하기 위해서 &lt;code>UITapGestureRecognizer&lt;/code>를 추가하였습니다.&lt;/p>
 &lt;h3 id="completesviewcontroller" class="flex items-center gap-3">CompletesViewController &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#completesviewcontroller"
+>&lt;a title="CompletesViewController" href="#completesviewcontroller"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -515,7 +515,7 @@ self.tableView.reloadData()
 &lt;p>&lt;code>CompletesViewController&lt;/code> 객체에 클로저를 전달하기 위해 &lt;code>ViewController&lt;/code>에 &lt;code>prepare&lt;/code> 메서드를 구현하였습니다. &lt;code>onDismissed&lt;/code>가 호출되면 메인 페이지의 &lt;code>tableView&lt;/code>를 갱신합니다.&lt;/p>
 &lt;h5 id="delegate-패턴-적용" class="flex items-center gap-3">Delegate 패턴 적용 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#delegate-%ed%8c%a8%ed%84%b4-%ec%a0%81%ec%9a%a9"
+>&lt;a title="Delegate 패턴 적용" href="#delegate-%ed%8c%a8%ed%84%b4-%ec%a0%81%ec%9a%a9"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -568,7 +568,7 @@ tableView.reloadData()
 &lt;p>&lt;code>ViewController&lt;/code>가 &lt;code>prepare&lt;/code> 메서드에서 &lt;code>delegate&lt;/code> 인스턴스를 전달하고, &lt;code>CompletesViewControllerDelegate&lt;/code>를 채택하여 &lt;code>tableView&lt;/code>를 갱신하도록 작성했습니다. 위와 동일하게 동작함을 확인할 수 있습니다.&lt;/p>
 &lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#trouble-shooting"
+>&lt;a title="Trouble Shooting" href="#trouble-shooting"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -581,7 +581,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="1-객체의-속성-변경이-반영되지-않는-문제" class="flex items-center gap-3">1. 객체의 속성 변경이 반영되지 않는 문제 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#1-%ea%b0%9d%ec%b2%b4%ec%9d%98-%ec%86%8d%ec%84%b1-%eb%b3%80%ea%b2%bd%ec%9d%b4-%eb%b0%98%ec%98%81%eb%90%98%ec%a7%80-%ec%95%8a%eb%8a%94-%eb%ac%b8%ec%a0%9c"
+>&lt;a title="1. 객체의 속성 변경이 반영되지 않는 문제" href="#1-%ea%b0%9d%ec%b2%b4%ec%9d%98-%ec%86%8d%ec%84%b1-%eb%b3%80%ea%b2%bd%ec%9d%b4-%eb%b0%98%ec%98%81%eb%90%98%ec%a7%80-%ec%95%8a%eb%8a%94-%eb%ac%b8%ec%a0%9c"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -607,7 +607,7 @@ item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
 &lt;p>원인은 &lt;code>TodoItem&lt;/code>이 &lt;code>struct&lt;/code> 키워드로 선언되어 있어, &lt;code>first&lt;/code>를 통해 찾은 값을 &lt;code>item&lt;/code> 변수에 할당하는 과정에서 값의 복사가 발생하여 복사된 값의 속성을 변경하더라도 원본 값이 변경되지 않는 문제였습니다. &lt;code>struct&lt;/code> 대신 &lt;code>class&lt;/code>로 선언하는 방식으로 문제를 해결했습니다.&lt;/p>
 &lt;h4 id="2-unknown-class-_viewcontroller-in-interface-builder-file-에러" class="flex items-center gap-3">2. Unknown class _ViewController in Interface Builder file. 에러 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2-unknown-class-_viewcontroller-in-interface-builder-file-%ec%97%90%eb%9f%ac"
+>&lt;a title="2. Unknown class _ViewController in Interface Builder file. 에러" href="#2-unknown-class-_viewcontroller-in-interface-builder-file-%ec%97%90%eb%9f%ac"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -629,7 +629,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/p>
 &lt;h3 id="retrospective" class="flex items-center gap-3">Retrospective &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#retrospective"
+>&lt;a title="Retrospective" href="#retrospective"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -643,7 +643,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h3>&lt;p>UIKit로 개발하면서 여태까지 해왔던 웹 개발과 많은 비교를 하게 되었습니다. UIKit으로 개발하는 건 웹 개발로 비유를 하자면 HTML, CSS 없이 JavaScript로만 모든 UI와 Style을 작성하는 것과 비슷했습니다. 웹에서 HTML과 CSS 그리고 JavaScript가 분리되어 있다는 게 굉장한 장점이구나 다시 한번 느끼게 되었습니다. UIKit의 경우 모든 내용을 선언형이 아닌 명령형으로 작성해야 하기 때문에 각 역할에 맞게 적절하게 코드를 분리하기 위한 노력이 필요함을 절실히 깨달았습니다.&lt;/p>
 &lt;p>Storyboard와 코드를 연동하여 작성되어야 하는 부분이 있기 때문에 코드가 실행되는데 눈에 보이는 부분보단 이렇게 동작할 것이다 추론해야 하는 경우가 많았고 에러가 발생해도 추적하기가 굉장히 어려워서 개발 경험이 그리 좋지 않았습니다. 아무래도 UIKit의 대부분이 Objective-C로 작성되어 있어 해당 내용을 알아야만 에러 내용을 통해 원인을 유추할 수 있는 것도 한몫 하다보니 어려웠던 듯 싶습니다. 협업 관점에서 보나 디버깅 관점에서 보나 웬만하면 Storyboard 방식보단 코드 방식의 개발이 더 유리하지 않을까 생각했습니다.&lt;/p></description></item><item><title>Learning Software Design Pattern (Swift)</title><link>https://jinyongp.dev/series/design-pattern/1/</link><pubDate>Wed, Aug 09 09:45:38 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/design-pattern/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -667,7 +667,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >을 참고하여 작성했습니다. 본 서적에선 GoF의 23가지 디자인 패턴을 다루고 있습니다. 하지만 GoF의 분류 체계(생성, 구조, 행위)를 따르지 않고, 다른 관점으로 분류하고 있으므로 이를 따라서 작성했습니다.&lt;/p>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -967,7 +967,7 @@ print(&amp;#34;\(count)...&amp;#34;)
 &lt;p>&lt;code>Countdown&lt;/code>은 ConcreteAggregate 역할을 수행하며, &lt;code>CountdownIterator&lt;/code>는 ConcreteIterator 역할을 수행합니다. 이렇게 순회 로직을 분리하는 방식으로 Collection 형식이 아니라 하더라도 순회 로직을 추가함으로서 순회 가능한 객체를 만들 수 있습니다.&lt;/p>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -993,7 +993,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul></description></item><item><title>Understanding Delegate Pattern</title><link>https://jinyongp.dev/posts/uikit/1/</link><pubDate>Tue, Aug 01 03:32:29 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/1/</guid><description>&lt;h2 id="introduce-delegate-pattern" class="flex items-center gap-3">Introduce Delegate Pattern &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduce-delegate-pattern"
+>&lt;a title="Introduce Delegate Pattern" href="#introduce-delegate-pattern"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1060,7 +1060,7 @@ func textFieldDidBeginEditing(_ textField: UITextField) {
 &lt;p>이런 식으로 Delegate Pattern을 통해 동작의 제어권을 위임받을 수 있습니다.&lt;/p>
 &lt;h2 id="understand-delegate-pattern" class="flex items-center gap-3">Understand Delegate Pattern &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#understand-delegate-pattern"
+>&lt;a title="Understand Delegate Pattern" href="#understand-delegate-pattern"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1133,7 +1133,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;p>과제를 수행하기에 충분한 문법과 이론을 학습했고, 이를 기반으로 CLI에서 실행할 수 있는 간단한 계산기 툴을 작성했습니다.&lt;/p>
 &lt;h3 id="requirements" class="flex items-center gap-3">Requirements &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#requirements"
+>&lt;a title="Requirements" href="#requirements"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1152,7 +1152,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/ul>
 &lt;h3 id="directory-structure" class="flex items-center gap-3">Directory Structure &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#directory-structure"
+>&lt;a title="Directory Structure" href="#directory-structure"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1185,7 +1185,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;/div>
 &lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#implementation"
+>&lt;a title="Implementation" href="#implementation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1198,7 +1198,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="setup" class="flex items-center gap-3">Setup &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#setup"
+>&lt;a title="Setup" href="#setup"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1250,7 +1250,7 @@ path: &amp;#34;Sources&amp;#34;
 &lt;p>&lt;code>Sources&lt;/code> 폴더에 &lt;code>main.swift&lt;/code> 또한 생성되므로 &lt;code>swift run&lt;/code> 명령어를 실행하여 프로젝트를 실행할 수 있습니다.&lt;/p>
 &lt;h4 id="impl-operator-protocol" class="flex items-center gap-3">Impl Operator protocol &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#impl-operator-protocol"
+>&lt;a title="Impl Operator protocol" href="#impl-operator-protocol"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1334,7 +1334,7 @@ return lhs % rhs
 &lt;p>이로써 나머지 연산에 대해서도 &lt;code>Double&lt;/code> 타입을 사용할 수 있게 되었고, &lt;code>Operator&lt;/code> 프로토콜을 준수하는 &lt;code>ModOperator&lt;/code> 클래스를 작성할 수 있게 되었습니다. (SPR. 단일 책임 원칙)&lt;/p>
 &lt;h4 id="impl-calculator-class" class="flex items-center gap-3">Impl Calculator class &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#impl-calculator-class"
+>&lt;a title="Impl Calculator class" href="#impl-calculator-class"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1391,7 +1391,7 @@ calculator.calculate(10, name: &amp;#34;&amp;#43;&amp;#34;)&lt;/code>&lt;/pre>
 &lt;p>이로써 &lt;code>Calculator&lt;/code>는 구체적인 클래스가 아닌 추상화된 프로토콜에 의존합니다. (DIP. 의존성 역전 원칙)&lt;/p>
 &lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#trouble-shooting"
+>&lt;a title="Trouble Shooting" href="#trouble-shooting"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1404,7 +1404,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="1-0으로-초기화할-때-제네릭-타입으로-변환할-수-없는-문제" class="flex items-center gap-3">1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#1-0%ec%9c%bc%eb%a1%9c-%ec%b4%88%ea%b8%b0%ed%99%94%ed%95%a0-%eb%95%8c-%ec%a0%9c%eb%84%a4%eb%a6%ad-%ed%83%80%ec%9e%85%ec%9c%bc%eb%a1%9c-%eb%b3%80%ed%99%98%ed%95%a0-%ec%88%98-%ec%97%86%eb%8a%94-%eb%ac%b8%ec%a0%9c"
+>&lt;a title="1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제" href="#1-0%ec%9c%bc%eb%a1%9c-%ec%b4%88%ea%b8%b0%ed%99%94%ed%95%a0-%eb%95%8c-%ec%a0%9c%eb%84%a4%eb%a6%ad-%ed%83%80%ec%9e%85%ec%9c%bc%eb%a1%9c-%eb%b3%80%ed%99%98%ed%95%a0-%ec%88%98-%ec%97%86%eb%8a%94-%eb%ac%b8%ec%a0%9c"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1428,7 +1428,7 @@ return 0 as? T ?? 0.0 as! T
 &lt;/div>
 &lt;h4 id="2-첫-문자를-제외한-문자열-가져오기" class="flex items-center gap-3">2. 첫 문자를 제외한 문자열 가져오기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2-%ec%b2%ab-%eb%ac%b8%ec%9e%90%eb%a5%bc-%ec%a0%9c%ec%99%b8%ed%95%9c-%eb%ac%b8%ec%9e%90%ec%97%b4-%ea%b0%80%ec%a0%b8%ec%98%a4%ea%b8%b0"
+>&lt;a title="2. 첫 문자를 제외한 문자열 가져오기" href="#2-%ec%b2%ab-%eb%ac%b8%ec%9e%90%eb%a5%bc-%ec%a0%9c%ec%99%b8%ed%95%9c-%eb%ac%b8%ec%9e%90%ec%97%b4-%ea%b0%80%ec%a0%b8%ec%98%a4%ea%b8%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1471,7 +1471,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;p>문자열 관련 메서드는 대개 &lt;code>Self.SubSequence&lt;/code> 타입을 반환합니다. 잘라낸 문자열을 저장하기 위헤 새로운 메모리 공간을 할당하는 것이 아닌 기존의 문자열에서 필요한 부분에 직접 접근하기 때문입니다. 따라서, 문자열로서 사용하고 싶다면 &lt;code>String&lt;/code>으로 변환해야 합니다.&lt;/p>
 &lt;h3 id="retrospective" class="flex items-center gap-3">Retrospective &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#retrospective"
+>&lt;a title="Retrospective" href="#retrospective"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1496,7 +1496,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/p>
 &lt;h2 id="의존성-주입을-위해-인터페이스-적용하기" class="flex items-center gap-3">의존성 주입을 위해 인터페이스 적용하기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%a3%bc%ec%9e%85%ec%9d%84-%ec%9c%84%ed%95%b4-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0"
+>&lt;a title="의존성 주입을 위해 인터페이스 적용하기" href="#%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%a3%bc%ec%9e%85%ec%9d%84-%ec%9c%84%ed%95%b4-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1605,7 +1605,7 @@ child: MainApp(),
 &lt;p>이로써, &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 모두 구현해야 함을 강제할 수 있게 되었고, &lt;code>IO&lt;/code> 인터페이스를 상속하는 클래스를 여러 개 추가하여 상황에 따라 교체할 수 있어 확장성을 높였습니다.&lt;/p>
 &lt;h2 id="데이터-송수신-로직-추상화하기" class="flex items-center gap-3">데이터 송수신 로직 추상화하기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%86%a1%ec%88%98%ec%8b%a0-%eb%a1%9c%ec%a7%81-%ec%b6%94%ec%83%81%ed%99%94%ed%95%98%ea%b8%b0"
+>&lt;a title="데이터 송수신 로직 추상화하기" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%86%a1%ec%88%98%ec%8b%a0-%eb%a1%9c%ec%a7%81-%ec%b6%94%ec%83%81%ed%99%94%ed%95%98%ea%b8%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1721,7 +1721,7 @@ values.map((comment) =&amp;gt; comment.toJson()).toList(),
 &lt;p>&lt;code>mixin&lt;/code>을 상속하기 위해선 &lt;code>with&lt;/code> 키워드를 사용해야 합니다. &lt;code>DataHandler&lt;/code>를 상속하면서 &lt;code>CommentService&lt;/code>에서 구현해야 하는 함수들을 재정의합니다.
 &lt;code>import&lt;/code>와 &lt;code>export&lt;/code> 함수는 단순히 JSON 형태의 stringify와 parse 작업을 수행합니다. 이로써 상속을 통해 중복 코드를 제거하고 함수의 역할을 분리할 수 있었습니다.&lt;/p></description></item><item><title>[내배캠] 사전캠프</title><link>https://jinyongp.dev/learn/nbcamp/1/</link><pubDate>Tue, Jun 27 11:16:56 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/1/</guid><description>&lt;h2 id="2023년-06월-30일" class="flex items-center gap-3">2023년 06월 30일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-30%ec%9d%bc"
+>&lt;a title="2023년 06월 30일" href="#2023%eb%85%84-06%ec%9b%94-30%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1735,7 +1735,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h2>&lt;p>5주차 강의는 HTTP API 요청 방법을 익혔습니다. 다음주는 광고 붙이는건데&amp;hellip; 이번이 마지막일 듯 하네요.&lt;/p>
 &lt;h3 id="requesting-network-data" class="flex items-center gap-3">Requesting Network Data &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#requesting-network-data"
+>&lt;a title="Requesting Network Data" href="#requesting-network-data"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1805,7 +1805,7 @@ _load().then((_) =&amp;gt; notifyListeners());
 &lt;p>&lt;code>BookService&lt;/code> 클래스에서 책 정보를 가져오는 함수(&lt;code>get&lt;/code>)와 정보를 저장(&lt;code>save&lt;/code>)하고 불러오는(&lt;code>load&lt;/code>) 함수를 주입할 수 있도록 구현했습니다.&lt;/p>
 &lt;h3 id="webview-page" class="flex items-center gap-3">WebView Page &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#webview-page"
+>&lt;a title="WebView Page" href="#webview-page"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1862,7 +1862,7 @@ url: book.previewLink.replaceFirst(&amp;#39;http:&amp;#39;, &amp;#39;https:&amp;
 &lt;/div>
 &lt;h3 id="watcha-pedia" class="flex items-center gap-3">Watcha Pedia &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#watcha-pedia"
+>&lt;a title="Watcha Pedia" href="#watcha-pedia"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1879,7 +1879,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 | webview가 동작하지 않습니다.&lt;/p>
 &lt;h3 id="project-structure" class="flex items-center gap-3">Project Structure &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#project-structure"
+>&lt;a title="Project Structure" href="#project-structure"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1920,7 +1920,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;hr>
 &lt;h2 id="2023년-06월-29일" class="flex items-center gap-3">2023년 06월 29일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-29%ec%9d%bc"
+>&lt;a title="2023년 06월 29일" href="#2023%eb%85%84-06%ec%9b%94-29%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1958,7 +1958,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;/div>
 &lt;h3 id="provider" class="flex items-center gap-3">Provider &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#provider"
+>&lt;a title="Provider" href="#provider"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2025,7 +2025,7 @@ return Scaffold(
 &lt;p>&lt;code>Consumer&lt;/code>는 전체 화면을 다시 그리지만, 화면 리렌더링 없이 &lt;code>MemoService&lt;/code>의 인스턴스를 가져오고 싶다면, &lt;code>context.read&amp;lt;MemoService&amp;gt;()&lt;/code>를 통해 가져올 수 있습니다.&lt;/p>
 &lt;h3 id="shared_preferences" class="flex items-center gap-3">shared_preferences &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#shared_preferences"
+>&lt;a title="shared_preferences" href="#shared_preferences"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2103,7 +2103,7 @@ _memos.addAll(jsonDecode(payload).map((e) =&amp;gt; Memo.fromJson(e)));&lt;/code
 &lt;p>이로써 데이터를 항시 유지할 수 있고, 언제든 &lt;code>main.dart&lt;/code>만 수정하여 데이터 유지 방식을 변경할 수 있습니다.&lt;/p>
 &lt;h3 id="my-memo" class="flex items-center gap-3">My Memo &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#my-memo"
+>&lt;a title="My Memo" href="#my-memo"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2128,7 +2128,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/ul>
 &lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#trouble-shooting"
+>&lt;a title="Trouble Shooting" href="#trouble-shooting"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2154,7 +2154,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;hr>
 &lt;h2 id="2023년-06월-28일" class="flex items-center gap-3">2023년 06월 28일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-28%ec%9d%bc"
+>&lt;a title="2023년 06월 28일" href="#2023%eb%85%84-06%ec%9b%94-28%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2169,7 +2169,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;iframe src="https://dartpad.dev/embed-flutter.html?id=88bf678d41cdd472009b50585f45304b&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
 &lt;h3 id="statelesswidget-vs-statefulwidget" class="flex items-center gap-3">StatelessWidget vs. StatefulWidget &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#statelesswidget-vs-statefulwidget"
+>&lt;a title="StatelessWidget vs. StatefulWidget" href="#statelesswidget-vs-statefulwidget"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2187,7 +2187,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>위 두 위젯은 보통 상속하여 &lt;code>build&lt;/code> 메서드를 override하는 방식으로 사용합니다. StatefulWidget은 State를 변경하는 클래스가 별도로 필요합니다.&lt;/p>
 &lt;h3 id="navigation" class="flex items-center gap-3">Navigation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#navigation"
+>&lt;a title="Navigation" href="#navigation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2201,7 +2201,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h3>&lt;p>Navigation은 Route라고 불리는 페이지를 전환하는 것을 의미하고 &lt;code>Navigator&lt;/code> 위젯으로 수행합니다. &lt;code>push&lt;/code>로 페이지를 이동하고 &lt;code>pop&lt;/code>으로 이전 페이지로 이동할 수 있습니다.&lt;/p>
 &lt;h3 id="당근마켓daangn-앱-클론" class="flex items-center gap-3">당근마켓(Daangn) 앱 클론 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%eb%8b%b9%ea%b7%bc%eb%a7%88%ec%bc%93daangn-%ec%95%b1-%ed%81%b4%eb%a1%a0"
+>&lt;a title="당근마켓(Daangn) 앱 클론" href="#%eb%8b%b9%ea%b7%bc%eb%a7%88%ec%bc%93daangn-%ec%95%b1-%ed%81%b4%eb%a1%a0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2231,7 +2231,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/blockquote>
 &lt;h3 id="샤잠shazam-앱-클론" class="flex items-center gap-3">샤잠(Shazam) 앱 클론 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%ec%83%a4%ec%9e%a0shazam-%ec%95%b1-%ed%81%b4%eb%a1%a0"
+>&lt;a title="샤잠(Shazam) 앱 클론" href="#%ec%83%a4%ec%9e%a0shazam-%ec%95%b1-%ed%81%b4%eb%a1%a0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2249,7 +2249,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;hr>
 &lt;h2 id="2023년-06월-27일" class="flex items-center gap-3">2023년 06월 27일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-27%ec%9d%bc"
+>&lt;a title="2023년 06월 27일" href="#2023%eb%85%84-06%ec%9b%94-27%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2275,7 +2275,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >으로 진행했습니다.&lt;/p>
 &lt;h3 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2312,7 +2312,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/ul>
 &lt;h3 id="installation" class="flex items-center gap-3">Installation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#installation"
+>&lt;a title="Installation" href="#installation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2387,7 +2387,7 @@ $ cd hello_flutter &amp;amp;&amp;amp; code .&lt;/code>&lt;/pre>
 &lt;p>위 명령어로 프로젝트를 생성한 뒤 flutter 프로젝트를 시작합니다.&lt;/p>
 &lt;h3 id="practice" class="flex items-center gap-3">Practice &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#practice"
+>&lt;a title="Practice" href="#practice"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2419,7 +2419,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;p>첫 주차에선 다양한 위젯을 활용하여 로그인 페이지와 간단한 영화 리스트 페이지를 작성했습니다.&lt;/p>
 &lt;h4 id="simple-login-page" class="flex items-center gap-3">Simple Login Page &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#simple-login-page"
+>&lt;a title="Simple Login Page" href="#simple-login-page"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2436,7 +2436,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/ul>
 &lt;h4 id="simple-movie-list" class="flex items-center gap-3">Simple Movie List &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#simple-movie-list"
+>&lt;a title="Simple Movie List" href="#simple-movie-list"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2452,7 +2452,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;li>&lt;code>ListView.builder&lt;/code> 위젯으로 리스트를 그릴 수 있습니다. &lt;code>ListView&lt;/code>를 &lt;code>Column&lt;/code>가 내부에서 사용할 때 &lt;code>Vertical viewport was given unbounded height.&lt;/code> 에러가 발생할 수 있는데, &lt;code>ListView&lt;/code>가 항상 최대 공간을 차지하려는 성질이 있어 높이가 무한대로 계산되는 문제가 발생하기 때문입니다. &lt;code>Expanded&lt;/code> 위젯으로 감싸서 문제를 해결할 수 있습니다.&lt;/li>
 &lt;/ul></description></item><item><title>Refactoring for Performance (Canvas API)</title><link>https://jinyongp.dev/posts/d3js/4/</link><pubDate>Fri, Apr 22 14:18:15 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/4/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2475,7 +2475,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;hr>
 &lt;h2 id="drawing-canvas" class="flex items-center gap-3">Drawing Canvas &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#drawing-canvas"
+>&lt;a title="Drawing Canvas" href="#drawing-canvas"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2584,7 +2584,7 @@ this.ctx.fillText(id, x, y);
 &lt;hr>
 &lt;h2 id="panning-and-zooming" class="flex items-center gap-3">Panning and Zooming &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#panning-and-zooming"
+>&lt;a title="Panning and Zooming" href="#panning-and-zooming"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2633,7 +2633,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;hr>
 &lt;h2 id="focusing" class="flex items-center gap-3">Focusing &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#focusing"
+>&lt;a title="Focusing" href="#focusing"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2687,7 +2687,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;hr>
 &lt;h2 id="dragging" class="flex items-center gap-3">Dragging &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#dragging"
+>&lt;a title="Dragging" href="#dragging"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2767,7 +2767,7 @@ this.canvas.style(&amp;#34;cursor&amp;#34;, node ? &amp;#34;pointer&amp;#34; : &
 &lt;hr>
 &lt;h2 id="impl" class="flex items-center gap-3">Impl. &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#impl"
+>&lt;a title="Impl." href="#impl"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2788,7 +2788,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;hr>
 &lt;h2 id="conclusion" class="flex items-center gap-3">Conclusion &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#conclusion"
+>&lt;a title="Conclusion" href="#conclusion"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2806,7 +2806,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;hr>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2826,7 +2826,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul></description></item><item><title>Panning, Zooming and Dragging</title><link>https://jinyongp.dev/posts/d3js/3/</link><pubDate>Thu, Apr 21 11:16:27 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/3/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2852,7 +2852,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;hr>
 &lt;h2 id="d3-zoom" class="flex items-center gap-3">d3-zoom &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#d3-zoom"
+>&lt;a title="d3-zoom" href="#d3-zoom"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2866,7 +2866,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h2>&lt;p>d3-zoom은 사용자가 화면을 드래그 혹은 스크롤하여 현재 보는 범위를 이동, 확대, 축소하는 기능을 제공합니다. 혹은, 특정 요소를 선택했을 때 그 위치로 이동하면서 포커스하는 효과를 줄 수도 있습니다.&lt;/p>
 &lt;h3 id="panning-and-zooming" class="flex items-center gap-3">Panning and Zooming &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#panning-and-zooming"
+>&lt;a title="Panning and Zooming" href="#panning-and-zooming"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -2956,7 +2956,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;p>화면을 드래그하여 이동하고 스크롤하여 확대, 축소할 수 있습니다.&lt;/p>
 &lt;h3 id="focusing" class="flex items-center gap-3">Focusing &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#focusing"
+>&lt;a title="Focusing" href="#focusing"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3009,7 +3009,7 @@ root
 &lt;hr>
 &lt;h2 id="d3-drag" class="flex items-center gap-3">d3-drag &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#d3-drag"
+>&lt;a title="d3-drag" href="#d3-drag"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3023,7 +3023,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h2>&lt;p>d3-drag는 요소를 클릭하여 드래그하는 기능을 제공합니다.&lt;/p>
 &lt;h3 id="dragging" class="flex items-center gap-3">Dragging &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#dragging"
+>&lt;a title="Dragging" href="#dragging"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3091,7 +3091,7 @@ circles.call(drag);&lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h2 id="impl" class="flex items-center gap-3">Impl. &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#impl"
+>&lt;a title="Impl." href="#impl"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3112,7 +3112,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;hr>
 &lt;h2 id="conclusion" class="flex items-center gap-3">Conclusion &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#conclusion"
+>&lt;a title="Conclusion" href="#conclusion"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3128,7 +3128,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;hr>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3160,7 +3160,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul></description></item><item><title>Data Driven Transformation of DOM</title><link>https://jinyongp.dev/posts/d3js/2/</link><pubDate>Sat, Apr 16 02:47:11 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/2/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3196,7 +3196,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;hr>
 &lt;h2 id="creating-and-editing" class="flex items-center gap-3">Creating and Editing &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#creating-and-editing"
+>&lt;a title="Creating and Editing" href="#creating-and-editing"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3236,7 +3236,7 @@ const nodeGroup = root.append(&amp;#39;g&amp;#39;).attr(&amp;#39;id&amp;#39;, &a
 &lt;hr>
 &lt;h2 id="joining-data" class="flex items-center gap-3">Joining Data &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#joining-data"
+>&lt;a title="Joining Data" href="#joining-data"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3363,7 +3363,7 @@ _parents: [g#nodes]&lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h2 id="impl" class="flex items-center gap-3">Impl. &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#impl"
+>&lt;a title="Impl." href="#impl"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3384,7 +3384,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;hr>
 &lt;h2 id="conclusion" class="flex items-center gap-3">Conclusion &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#conclusion"
+>&lt;a title="Conclusion" href="#conclusion"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3399,7 +3399,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>&lt;code>node&lt;/code>의 데이터가 많아질수록 d3-selection을 더욱 적극적으로 이용할 예정이므로, 그 때를 위해 이번엔 이 정도로 하고 다음 시리즈에선 d3-zoom과 d3-drag를 이용하여 상호작용하는 방법에 대해 알아보겠습니다.&lt;/p>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3431,7 +3431,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3456,7 +3456,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >입니다. d3가 가진 수많은 라이브러리 중에서도 &lt;code>d3-force&lt;/code>, &lt;code>d3-zoom&lt;/code>, &lt;code>d3-selection&lt;/code>, &lt;code>d3-drag&lt;/code> 등 추가로 필요한 모듈이라면 전부 활용해볼 예정이고 성능 향상을 위해 Canvas API로 구현해보려고 합니다.&lt;/p>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3494,7 +3494,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul></description></item><item><title>Simulating Physical Forces</title><link>https://jinyongp.dev/posts/d3js/1/</link><pubDate>Thu, Apr 14 14:20:46 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/1/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3528,7 +3528,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Simulation&lt;/a
 > &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#simulationhttpsgithubcomd3d3-forcesimulation"
+>&lt;a title="Simulation" href="#simulationhttpsgithubcomd3d3-forcesimulation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3551,7 +3551,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;p>Simulation에 그래프의 정점 목록인 &lt;code>nodes&lt;/code>와 간선 목록인 &lt;code>links&lt;/code>를 등록할 수 있습니다.&lt;/p>
 &lt;h3 id="nodes" class="flex items-center gap-3">Nodes &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#nodes"
+>&lt;a title="Nodes" href="#nodes"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3592,7 +3592,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >는 사용할 수 없습니다. 만약 불변성 유지가 필요하다면 객체를 복사하여 전달해야 합니다.&lt;/p>
 &lt;h3 id="links" class="flex items-center gap-3">Links &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#links"
+>&lt;a title="Links" href="#links"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3647,7 +3647,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 > 함수로 지정해야 합니다.)&lt;/p>
 &lt;h3 id="tick" class="flex items-center gap-3">Tick &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#tick"
+>&lt;a title="Tick" href="#tick"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3688,7 +3688,7 @@ console.log(nodes[0]);
 &lt;p>Simulation은 &lt;code>tick&lt;/code> 단위마다 좌표값을 계산합니다. 우린 simulation에 의해 &lt;code>tick&lt;/code>마다 계산된 절대 좌표값(x, y)를 화면에 그려주기만 하면 됩니다. 그리는 건 나중에 d3-selection과 함께 알아보겠습니다.&lt;/p>
 &lt;h3 id="alpha" class="flex items-center gap-3">Alpha &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#alpha"
+>&lt;a title="Alpha" href="#alpha"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3778,7 +3778,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Forces&lt;/a
 > &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#forceshttpsgithubcomd3d3-forceforces"
+>&lt;a title="Forces" href="#forceshttpsgithubcomd3d3-forceforces"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3797,7 +3797,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Links&lt;/a
 > &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#linkshttpsgithubcomd3d3-forcelinks"
+>&lt;a title="Links" href="#linkshttpsgithubcomd3d3-forcelinks"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3830,7 +3830,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Many-Body&lt;/a
 > &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#many-bodyhttpsgithubcomd3d3-forcemany-body"
+>&lt;a title="Many-Body" href="#many-bodyhttpsgithubcomd3d3-forcemany-body"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3861,7 +3861,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Centering&lt;/a
 > &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#centeringhttpsgithubcomd3d3-forcecentering"
+>&lt;a title="Centering" href="#centeringhttpsgithubcomd3d3-forcecentering"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3897,7 +3897,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Collision&lt;/a
 > &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#collisionhttpsgithubcomd3d3-forcecollision"
+>&lt;a title="Collision" href="#collisionhttpsgithubcomd3d3-forcecollision"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3928,7 +3928,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >Positioning&lt;/a
 > &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#positioninghttpsgithubcomd3d3-forcepositioning"
+>&lt;a title="Positioning" href="#positioninghttpsgithubcomd3d3-forcepositioning"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3965,7 +3965,7 @@ simulation.force(&amp;#39;radial&amp;#39;, forceRadial);&lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h2 id="conclusion" class="flex items-center gap-3">Conclusion &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#conclusion"
+>&lt;a title="Conclusion" href="#conclusion"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -3981,7 +3981,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;hr>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">

@@ -11,7 +11,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/p>
 &lt;h2 id="의존성-주입을-위해-인터페이스-적용하기" class="flex items-center gap-3">의존성 주입을 위해 인터페이스 적용하기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%a3%bc%ec%9e%85%ec%9d%84-%ec%9c%84%ed%95%b4-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0"
+>&lt;a title="의존성 주입을 위해 인터페이스 적용하기" href="#%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%a3%bc%ec%9e%85%ec%9d%84-%ec%9c%84%ed%95%b4-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -120,7 +120,7 @@ child: MainApp(),
 &lt;p>이로써, &lt;code>save&lt;/code>와 &lt;code>load&lt;/code> 모두 구현해야 함을 강제할 수 있게 되었고, &lt;code>IO&lt;/code> 인터페이스를 상속하는 클래스를 여러 개 추가하여 상황에 따라 교체할 수 있어 확장성을 높였습니다.&lt;/p>
 &lt;h2 id="데이터-송수신-로직-추상화하기" class="flex items-center gap-3">데이터 송수신 로직 추상화하기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%86%a1%ec%88%98%ec%8b%a0-%eb%a1%9c%ec%a7%81-%ec%b6%94%ec%83%81%ed%99%94%ed%95%98%ea%b8%b0"
+>&lt;a title="데이터 송수신 로직 추상화하기" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%86%a1%ec%88%98%ec%8b%a0-%eb%a1%9c%ec%a7%81-%ec%b6%94%ec%83%81%ed%99%94%ed%95%98%ea%b8%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -236,7 +236,7 @@ values.map((comment) =&amp;gt; comment.toJson()).toList(),
 &lt;p>&lt;code>mixin&lt;/code>을 상속하기 위해선 &lt;code>with&lt;/code> 키워드를 사용해야 합니다. &lt;code>DataHandler&lt;/code>를 상속하면서 &lt;code>CommentService&lt;/code>에서 구현해야 하는 함수들을 재정의합니다.
 &lt;code>import&lt;/code>와 &lt;code>export&lt;/code> 함수는 단순히 JSON 형태의 stringify와 parse 작업을 수행합니다. 이로써 상속을 통해 중복 코드를 제거하고 함수의 역할을 분리할 수 있었습니다.&lt;/p></description></item><item><title>[내배캠] 사전캠프</title><link>https://jinyongp.dev/learn/nbcamp/1/</link><pubDate>Tue, Jun 27 11:16:56 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/1/</guid><description>&lt;h2 id="2023년-06월-30일" class="flex items-center gap-3">2023년 06월 30일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-30%ec%9d%bc"
+>&lt;a title="2023년 06월 30일" href="#2023%eb%85%84-06%ec%9b%94-30%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -250,7 +250,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h2>&lt;p>5주차 강의는 HTTP API 요청 방법을 익혔습니다. 다음주는 광고 붙이는건데&amp;hellip; 이번이 마지막일 듯 하네요.&lt;/p>
 &lt;h3 id="requesting-network-data" class="flex items-center gap-3">Requesting Network Data &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#requesting-network-data"
+>&lt;a title="Requesting Network Data" href="#requesting-network-data"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -320,7 +320,7 @@ _load().then((_) =&amp;gt; notifyListeners());
 &lt;p>&lt;code>BookService&lt;/code> 클래스에서 책 정보를 가져오는 함수(&lt;code>get&lt;/code>)와 정보를 저장(&lt;code>save&lt;/code>)하고 불러오는(&lt;code>load&lt;/code>) 함수를 주입할 수 있도록 구현했습니다.&lt;/p>
 &lt;h3 id="webview-page" class="flex items-center gap-3">WebView Page &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#webview-page"
+>&lt;a title="WebView Page" href="#webview-page"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -377,7 +377,7 @@ url: book.previewLink.replaceFirst(&amp;#39;http:&amp;#39;, &amp;#39;https:&amp;
 &lt;/div>
 &lt;h3 id="watcha-pedia" class="flex items-center gap-3">Watcha Pedia &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#watcha-pedia"
+>&lt;a title="Watcha Pedia" href="#watcha-pedia"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -394,7 +394,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 | webview가 동작하지 않습니다.&lt;/p>
 &lt;h3 id="project-structure" class="flex items-center gap-3">Project Structure &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#project-structure"
+>&lt;a title="Project Structure" href="#project-structure"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -435,7 +435,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;hr>
 &lt;h2 id="2023년-06월-29일" class="flex items-center gap-3">2023년 06월 29일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-29%ec%9d%bc"
+>&lt;a title="2023년 06월 29일" href="#2023%eb%85%84-06%ec%9b%94-29%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -473,7 +473,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;/div>
 &lt;h3 id="provider" class="flex items-center gap-3">Provider &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#provider"
+>&lt;a title="Provider" href="#provider"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -540,7 +540,7 @@ return Scaffold(
 &lt;p>&lt;code>Consumer&lt;/code>는 전체 화면을 다시 그리지만, 화면 리렌더링 없이 &lt;code>MemoService&lt;/code>의 인스턴스를 가져오고 싶다면, &lt;code>context.read&amp;lt;MemoService&amp;gt;()&lt;/code>를 통해 가져올 수 있습니다.&lt;/p>
 &lt;h3 id="shared_preferences" class="flex items-center gap-3">shared_preferences &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#shared_preferences"
+>&lt;a title="shared_preferences" href="#shared_preferences"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -618,7 +618,7 @@ _memos.addAll(jsonDecode(payload).map((e) =&amp;gt; Memo.fromJson(e)));&lt;/code
 &lt;p>이로써 데이터를 항시 유지할 수 있고, 언제든 &lt;code>main.dart&lt;/code>만 수정하여 데이터 유지 방식을 변경할 수 있습니다.&lt;/p>
 &lt;h3 id="my-memo" class="flex items-center gap-3">My Memo &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#my-memo"
+>&lt;a title="My Memo" href="#my-memo"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -643,7 +643,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/ul>
 &lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#trouble-shooting"
+>&lt;a title="Trouble Shooting" href="#trouble-shooting"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -669,7 +669,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;hr>
 &lt;h2 id="2023년-06월-28일" class="flex items-center gap-3">2023년 06월 28일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-28%ec%9d%bc"
+>&lt;a title="2023년 06월 28일" href="#2023%eb%85%84-06%ec%9b%94-28%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -684,7 +684,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;iframe src="https://dartpad.dev/embed-flutter.html?id=88bf678d41cdd472009b50585f45304b&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
 &lt;h3 id="statelesswidget-vs-statefulwidget" class="flex items-center gap-3">StatelessWidget vs. StatefulWidget &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#statelesswidget-vs-statefulwidget"
+>&lt;a title="StatelessWidget vs. StatefulWidget" href="#statelesswidget-vs-statefulwidget"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -702,7 +702,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;p>위 두 위젯은 보통 상속하여 &lt;code>build&lt;/code> 메서드를 override하는 방식으로 사용합니다. StatefulWidget은 State를 변경하는 클래스가 별도로 필요합니다.&lt;/p>
 &lt;h3 id="navigation" class="flex items-center gap-3">Navigation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#navigation"
+>&lt;a title="Navigation" href="#navigation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -716,7 +716,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h3>&lt;p>Navigation은 Route라고 불리는 페이지를 전환하는 것을 의미하고 &lt;code>Navigator&lt;/code> 위젯으로 수행합니다. &lt;code>push&lt;/code>로 페이지를 이동하고 &lt;code>pop&lt;/code>으로 이전 페이지로 이동할 수 있습니다.&lt;/p>
 &lt;h3 id="당근마켓daangn-앱-클론" class="flex items-center gap-3">당근마켓(Daangn) 앱 클론 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%eb%8b%b9%ea%b7%bc%eb%a7%88%ec%bc%93daangn-%ec%95%b1-%ed%81%b4%eb%a1%a0"
+>&lt;a title="당근마켓(Daangn) 앱 클론" href="#%eb%8b%b9%ea%b7%bc%eb%a7%88%ec%bc%93daangn-%ec%95%b1-%ed%81%b4%eb%a1%a0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -746,7 +746,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/blockquote>
 &lt;h3 id="샤잠shazam-앱-클론" class="flex items-center gap-3">샤잠(Shazam) 앱 클론 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#%ec%83%a4%ec%9e%a0shazam-%ec%95%b1-%ed%81%b4%eb%a1%a0"
+>&lt;a title="샤잠(Shazam) 앱 클론" href="#%ec%83%a4%ec%9e%a0shazam-%ec%95%b1-%ed%81%b4%eb%a1%a0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -764,7 +764,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;hr>
 &lt;h2 id="2023년-06월-27일" class="flex items-center gap-3">2023년 06월 27일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2023%eb%85%84-06%ec%9b%94-27%ec%9d%bc"
+>&lt;a title="2023년 06월 27일" href="#2023%eb%85%84-06%ec%9b%94-27%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -790,7 +790,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >으로 진행했습니다.&lt;/p>
 &lt;h3 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -827,7 +827,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/ul>
 &lt;h3 id="installation" class="flex items-center gap-3">Installation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#installation"
+>&lt;a title="Installation" href="#installation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -902,7 +902,7 @@ $ cd hello_flutter &amp;amp;&amp;amp; code .&lt;/code>&lt;/pre>
 &lt;p>위 명령어로 프로젝트를 생성한 뒤 flutter 프로젝트를 시작합니다.&lt;/p>
 &lt;h3 id="practice" class="flex items-center gap-3">Practice &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#practice"
+>&lt;a title="Practice" href="#practice"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -934,7 +934,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;p>첫 주차에선 다양한 위젯을 활용하여 로그인 페이지와 간단한 영화 리스트 페이지를 작성했습니다.&lt;/p>
 &lt;h4 id="simple-login-page" class="flex items-center gap-3">Simple Login Page &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#simple-login-page"
+>&lt;a title="Simple Login Page" href="#simple-login-page"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -951,7 +951,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/ul>
 &lt;h4 id="simple-movie-list" class="flex items-center gap-3">Simple Movie List &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#simple-movie-list"
+>&lt;a title="Simple Movie List" href="#simple-movie-list"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">

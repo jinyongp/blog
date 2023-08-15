@@ -118,7 +118,7 @@ display.display()
 &lt;p>이렇듯 하나의 공통적인 로직을 템플릿화하여 코드의 중복을 없앨 수 있고, 추상 클래스를 상속(채택)하는 방식으로 인하여 상위 클래스 형식의 변수에 하위 클래스 인스턴스 중 어느 것을 대입해도 제대로 동작해야 한다는 원칙인 &lt;code>리스코프 치환 원칙(LSP, Liskov Substitution Principle)&lt;/code>을 만족합니다.&lt;/p>
 &lt;p>Swift에서는 &lt;code>extension&lt;/code> 키워드의 존재로 인터페이스를 변경하지 않고도 쉽게 새로운 공통 로직을 언제든 추가할 수 있습니다.&lt;/p></description></item><item><title>Learning Software Design Pattern (Swift)</title><link>https://jinyongp.dev/series/design-pattern/1/</link><pubDate>Wed, Aug 09 09:45:38 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/design-pattern/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -142,7 +142,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >을 참고하여 작성했습니다. 본 서적에선 GoF의 23가지 디자인 패턴을 다루고 있습니다. 하지만 GoF의 분류 체계(생성, 구조, 행위)를 따르지 않고, 다른 관점으로 분류하고 있으므로 이를 따라서 작성했습니다.&lt;/p>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -442,7 +442,7 @@ print(&amp;#34;\(count)...&amp;#34;)
 &lt;p>&lt;code>Countdown&lt;/code>은 ConcreteAggregate 역할을 수행하며, &lt;code>CountdownIterator&lt;/code>는 ConcreteIterator 역할을 수행합니다. 이렇게 순회 로직을 분리하는 방식으로 Collection 형식이 아니라 하더라도 순회 로직을 추가함으로서 순회 가능한 객체를 만들 수 있습니다.&lt;/p>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">

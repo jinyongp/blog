@@ -18,7 +18,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/ul>
 &lt;h3 id="project-structure" class="flex items-center gap-3">Project Structure &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#project-structure"
+>&lt;a title="Project Structure" href="#project-structure"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -59,7 +59,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;/blockquote>
 &lt;h3 id="storyboard" class="flex items-center gap-3">Storyboard &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#storyboard"
+>&lt;a title="Storyboard" href="#storyboard"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -79,7 +79,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/div>
 &lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#implementation"
+>&lt;a title="Implementation" href="#implementation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -92,7 +92,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="todoitem" class="flex items-center gap-3">TodoItem &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#todoitem"
+>&lt;a title="TodoItem" href="#todoitem"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -125,7 +125,7 @@ self.createdAt = UInt(Date().timeIntervalSince1970)
 &lt;p>배열에서 인스턴스를 가져오는 과정에서 값의 복사가 아닌 참조를 가져오길 원했습니다. 그런 이유로 &lt;code>struct&lt;/code> 대신 &lt;code>class&lt;/code>를 사용했고, 상속할 여지가 없으므로 &lt;code>final&lt;/code> 키워드를 붙여 Dynamic Dispatch 대신 Static Dispatch 방식을 채택하였습니다.&lt;/p>
 &lt;h4 id="todoservice" class="flex items-center gap-3">TodoService &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#todoservice"
+>&lt;a title="TodoService" href="#todoservice"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -166,7 +166,7 @@ item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
 &lt;p>&lt;code>TodoService&lt;/code>의 경우, 대부분의 &lt;code>Views&lt;/code>에서 사용될 예정이므로 하나의 &lt;code>Items&lt;/code>만 생성되어야 함을 보장하기 위해 Singleton 패턴을 적용하였습니다.&lt;/p>
 &lt;h4 id="viewcontroller" class="flex items-center gap-3">ViewController &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#viewcontroller"
+>&lt;a title="ViewController" href="#viewcontroller"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -248,7 +248,7 @@ return cell
 &lt;p>완료 버튼을 눌렀을 땐 애니메이션과 함께 목록에서 제거하도록 작성하였고, 라벨을 눌렀을 땐 Alert을 띄워 내용을 수정할 수 있도록 작성하였습니다.&lt;/p>
 &lt;h3 id="todotableviewcell" class="flex items-center gap-3">TodoTableViewCell &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#todotableviewcell"
+>&lt;a title="TodoTableViewCell" href="#todotableviewcell"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -308,7 +308,7 @@ onCompleted?(self)
 &lt;p>라벨에 Touch Action을 등록하기 위해서 &lt;code>UITapGestureRecognizer&lt;/code>를 추가하였습니다.&lt;/p>
 &lt;h3 id="completesviewcontroller" class="flex items-center gap-3">CompletesViewController &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#completesviewcontroller"
+>&lt;a title="CompletesViewController" href="#completesviewcontroller"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -397,7 +397,7 @@ self.tableView.reloadData()
 &lt;p>&lt;code>CompletesViewController&lt;/code> 객체에 클로저를 전달하기 위해 &lt;code>ViewController&lt;/code>에 &lt;code>prepare&lt;/code> 메서드를 구현하였습니다. &lt;code>onDismissed&lt;/code>가 호출되면 메인 페이지의 &lt;code>tableView&lt;/code>를 갱신합니다.&lt;/p>
 &lt;h5 id="delegate-패턴-적용" class="flex items-center gap-3">Delegate 패턴 적용 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#delegate-%ed%8c%a8%ed%84%b4-%ec%a0%81%ec%9a%a9"
+>&lt;a title="Delegate 패턴 적용" href="#delegate-%ed%8c%a8%ed%84%b4-%ec%a0%81%ec%9a%a9"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -450,7 +450,7 @@ tableView.reloadData()
 &lt;p>&lt;code>ViewController&lt;/code>가 &lt;code>prepare&lt;/code> 메서드에서 &lt;code>delegate&lt;/code> 인스턴스를 전달하고, &lt;code>CompletesViewControllerDelegate&lt;/code>를 채택하여 &lt;code>tableView&lt;/code>를 갱신하도록 작성했습니다. 위와 동일하게 동작함을 확인할 수 있습니다.&lt;/p>
 &lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#trouble-shooting"
+>&lt;a title="Trouble Shooting" href="#trouble-shooting"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -463,7 +463,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="1-객체의-속성-변경이-반영되지-않는-문제" class="flex items-center gap-3">1. 객체의 속성 변경이 반영되지 않는 문제 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#1-%ea%b0%9d%ec%b2%b4%ec%9d%98-%ec%86%8d%ec%84%b1-%eb%b3%80%ea%b2%bd%ec%9d%b4-%eb%b0%98%ec%98%81%eb%90%98%ec%a7%80-%ec%95%8a%eb%8a%94-%eb%ac%b8%ec%a0%9c"
+>&lt;a title="1. 객체의 속성 변경이 반영되지 않는 문제" href="#1-%ea%b0%9d%ec%b2%b4%ec%9d%98-%ec%86%8d%ec%84%b1-%eb%b3%80%ea%b2%bd%ec%9d%b4-%eb%b0%98%ec%98%81%eb%90%98%ec%a7%80-%ec%95%8a%eb%8a%94-%eb%ac%b8%ec%a0%9c"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -489,7 +489,7 @@ item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
 &lt;p>원인은 &lt;code>TodoItem&lt;/code>이 &lt;code>struct&lt;/code> 키워드로 선언되어 있어, &lt;code>first&lt;/code>를 통해 찾은 값을 &lt;code>item&lt;/code> 변수에 할당하는 과정에서 값의 복사가 발생하여 복사된 값의 속성을 변경하더라도 원본 값이 변경되지 않는 문제였습니다. &lt;code>struct&lt;/code> 대신 &lt;code>class&lt;/code>로 선언하는 방식으로 문제를 해결했습니다.&lt;/p>
 &lt;h4 id="2-unknown-class-_viewcontroller-in-interface-builder-file-에러" class="flex items-center gap-3">2. Unknown class _ViewController in Interface Builder file. 에러 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2-unknown-class-_viewcontroller-in-interface-builder-file-%ec%97%90%eb%9f%ac"
+>&lt;a title="2. Unknown class _ViewController in Interface Builder file. 에러" href="#2-unknown-class-_viewcontroller-in-interface-builder-file-%ec%97%90%eb%9f%ac"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -511,7 +511,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/p>
 &lt;h3 id="retrospective" class="flex items-center gap-3">Retrospective &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#retrospective"
+>&lt;a title="Retrospective" href="#retrospective"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -525,7 +525,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h3>&lt;p>UIKit로 개발하면서 여태까지 해왔던 웹 개발과 많은 비교를 하게 되었습니다. UIKit으로 개발하는 건 웹 개발로 비유를 하자면 HTML, CSS 없이 JavaScript로만 모든 UI와 Style을 작성하는 것과 비슷했습니다. 웹에서 HTML과 CSS 그리고 JavaScript가 분리되어 있다는 게 굉장한 장점이구나 다시 한번 느끼게 되었습니다. UIKit의 경우 모든 내용을 선언형이 아닌 명령형으로 작성해야 하기 때문에 각 역할에 맞게 적절하게 코드를 분리하기 위한 노력이 필요함을 절실히 깨달았습니다.&lt;/p>
 &lt;p>Storyboard와 코드를 연동하여 작성되어야 하는 부분이 있기 때문에 코드가 실행되는데 눈에 보이는 부분보단 이렇게 동작할 것이다 추론해야 하는 경우가 많았고 에러가 발생해도 추적하기가 굉장히 어려워서 개발 경험이 그리 좋지 않았습니다. 아무래도 UIKit의 대부분이 Objective-C로 작성되어 있어 해당 내용을 알아야만 에러 내용을 통해 원인을 유추할 수 있는 것도 한몫 하다보니 어려웠던 듯 싶습니다. 협업 관점에서 보나 디버깅 관점에서 보나 웬만하면 Storyboard 방식보단 코드 방식의 개발이 더 유리하지 않을까 생각했습니다.&lt;/p></description></item><item><title>Learning Software Design Pattern (Swift)</title><link>https://jinyongp.dev/series/design-pattern/1/</link><pubDate>Wed, Aug 09 09:45:38 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/design-pattern/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduction"
+>&lt;a title="Introduction" href="#introduction"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -549,7 +549,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >을 참고하여 작성했습니다. 본 서적에선 GoF의 23가지 디자인 패턴을 다루고 있습니다. 하지만 GoF의 분류 체계(생성, 구조, 행위)를 따르지 않고, 다른 관점으로 분류하고 있으므로 이를 따라서 작성했습니다.&lt;/p>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#references"
+>&lt;a title="References" href="#references"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -581,7 +581,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 >&lt;/li>
 &lt;/ul></description></item><item><title>Understanding Delegate Pattern</title><link>https://jinyongp.dev/posts/uikit/1/</link><pubDate>Tue, Aug 01 03:32:29 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/1/</guid><description>&lt;h2 id="introduce-delegate-pattern" class="flex items-center gap-3">Introduce Delegate Pattern &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#introduce-delegate-pattern"
+>&lt;a title="Introduce Delegate Pattern" href="#introduce-delegate-pattern"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -648,7 +648,7 @@ func textFieldDidBeginEditing(_ textField: UITextField) {
 &lt;p>이런 식으로 Delegate Pattern을 통해 동작의 제어권을 위임받을 수 있습니다.&lt;/p>
 &lt;h2 id="understand-delegate-pattern" class="flex items-center gap-3">Understand Delegate Pattern &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#understand-delegate-pattern"
+>&lt;a title="Understand Delegate Pattern" href="#understand-delegate-pattern"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -721,7 +721,7 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;p>과제를 수행하기에 충분한 문법과 이론을 학습했고, 이를 기반으로 CLI에서 실행할 수 있는 간단한 계산기 툴을 작성했습니다.&lt;/p>
 &lt;h3 id="requirements" class="flex items-center gap-3">Requirements &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#requirements"
+>&lt;a title="Requirements" href="#requirements"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -740,7 +740,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/ul>
 &lt;h3 id="directory-structure" class="flex items-center gap-3">Directory Structure &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#directory-structure"
+>&lt;a title="Directory Structure" href="#directory-structure"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -773,7 +773,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;/div>
 &lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#implementation"
+>&lt;a title="Implementation" href="#implementation"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -786,7 +786,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="setup" class="flex items-center gap-3">Setup &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#setup"
+>&lt;a title="Setup" href="#setup"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -838,7 +838,7 @@ path: &amp;#34;Sources&amp;#34;
 &lt;p>&lt;code>Sources&lt;/code> 폴더에 &lt;code>main.swift&lt;/code> 또한 생성되므로 &lt;code>swift run&lt;/code> 명령어를 실행하여 프로젝트를 실행할 수 있습니다.&lt;/p>
 &lt;h4 id="impl-operator-protocol" class="flex items-center gap-3">Impl Operator protocol &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#impl-operator-protocol"
+>&lt;a title="Impl Operator protocol" href="#impl-operator-protocol"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -922,7 +922,7 @@ return lhs % rhs
 &lt;p>이로써 나머지 연산에 대해서도 &lt;code>Double&lt;/code> 타입을 사용할 수 있게 되었고, &lt;code>Operator&lt;/code> 프로토콜을 준수하는 &lt;code>ModOperator&lt;/code> 클래스를 작성할 수 있게 되었습니다. (SPR. 단일 책임 원칙)&lt;/p>
 &lt;h4 id="impl-calculator-class" class="flex items-center gap-3">Impl Calculator class &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#impl-calculator-class"
+>&lt;a title="Impl Calculator class" href="#impl-calculator-class"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -979,7 +979,7 @@ calculator.calculate(10, name: &amp;#34;&amp;#43;&amp;#34;)&lt;/code>&lt;/pre>
 &lt;p>이로써 &lt;code>Calculator&lt;/code>는 구체적인 클래스가 아닌 추상화된 프로토콜에 의존합니다. (DIP. 의존성 역전 원칙)&lt;/p>
 &lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#trouble-shooting"
+>&lt;a title="Trouble Shooting" href="#trouble-shooting"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -992,7 +992,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;h4 id="1-0으로-초기화할-때-제네릭-타입으로-변환할-수-없는-문제" class="flex items-center gap-3">1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#1-0%ec%9c%bc%eb%a1%9c-%ec%b4%88%ea%b8%b0%ed%99%94%ed%95%a0-%eb%95%8c-%ec%a0%9c%eb%84%a4%eb%a6%ad-%ed%83%80%ec%9e%85%ec%9c%bc%eb%a1%9c-%eb%b3%80%ed%99%98%ed%95%a0-%ec%88%98-%ec%97%86%eb%8a%94-%eb%ac%b8%ec%a0%9c"
+>&lt;a title="1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제" href="#1-0%ec%9c%bc%eb%a1%9c-%ec%b4%88%ea%b8%b0%ed%99%94%ed%95%a0-%eb%95%8c-%ec%a0%9c%eb%84%a4%eb%a6%ad-%ed%83%80%ec%9e%85%ec%9c%bc%eb%a1%9c-%eb%b3%80%ed%99%98%ed%95%a0-%ec%88%98-%ec%97%86%eb%8a%94-%eb%ac%b8%ec%a0%9c"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1016,7 +1016,7 @@ return 0 as? T ?? 0.0 as! T
 &lt;/div>
 &lt;h4 id="2-첫-문자를-제외한-문자열-가져오기" class="flex items-center gap-3">2. 첫 문자를 제외한 문자열 가져오기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#2-%ec%b2%ab-%eb%ac%b8%ec%9e%90%eb%a5%bc-%ec%a0%9c%ec%99%b8%ed%95%9c-%eb%ac%b8%ec%9e%90%ec%97%b4-%ea%b0%80%ec%a0%b8%ec%98%a4%ea%b8%b0"
+>&lt;a title="2. 첫 문자를 제외한 문자열 가져오기" href="#2-%ec%b2%ab-%eb%ac%b8%ec%9e%90%eb%a5%bc-%ec%a0%9c%ec%99%b8%ed%95%9c-%eb%ac%b8%ec%9e%90%ec%97%b4-%ea%b0%80%ec%a0%b8%ec%98%a4%ea%b8%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1059,7 +1059,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;p>문자열 관련 메서드는 대개 &lt;code>Self.SubSequence&lt;/code> 타입을 반환합니다. 잘라낸 문자열을 저장하기 위헤 새로운 메모리 공간을 할당하는 것이 아닌 기존의 문자열에서 필요한 부분에 직접 접근하기 때문입니다. 따라서, 문자열로서 사용하고 싶다면 &lt;code>String&lt;/code>으로 변환해야 합니다.&lt;/p>
 &lt;h3 id="retrospective" class="flex items-center gap-3">Retrospective &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a href="#retrospective"
+>&lt;a title="Retrospective" href="#retrospective"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
