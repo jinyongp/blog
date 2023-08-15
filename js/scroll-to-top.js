@@ -1,4 +1,10 @@
-window.addEventListener("DOMContentLoaded", () => {
+setupScrollToTop();
+
+function setupScrollToTop() {
+  if (document.readyState === "loading") {
+    return setTimeout(setupScrollToTop, 100);
+  }
+
   const scrollToTopButton = document.getElementById("js-scroll-back-to-top");
   if (!scrollToTopButton) return;
 
@@ -13,4 +19,4 @@ window.addEventListener("DOMContentLoaded", () => {
       scrollToTopButton?.classList.add("hide");
     }
   });
-});
+}
