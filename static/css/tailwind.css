@@ -10,6 +10,10 @@
   html {
     @apply leading-normal antialiased text-[14px] md:text-[16px];
     font-family: var(--font), sans-serif;
+
+    :has(.lightbox > img) {
+      @apply overflow-hidden;
+    }
   }
 
   body {
@@ -63,6 +67,9 @@
   }
 
   .back-to-top {
+    @apply fixed bottom-10 right-10 w-10 h-10 grid place-items-center;
+    @apply rounded-full bg-white border border-accent cursor-pointer;
+
     &:not([class*="hide"]) {
       @apply animate-[clockwise-pop_0.5s_cubic-bezier(0.34,1.56,0.64,1)];
     }
