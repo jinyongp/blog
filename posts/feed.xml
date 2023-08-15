@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on jinyongp.dev</title><link>https://jinyongp.dev/posts/</link><description>Recent content in Posts on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Sat, Aug 12 09:52:24 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/posts/feed.xml" rel="self" type="application/rss+xml"/><item><title>Template Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/3/</link><pubDate>Sat, Aug 12 09:52:24 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/3/</guid><description>&lt;p>&lt;strong>Template Method Pattern&lt;/strong>은 특정 알고리즘을 반복적으로 사용하고 있을 때 중복을 제거하기 위하여 적용해볼 수 있습니다. 공통 알고리즘을 묶을 템플릿 메서드를 포함할 추상 클래스를 정의하고, 하위 클래스에서 구체적인 내용을 작성하는 패턴입니다. 해당 패턴을 통해 코드 중복을 제거하고 공통된 알고리즘을 재사용할 수 있습니다. 템플릿 메서드의 변경이 필요하다면 하위 클래스에서 재정의를 통해 인터페이스의 변경 없이 세부 구현을 변경할 수도 있습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on jinyongp.dev</title><link>https://jinyongp.dev/posts/</link><description>Recent content in Posts on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Sun, Aug 13 14:15:28 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/posts/feed.xml" rel="self" type="application/rss+xml"/><item><title>Factory Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/4/</link><pubDate>Sun, Aug 13 14:15:28 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/4/</guid><description>&lt;p>&lt;strong>Factory Method Pattern&lt;/strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Factory Method Pattern&lt;/code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>Factory Method Pattern을 구현하기 위해 필요한 역할은 다음과 같습니다.&lt;/p>
+&lt;ul>
+&lt;li>Product(제품): Factory Method로 생성되는 객체의 인터페이스를 결정합니다.&lt;/li>
+&lt;li>Creator(생산자): Product 역할을 생성하는 추상 클래스입니다.&lt;/li>
+&lt;li>ConcreteProduct(구체적인 제품): Product 역할의 인스턴스를 실제로 생성합니다.&lt;/li>
+&lt;li>ConcreteCreator(구체적인 생산자): Product 역할의 인스턴스를 생성하는 클래스입니다.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://product.kyobobook.co.kr/detail/S000200311846"
+target="_blank" rel="noopener noreferrer nofollow"
+>Java 언어로 배우는 디자인 패턴 입문&lt;/a
+>의 예제를 Swift 코드로 작성해봅시다.&lt;/p>
+&lt;p>먼저 &lt;code>Product&lt;/code> 프로토콜을 정의합니다. 모든 &lt;code>Product&lt;/code>는 이름(&lt;code>name&lt;/code>)을 가지고 가장 무난한 &lt;code>use()&lt;/code> 메서드를 제공한다고 가정해봅시다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol Product {
+var name: String { get }
+func use()
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>그리고 Creator 역할을 수행하는 &lt;code>Factory&lt;/code> 프로토콜을 정의합니다. 제품 &lt;code>Product&lt;/code>를 생성하는 역할을 수행하는 &lt;code>Factory&lt;/code>는 &lt;code>create()&lt;/code> factory method를 가집니다. &lt;code>create()&lt;/code> 메서드는 &lt;code>Product&lt;/code>를 생성하고 &lt;code>register()&lt;/code> 메서드를 호출하며 하위 클래스에서 정의한 구체적인 동작을 수행하는 등 복잡한 로직을 수행한다고 가정합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol Factory {
+func createProduct(owner: String) -&amp;gt; Product
+func register(product: Product)
+}
+extension Factory {
+func create(owner: String) -&amp;gt; Product {
+let product: Product = createProduct(owner: owner)
+register(product: product)
+return product
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>생산하고자 하는 ConcreteProduct인 &lt;code>IDCard&lt;/code> 클래스를 정의합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class IDCard: Product {
+var name: String { &amp;#34;[ID Card: \(owner)]&amp;#34; }
+private(set) var owner: String
+init(owner: String) {
+print(&amp;#34;카드를 생성합니다. (소유자: \(owner))&amp;#34;)
+self.owner = owner
+}
+func use() {
+print(&amp;#34;\(self.name) 사용&amp;#34;)
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>IDCard&lt;/code> 클래스는 &lt;code>Factory&lt;/code>에 전혀 의존하고 있지 않습니다. 그렇기에 하나의 Product를 생산하는 Factory는 여러 종류가 될 수 있다고 예상할 수 있습니다.&lt;/p>
+&lt;p>&lt;code>IDCard&lt;/code>를 생산하기 위해 구체적인 내용을 담고 있는 &lt;code>IDCardFactory&lt;/code> 클래스를 정의합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class IDCardFactory: Factory {
+func createProduct(owner: String) -&amp;gt; Product {
+return IDCard(owner: owner)
+}
+func register(product: Product) {
+print(&amp;#34;\(product.name) 등록&amp;#34;)
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>이를 토대로 &lt;code>IDCardFactory&lt;/code>를 통해 제품을 생산하는 예제를 작성해봅시다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">let factory: Factory = IDCardFactory()
+let products = [
+factory.create(owner: &amp;#34;Kim&amp;#34;),
+factory.create(owner: &amp;#34;Park&amp;#34;),
+factory.create(owner: &amp;#34;Son&amp;#34;),
+]
+for product in products {
+product.use()
+}
+// output:
+// 카드를 생성합니다. (소유자: Kim)
+// [ID Card: Kim] 등록
+// 카드를 생성합니다. (소유자: Park)
+// [ID Card: Park] 등록
+// 카드를 생성합니다. (소유자: Son)
+// [ID Card: Son] 등록
+// [ID Card: Kim] 사용
+// [ID Card: Park] 사용
+// [ID Card: Son] 사용&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>단순히 객체를 생성하기 위해 틀을 만드는 건 함수로도 충분할 수 있습니다. 허나, 프로토콜과 클래스를 활용하여 객체 생성 로직과 사용 로직을 분리할 수 있었습니다. 또한, 객체의 생성과 관련된 공통 로직을 묶고 하위 클래스에서 재정의한 복잡한 로직을 하위 클래스에서 재정의할 수 있게 되어 변경에 있어 유연성을 얻을 수 있었습니다.&lt;/p></description></item><item><title>Template Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/3/</link><pubDate>Sat, Aug 12 09:52:24 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/3/</guid><description>&lt;p>&lt;strong>Template Method Pattern&lt;/strong>은 특정 알고리즘을 반복적으로 사용하고 있을 때 중복을 제거하기 위하여 적용해볼 수 있습니다. 공통 알고리즘을 묶을 템플릿 메서드를 포함할 추상 클래스를 정의하고, 하위 클래스에서 구체적인 내용을 작성하는 패턴입니다. 해당 패턴을 통해 코드 중복을 제거하고 공통된 알고리즘을 재사용할 수 있습니다. 템플릿 메서드의 변경이 필요하다면 하위 클래스에서 재정의를 통해 인터페이스의 변경 없이 세부 구현을 변경할 수도 있습니다.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>Template Method Pattern&lt;/code>은 GoF의 분류 체계에서 행위(Behavioral) 패턴에 속합니다.&lt;/p>
 &lt;/blockquote>
@@ -35,7 +147,7 @@ close()
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>&lt;code>AbstractClass&lt;/code>는 추상 클래스이므로 구현되어 있는 메서드가 존재하고 인스턴스를 생성할 수 없어야 합니다. &lt;code>protocol&lt;/code>과 &lt;code>extension&lt;/code> 키워드를 활용하여 추상 클래스를 정의하였습니다. &lt;code>display&lt;/code> 탬플릿 메서드를 사용하고 싶다면, &lt;code>AbstractClass&lt;/code>를 채택하고 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현해야 합니다.&lt;/p>
+&lt;p>&lt;code>AbstractClass&lt;/code>는 추상 클래스이므로 구현되어 있는 메서드가 존재하고 인스턴스를 생성할 수 없어야 합니다. &lt;code>protocol&lt;/code>과 &lt;code>extension&lt;/code> 키워드를 활용하여 추상 클래스를 정의하였습니다. &lt;code>display&lt;/code> 템플릿 메서드를 사용하고 싶다면, &lt;code>AbstractClass&lt;/code>를 채택하고 &lt;code>open&lt;/code>, &lt;code>write&lt;/code>, &lt;code>close&lt;/code> 메서드를 구현해야 합니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -539,7 +651,28 @@ controller.textField.userTextFieldTapped()
 class="underline-lsre"
 href="https://jinyongp.dev/learn/nbcamp/5#delegate-%ed%8c%a8%ed%84%b4-%ec%a0%81%ec%9a%a9"
 >Delegate Pattern 적용하기&lt;/a
->&lt;/p></description></item><item><title>Refactoring for Performance (Canvas API)</title><link>https://jinyongp.dev/posts/d3js/4/</link><pubDate>Fri, Apr 22 14:18:15 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/4/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+>&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://developer.apple.com/documentation/uikit/uitextfield"
+target="_blank" rel="noopener noreferrer nofollow"
+>Apple Developer : UITextField&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://developer.apple.com/documentation/uikit/uitextfielddelegate"
+target="_blank" rel="noopener noreferrer nofollow"
+>Apple Developer : UITextFieldDelegate&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8-%ec%95%b1%eb%a7%8c%eb%93%a4%ea%b8%b0"
+target="_blank" rel="noopener noreferrer nofollow"
+>앨런 Swift 문법 마스터 스쿨 (15개 앱을 만들면서 근본 원리부터 배우는 UIKit)&lt;/a
+>&lt;/li>
+&lt;/ul></description></item><item><title>Refactoring for Performance (Canvas API)</title><link>https://jinyongp.dev/posts/d3js/4/</link><pubDate>Fri, Apr 22 14:18:15 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/4/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="Introduction" href="#introduction"
 >

@@ -127,4 +127,25 @@ controller.textField.userTextFieldTapped()
 class="underline-lsre"
 href="https://jinyongp.dev/learn/nbcamp/5#delegate-%ed%8c%a8%ed%84%b4-%ec%a0%81%ec%9a%a9"
 >Delegate Pattern 적용하기&lt;/a
->&lt;/p></description></item></channel></rss>
+>&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://developer.apple.com/documentation/uikit/uitextfield"
+target="_blank" rel="noopener noreferrer nofollow"
+>Apple Developer : UITextField&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://developer.apple.com/documentation/uikit/uitextfielddelegate"
+target="_blank" rel="noopener noreferrer nofollow"
+>Apple Developer : UITextFieldDelegate&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8-%ec%95%b1%eb%a7%8c%eb%93%a4%ea%b8%b0"
+target="_blank" rel="noopener noreferrer nofollow"
+>앨런 Swift 문법 마스터 스쿨 (15개 앱을 만들면서 근본 원리부터 배우는 UIKit)&lt;/a
+>&lt;/li>
+&lt;/ul></description></item></channel></rss>

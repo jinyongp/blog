@@ -1,0 +1,65 @@
+<!doctype html><html lang=ko><head><meta charset=utf-8><meta name=viewport viewport-fit=cover content="width=device-width"><meta name=HandheldFriendly content="true"><link rel=sitemap type=application/xml href=/sitemap.xml><link rel=canonical href=https://jinyongp.dev/posts/design-pattern/4/><meta name=naver-site-verification content="c36f259891f25bc92e3884c1ceb626a0aaa76146"><link rel=alternate type=application/rss+xml href=https://jinyongp.dev/feed.xml title=jinyongp.dev><meta name=author content="jinyongp <dev.jinyongp@gmail.com>"><meta name=keywords content="design-pattern"><link rel=manifest href=/manifest.webmanifest><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-title content="jinyongp.dev"><meta name=apple-mobile-web-app-status-bar-style content="default"><meta name=theme-color content="rgb(65, 105, 225)"><meta property="og:site_name" content="jinyongp.dev"><meta property="og:title" content="Factory Method Pattern in Swift"><meta property="og:type" content="website"><meta property="og:url" content="https://jinyongp.dev/posts/design-pattern/4/"><meta property="og:description" content="Factory Method Pattern에 대해 알아보고 Swift로 구현해봅니다."><meta name=description content="Factory Method Pattern에 대해 알아보고 Swift로 구현해봅니다."><title>Factory Method Pattern in Swift</title><link rel=preload href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/nord.min.css as=style><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/nord.min.css><script defer type=module>
+    import hljs from "https:\/\/cdn.jsdelivr.net\/gh\/highlightjs\/cdn-release@11.8.0\/build/es/highlight.min.js";
+    import dart from "https:\/\/cdn.jsdelivr.net\/gh\/highlightjs\/cdn-release@11.8.0\/build/es/languages/dart.min.js";
+    hljs.configure({})
+    hljs.registerLanguage("dart", dart);
+    hljs.highlightAll();
+  </script><script async>(function(e,t,n,s,o){e[s]=e[s]||[],e[s].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=t.getElementsByTagName(n)[0],i=t.createElement(n),r=s!="dataLayer"?"&l="+s:"";i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id="+o+r,a.parentNode.insertBefore(i,a)})(window,document,"script","dataLayer","GTM-PFTW4CN")</script><script async>"serviceWorker"in navigator&&navigator.serviceWorker.register("/js/sw.js")</script><script async type=module src=/js/main.js></script>
+<link rel=icon href=https://jinyongp.dev/favicon.ico><link rel=preload href=https://jinyongp.dev/main.min.css as=style><link rel=stylesheet href=https://jinyongp.dev/main.min.css><link rel=preload href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap" as=style><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap"><style>:root{--accent:65 105 225;--font:Raleway}</style></head><body><nav class=shadow-md><div class="layout flex justify-between text-gray-600"><ul class="flex gap-4 py-4"><li class=hover:text-accent><a title=Home href=/>Home</a></li><li class=hover:text-accent><a title=Posts href=/posts class=text-accent>Posts</a></li><li class=hover:text-accent><a title=Learn href=/learn>Learn</a></li><li class=hover:text-accent><a title=Series href=/series>Series</a></li></ul><ul class="flex gap-4 py-4"><li class="hover:text-accent grid place-items-center"><a class=text-xl title=envelope href=mailto:dev.jinyongp@gmail.com target=_blank rel="noopener noreferrer"><i><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 112c-8.8.0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1.0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8.0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3.0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3.0-64-28.7-64-64V128z"/></svg></i></a></li><li class="hover:text-accent grid place-items-center"><a class=text-xl title=github href=https://github.com/jinyongp/ target=_blank rel="noopener noreferrer"><i><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></i></a></li></ul></div></nav><main><div class=layout><header class=text-center><h1 class="relative mt-16 mb-12 flex justify-center">Factory Method Pattern in Swift</h1><div class="flex justify-between items-center"><div><a href=https://jinyongp.dev/tags/design-pattern><kbd class="text-xs bg-accent text-white rounded px-1 py-0.5">design-pattern</kbd></a></div><span>Written on Aug 13, 2023</span></div><hr class="my-4 w-full"></header><div class="text-slate-500 grid grid-cols-1 gap-2 md:gap-20 md:grid-cols-2"><div><a href=/posts/design-pattern/3/ class="flex flex-col gap-1 border border-current text-current rounded p-2 hover:text-accent"><div class="flex items-center gap-1 [&_span]:font-bold"><i class=mb-0.5><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L109.2 288H416c17.7.0 32-14.3 32-32s-14.3-32-32-32H109.3L214.6 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></svg></i><span>PREV</span></div><span class="truncate whitespace-nowrap">Template Method Pattern in Swift</span></a></div><div></div></div><hr class=my-4><article class=content><p><strong>Factory Method Pattern</strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.</p><blockquote><p><code>Factory Method Pattern</code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.</p></blockquote><p>Factory Method Pattern을 구현하기 위해 필요한 역할은 다음과 같습니다.</p><ul><li>Product(제품): Factory Method로 생성되는 객체의 인터페이스를 결정합니다.</li><li>Creator(생산자): Product 역할을 생성하는 추상 클래스입니다.</li><li>ConcreteProduct(구체적인 제품): Product 역할의 인스턴스를 실제로 생성합니다.</li><li>ConcreteCreator(구체적인 생산자): Product 역할의 인스턴스를 생성하는 클래스입니다.</li></ul><hr><p><a class=underline-lsre href=https://product.kyobobook.co.kr/detail/S000200311846 target=_blank rel="noopener noreferrer nofollow">Java 언어로 배우는 디자인 패턴 입문</a>의 예제를 Swift 코드로 작성해봅시다.</p><p>먼저 <code>Product</code> 프로토콜을 정의합니다. 모든 <code>Product</code>는 이름(<code>name</code>)을 가지고 가장 무난한 <code>use()</code> 메서드를 제공한다고 가정해봅시다.</p><div class="relative rounded-md overflow-hidden my-4 group"><small class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"><span class=sr-only>Language:</span>swift</small><pre><code class="hljs language-swift">protocol Product {
+    var name: String { get }
+
+    func use()
+}</code></pre></div><p>그리고 Creator 역할을 수행하는 <code>Factory</code> 프로토콜을 정의합니다. 제품 <code>Product</code>를 생성하는 역할을 수행하는 <code>Factory</code>는 <code>create()</code> factory method를 가집니다. <code>create()</code> 메서드는 <code>Product</code>를 생성하고 <code>register()</code> 메서드를 호출하며 하위 클래스에서 정의한 구체적인 동작을 수행하는 등 복잡한 로직을 수행한다고 가정합니다.</p><div class="relative rounded-md overflow-hidden my-4 group"><small class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"><span class=sr-only>Language:</span>swift</small><pre><code class="hljs language-swift">protocol Factory {    
+    func createProduct(owner: String) -&gt; Product
+    func register(product: Product)
+}
+
+extension Factory {
+    func create(owner: String) -&gt; Product {
+        let product: Product = createProduct(owner: owner)
+        register(product: product)
+        return product
+    }
+}</code></pre></div><p>생산하고자 하는 ConcreteProduct인 <code>IDCard</code> 클래스를 정의합니다.</p><div class="relative rounded-md overflow-hidden my-4 group"><small class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"><span class=sr-only>Language:</span>swift</small><pre><code class="hljs language-swift">final class IDCard: Product {
+    var name: String { &#34;[ID Card: \(owner)]&#34; }
+
+    private(set) var owner: String
+
+    init(owner: String) {
+        print(&#34;카드를 생성합니다. (소유자: \(owner))&#34;)
+        self.owner = owner
+    }
+
+    func use() {
+        print(&#34;\(self.name) 사용&#34;)
+    }
+}</code></pre></div><p><code>IDCard</code> 클래스는 <code>Factory</code>에 전혀 의존하고 있지 않습니다. 그렇기에 하나의 Product를 생산하는 Factory는 여러 종류가 될 수 있다고 예상할 수 있습니다.</p><p><code>IDCard</code>를 생산하기 위해 구체적인 내용을 담고 있는 <code>IDCardFactory</code> 클래스를 정의합니다.</p><div class="relative rounded-md overflow-hidden my-4 group"><small class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"><span class=sr-only>Language:</span>swift</small><pre><code class="hljs language-swift">final class IDCardFactory: Factory {
+    func createProduct(owner: String) -&gt; Product {
+        return IDCard(owner: owner)
+    }
+
+    func register(product: Product) {
+        print(&#34;\(product.name) 등록&#34;)
+    }
+}</code></pre></div><p>이를 토대로 <code>IDCardFactory</code>를 통해 제품을 생산하는 예제를 작성해봅시다.</p><div class="relative rounded-md overflow-hidden my-4 group"><small class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"><span class=sr-only>Language:</span>swift</small><pre><code class="hljs language-swift">let factory: Factory = IDCardFactory()
+let products = [
+    factory.create(owner: &#34;Kim&#34;),
+    factory.create(owner: &#34;Park&#34;),
+    factory.create(owner: &#34;Son&#34;),
+]
+
+for product in products {
+    product.use()
+}
+
+// output:
+// 카드를 생성합니다. (소유자: Kim)
+// [ID Card: Kim] 등록
+// 카드를 생성합니다. (소유자: Park)
+// [ID Card: Park] 등록
+// 카드를 생성합니다. (소유자: Son)
+// [ID Card: Son] 등록
+// [ID Card: Kim] 사용
+// [ID Card: Park] 사용
+// [ID Card: Son] 사용</code></pre></div><p>단순히 객체를 생성하기 위해 틀을 만드는 건 함수로도 충분할 수 있습니다. 허나, 프로토콜과 클래스를 활용하여 객체 생성 로직과 사용 로직을 분리할 수 있었습니다. 또한, 객체의 생성과 관련된 공통 로직을 묶고 하위 클래스에서 재정의한 복잡한 로직을 하위 클래스에서 재정의할 수 있게 되어 변경에 있어 유연성을 얻을 수 있었습니다.</p></article><script src=https://giscus.app/client.js data-repo=jinyongp/jinyongp.dev data-repo-id=R_kgDOHJDtcg data-category=Comments data-category-id=DIC_kwDOHJDtcs4CXf7o data-mapping=title data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=ko crossorigin=anonymous async></script><div class=h-24></div></div></main><footer class="absolute bottom-0 w-full"><div class="flex justify-center py-8"><p class="[&_a]:text-accent text-center text-sm">Copyright 2023. Jinyong Park. All rights reserved.<br><span class=text-xs>Powered by
+<a title=Hugo href=https://gohugo.io target=_blank rel="noopener noreferrer nofollow">Hugo</a></span></p></div></footer><div id=js-scroll-back-to-top class="back-to-top hide"><i class=text-accent><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M288 0c17.7.0 32 14.3 32 32V49.7C451.8 63.4 557.7 161 573.9 285.9c2 15.6-17.3 24.4-27.8 12.7C532.1 283 504.8 272 480 272c-38.7.0-71 27.5-78.4 64.1-1.7 8.7-8.7 15.9-17.6 15.9s-15.8-7.2-17.6-15.9C359 299.5 326.7 272 288 272s-71 27.5-78.4 64.1c-1.7 8.7-8.7 15.9-17.6 15.9s-15.8-7.2-17.6-15.9C167 299.5 134.7 272 96 272c-24.8.0-52.1 11-66.1 26.7C19.4 310.4.1 301.5 2.1 285.9 18.3 161 124.2 63.4 256 49.7V32c0-17.7 14.3-32 32-32zm0 304c12.3.0 23.5 4.6 32 12.2V430.6c0 45-36.5 81.4-81.4 81.4-30.8.0-59-17.4-72.8-45l-2.3-4.7c-7.9-15.8-1.5-35 14.3-42.9s35-1.5 42.9 14.3l2.3 4.7c3 5.9 9 9.6 15.6 9.6 9.6.0 17.4-7.8 17.4-17.4V316.2c8.5-7.6 19.7-12.2 32-12.2z"/></svg></i></div></body></html>
