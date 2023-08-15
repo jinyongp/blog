@@ -2,7 +2,7 @@ setupLightbox();
 
 function setupLightbox() {
   if (document.readyState === "loading") {
-    return setTimeout(setupScrollToTop, 100);
+    return setTimeout(setupLightbox, 100);
   }
 
   const article = document.querySelector("article.content");
@@ -18,11 +18,18 @@ function setupLightbox() {
       image.src = event.target.src;
       lightbox.appendChild(image);
       setTimeout(() => image.classList.add("show"));
+
+      window.addEventListener(
+        "keydown",
+        (event) => event.key === "Escape" && resetLightbox(),
+        { once: true },
+      );
+      lightbox.addEventListener("click", resetLightbox, { once: true });
     }
   });
 
-  lightbox.addEventListener("click", () => {
-    setTimeout(() => (lightbox.innerHTML = ""), 150);
-    lightbox.firstChild?.classList.remove("show");
-  });
+  function resetLightbox() {
+    setTimeout(() => (lightbox.innerHTML = ""), 300);
+    lightbox.firstElementChild?.classList.remove("show");
+  }
 }
