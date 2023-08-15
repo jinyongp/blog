@@ -3,50 +3,71 @@
   )
 }}
 
+{{ define "partials/paginator-list-item" }}
+  <li {{ if .disabled }}disabled{{ end }}>
+    <a
+      title="{{ .title }}"
+      tabindex="{{ mul (int .disabled) -1 }}"
+      {{ with .context }}
+        href="{{ .URL }}"
+      {{ else }}
+        href="#"
+      {{ end }}
+    >
+      <div class="{{ .button }}">
+        {{ partial "svg" (dict "name" .icon "class" "") }}
+      </div>
+    </a>
+  </li>
+{{ end }}
+
 {{- with .paginator }}
   {{- $currentPageNumber := .PageNumber }}
   {{- $url := .URL }}
 
 
   <ul class="flex items-center justify-between py-4 w-full">
-    {{- with .First }}
-      <li {{ if eq $currentPageNumber .PageNumber }}disabled{{ end }}>
-        <a href="{{ .URL }}">
-          <div class="{{ $style.button }}">
-            {{ partial "svg" (dict "name" "angles-left" "class" "") }}
-          </div>
-        </a>
-      </li>
-    {{- end }}
+    {{ partial "paginator-list-item"
+      (dict
+      "context" .First
+      "title" "Go to First Page"
+      "disabled" (eq $currentPageNumber .First.PageNumber)
+      "button" $style.button
+      "icon" "angles-left"
+      )
+    }}
 
+    {{ partial "paginator-list-item"
+      (dict
+      "context" .Prev
+      "title" "Go to Previous Page"
+      "disabled" (eq .Prev nil)
+      "button" $style.button
+      "icon" "angle-left"
+      )
+    }}
 
-    <li {{ if eq .Prev nil }}disabled{{ end }}>
-      <a href="{{ with .Prev }}{{ .URL }}{{ end }}">
-        <div class="{{ $style.button }}">
-          {{ partial "svg" (dict "name" "angle-left" "class" "") }}
-        </div>
-      </a>
-    </li>
 
     <li class="grow text-center">Page {{ .PageNumber }}</li>
 
-    <li {{ if eq .Next nil }}disabled{{ end }}>
-      <a href="{{ with .Next }}{{ .URL }}{{ end }}">
-        <div class="{{ $style.button }}">
-          {{ partial "svg" (dict "name" "angle-right" "class" "") }}
-        </div>
-      </a>
-    </li>
+    {{ partial "paginator-list-item"
+      (dict
+      "context" .Next
+      "title" "Go to Next Page"
+      "disabled" (eq .Next nil)
+      "button" $style.button
+      "icon" "angle-right"
+      )
+    }}
 
-    {{- with .Last }}
-      <li {{ if eq $currentPageNumber .PageNumber }}disabled{{ end }}>
-        <a href="{{ .URL }}">
-          <div class="{{ $style.button }}">
-            {{ partial "svg" (dict "name" "angles-right" "class" "") }}
-          </div>
-        </a>
-      </li>
-    {{- end }}
-
+    {{ partial "paginator-list-item"
+      (dict
+      "context" .Last
+      "title" "Go to Last Page"
+      "disabled" (eq $currentPageNumber .Last.PageNumber)
+      "button" $style.button
+      "icon" "angles-right"
+      )
+    }}
   </ul>
 {{- end }}

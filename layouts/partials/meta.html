@@ -35,6 +35,14 @@
 <meta name="apple-mobile-web-app-title" content="jinyongp.dev" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
+{{ with .Site.Params.style.accent }}
+  {{ $color := printf "rgb(%s)" (replace . " " ", ") }}
+  <meta name="theme-color" content="{{ $color }}" />
+{{ else }}
+  <meta name="theme-color" content="white" />
+{{ end }}
+
+
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:type" content="website" />

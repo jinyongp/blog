@@ -1,6 +1,6 @@
 <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="flex items-center gap-3">{{ .Text | safeHTML }} <i
   class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
-><a href="#{{ .Anchor | safeURL }}"
+><a title="{{ .Text | safeHTML }}" href="#{{ .Anchor | safeURL }}"
   >{{ partial "svg" (dict "name" "magnet" "class" "") }}</a
 ></i
 ></h{{ .Level }}>
