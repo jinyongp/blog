@@ -1,4 +1,109 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>design-pattern on jinyongp.dev</title><link>https://jinyongp.dev/tags/design-pattern/</link><description>Recent content in design-pattern on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Sun, Aug 13 14:15:28 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/design-pattern/feed.xml" rel="self" type="application/rss+xml"/><item><title>Factory Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/4/</link><pubDate>Sun, Aug 13 14:15:28 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/4/</guid><description>&lt;p>&lt;strong>Factory Method Pattern&lt;/strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>design-pattern on jinyongp.dev</title><link>https://jinyongp.dev/tags/design-pattern/</link><description>Recent content in design-pattern on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Aug 16 13:24:46 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/design-pattern/feed.xml" rel="self" type="application/rss+xml"/><item><title>Singleton Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/5/</link><pubDate>Wed, Aug 16 13:24:46 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/5/</guid><description>&lt;p>&lt;strong>Singleton Pattern&lt;/strong>은 클래스가 오직 하나의 인스턴스만 가지고 있음을 보장합니다. 프로그램 전반에 걸쳐 인스턴스를 공용으로 사용하고자 할 때나, 굳이 인스턴스를 여러 개 생성할 필요가 없을 때 사용합니다. 서버나 DB 혹은 입출력 장치와 같이 외부와 통신하는 역할을 수행하는 클래스에서 주로 사용합니다. UIKit에서도 자주 등장하는 패턴 중 하나입니다.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Singleton Pattern&lt;/code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>Singleton Pattern은 단순히 인스턴스를 하나만 생성할 수 있는 클래스만 있으면 됩니다.&lt;/p>
+&lt;hr>
+&lt;p>간단한 예제를 통해 Singleton Pattern에 대해 알아봅시다. 사용자 인증 정보를 관리하는 &lt;code>AuthService&lt;/code>를 구현했습니다. 프로그램 전반에서 해당 서비스에 접근하여 사용자 정보를 불러오거나 업데이트할 수 있습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct User {
+var id: String
+var name: String
+}
+final class AuthService {
+private(set) var user: User?
+func login(email: String, password: String) {
+// 서버에 로그인을 요청하여 사용자 정보를 불러옴
+user = User(id: &amp;#34;1&amp;#34;, name: &amp;#34;jinyongp&amp;#34;)
+}
+func logout() {
+// 서버에 로그아웃을 요청
+user = nil
+}
+func update(user: User) {
+// 서버에 사용자 정보 변경을 요청
+self.user = user
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>이렇게 Singleton이 아닌 방식으로 구현한다면 &lt;code>AuthService&lt;/code>로부터 사용자 정보를 불러올 때 사용자 정보가 매번 초기화됩니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// 로그인을 통해 사용자 정보 저장
+let authService = AuthService()
+authService.login(email: &amp;#34;dev.jinyongp@gmail.com&amp;#34;, password: &amp;#34;PASSWORD&amp;#34;)
+print(authService.user?.name) // jinyongp&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// 다른 곳에서 사용자 정보를 불러오고자 인스턴스를 생성하면 사용자 정보가 없음
+let authService = AuthService()
+print(authService.user?.name) // nil&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>이를 Singleton Pattern을 적용하여 해결해봅시다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class AuthService {
+static let shared = AuthService()
+private init() { print(&amp;#34;인스턴스 생성&amp;#34;) }
+private(set) var user: User?
+func login(email: String, password: String) {
+// 서버에 로그인을 요청하여 사용자 정보를 불러옴
+user = User(id: &amp;#34;1&amp;#34;, name: &amp;#34;jinyongp&amp;#34;)
+}
+func logout() {
+// 서버에 로그아웃을 요청
+user = nil
+}
+func update(user: User) {
+// 서버에 요청
+self.user = user
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>static&lt;/code> 키워드를 활용하여 &lt;code>shared&lt;/code>라는 타입 속성을 추가했습니다. &lt;code>shared&lt;/code>는 &lt;code>AuthService&lt;/code>의 생성자를 실행하여 인스턴스를 얻습니다. 그리고 새로운 인스턴스 생성을 막기 위해 &lt;code>private init() {}&lt;/code>을 추가했습니다. 이제 외부에서 생성자를 호출할 수 없고, &lt;code>shared&lt;/code> 속성으로만 인스턴스를 얻을 수 있습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>Swift에서 타입 속성은 lazy로 동작합니다. 즉, 타입 속성에 처음 접근할 때 생성자를 실행합니다. 그렇기에 &lt;code>shared&lt;/code>를 사용하지 않는다면 인스턴스가 생성되지 않습니다.&lt;/p>
+&lt;/blockquote>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// 로그인을 통해 사용자 정보 저장
+let authService = AuthService.shared
+authService.login(email: &amp;#34;dev.jinyongp@gmail.com&amp;#34;, password: &amp;#34;PASSWORD&amp;#34;)
+print(authService.user?.name) // jinyongp&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// 동일한 인스턴스를 가지므로 다른 곳에서 사용자 정보를 볼러올 수 있음
+let authService = AuthService.shared
+print(authService.user?.name) // jinyongp&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>이제 &lt;code>AuthService&lt;/code>의 인스턴스는 하나만 생성됨을 보장하고 인스턴스의 데이터를 유지할 수 있습니다.&lt;/p></description></item><item><title>Factory Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/4/</link><pubDate>Sun, Aug 13 14:15:28 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/4/</guid><description>&lt;p>&lt;strong>Factory Method Pattern&lt;/strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>Factory Method Pattern&lt;/code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.&lt;/p>
 &lt;/blockquote>
@@ -242,16 +347,16 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>소프트웨어 디자인 패턴은 소프트웨어 개발 과정에서 자주 발생하고 직면하는 문제에 대한 해결책입니다. 반복적으로 마주하는 문제에 대한 해결책을 청사진처럼 만들어두고 필요할 때마다 재사용할 수 있습니다.&lt;/p>
-&lt;p>각 디자인 패턴마다 어떤 문제를 마주했을 때 적용할 법한 패턴인지 알아보고 Swift 언어를 활용하여 어떻게 구현할 수 있는지 알아보았습니다. 그러므로 Swift의 문법이 포함되어 있습니다.&lt;/p>
-&lt;blockquote>
-&lt;p>⚠️ 디자인 패턴을 갓 배운 많은 개발자는 문제를 더 간단히 해결할 수 있는 상황임에도 모든 곳에 패턴을 적용해보려는 실수를 범한다고 합니다. 문제를 해결하는데 더 간단한 방법이 있다면 굳이 디자인 패턴을 적용할 필요가 없습니다.&lt;/p>
-&lt;/blockquote>
 &lt;p>본 시리즈는 &lt;a
 class="underline-lsre"
 href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문&lt;/a
 >을 참고하여 작성했습니다. 본 서적에선 GoF의 23가지 디자인 패턴을 다루고 있습니다. 하지만 GoF의 분류 체계(생성, 구조, 행위)를 따르지 않고, 다른 관점으로 분류하고 있으므로 이를 따라서 작성했습니다.&lt;/p>
+&lt;p>글의 구성은 어떤 문제 혹은 상황에 직면했을 때 적용할 법한 패턴인지, 그리고 Swift 언어를 활용한 예시를 통해 해당 디자인 패턴을 어떻게 구현할 수 있는지에 초점을 맞춰 작성했습니다. 부족한 부분이 있다면 꾸준히 개선해나갈 예정이므로 틀린 내용 혹은 추가되었으면 하는 내용이 있다면 댓글로 남겨주시면 감사하겠습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>⚠️ 디자인 패턴을 갓 배운 많은 개발자는 문제를 더 간단히 해결할 수 있는 상황임에도 모든 곳에 패턴을 적용해보려는 실수를 범한다고 합니다. 문제를 해결하는데 더 간단한 방법이 있다면 굳이 디자인 패턴을 적용할 필요가 없습니다.&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="References" href="#references"
@@ -268,21 +373,21 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/h2>&lt;ul>
 &lt;li>&lt;a
 class="underline-lsre"
+href="https://refactoring.guru/ko/design-patterns/swift"
+target="_blank" rel="noopener noreferrer nofollow"
+>Design Pattern in Swift&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
 href="https://refactoring.guru/ko/design-patterns"
 target="_blank" rel="noopener noreferrer nofollow"
->Design pattern - Refactoring Guru&lt;/a
+>Design pattern : Refactoring Guru&lt;/a
 >&lt;/li>
 &lt;li>&lt;a
 class="underline-lsre"
 href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문 : 쉽게 배우는 GoF의 23가지 디자인 패턴&lt;/a
->&lt;/li>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://refactoring.guru/ko/design-patterns/swift"
-target="_blank" rel="noopener noreferrer nofollow"
->Design Pattern in Swift&lt;/a
 >&lt;/li>
 &lt;/ul></description></item><item><title>Adapter Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/2/</link><pubDate>Wed, Aug 09 06:35:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/2/</guid><description>&lt;p>&lt;strong>Adapter Pattern&lt;/strong>을 활용하면 외부 라이브러리의 인터페이스와 내가 사용하고자 하는 인터페이스가 호환되지 않을 때, 중간에 Adapter를 추가하는 방법으로 호환성을 확보할 수 있습니다. Wrapper Pattern으로 불리기도 합니다.&lt;/p>
 &lt;blockquote>
