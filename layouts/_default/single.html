@@ -3,14 +3,12 @@
     <header class="text-center">
       <h1 class="relative mt-16 mb-12 flex justify-center">
         {{ with .Params.repo }}
-          <a
-            href="{{ . }}"
-            title="View on GitHub Repository"
+          <i
             class="absolute translate-y-[-1.25em] text-base md:text-lg hover:text-accent"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >{{ partial "svg" (dict "name" "github-alt" "class" "") }}</a
           >
+            {{ $icon := partial "svg" (dict "name" "github-alt") }}
+            {{ partial "link/external" (dict "title" "View on GitHub Repository" "link" . "content" $icon) }}
+          </i>
         {{ end }}
         {{ .Title }}
       </h1>

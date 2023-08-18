@@ -3,6 +3,6 @@
 */}}
 
 
-<i class="{{ .class }}">
+<i {{ if isset . "class" }}class="{{ .class }}"{{ end }}>
   {{ partial (replace "svg/name.svg" "name" .name) . }}
 </i>

@@ -26,30 +26,18 @@
             {{ range .Site.Menus.main }}
               <li class="hover:text-accent">
                 {{ if and (not (eq .PageRef "/")) (hasPrefix $.RelPermalink .PageRef) }}
-                  <a
-                    title="{{ .Name }}"
-                    href="{{ .PageRef }}"
-                    class="text-accent"
-                    >{{ .Name }}</a
-                  >
+                  {{ partial "link/internal" (dict "class" "text-accent" "title" .Name "link" .PageRef "content" .Name) }}
                 {{ else }}
-                  <a title="{{ .Name }}" href="{{ .PageRef }}">{{ .Name }}</a>
+                  {{ partial "link/internal" (dict "title" .Name "link" .PageRef "content" .Name) }}
                 {{ end }}
               </li>
             {{ end }}
           </ul>
           <ul class="flex gap-4 py-4">
             {{ range .Site.Menus.icon }}
-              <li class="hover:text-accent grid place-items-center w-5">
-                <a
-                  class="text-xl"
-                  title="{{ .Name }}"
-                  href="{{ .URL }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {{ partial "svg" (dict "name" .Name) }}
-                </a>
+              <li class="text-xl hover:text-accent grid place-items-center w-5">
+                {{ $icon := partial "svg" (dict "name" .Name) }}
+                {{ partial "link/external" (dict "title" .Name "link" .URL "content" $icon) }}
               </li>
             {{ end }}
           </ul>
@@ -69,13 +57,9 @@
             {{ .Site.Copyright }}<br />
             <span class="text-xs"
               >Powered by
-              <a
-                title="Hugo"
-                href="https://gohugo.io"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Hugo</a
-              ></span
+              {{ partial "link/external" (dict "title" "Go to Hugo Site" "link" "https://gohugo.io" "content" "Hugo") }}
+              | Developed on
+              {{ partial "link/external" (dict "title" "Go to Github Repo" "link" "https://github.com/jinyongp/jinyongp.github.io" "content" "Here") }}</span
             >
           </p>
         </div>

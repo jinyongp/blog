@@ -1,0 +1,10 @@
+<a
+  {{ if isset . "class" }}
+    class="{{ .class }}"
+  {{ end }}
+  title="{{ .title }}"
+  href="{{ .link | safeURL }}"
+  target="_blank"
+  rel="noopener noreferrer nofollow"
+  >{{ .content }}</a
+>

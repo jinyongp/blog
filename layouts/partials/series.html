@@ -15,7 +15,11 @@
     >
       <div>
         {{ with $prev }}
-          <a href="{{ .RelPermalink }}" class="{{ $style.anchor }}">
+          <a
+            title="Previous Series ({{ .Title }})"
+            href="{{ .RelPermalink }}"
+            class="{{ $style.anchor }}"
+          >
             <div class="{{ $style.icon }}">
               {{ partial "svg" (dict "name" "arrow-left" "class" "mb-0.5") }}
               <span>PREV</span>
@@ -26,7 +30,11 @@
       </div>
       <div>
         {{ with $next }}
-          <a href="{{ .RelPermalink }}" class="{{ $style.anchor }} text-right">
+          <a
+            title="Next Series ({{ .Title }})"
+            href="{{ .RelPermalink }}"
+            class="{{ $style.anchor }} text-right"
+          >
             <div class="{{ $style.icon }} justify-end">
               <span>NEXT</span>
               {{ partial "svg" (dict "name" "arrow-right" "class" "mb-0.5") }}
@@ -50,7 +58,10 @@
                 style="counter-increment: series;"
                 class="before:content-[counter(series)'.'] before:mr-1 before:inline-block before:-translate-y-px"
               >
-                <a class="text-accent underline-fade" href="{{ .RelPermalink }}"
+                <a
+                  title="{{ .Title }}"
+                  class="text-accent underline-fade"
+                  href="{{ .RelPermalink }}"
                   >{{ .Title }}</a
                 >
               </li>

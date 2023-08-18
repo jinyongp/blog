@@ -13,15 +13,10 @@
             <li>
               <div class="py-5">
                 <div class="px-2 flex flex-col gap-2">
-                  <a
-                    class="text-accent underline-fade font-medium text-xl w-fit"
-                    href="{{ .RelPermalink }}"
-                  >
-                    {{ .Title }}
-                    {{ if .Draft }}
-                      {{ partial "svg" (dict "name" "person-digging" "class" "text-rose-500 float-right pl-2 mt-0.5") }}
-                    {{ end }}
-                  </a>
+                  {{ $content := .Title }}
+                  {{ $draft := cond .Draft (partial "svg" (dict "name" "person-digging" "class" "text-rose-500 float-right pl-2 mt-0.5")) "" }}
+                  {{ $content := printf "%s%s" $content $draft }}
+                  {{ partial "link/internal.html" (dict "class" "text-accent underline-fade font-medium text-xl w-fit" "link" .RelPermalink "content" $content) }}
                   <span class="text-sm">{{ $.Scratch.Get "description" }}</span>
                 </div>
               </div>

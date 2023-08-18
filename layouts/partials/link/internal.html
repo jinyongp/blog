@@ -1,0 +1,8 @@
+<a
+  {{ if isset . "class" }}
+    class="{{ .class }}"
+  {{ end }}
+  title="{{ .title }}"
+  href="{{ .link | safeURL }}"
+  >{{ .content | safeHTML }}</a
+>
