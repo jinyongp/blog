@@ -24,6 +24,11 @@ function setupLightbox() {
         (event) => event.key === "Escape" && resetLightbox(),
         { once: true },
       );
+      window.addEventListener(
+        "wheel",
+        (event) => event.deltaY && resetLightbox(),
+        { once: true },
+      );
       lightbox.addEventListener("click", resetLightbox, { once: true });
     }
   });
