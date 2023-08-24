@@ -37,6 +37,10 @@
   },
   "json.schemas": [
     {
+      "fileMatch": ["frontmatter.json"],
+      "url": "https://frontmatter.codes/frontmatter.schema.json"
+    },
+    {
       "fileMatch": ["manifest.webmanifest"],
       "url": "https://json.schemastore.org/web-manifest"
     }
