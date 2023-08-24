@@ -48,7 +48,7 @@
     }}
 
 
-    <li class="grow text-center">Page {{ .PageNumber }}</li>
+    <li class="grow text-center">{{ .PageNumber }} / {{ .TotalPages }}</li>
 
     {{ partial "paginator-list-item"
       (dict
