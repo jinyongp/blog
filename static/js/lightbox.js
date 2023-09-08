@@ -29,6 +29,11 @@ function setupLightbox() {
         (event) => event.deltaY && resetLightbox(),
         { once: true },
       );
+      window.addEventListener(
+        "touchmove",
+        (event) => event.touches.length && resetLightbox(),
+        { once: true },
+      );
       lightbox.addEventListener("click", resetLightbox, { once: true });
     }
   });
