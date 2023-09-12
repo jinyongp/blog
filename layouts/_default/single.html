@@ -21,13 +21,14 @@
 
     {{ partial "series" . }}
 
+    {{ if .Draft }}
+      {{ partialCached "draft" . }}
+    {{ else }}
+      <article class="content">{{ .Content }}</article>
+      {{ partial "giscus" . }}
+      <div class="h-24"></div>
+    {{ end }}
 
-    <article class="content">{{ .Content }}</article>
-
-    {{ partial "giscus" . }}
-
-
-    <div class="h-24"></div>
   </div>
 {{ end }}
 
