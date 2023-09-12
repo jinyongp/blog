@@ -54,7 +54,74 @@ href="https://product.kyobobook.co.kr/detail/S000200311846"
 target="_blank" rel="noopener noreferrer nofollow"
 >Java 언어로 배우는 디자인 패턴 입문 : 쉽게 배우는 GoF의 23가지 디자인 패턴&lt;/a
 >&lt;/li>
-&lt;/ul></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+&lt;/ul></description></item><item><title>[내일배움캠프] iOS 과정 부트캠프 시리즈 (7기)</title><link>https://jinyongp.dev/series/nbcamp/1/</link><pubDate>Mon, Jun 26 14:38:22 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/nbcamp/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Introduction" href="#introduction"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>2023년 7월 10일부터 11월 17일까지 4개월간 진행되는 &lt;a
+class="underline-lsre"
+href="https://nbcamp.spartacodingclub.kr/app"
+target="_blank" rel="noopener noreferrer nofollow"
+>내일배움캠프 iOS 과정&lt;/a
+>(7기) 부트캠프에 합류하게 되었습니다. 본 시리즈에서는 iOS 과정 부트캠프에서 배우고 경험한 내용을 정리해보려고 합니다.&lt;/p>
+&lt;h2 id="about-me" class="flex items-center gap-3">About Me &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="About Me" href="#about-me"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>코드스테이츠 웹 개발 부트캠프를 수료하고 1년 동안 웹 개발자로서 Vue 프레임워크를 활용한 웹/웹앱 서비스를 개발했습니다. 웹페이지를 AOS/iOS 모바일 환경에서 제공해야 했으며 여러 디바이스에서 구동되더라도 동일한 경험을 줄 수 있도록 반응형 스타일을 적용하거나 앱 환경에서도 최적의 성능을 제공하기 위해 다양한 최적화 기법을 적용해보면서 최대한 앱 환경과 비슷하게 구현하기 위해 노력했습니다.&lt;/p>
+&lt;p>그 과정에서 최적의 성능과 유려한 UI/UX를 가진 네이티브 앱 개발에 관심을 가지게 되었습니다. 퇴사 이후 웹 말고 다른 분야를 경험해보고 싶었던 저는 운 좋게도 iOS 부트캠프 과정에 합류할 수 있게 되었습니다. 과거 웹 개발 부트캠프를 수료하며 겪은 경험과 고민, 고뇌, 후회를 발판 삼아 이번 부트캠프에서는 최대한 많이 배우고 경험해보기로 했습니다.&lt;/p>
+&lt;h2 id="goals" class="flex items-center gap-3">Goals &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Goals" href="#goals"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>내일배움캠프 부트캠프 iOS 과정에서는 Swift 문법 관련 프로젝트 혹은 실전 앱 개발 프로젝트 등 다양한 개인 · 팀 프로젝트를 수행하게 됩니다. 매 프로젝트마다 임의로 편성되는 팀과 함께 진행하게 되는데, 저는 이번 기회에 모든 팀에서 팀장 역할을 수행해보고자 했습니다. 팀원의 의견을 모아 팀 규칙 및 일정을 결정하고, 프로젝트 및 일정을 관리하고, 팀원 개개인의 역량을 파악하고 예측하여 각 팀원의 학업 성취도에 맞게 작업을 적절히 분배하는 등 팀을 이끄는데 겪을 어려움을 경험해보고 싶었습니다. 리더 역할을 수행하면서 팀원과의 소통을 적극적으로 해보고 팀원 개개인의 역량을 고려하여 프로젝트를 성공적으로 마치고 팀원 모두의 성장을 도모하는 것이 목표입니다.&lt;/p>
+&lt;h2 id="how-to-study" class="flex items-center gap-3">How to Study &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="How to Study" href="#how-to-study"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>부트캠프는 자기 주도 학습을 원칙으로 하는만큼 빠른 성장을 위해서는 자신만의 학습 방법과 함께 좋은 레퍼런스를 가지고 있어야 합니다. 지난 부트캠프를 수료하며 이러한 부분에 대해 부족함을 많이 느꼈었고, 나를 빠르게 성장시켜줄 수 있는 레퍼런스가 뭐가 있을까 고민하게 되었습니다. 그러던 중 우연히 지인으로부터 인프런의 &lt;a
+class="underline-lsre"
+href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8"
+target="_blank" rel="noopener noreferrer nofollow"
+>앨런 Swift 문법 마스터 스쿨&lt;/a
+> 강의에 대해 알게 되었습니다. 단순히 문법만 다루는 강의로 가격이 꽤 비싸긴 했지만, 기본을 단단히 다지기 위해 필요한 비용과 시간은 값에 상관없이 충분히 할애할 수 있었으므로 바로 23기 부트캠프에 참여했습니다. 해당 과정은 구매한 강의와 별개로 매주 실시간 세션을 통해 복습을 진행하며 Swift 문법을 시작적 자료와 함께 메모리 관점에서 아주 자세하게 설명해주는 식으로 기본에 충실한 내용을 담고 있어서 매우 만족스러웠습니다. 이를 통해 Swift 문법에 있어 아주 탄탄한 기본기와 깊은 이해를 가지고 부트캠프에서 제공하는 과제와 프로젝트에 적용해보려고 합니다.&lt;/p>
+&lt;p>개발을 학습하는데 있어 하드 스킬도 못지 않게 중요하지만, 제가 생각하는 부트캠프에서 충분히 익혀야할 역량은 소프트 스킬이라고 봅니다. 다양한 개발자와 함께 학습하거나 협업하는 과정에서 겪을 수 있는 사람과 사람 사이의 문제를 소통을 통해 어떻게 슬기롭게 해결할 수 있을지 고민해보고 직접 부딪히며 경험해보는 것이 부트캠프에 참여해서 가져야할 가장 큰 목표라고 생각합니다. 그런 이유로 저는 항상 팀원과 소통하기 위해 노력하며 하드 스킬 못지 않게 뛰어난 소프트 스킬을 얻고자 합니다.&lt;/p></description></item><item><title>D3.js Network Simulation In Depth</title><link>https://jinyongp.dev/series/d3js/1/</link><pubDate>Thu, Apr 14 14:31:09 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/series/d3js/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="Introduction" href="#introduction"
 >

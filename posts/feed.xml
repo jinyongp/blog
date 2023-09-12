@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on jinyongp.dev</title><link>https://jinyongp.dev/posts/</link><description>Recent content in Posts on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Aug 16 13:24:46 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/posts/feed.xml" rel="self" type="application/rss+xml"/><item><title>Singleton Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/5/</link><pubDate>Wed, Aug 16 13:24:46 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/5/</guid><description>&lt;p>&lt;strong>Singleton Pattern&lt;/strong>은 클래스가 오직 하나의 인스턴스만 가지고 있음을 보장합니다. 프로그램 전반에 걸쳐 인스턴스를 공용으로 사용하고자 할 때나, 굳이 인스턴스를 여러 개 생성할 필요가 없을 때 사용합니다. 서버나 DB 혹은 입출력 장치와 같이 외부와 통신하는 역할을 수행하는 클래스에서 주로 사용합니다. UIKit에서도 자주 등장하는 패턴 중 하나입니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on jinyongp.dev</title><link>https://jinyongp.dev/posts/</link><description>Recent content in Posts on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Fri, Aug 18 14:05:34 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/posts/feed.xml" rel="self" type="application/rss+xml"/><item><title>Prototype Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/6/</link><pubDate>Fri, Aug 18 14:05:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/6/</guid><description>&lt;p>&lt;strong>Prototype Pattern&lt;/strong>은&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Prototype Pattern&lt;/code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>Prototype Pattern은 객체를 생성하는 방법 중 하나입니다. 객체를 생성하는 방법은 크게 두 가지로 나눌 수 있습니다. 첫 번째는 객체를 생성하는 방법을 명시적으로 구현하는 것이고, 두 번째는 객체를 생성하는 방법을 추상화하는 것입니다. Prototype Pattern은 후자에 속합니다. 객체를 생성하는 방법을 추상화하여 객체를 생성하는 방법을 명시적으로 구현하는 것보다 유연하게 객체를 생성할 수 있습니다.&lt;/p>
+&lt;hr>
+&lt;p>간단한 예제를 통해 Singleton Pattern에 대해 알아봅시다. 사용자 인증 정보를 관리하는 &lt;code>AuthService&lt;/code>를 구현했습니다. 프로그램 전반에서 해당 서비스에 접근하여 사용자 정보를 불러오거나 업데이트할 수 있습니다.&lt;/p></description></item><item><title>Singleton Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/5/</link><pubDate>Wed, Aug 16 13:24:46 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/5/</guid><description>&lt;p>&lt;strong>Singleton Pattern&lt;/strong>은 클래스가 오직 하나의 인스턴스만 가지고 있음을 보장합니다. 프로그램 전반에 걸쳐 인스턴스를 공용으로 사용하고자 할 때나, 굳이 인스턴스를 여러 개 생성할 필요가 없을 때 사용합니다. 서버나 DB 혹은 입출력 장치와 같이 외부와 통신하는 역할을 수행하는 클래스에서 주로 사용합니다. UIKit에서도 자주 등장하는 패턴 중 하나입니다.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>Singleton Pattern&lt;/code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.&lt;/p>
 &lt;/blockquote>
@@ -103,7 +109,28 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 let authService = AuthService.shared
 print(authService.user?.name) // jinyongp&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>이제 &lt;code>AuthService&lt;/code>의 인스턴스는 하나만 생성됨을 보장하고 인스턴스의 데이터를 유지할 수 있습니다.&lt;/p></description></item><item><title>Factory Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/4/</link><pubDate>Sun, Aug 13 14:15:28 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/4/</guid><description>&lt;p>&lt;strong>Factory Method Pattern&lt;/strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.&lt;/p>
+&lt;p>이제 &lt;code>AuthService&lt;/code>의 인스턴스는 하나만 생성됨을 보장하고 인스턴스의 데이터를 유지할 수 있습니다.&lt;/p></description></item><item><title>Understanding Coordinator Pattern</title><link>https://jinyongp.dev/posts/uikit/2/</link><pubDate>Tue, Aug 15 05:56:30 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/2/</guid><description>&lt;p>AnyObject 사용이유&lt;/p>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://stackoverflow.com/a/64186834"
+target="_blank" rel="noopener noreferrer nofollow"
+>https://stackoverflow.com/a/64186834&lt;/a
+>&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://zeddios.medium.com/coordinator-pattern-bf4a1bc46930"
+target="_blank" rel="noopener noreferrer nofollow"
+>Coordinator Pattern - Zedd&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://somevitalyz123.medium.com/coordinator-pattern-with-tab-bar-controller-33e08d39d7d"
+target="_blank" rel="noopener noreferrer nofollow"
+>Coordinator pattern with Tab Bar Controller&lt;/a
+>&lt;/li>
+&lt;/ul></description></item><item><title>Factory Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/4/</link><pubDate>Sun, Aug 13 14:15:28 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/4/</guid><description>&lt;p>&lt;strong>Factory Method Pattern&lt;/strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>Factory Method Pattern&lt;/code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.&lt;/p>
 &lt;/blockquote>
@@ -777,7 +804,20 @@ href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%a
 target="_blank" rel="noopener noreferrer nofollow"
 >앨런 Swift 문법 마스터 스쿨 (15개 앱을 만들면서 근본 원리부터 배우는 UIKit)&lt;/a
 >&lt;/li>
-&lt;/ul></description></item><item><title>Refactoring for Performance (Canvas API)</title><link>https://jinyongp.dev/posts/d3js/4/</link><pubDate>Fri, Apr 22 14:18:15 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/4/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+&lt;/ul></description></item><item><title>Git WIP Automation (Git hooks)</title><link>https://jinyongp.dev/posts/git/1/</link><pubDate>Sun, Jul 23 12:06:31 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/git/1/</guid><description>&lt;h2 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Introduction" href="#introduction"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2></description></item><item><title>Refactoring for Performance (Canvas API)</title><link>https://jinyongp.dev/posts/d3js/4/</link><pubDate>Fri, Apr 22 14:18:15 2022 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/d3js/4/</guid><description>&lt;h1 id="introduction" class="flex items-center gap-3">Introduction &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="Introduction" href="#introduction"
 >

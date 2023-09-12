@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>uikit on jinyongp.dev</title><link>https://jinyongp.dev/tags/uikit/</link><description>Recent content in uikit on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Fri, Aug 11 06:52:27 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/uikit/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>uikit on jinyongp.dev</title><link>https://jinyongp.dev/tags/uikit/</link><description>Recent content in uikit on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/uikit/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 심화 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description/></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
+&lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. 그렇기에 과제 요구조건에 부합하는 최소한의 UI와 기능을 개발하기로 했습니다.&lt;/p>
+&lt;p>아무래도 팀 과제이고 팀원 개개인의 역량이 모두 다르다보니 갑자기 어려운 내용을 진행하게 되면 따라오지 못하는 팀원이 있어 걱정이 들었습니다. 팀 프로젝트를 수행하기 전 2주 간 개인 프로젝트를 진행하면서 팀원들의 역량을 잘 측정했다고 생각했는데, 제가 기대하던 것보다도 더 어려움을 겪고 있는 팀원이 있어 역할을 분배하는데 있어 어려움을 겪었습니다.&lt;/p></description></item><item><title>Understanding Coordinator Pattern</title><link>https://jinyongp.dev/posts/uikit/2/</link><pubDate>Tue, Aug 15 05:56:30 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/2/</guid><description>&lt;p>AnyObject 사용이유&lt;/p>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://stackoverflow.com/a/64186834"
+target="_blank" rel="noopener noreferrer nofollow"
+>https://stackoverflow.com/a/64186834&lt;/a
+>&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://zeddios.medium.com/coordinator-pattern-bf4a1bc46930"
+target="_blank" rel="noopener noreferrer nofollow"
+>Coordinator Pattern - Zedd&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://somevitalyz123.medium.com/coordinator-pattern-with-tab-bar-controller-33e08d39d7d"
+target="_blank" rel="noopener noreferrer nofollow"
+>Coordinator pattern with Tab Bar Controller&lt;/a
+>&lt;/li>
+&lt;/ul></description></item><item><title>[내배캠] UIKit 입문 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
 &lt;p>기본으로 제공되는 강의도 있었지만 프로젝트를 진행하기에 내용이 그리 충분치 않았기에 별도의 강의를 수강하면서 과제를 수행하였습니다. &lt;a
 class="underline-lsre"
 href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8"

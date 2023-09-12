@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>swift on jinyongp.dev</title><link>https://jinyongp.dev/tags/swift/</link><description>Recent content in swift on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Fri, Aug 11 06:52:27 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/swift/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>swift on jinyongp.dev</title><link>https://jinyongp.dev/tags/swift/</link><description>Recent content in swift on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/swift/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 심화 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description/></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
+&lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. 그렇기에 과제 요구조건에 부합하는 최소한의 UI와 기능을 개발하기로 했습니다.&lt;/p>
+&lt;p>아무래도 팀 과제이고 팀원 개개인의 역량이 모두 다르다보니 갑자기 어려운 내용을 진행하게 되면 따라오지 못하는 팀원이 있어 걱정이 들었습니다. 팀 프로젝트를 수행하기 전 2주 간 개인 프로젝트를 진행하면서 팀원들의 역량을 잘 측정했다고 생각했는데, 제가 기대하던 것보다도 더 어려움을 겪고 있는 팀원이 있어 역할을 분배하는데 있어 어려움을 겪었습니다.&lt;/p></description></item><item><title>Understanding Coordinator Pattern</title><link>https://jinyongp.dev/posts/uikit/2/</link><pubDate>Tue, Aug 15 05:56:30 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/2/</guid><description>&lt;p>AnyObject 사용이유&lt;/p>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://stackoverflow.com/a/64186834"
+target="_blank" rel="noopener noreferrer nofollow"
+>https://stackoverflow.com/a/64186834&lt;/a
+>&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://zeddios.medium.com/coordinator-pattern-bf4a1bc46930"
+target="_blank" rel="noopener noreferrer nofollow"
+>Coordinator Pattern - Zedd&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://somevitalyz123.medium.com/coordinator-pattern-with-tab-bar-controller-33e08d39d7d"
+target="_blank" rel="noopener noreferrer nofollow"
+>Coordinator pattern with Tab Bar Controller&lt;/a
+>&lt;/li>
+&lt;/ul></description></item><item><title>[내배캠] UIKit 입문 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
 &lt;p>기본으로 제공되는 강의도 있었지만 프로젝트를 진행하기에 내용이 그리 충분치 않았기에 별도의 강의를 수강하면서 과제를 수행하였습니다. &lt;a
 class="underline-lsre"
 href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8"
@@ -730,17 +753,265 @@ href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%a
 target="_blank" rel="noopener noreferrer nofollow"
 >앨런 Swift 문법 마스터 스쿨 (15개 앱을 만들면서 근본 원리부터 배우는 UIKit)&lt;/a
 >&lt;/li>
-&lt;/ul></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
-&lt;p>이번 주차에선 Swift를 학습하고 간단한 연산 기능을 제공하는 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
-&lt;p>캠프에서는 자기주도적 학습 방식을 추구하기 때문에 주어지는 학습 자료 외에도 스스로 조사하고 학습해야 합니다.
-주어지는 학습자료만으로는 깊게 학습할 수 없었기에 공식 문서와 다른 강의를 병행하며 부족한 부분을 채워야 합니다.&lt;/p>
-&lt;p>저는 캠프 참여 이전에 이러한 부분을 인지하고 있었으므로 자세한 문법이나 이론 관련한 내용은 &lt;a
-class="underline-lsre"
-href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8"
-target="_blank" rel="noopener noreferrer nofollow"
->앨런 Swift 문법 마스터 스쿨&lt;/a
-> 과정을 병행하며 보충했습니다.&lt;/p>
-&lt;p>과제를 수행하기에 충분한 문법과 이론을 학습했고, 이를 기반으로 CLI에서 실행할 수 있는 간단한 계산기 툴을 작성했습니다.&lt;/p>
+&lt;/ul></description></item><item><title>[내배캠] Swift 심화 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/4/</link><pubDate>Fri, Jul 21 09:25:11 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/4/</guid><description>&lt;p>3주차가 되었습니다!&lt;/p>
+&lt;p>이번 주차에서는 팀 프로젝트로서 Swift 심화 내용을 학습하고 간단한 키오스크 CLI 프로그램을 작성했습니다.&lt;/p>
+&lt;p>이번에도 저번 개인 프로젝트에서 진행했던대로 터미널 환경에서 Swift 프로젝트를 생성하여 진행했습니다.&lt;/p>
+&lt;p>구현한 키오스크 프로그램은 다음의 기능을 제공합니다.&lt;/p>
+&lt;ol>
+&lt;li>메뉴 화면 및 세부 메뉴 화면 표시&lt;/li>
+&lt;li>숫자를 입력하여 메뉴 선택 가능&lt;/li>
+&lt;li>메뉴를 장바구니에 추가하고 관리&lt;/li>
+&lt;li>장바구니에 있는 메뉴를 주문&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;p>&lt;strong>결과 미리보기&lt;/strong>&lt;/p>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+SHAEKSHACK 메뉴 선택 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">[ ⭐️ WELCOME SHAKESHACK ⭐️ ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Burger ┃ 앵거스 비프 통살을 다져만든 버거
+2. Flat-Top Degs ┃ 참나무칩으로 훈연한 소시지가 들어간 핫 도그
+3. Frozen Custard ┃ 매장에서 신선하게 만드는 아이스크림
+4. Drink ┃ 매장에서 직접 만드는 상큼한 음료
+5. Beer ┃ 뉴욕 브루클린 브루어리에서 양조한 맥주
+6. Order ┃ 장바구니를 확인합니다.
+7. Exit ┃ 프로그램을 종료합니다
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 1&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+SHAEKSHACK 메뉴 선택 화면
+&lt;/div>
+&lt;/details>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+Burger 메뉴 선택 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">[ 🍔 Burger MENU 🥤 ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Shack Burger ┃ W 6.9 ┃ 토마토, 양상추, 쉑소스가 토핑된 치즈버거
+2. Smoke Burger ┃ W 8.9 ┃ 베이컨, 체리 페퍼, 쉑소스가 들어간 치즈버거
+3. Shroom Burger ┃ W 9.4 ┃ 치즈로 속을 채운 베지테리안 버거
+4. Shack Stack ┃ W 9.9 ┃ 슈룸 버거, 쉑버거의 맛을 즐길 수 있는 메뉴
+5. Cheeseburger ┃ W 6.9 ┃ 포테이토 번, 비프패티, 치즈를 담은 치즈버거
+6. Hamburger ┃ W 5.4 ┃ 포테이토 번, 비프패티, 신선한 재료를 담은 버거
+0. Back ┃ 홈 화면으로 돌아갑니다.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 3
+3. Shroom Burger ┃ W 9.4 ┃ 치즈로 속을 채운 베지테리안 버거
+장바구니에 추가할까요? (Y/n): Y
+정상적으로 추가되었습니다.&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+Burger 메뉴 선택 화면
+&lt;/div>
+&lt;/details>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+장바구니 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ⭐️ WELCOME SHAKESHACK ⭐️ ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Burger ┃ 앵거스 비프 통살을 다져만든 버거
+2. Flat-Top Degs ┃ 참나무칩으로 훈연한 소시지가 들어간 핫 도그
+3. Frozen Custard ┃ 매장에서 신선하게 만드는 아이스크림
+4. Drink ┃ 매장에서 직접 만드는 상큼한 음료
+5. Beer ┃ 뉴욕 브루클린 브루어리에서 양조한 맥주
+6. Order ┃ 장바구니를 확인합니다.
+0. Exit ┃ 프로그램을 종료합니다
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 6&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+장바구니 화면
+&lt;/div>
+&lt;/details>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+주문 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">[ 🍕 Order List 💳 ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Buy ┃ 장바구니에 담은 제품을 구매합니다.
+2. Clear ┃ 장바구니를 비웁니다.
+0. Back ┃ 홈 화면으로 돌아갑니다.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+품목 목록
+Shroom Burger x 1
+🧾 Total Order Price: 9,400 WON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 1
+결제가 정상적으로 처리되었습니다. 감사합니다.&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+주문 화면
+&lt;/div>
+&lt;/details>
+&lt;h3 id="directory-structure" class="flex items-center gap-3">Directory Structure &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Directory Structure" href="#directory-structure"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">.
+├── Options/
+│ └── Option.swift
+├── Services/
+│ ├── CoreService.swift
+│ ├── OrderService.swift
+│ ├── Receipt.swift
+│ └── WaitService.swift
+├── Viewers/
+│ ├── ConsoleViewer.swift
+│ └── Viewer.swift
+├── App.swift
+└── main.swift&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Implementation" href="#implementation"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>이번 프로젝트에선 enum 형식의 Associated Value를 적극적으로 활용하여 메뉴 화면에 표시될 옵션을 구현했습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">enum Option: Equatable, Hashable {
+struct Attr {
+let id: Int
+let name: String
+let desc: String
+}
+case category(attr: Attr, menus: [Option])
+case menu(attr: Attr, price: Int)
+case order(attr: Attr, actions: [Option])
+case action(attr: Attr)
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>Option&lt;/code> enum은 재귀적으로 작성되어 메뉴를 선택하면 하위 메뉴가 표시되는 구조입니다. &lt;code>main.swift&lt;/code> 파일에서 세부적인 모든 옵션을 추가하고 &lt;code>App&lt;/code> 클래스에 서비스를 등록합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">import Foundation
+let viewer = ConsoleViewer()
+let app = App(core: CoreService(
+viewer: viewer,
+orderService: OrderService(),
+waitService: WaitService(
+viewer: viewer,
+queue: DispatchQueue(
+label: &amp;#34;waiting&amp;#34;,
+attributes: .concurrent)))
+)
+app.register(option: .category(
+attr: Option.Attr(id: 1, name: &amp;#34;Burger&amp;#34;, desc: &amp;#34;앵거스 비프 통살을 다져만든 버거&amp;#34;),
+menus: [
+.menu(attr: Option.Attr(id: 1, name: &amp;#34;Shack Burger&amp;#34;, desc: &amp;#34;토마토, 양상추, 쉑소스가 토핑된 치즈버거&amp;#34;), price: 6900),
+.menu(attr: Option.Attr(id: 2, name: &amp;#34;Smoke Burger&amp;#34;, desc: &amp;#34;베이컨, 체리 페퍼, 쉑소스가 들어간 치즈버거&amp;#34;), price: 8900),
+.menu(attr: Option.Attr(id: 3, name: &amp;#34;Shroom Burger&amp;#34;, desc: &amp;#34;치즈로 속을 채운 베지테리안 버거&amp;#34;), price: 9400),
+.menu(attr: Option.Attr(id: 4, name: &amp;#34;Shack Stack&amp;#34;, desc: &amp;#34;슈룸 버거, 쉑버거의 맛을 즐길 수 있는 메뉴&amp;#34;), price: 9900),
+.menu(attr: Option.Attr(id: 5, name: &amp;#34;Cheeseburger&amp;#34;, desc: &amp;#34;포테이토 번, 비프패티, 치즈를 담은 치즈버거&amp;#34;), price: 6900),
+.menu(attr: Option.Attr(id: 6, name: &amp;#34;Hamburger&amp;#34;, desc: &amp;#34;포테이토 번, 비프패티, 신선한 재료를 담은 버거&amp;#34;), price: 5400),
+])
+)
+// 더욱 많은 메뉴 추가...
+app.register(option: .order(
+attr: Option.Attr(id: 6, name: &amp;#34;Order&amp;#34;, desc: &amp;#34;장바구니를 확인합니다.&amp;#34;),
+actions: [
+.action(attr: Option.Attr(id: 1, name: &amp;#34;Buy&amp;#34;, desc: &amp;#34;장바구니에 담은 제품을 구매합니다.&amp;#34;)),
+.action(attr: Option.Attr(id: 2, name: &amp;#34;Clear&amp;#34;, desc: &amp;#34;장바구니를 비웁니다.&amp;#34;)),
+])
+)
+app.run()&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>프로토콜을 활용해서&lt;/p></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
+&lt;p>이번 주차에선 Swift 기초를 학습하고 간단한 연산 기능을 제공하는 CLI 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
 &lt;h3 id="requirements" class="flex items-center gap-3">Requirements &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="Requirements" href="#requirements"

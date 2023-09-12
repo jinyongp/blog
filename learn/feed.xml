@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learns on jinyongp.dev</title><link>https://jinyongp.dev/learn/</link><description>Recent content in Learns on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Fri, Aug 11 06:52:27 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/learn/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learns on jinyongp.dev</title><link>https://jinyongp.dev/learn/</link><description>Recent content in Learns on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/learn/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 심화 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description/></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
+&lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. 그렇기에 과제 요구조건에 부합하는 최소한의 UI와 기능을 개발하기로 했습니다.&lt;/p>
+&lt;p>아무래도 팀 과제이고 팀원 개개인의 역량이 모두 다르다보니 갑자기 어려운 내용을 진행하게 되면 따라오지 못하는 팀원이 있어 걱정이 들었습니다. 팀 프로젝트를 수행하기 전 2주 간 개인 프로젝트를 진행하면서 팀원들의 역량을 잘 측정했다고 생각했는데, 제가 기대하던 것보다도 더 어려움을 겪고 있는 팀원이 있어 역할을 분배하는데 있어 어려움을 겪었습니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
 &lt;p>기본으로 제공되는 강의도 있었지만 프로젝트를 진행하기에 내용이 그리 충분치 않았기에 별도의 강의를 수강하면서 과제를 수행하였습니다. &lt;a
 class="underline-lsre"
 href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8"
@@ -524,17 +526,265 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;p>UIKit로 개발하면서 여태까지 해왔던 웹 개발과 많은 비교를 하게 되었습니다. UIKit으로 개발하는 건 웹 개발로 비유를 하자면 HTML, CSS 없이 JavaScript로만 모든 UI와 Style을 작성하는 것과 비슷했습니다. 웹에서 HTML과 CSS 그리고 JavaScript가 분리되어 있다는 게 굉장한 장점이구나 다시 한번 느끼게 되었습니다. UIKit의 경우 모든 내용을 선언형이 아닌 명령형으로 작성해야 하기 때문에 각 역할에 맞게 적절하게 코드를 분리하기 위한 노력이 필요함을 절실히 깨달았습니다.&lt;/p>
 &lt;p>Storyboard와 코드를 연동하여 작성되어야 하는 부분이 있기 때문에 코드가 실행되는데 눈에 보이는 부분보단 이렇게 동작할 것이다 추론해야 하는 경우가 많았고 에러가 발생해도 추적하기가 굉장히 어려워서 개발 경험이 그리 좋지 않았습니다. 아무래도 UIKit의 대부분이 Objective-C로 작성되어 있어 해당 내용을 알아야만 에러 내용을 통해 원인을 유추할 수 있는 것도 한몫 하다보니 어려웠던 듯 싶습니다. 협업 관점에서 보나 디버깅 관점에서 보나 웬만하면 Storyboard 방식보단 코드 방식의 개발이 더 유리하지 않을까 생각했습니다.&lt;/p>
-&lt;p>이후 기초 팀 프로젝트에서는 코드 방식으로 개발을 진행하며 Storyboard 개발 방식과 비교해보고자 합니다.&lt;/p></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
-&lt;p>이번 주차에선 Swift를 학습하고 간단한 연산 기능을 제공하는 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
-&lt;p>캠프에서는 자기주도적 학습 방식을 추구하기 때문에 주어지는 학습 자료 외에도 스스로 조사하고 학습해야 합니다.
-주어지는 학습자료만으로는 깊게 학습할 수 없었기에 공식 문서와 다른 강의를 병행하며 부족한 부분을 채워야 합니다.&lt;/p>
-&lt;p>저는 캠프 참여 이전에 이러한 부분을 인지하고 있었으므로 자세한 문법이나 이론 관련한 내용은 &lt;a
-class="underline-lsre"
-href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8"
-target="_blank" rel="noopener noreferrer nofollow"
->앨런 Swift 문법 마스터 스쿨&lt;/a
-> 과정을 병행하며 보충했습니다.&lt;/p>
-&lt;p>과제를 수행하기에 충분한 문법과 이론을 학습했고, 이를 기반으로 CLI에서 실행할 수 있는 간단한 계산기 툴을 작성했습니다.&lt;/p>
+&lt;p>이후 기초 팀 프로젝트에서는 코드 방식으로 개발을 진행하며 Storyboard 개발 방식과 비교해보고자 합니다.&lt;/p></description></item><item><title>[내배캠] Swift 심화 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/4/</link><pubDate>Fri, Jul 21 09:25:11 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/4/</guid><description>&lt;p>3주차가 되었습니다!&lt;/p>
+&lt;p>이번 주차에서는 팀 프로젝트로서 Swift 심화 내용을 학습하고 간단한 키오스크 CLI 프로그램을 작성했습니다.&lt;/p>
+&lt;p>이번에도 저번 개인 프로젝트에서 진행했던대로 터미널 환경에서 Swift 프로젝트를 생성하여 진행했습니다.&lt;/p>
+&lt;p>구현한 키오스크 프로그램은 다음의 기능을 제공합니다.&lt;/p>
+&lt;ol>
+&lt;li>메뉴 화면 및 세부 메뉴 화면 표시&lt;/li>
+&lt;li>숫자를 입력하여 메뉴 선택 가능&lt;/li>
+&lt;li>메뉴를 장바구니에 추가하고 관리&lt;/li>
+&lt;li>장바구니에 있는 메뉴를 주문&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;p>&lt;strong>결과 미리보기&lt;/strong>&lt;/p>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+SHAEKSHACK 메뉴 선택 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">[ ⭐️ WELCOME SHAKESHACK ⭐️ ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Burger ┃ 앵거스 비프 통살을 다져만든 버거
+2. Flat-Top Degs ┃ 참나무칩으로 훈연한 소시지가 들어간 핫 도그
+3. Frozen Custard ┃ 매장에서 신선하게 만드는 아이스크림
+4. Drink ┃ 매장에서 직접 만드는 상큼한 음료
+5. Beer ┃ 뉴욕 브루클린 브루어리에서 양조한 맥주
+6. Order ┃ 장바구니를 확인합니다.
+7. Exit ┃ 프로그램을 종료합니다
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 1&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+SHAEKSHACK 메뉴 선택 화면
+&lt;/div>
+&lt;/details>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+Burger 메뉴 선택 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">[ 🍔 Burger MENU 🥤 ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Shack Burger ┃ W 6.9 ┃ 토마토, 양상추, 쉑소스가 토핑된 치즈버거
+2. Smoke Burger ┃ W 8.9 ┃ 베이컨, 체리 페퍼, 쉑소스가 들어간 치즈버거
+3. Shroom Burger ┃ W 9.4 ┃ 치즈로 속을 채운 베지테리안 버거
+4. Shack Stack ┃ W 9.9 ┃ 슈룸 버거, 쉑버거의 맛을 즐길 수 있는 메뉴
+5. Cheeseburger ┃ W 6.9 ┃ 포테이토 번, 비프패티, 치즈를 담은 치즈버거
+6. Hamburger ┃ W 5.4 ┃ 포테이토 번, 비프패티, 신선한 재료를 담은 버거
+0. Back ┃ 홈 화면으로 돌아갑니다.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 3
+3. Shroom Burger ┃ W 9.4 ┃ 치즈로 속을 채운 베지테리안 버거
+장바구니에 추가할까요? (Y/n): Y
+정상적으로 추가되었습니다.&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+Burger 메뉴 선택 화면
+&lt;/div>
+&lt;/details>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+장바구니 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ⭐️ WELCOME SHAKESHACK ⭐️ ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Burger ┃ 앵거스 비프 통살을 다져만든 버거
+2. Flat-Top Degs ┃ 참나무칩으로 훈연한 소시지가 들어간 핫 도그
+3. Frozen Custard ┃ 매장에서 신선하게 만드는 아이스크림
+4. Drink ┃ 매장에서 직접 만드는 상큼한 음료
+5. Beer ┃ 뉴욕 브루클린 브루어리에서 양조한 맥주
+6. Order ┃ 장바구니를 확인합니다.
+0. Exit ┃ 프로그램을 종료합니다
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 6&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+장바구니 화면
+&lt;/div>
+&lt;/details>
+&lt;details class="rounded group my-2">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+>
+주문 화면
+&lt;span
+class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">[ 🍕 Order List 💳 ]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Buy ┃ 장바구니에 담은 제품을 구매합니다.
+2. Clear ┃ 장바구니를 비웁니다.
+0. Back ┃ 홈 화면으로 돌아갑니다.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+품목 목록
+Shroom Burger x 1
+🧾 Total Order Price: 9,400 WON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. 1
+결제가 정상적으로 처리되었습니다. 감사합니다.&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+주문 화면
+&lt;/div>
+&lt;/details>
+&lt;h3 id="directory-structure" class="flex items-center gap-3">Directory Structure &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Directory Structure" href="#directory-structure"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">.
+├── Options/
+│ └── Option.swift
+├── Services/
+│ ├── CoreService.swift
+│ ├── OrderService.swift
+│ ├── Receipt.swift
+│ └── WaitService.swift
+├── Viewers/
+│ ├── ConsoleViewer.swift
+│ └── Viewer.swift
+├── App.swift
+└── main.swift&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Implementation" href="#implementation"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>이번 프로젝트에선 enum 형식의 Associated Value를 적극적으로 활용하여 메뉴 화면에 표시될 옵션을 구현했습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">enum Option: Equatable, Hashable {
+struct Attr {
+let id: Int
+let name: String
+let desc: String
+}
+case category(attr: Attr, menus: [Option])
+case menu(attr: Attr, price: Int)
+case order(attr: Attr, actions: [Option])
+case action(attr: Attr)
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>Option&lt;/code> enum은 재귀적으로 작성되어 메뉴를 선택하면 하위 메뉴가 표시되는 구조입니다. &lt;code>main.swift&lt;/code> 파일에서 세부적인 모든 옵션을 추가하고 &lt;code>App&lt;/code> 클래스에 서비스를 등록합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">import Foundation
+let viewer = ConsoleViewer()
+let app = App(core: CoreService(
+viewer: viewer,
+orderService: OrderService(),
+waitService: WaitService(
+viewer: viewer,
+queue: DispatchQueue(
+label: &amp;#34;waiting&amp;#34;,
+attributes: .concurrent)))
+)
+app.register(option: .category(
+attr: Option.Attr(id: 1, name: &amp;#34;Burger&amp;#34;, desc: &amp;#34;앵거스 비프 통살을 다져만든 버거&amp;#34;),
+menus: [
+.menu(attr: Option.Attr(id: 1, name: &amp;#34;Shack Burger&amp;#34;, desc: &amp;#34;토마토, 양상추, 쉑소스가 토핑된 치즈버거&amp;#34;), price: 6900),
+.menu(attr: Option.Attr(id: 2, name: &amp;#34;Smoke Burger&amp;#34;, desc: &amp;#34;베이컨, 체리 페퍼, 쉑소스가 들어간 치즈버거&amp;#34;), price: 8900),
+.menu(attr: Option.Attr(id: 3, name: &amp;#34;Shroom Burger&amp;#34;, desc: &amp;#34;치즈로 속을 채운 베지테리안 버거&amp;#34;), price: 9400),
+.menu(attr: Option.Attr(id: 4, name: &amp;#34;Shack Stack&amp;#34;, desc: &amp;#34;슈룸 버거, 쉑버거의 맛을 즐길 수 있는 메뉴&amp;#34;), price: 9900),
+.menu(attr: Option.Attr(id: 5, name: &amp;#34;Cheeseburger&amp;#34;, desc: &amp;#34;포테이토 번, 비프패티, 치즈를 담은 치즈버거&amp;#34;), price: 6900),
+.menu(attr: Option.Attr(id: 6, name: &amp;#34;Hamburger&amp;#34;, desc: &amp;#34;포테이토 번, 비프패티, 신선한 재료를 담은 버거&amp;#34;), price: 5400),
+])
+)
+// 더욱 많은 메뉴 추가...
+app.register(option: .order(
+attr: Option.Attr(id: 6, name: &amp;#34;Order&amp;#34;, desc: &amp;#34;장바구니를 확인합니다.&amp;#34;),
+actions: [
+.action(attr: Option.Attr(id: 1, name: &amp;#34;Buy&amp;#34;, desc: &amp;#34;장바구니에 담은 제품을 구매합니다.&amp;#34;)),
+.action(attr: Option.Attr(id: 2, name: &amp;#34;Clear&amp;#34;, desc: &amp;#34;장바구니를 비웁니다.&amp;#34;)),
+])
+)
+app.run()&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>프로토콜을 활용해서&lt;/p></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
+&lt;p>이번 주차에선 Swift 기초를 학습하고 간단한 연산 기능을 제공하는 CLI 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
 &lt;h3 id="requirements" class="flex items-center gap-3">Requirements &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="Requirements" href="#requirements"
@@ -888,16 +1138,10 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h3>&lt;p>객체 지향 프로그래밍의 5대 원칙 중 단일 책임 원칙(Single Responsibility Principle)과 의존성 역전 원칙(Dependency Inversion Principle)을 적용하여 계산기를 구현해보았습니다. 원칙을 적용해보기 위해 프로토콜로 명세를 작성하고 이를 준수하는 클래스는 작성하는 작업을 진행하면서 코드의 중복을 제거하고 확장성 높은 프로그램을 작성할 수 있었습니다.&lt;/p>
 &lt;p>앞으로 이외에도 적용할 수 있는 원칙을 찾아보고 적합한 디자인 패턴 및 기법을 추가로 학습하여 적용해보려고 합니다.&lt;/p></description></item><item><title>[내배캠] 첫번째 팀 프로젝트</title><link>https://jinyongp.dev/learn/nbcamp/2/</link><pubDate>Wed, Jul 19 01:27:06 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/2/</guid><description>&lt;p>사전캠프에서 학습한 Flutter를 활용하여 첫번째 팀 프로젝트를 진행했습니다.&lt;/p>
-&lt;p>4일간 진행한 프로젝트로 목적은 앱 개발 전반의 과정을 익히기 위함이지만, 보다 팀원분들과의 소통과 협업 관점에 비중으로 두고 프로젝트를 진행하였습니다.&lt;/p>
+&lt;p>4일간 진행한 프로젝트로 목적은 앱 개발 전반의 과정을 익히기 위함이지만, 그보다 팀원분들과의 소통과 협업 관점에 비중으로 두고 프로젝트를 진행하였습니다.&lt;/p>
 &lt;p>프로젝트의 주제는 팀과 팀원의 소개를 담은 앱을 작성하는 것으로, 각자 자신의 소개를 담은 상세 페이지를 작성하고 합치기로 결정하였습니다.
 저는 상세 페이지와 더불어 메인 페이지와 각 상세 페이지에서 쓰일 댓글 관리 서비스를 맡았습니다.&lt;/p>
 &lt;p>그 중에서도 댓글 관리 서비스를 어떻게 구현했는지 정리해보고자 합니다.&lt;/p>
-&lt;p>&lt;a
-class="underline-lsre"
-href="https://github.com/nbcamp/introduce-e1if"
-target="_blank" rel="noopener noreferrer nofollow"
->프로젝트 저장소&lt;/a
->&lt;/p>
 &lt;h2 id="의존성-주입을-위해-인터페이스-적용하기" class="flex items-center gap-3">의존성 주입을 위해 인터페이스 적용하기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="의존성 주입을 위해 인터페이스 적용하기" href="#%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%a3%bc%ec%9e%85%ec%9d%84-%ec%9c%84%ed%95%b4-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0"
@@ -1123,9 +1367,9 @@ values.map((comment) =&amp;gt; comment.toJson()).toList(),
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>mixin&lt;/code>을 상속하기 위해선 &lt;code>with&lt;/code> 키워드를 사용해야 합니다. &lt;code>DataHandler&lt;/code>를 상속하면서 &lt;code>CommentService&lt;/code>에서 구현해야 하는 함수들을 재정의합니다.
-&lt;code>import&lt;/code>와 &lt;code>export&lt;/code> 함수는 단순히 JSON 형태의 stringify와 parse 작업을 수행합니다. 이로써 상속을 통해 중복 코드를 제거하고 함수의 역할을 분리할 수 있었습니다.&lt;/p></description></item><item><title>[내배캠] 사전캠프</title><link>https://jinyongp.dev/learn/nbcamp/1/</link><pubDate>Tue, Jun 27 11:16:56 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/1/</guid><description>&lt;h2 id="2023년-06월-30일" class="flex items-center gap-3">2023년 06월 30일 &lt;i
+&lt;code>import&lt;/code>와 &lt;code>export&lt;/code> 함수는 단순히 JSON 형태의 stringify와 parse 작업을 수행합니다. 이로써 상속을 통해 중복 코드를 제거하고 함수의 역할을 분리할 수 있었습니다.&lt;/p></description></item><item><title>[내배캠] 사전캠프</title><link>https://jinyongp.dev/learn/nbcamp/1/</link><pubDate>Tue, Jun 27 11:16:56 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/1/</guid><description>&lt;h2 id="table-of-contents" class="flex items-center gap-3">Table of Contents &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="2023년 06월 30일" href="#2023%eb%85%84-06%ec%9b%94-30%ec%9d%bc"
+>&lt;a title="Table of Contents" href="#table-of-contents"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1136,191 +1380,327 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h2>&lt;p>5주차 강의는 HTTP API 요청 방법을 익혔습니다. 다음주는 광고 붙이는건데&amp;hellip; 이번이 마지막일 듯 하네요.&lt;/p>
-&lt;h3 id="requesting-network-data" class="flex items-center gap-3">Requesting Network Data &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Requesting Network Data" href="#requesting-network-data"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;p>HttpClient로는 &lt;a
+>&lt;/h2>&lt;ul>
+&lt;li>&lt;a
 class="underline-lsre"
-href="https://pub.dev/packages/dio"
-target="_blank" rel="noopener noreferrer nofollow"
->dio&lt;/a
-> 패키지를 활용했습니다. &lt;br>
-책 정보를 불러올 수 있는 Google API를 활용하여 Watcha Pedia 서비스를 구현했습니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4 group">
-&lt;small
-class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
->
-&lt;span class="sr-only">Language:&lt;/span>dart
-&lt;/small>
-&lt;pre>&lt;code class="hljs language-dart">// main.dart
-void main() async {
-late SharedPreferences pref;
-if (!kIsWeb) {
-WidgetsFlutterBinding.ensureInitialized();
-pref = await SharedPreferences.getInstance();
-}
-runApp(MultiProvider(
-providers: [
-ChangeNotifierProvider(
-create: (_) =&amp;gt; BookService(
-get: &amp;lt;T&amp;gt;(String query) async {
-String url =
-&amp;#39;https://www.googleapis.com/books/v1/volumes?q=$query&amp;amp;startIndex=0&amp;amp;maxResults=40&amp;#39;;
-Response res = await Dio().get(url);
-if (res.statusCode != 200) {
-throw Exception(&amp;#39;http.get error: statusCode= ${res.statusCode}&amp;#39;);
-}
-return res.data[&amp;#39;items&amp;#39;];
-},
-save: (String payload) =&amp;gt; pref.setString(&amp;#39;likedBooks&amp;#39;, payload),
-load: () =&amp;gt; pref.getString(&amp;#39;likedBooks&amp;#39;),
-),
-),
-],
-child: const MainApp(),
-));
-}&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4 group">
-&lt;small
-class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
->
-&lt;span class="sr-only">Language:&lt;/span>dart
-&lt;/small>
-&lt;pre>&lt;code class="hljs language-dart">// services/book.dart
-final Future&amp;lt;T&amp;gt; Function&amp;lt;T&amp;gt;(String url) get;
-final FutureOr Function(String payload)? save;
-final FutureOr Function()? load;
-BookService({required this.get, this.save, this.load}) {
-_load().then((_) =&amp;gt; notifyListeners());
-}&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;p>&lt;code>BookService&lt;/code> 클래스에서 책 정보를 가져오는 함수(&lt;code>get&lt;/code>)와 정보를 저장(&lt;code>save&lt;/code>)하고 불러오는(&lt;code>load&lt;/code>) 함수를 주입할 수 있도록 구현했습니다.&lt;/p>
-&lt;h3 id="webview-page" class="flex items-center gap-3">WebView Page &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="WebView Page" href="#webview-page"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;p>앱 상에서 외부 웹 링크 페이지를 띄우기 위해선 &lt;code>webview_flutter&lt;/code> 패키지를 사용해야 합니다. &lt;br>
-책 목록에서 책을 클릭하면 해당 책의 정보를 보여주는 페이지를 띄웁니다.&lt;/p>
-&lt;div class="relative rounded-md overflow-hidden my-4 group">
-&lt;small
-class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
->
-&lt;span class="sr-only">Language:&lt;/span>dart
-&lt;/small>
-&lt;pre>&lt;code class="hljs language-dart">// screens/webview.dart
-class WebViewScreen extends StatelessWidget {
-WebViewScreen({
-super.key,
-required this.url,
-});
-String url;
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-appBar: AppBar(
-backgroundColor: Colors.grey,
-title: Text(url),
-),
-body: WebView(initialUrl: url),
-);
-}
-}&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;div class="relative rounded-md overflow-hidden my-4 group">
-&lt;small
-class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
->
-&lt;span class="sr-only">Language:&lt;/span>dart
-&lt;/small>
-&lt;pre>&lt;code class="hljs language-dart">// widgets/book_tile.dart
-onTap: () {
-Navigator.push(
-context,
-MaterialPageRoute(
-builder: (_) =&amp;gt; WebViewScreen(
-url: book.previewLink.replaceFirst(&amp;#39;http:&amp;#39;, &amp;#39;https:&amp;#39;)),
-),
-);
-},&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;h3 id="watcha-pedia" class="flex items-center gap-3">Watcha Pedia &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Watcha Pedia" href="#watcha-pedia"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=7a51cd7685929c94d82ca0b707f69516&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
-&lt;p>| Dartpad에서 &lt;code>Image.network&lt;/code> 불러오기가 안 되는 문제가 있습니다. &lt;br>
-| &lt;code>dio&lt;/code>가 동작하지 않아, &lt;code>http&lt;/code> 모듈로 대체했습니다. &lt;br>
-| webview가 동작하지 않습니다.&lt;/p>
-&lt;h3 id="project-structure" class="flex items-center gap-3">Project Structure &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Project Structure" href="#project-structure"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;p>Dartpad에서는 확인할 수 없지만, 프로젝트 구조에 대해 고민해보았습니다.&lt;/p>
-&lt;ul>
-&lt;li>screens: 화면&lt;/li>
-&lt;li>models: 데이터 모델 (자료구조)&lt;/li>
-&lt;li>services: 서비스 (비즈니스 로직)&lt;/li>
-&lt;li>widgets: 위젯 (컴포넌트)&lt;/li>
+href="#2023%eb%85%84-06%ec%9b%94-27%ec%9d%bc"
+>2023년 06월 27일&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="#2023%eb%85%84-06%ec%9b%94-28%ec%9d%bc"
+>2023년 06월 28일&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="#2023%eb%85%84-06%ec%9b%94-29%ec%9d%bc"
+>2023년 06월 29일&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="#2023%eb%85%84-06%ec%9b%94-30%ec%9d%bc"
+>2023년 06월 30일&lt;/a
+>&lt;/li>
 &lt;/ul>
+&lt;hr>
+&lt;h2 id="2023년-06월-27일" class="flex items-center gap-3">2023년 06월 27일 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="2023년 06월 27일" href="#2023%eb%85%84-06%ec%9b%94-27%ec%9d%bc"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>&lt;a
+class="underline-lsre"
+href="https://nbcamp-android-ios-unity.oopy.io/0dc0a70c-49ca-499c-b2df-965a2828cca6"
+target="_blank" rel="noopener noreferrer nofollow"
+>내일배움캠프 iOS 과정&lt;/a
+>을 본격적으로 시작하기에 앞서 앱 개발 전반의 이해를 위해 Dart와 Flutter를 학습했습니다.&lt;/p>
+&lt;p>지원을 거의 막바지에 하게 되었는데 사전캠프가 이미 진행 도중이었습니다. 다른 분들보다 진도가 느릴까 걱정되었지만, 본 캠프는 9 to 9(&amp;hellip;) 과정이니만큼 사전캠프도 바쁘게 해보고자 최대한 빨리 나가고자 했습니다.&lt;/p>
+&lt;p>강의는 스파르타코딩클럽의 &lt;a
+class="underline-lsre"
+href="https://spartacodingclub.kr/nb/app"
+target="_blank" rel="noopener noreferrer nofollow"
+>[왕초보] 플러터(Flutter)로 시작하는 앱개발 종합반&lt;/a
+>으로 진행했습니다.&lt;/p>
+&lt;h3 id="introduction" class="flex items-center gap-3">Introduction &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Introduction" href="#introduction"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>Flutter는 크로스 플랫폼 개발을 위한 프레임워크로 Dart라는 언어로 작성합니다. 동일한 역할을 수행하는 React Native와 비교했을 때 등장 시기는 늦지만 등장부터 빠르게 치고 올라가 Github Star 수는 이미 압도적이라 할 수 있습니다.&lt;/p>
+&lt;p>&lt;img src="https://api.star-history.com/svg?repos=flutter/flutter,facebook/react-native&amp;amp;type=Date" alt="Star History Chart">
+&lt;a
+class="underline-lsre"
+href="https://star-history.com/#flutter/flutter&amp;amp;facebook/react-native"
+target="_blank" rel="noopener noreferrer nofollow"
+>출처: Github Star History | Flutter vs. React Native&lt;/a
+>&lt;/p>
+&lt;p>공식 문서 정리에 유튜브 채널까지&amp;hellip;&lt;br>
+심지어 성능 또한 네이티브 못지않게 빠르다고 하니 Flutter를 써보지 않을 이유가 없을 듯 합니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://api.flutter.dev/"
+target="_blank" rel="noopener noreferrer nofollow"
+>Flutter Docs&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://www.youtube.com/@flutterdev/videos"
+target="_blank" rel="noopener noreferrer nofollow"
+>Youtube Flutter Channel&lt;/a
+>&lt;/li>
+&lt;/ul>
+&lt;h3 id="installation" class="flex items-center gap-3">Installation &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Installation" href="#installation"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>brew로 flutter를 설치해줍시다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
-&lt;span class="sr-only">Language:&lt;/span>txt
+&lt;span class="sr-only">Language:&lt;/span>bash
 &lt;/small>
-&lt;pre>&lt;code class="hljs language-txt">lib/
-├── models/
-│ └── book.dart
-├── screens/
-│ ├── home.dart
-│ ├── like.dart
-│ ├── search.dart
-│ └── webview.dart
-├── services/
-│ └── book.dart
-├── widgets/
-│ └── book_tile.dart
-└── main.dart&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="hljs language-bash">$ brew install --cask flutter&lt;/code>&lt;/pre>
 &lt;/div>
+&lt;p>설치 후 &lt;code>flutter&lt;/code> 명령어를 사용할 수 있습니다. &lt;code>doctor&lt;/code> 명령어로 정상적으로 설치됐는지 확인할 수 있습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>bash
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-bash">$ flutter doctor -v
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.10.5, on macOS 13.4.1 22F82 darwin-arm64, locale en-KR)
+[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+✗ cmdline-tools component is missing
+Run `path/to/sdkmanager --install &amp;#34;cmdline-tools;latest&amp;#34;`
+See https://developer.android.com/studio/command-line for more details.
+✗ Android license status unknown.
+Run `flutter doctor --android-licenses` to accept the SDK licenses.
+See https://flutter.dev/docs/get-started/install/macos#android-setup for more details.
+[✓] Xcode - develop for iOS and macOS (Xcode 14.3.1)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2022.2)
+[✓] VS Code (version 1.79.2)
+[✓] Connected device (2 available)
+[✓] Network resources
+! Doctor found issues in 1 category.&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>문제없이 실행하기 위해 필요한 도구 중 없는 것을 알려줍니다. 구글에서 제작한 flutter에서 vscode 설치 여부를 확인하고 있는게 좀 당황스럽긴 하지만 그만큼 vscode를 대신할만한 에디터가 없다는거겠죠.&lt;/p>
+&lt;p>Android에서 문제가 발생했지만 노트북 용량이 부족하니 그냥 넘어가줍니다.&lt;/p>
+&lt;p>VSCode에서는 다음 두 가지 Extension을 설치합니다. Flutter extension을 설치하면 dart는 알아서 설치됩니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code"
+target="_blank" rel="noopener noreferrer nofollow"
+>Dart-Code.dart-code&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter"
+target="_blank" rel="noopener noreferrer nofollow"
+>Dart-Code.flutter&lt;/a
+>&lt;/li>
+&lt;/ul>
+&lt;p>Command Palette를 열고 &lt;code>Dart: Use Recommended Settings&lt;/code> 명령어를 수행합니다. 추천하는 다트 설정을 vscode 전역 설정에 추가되는데 전 그게 싫어서 Workspace에 &lt;code>.vscode/settings.json&lt;/code> 생성 후 옮겼습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>bash
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-bash">$ flutter create hello_flutter --empty
+$ cd hello_flutter &amp;amp;&amp;amp; code .&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>위 명령어로 프로젝트를 생성한 뒤 flutter 프로젝트를 시작합니다.&lt;/p>
+&lt;h3 id="practice" class="flex items-center gap-3">Practice &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Practice" href="#practice"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>Flutter는 Widget이라고 불리는 가장 작은 단위의 모듈이 겹겹이 쌓여 전체 프로젝트를 구성합니다. 이를 위젯 트리라 부릅니다.&lt;/p>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://docs.flutter.dev/ui/widgets"
+target="_blank" rel="noopener noreferrer nofollow"
+>Widget Catalog&lt;/a
+>에서 다양한 위젯을 제공합니다. &lt;a
+class="underline-lsre"
+href="https://docs.flutter.dev/ui/widgets/cupertino"
+target="_blank" rel="noopener noreferrer nofollow"
+>iOS 스타일의 Cupertino 위젯&lt;/a
+>과 &lt;a
+class="underline-lsre"
+href="https://docs.flutter.dev/ui/widgets/material"
+target="_blank" rel="noopener noreferrer nofollow"
+>Android 스타일의 위젯&lt;/a
+>을 활용하면 쉽게 네이티브 스타일을 구현할 수 있습니다.&lt;/p>
+&lt;p>Command Palette에서 &lt;code>Flutter: Launch Emulator&lt;/code> 명령을 실행하여 에뮬레이터의 실행을 마친 뒤, &lt;code>lib/main.dart&lt;/code> 파일을 열고 &lt;code>main&lt;/code> 함수 상단에 &lt;code>Run&lt;/code>을 클릭하여 프로젝트를 실행합니다.&lt;/p>
+&lt;p>첫 주차에선 다양한 위젯을 활용하여 로그인 페이지와 간단한 영화 리스트 페이지를 작성했습니다.&lt;/p>
+&lt;h4 id="simple-login-page" class="flex items-center gap-3">Simple Login Page &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Simple Login Page" href="#simple-login-page"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=9b26d4ef17f9b7df5f125ccd9f3b976a&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
+&lt;ul>
+&lt;li>사용자가 입력하기 위해 입력폼을 클릭했을 때 올라오는 키보드에 입력폼이 가려지는 문제가 있습니다. &lt;code>ListView&lt;/code>와 같이 scrollable한 위젯에선 발생하지 않는 문제지만 스크롤이 없을 때 발생합니다. 스크롤이 없는 단일 페이지에서 해당 문제가 발생할 시 &lt;code>SingleChildScrollView&lt;/code> 위젯을 사용해야 합니다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="simple-movie-list" class="flex items-center gap-3">Simple Movie List &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Simple Movie List" href="#simple-movie-list"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=a92d7ac36eae072383b19b8438df0a15&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
+&lt;ul>
+&lt;li>&lt;code>ListView.builder&lt;/code> 위젯으로 리스트를 그릴 수 있습니다. &lt;code>ListView&lt;/code>를 &lt;code>Column&lt;/code>가 내부에서 사용할 때 &lt;code>Vertical viewport was given unbounded height.&lt;/code> 에러가 발생할 수 있는데, &lt;code>ListView&lt;/code>가 항상 최대 공간을 차지하려는 성질이 있어 높이가 무한대로 계산되는 문제가 발생하기 때문입니다. &lt;code>Expanded&lt;/code> 위젯으로 감싸서 문제를 해결할 수 있습니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="2023년-06월-28일" class="flex items-center gap-3">2023년 06월 28일 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="2023년 06월 28일" href="#2023%eb%85%84-06%ec%9b%94-28%ec%9d%bc"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>오늘은 간단하게 StatelessWidget과 StatefulWidget 그리고 Navigation에 대해 학습했습니다. (이번이 2주차 내용입니다.)&lt;/p>
+&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=88bf678d41cdd472009b50585f45304b&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
+&lt;h3 id="statelesswidget-vs-statefulwidget" class="flex items-center gap-3">StatelessWidget vs. StatefulWidget &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="StatelessWidget vs. StatefulWidget" href="#statelesswidget-vs-statefulwidget"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;ul>
+&lt;li>StatelessWidget: 상태가 없는 위젯으로 처음에 한번만 &lt;code>build&lt;/code>를 호출합니다.&lt;/li>
+&lt;li>StatefulWidget: 상태를 가진 위젯으로 상태가 변경될 때마다 &lt;code>build&lt;/code> 메서드를 호출하여 다시 그립니다.&lt;/li>
+&lt;/ul>
+&lt;p>위 두 위젯은 보통 상속하여 &lt;code>build&lt;/code> 메서드를 override하는 방식으로 사용합니다. StatefulWidget은 State를 변경하는 클래스가 별도로 필요합니다.&lt;/p>
+&lt;h3 id="navigation" class="flex items-center gap-3">Navigation &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Navigation" href="#navigation"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>Navigation은 Route라고 불리는 페이지를 전환하는 것을 의미하고 &lt;code>Navigator&lt;/code> 위젯으로 수행합니다. &lt;code>push&lt;/code>로 페이지를 이동하고 &lt;code>pop&lt;/code>으로 이전 페이지로 이동할 수 있습니다.&lt;/p>
+&lt;h3 id="당근마켓daangn-앱-클론" class="flex items-center gap-3">당근마켓(Daangn) 앱 클론 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="당근마켓(Daangn) 앱 클론" href="#%eb%8b%b9%ea%b7%bc%eb%a7%88%ec%bc%93daangn-%ec%95%b1-%ed%81%b4%eb%a1%a0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=2eef886fac601cbee5bceebdd320a255&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
+&lt;p>Stateful한 Feed 위젯을 구현해보았고, 파일을 분리하여 작성해보았습니다. (dartpad는 파일 분리를 지원하지 않아 main.dart에 전부 있습니다&amp;hellip;. &lt;a
+class="underline-lsre"
+href="https://github.com/dart-lang/dart-pad/issues/2149"
+target="_blank" rel="noopener noreferrer nofollow"
+>22년도에 올라온 이슈인데...&lt;/a
+>)&lt;/p>
+&lt;p>여기서 놀랐던 점은 &lt;code>ListView.builder&lt;/code>에 &lt;code>itemCount&lt;/code>를 명시하지 않으면 리스트 요소를 무한히 만들어낸다는 점입니다. 예전에 Recycle Scrolling을 구현하면서 겪은 제한으로는 적어도 요소의 최소 크기가 결정되어 있어야 하고, 요소의 개수를 어느정도 알고 있어야 했는데 그런거 없이 무한정 그려낼 수 있다는 점이 놀라웠습니다.&lt;/p>
+&lt;p>&lt;a
+class="underline-lsre"
+href="https://docs.flutter.dev/get-started/flutter-for/android-devs#how-do-i-update-listviews-dynamically"
+target="_blank" rel="noopener noreferrer nofollow"
+>해당 문서&lt;/a
+>에서 &lt;code>ListView&lt;/code> 자체가 내부적으로 요소를 재활용(recycle)하는 동작으로 수행됨을 알 수 있습니다.&lt;/p>
+&lt;blockquote>
+&lt;p>The recommended, efficient, and effective way to build a list uses a ListView.Builder. This method is great when you have a dynamic List or a List with very large amounts of data. This is essentially the equivalent of RecyclerView on Android, which automatically recycles list elements for you&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="샤잠shazam-앱-클론" class="flex items-center gap-3">샤잠(Shazam) 앱 클론 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="샤잠(Shazam) 앱 클론" href="#%ec%83%a4%ec%9e%a0shazam-%ec%95%b1-%ed%81%b4%eb%a1%a0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=252f87e790119799f8be13d1c7875a6d&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
+&lt;p>사실 과제는 페이지 세 개 중 하나를 택해 수행하는 건데 그까이꺼 전부 클론해봤습니다. 리팩토링이 필요한 부분이 굉장히 많아보이긴 하지만&amp;hellip; 항상 언젠가 한다는 마음가짐으로&amp;hellip;&lt;/p>
+&lt;p>탭 생성 및 이동 방법에 대해서 알게 되었고, 많고 많은 삽질을 하며 스크롤 요소를 어디에 어떻게 배치해야하는지 요령을 습득했습니다.&lt;/p>
+&lt;p>가장 난해했던 부분&amp;hellip; overflow&amp;hellip; Scrollable하지 않은 페이지에서 요소가 화면을 벗어나면 &lt;code>A ListView A RenderFlex overflowed by &amp;lt;number&amp;gt; pixels on the bottom.&lt;/code> 에러가 발생합니다. Scrollable하게 만들어주기 위해 &lt;code>SingleChildScrollView&lt;/code>를 이용하거나 &lt;code>ListView&lt;/code>로 감싸줘야하고, &lt;code>Expanded&lt;/code>로 감싸야합니다.&lt;/p>
 &lt;hr>
 &lt;h2 id="2023년-06월-29일" class="flex items-center gap-3">2023년 06월 29일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
@@ -1556,9 +1936,9 @@ target="_blank" rel="noopener noreferrer nofollow"
 &lt;/ul>
 &lt;p>전반으로 리액트나 뷰와 비슷한 느낌이라 기능 구현은 별로 어렵진 않았어서 다트 언어에 더 익숙해질 수 있는 시간이었네요.&lt;/p>
 &lt;hr>
-&lt;h2 id="2023년-06월-28일" class="flex items-center gap-3">2023년 06월 28일 &lt;i
+&lt;h2 id="2023년-06월-30일" class="flex items-center gap-3">2023년 06월 30일 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="2023년 06월 28일" href="#2023%eb%85%84-06%ec%9b%94-28%ec%9d%bc"
+>&lt;a title="2023년 06월 30일" href="#2023%eb%85%84-06%ec%9b%94-30%ec%9d%bc"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1569,11 +1949,10 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h2>&lt;p>오늘은 간단하게 StatelessWidget과 StatefulWidget 그리고 Navigation에 대해 학습했습니다. (이번이 2주차 내용입니다.)&lt;/p>
-&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=88bf678d41cdd472009b50585f45304b&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
-&lt;h3 id="statelesswidget-vs-statefulwidget" class="flex items-center gap-3">StatelessWidget vs. StatefulWidget &lt;i
+>&lt;/h2>&lt;p>5주차 강의는 HTTP API 요청 방법을 익혔습니다. 다음주는 광고 붙이는건데&amp;hellip; 이번이 마지막일 듯 하네요.&lt;/p>
+&lt;h3 id="requesting-network-data" class="flex items-center gap-3">Requesting Network Data &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="StatelessWidget vs. StatefulWidget" href="#statelesswidget-vs-statefulwidget"
+>&lt;a title="Requesting Network Data" href="#requesting-network-data"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1584,214 +1963,123 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;ul>
-&lt;li>StatelessWidget: 상태가 없는 위젯으로 처음에 한번만 &lt;code>build&lt;/code>를 호출합니다.&lt;/li>
-&lt;li>StatefulWidget: 상태를 가진 위젯으로 상태가 변경될 때마다 &lt;code>build&lt;/code> 메서드를 호출하여 다시 그립니다.&lt;/li>
-&lt;/ul>
-&lt;p>위 두 위젯은 보통 상속하여 &lt;code>build&lt;/code> 메서드를 override하는 방식으로 사용합니다. StatefulWidget은 State를 변경하는 클래스가 별도로 필요합니다.&lt;/p>
-&lt;h3 id="navigation" class="flex items-center gap-3">Navigation &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Navigation" href="#navigation"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;p>Navigation은 Route라고 불리는 페이지를 전환하는 것을 의미하고 &lt;code>Navigator&lt;/code> 위젯으로 수행합니다. &lt;code>push&lt;/code>로 페이지를 이동하고 &lt;code>pop&lt;/code>으로 이전 페이지로 이동할 수 있습니다.&lt;/p>
-&lt;h3 id="당근마켓daangn-앱-클론" class="flex items-center gap-3">당근마켓(Daangn) 앱 클론 &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="당근마켓(Daangn) 앱 클론" href="#%eb%8b%b9%ea%b7%bc%eb%a7%88%ec%bc%93daangn-%ec%95%b1-%ed%81%b4%eb%a1%a0"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=2eef886fac601cbee5bceebdd320a255&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
-&lt;p>Stateful한 Feed 위젯을 구현해보았고, 파일을 분리하여 작성해보았습니다. (dartpad는 파일 분리를 지원하지 않아 main.dart에 전부 있습니다&amp;hellip;. &lt;a
+>&lt;/h3>&lt;p>HttpClient로는 &lt;a
 class="underline-lsre"
-href="https://github.com/dart-lang/dart-pad/issues/2149"
+href="https://pub.dev/packages/dio"
 target="_blank" rel="noopener noreferrer nofollow"
->22년도에 올라온 이슈인데...&lt;/a
->)&lt;/p>
-&lt;p>여기서 놀랐던 점은 &lt;code>ListView.builder&lt;/code>에 &lt;code>itemCount&lt;/code>를 명시하지 않으면 리스트 요소를 무한히 만들어낸다는 점입니다. 예전에 Recycle Scrolling을 구현하면서 겪은 제한으로는 적어도 요소의 최소 크기가 결정되어 있어야 하고, 요소의 개수를 어느정도 알고 있어야 했는데 그런거 없이 무한정 그려낼 수 있다는 점이 놀라웠습니다.&lt;/p>
-&lt;p>&lt;a
-class="underline-lsre"
-href="https://docs.flutter.dev/get-started/flutter-for/android-devs#how-do-i-update-listviews-dynamically"
-target="_blank" rel="noopener noreferrer nofollow"
->해당 문서&lt;/a
->에서 &lt;code>ListView&lt;/code> 자체가 내부적으로 요소를 재활용(recycle)하는 동작으로 수행됨을 알 수 있습니다.&lt;/p>
-&lt;blockquote>
-&lt;p>The recommended, efficient, and effective way to build a list uses a ListView.Builder. This method is great when you have a dynamic List or a List with very large amounts of data. This is essentially the equivalent of RecyclerView on Android, which automatically recycles list elements for you&amp;hellip;&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="샤잠shazam-앱-클론" class="flex items-center gap-3">샤잠(Shazam) 앱 클론 &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="샤잠(Shazam) 앱 클론" href="#%ec%83%a4%ec%9e%a0shazam-%ec%95%b1-%ed%81%b4%eb%a1%a0"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=252f87e790119799f8be13d1c7875a6d&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
-&lt;p>사실 과제는 페이지 세 개 중 하나를 택해 수행하는 건데 그까이꺼 전부 클론해봤습니다. 리팩토링이 필요한 부분이 굉장히 많아보이긴 하지만&amp;hellip; 항상 언젠가 한다는 마음가짐으로&amp;hellip;&lt;/p>
-&lt;p>탭 생성 및 이동 방법에 대해서 알게 되었고, 많고 많은 삽질을 하며 스크롤 요소를 어디에 어떻게 배치해야하는지 요령을 습득했습니다.&lt;/p>
-&lt;p>가장 난해했던 부분&amp;hellip; overflow&amp;hellip; Scrollable하지 않은 페이지에서 요소가 화면을 벗어나면 &lt;code>A ListView A RenderFlex overflowed by &amp;lt;number&amp;gt; pixels on the bottom.&lt;/code> 에러가 발생합니다. Scrollable하게 만들어주기 위해 &lt;code>SingleChildScrollView&lt;/code>를 이용하거나 &lt;code>ListView&lt;/code>로 감싸줘야하고, &lt;code>Expanded&lt;/code>로 감싸야합니다.&lt;/p>
-&lt;hr>
-&lt;h2 id="2023년-06월-27일" class="flex items-center gap-3">2023년 06월 27일 &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="2023년 06월 27일" href="#2023%eb%85%84-06%ec%9b%94-27%ec%9d%bc"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h2>&lt;p>&lt;a
-class="underline-lsre"
-href="https://nbcamp-android-ios-unity.oopy.io/0dc0a70c-49ca-499c-b2df-965a2828cca6"
-target="_blank" rel="noopener noreferrer nofollow"
->내일배움캠프 iOS 과정&lt;/a
->에 앞서 앱 개발 전반의 이해를 위해 Dart와 Flutter를 학습했습니다.&lt;/p>
-&lt;p>지원을 거의 막바지에 하게 되었는데 사전캠프가 이미 진행 도중이었습니다. 다른 분들보다 진도가 느릴까 걱정되었지만, 본 캠프는 9 to 9(&amp;hellip;) 과정이니만큼 사전캠프도 바쁘게 해보고자 최대한 빨리 나가고자 했습니다. (국비 과정이라 하루에 최대 16개만 수강할 수 있는게 아쉽긴 합니다&amp;hellip;)&lt;/p>
-&lt;p>강의는 스파르타코딩클럽의 &lt;a
-class="underline-lsre"
-href="https://spartacodingclub.kr/nb/app"
-target="_blank" rel="noopener noreferrer nofollow"
->[왕초보] 플러터(Flutter)로 시작하는 앱개발 종합반&lt;/a
->으로 진행했습니다.&lt;/p>
-&lt;h3 id="introduction" class="flex items-center gap-3">Introduction &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Introduction" href="#introduction"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;p>Flutter는 크로스 플랫폼 개발을 위한 프레임워크로 Dart라는 언어로 작성합니다. 동일한 역할을 수행하는 React Native와 비교했을 때 등장 시기는 늦지만 등장부터 빠르게 치고 올라가 Github Star 수는 이미 압도적이라 할 수 있습니다.&lt;/p>
-&lt;p>&lt;img src="https://api.star-history.com/svg?repos=flutter/flutter,facebook/react-native&amp;amp;type=Date" alt="Star History Chart">
-&lt;a
-class="underline-lsre"
-href="https://star-history.com/#flutter/flutter&amp;amp;facebook/react-native"
-target="_blank" rel="noopener noreferrer nofollow"
->출처: Github Star History | Flutter vs. React Native&lt;/a
->&lt;/p>
-&lt;p>공식 문서 정리에 유튜브 채널까지&amp;hellip;&lt;br>
-심지어 성능 또한 네이티브 못지않게 빠르다고 하니 Flutter를 써보지 않을 이유가 없을 듯 합니다.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://api.flutter.dev/"
-target="_blank" rel="noopener noreferrer nofollow"
->Flutter Docs&lt;/a
->&lt;/li>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://www.youtube.com/@flutterdev/videos"
-target="_blank" rel="noopener noreferrer nofollow"
->Youtube Flutter Channel&lt;/a
->&lt;/li>
-&lt;/ul>
-&lt;h3 id="installation" class="flex items-center gap-3">Installation &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Installation" href="#installation"
->
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h3>&lt;p>전 brew로 설치 가능하면 전부 brew로 설치하는 편입니다.&lt;/p>
+>dio&lt;/a
+> 패키지를 활용했습니다. &lt;br>
+책 정보를 불러올 수 있는 Google API를 활용하여 Watcha Pedia 서비스를 구현했습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
-&lt;span class="sr-only">Language:&lt;/span>bash
+&lt;span class="sr-only">Language:&lt;/span>dart
 &lt;/small>
-&lt;pre>&lt;code class="hljs language-bash">$ brew install --cask flutter&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="hljs language-dart">// main.dart
+void main() async {
+late SharedPreferences pref;
+if (!kIsWeb) {
+WidgetsFlutterBinding.ensureInitialized();
+pref = await SharedPreferences.getInstance();
+}
+runApp(MultiProvider(
+providers: [
+ChangeNotifierProvider(
+create: (_) =&amp;gt; BookService(
+get: &amp;lt;T&amp;gt;(String query) async {
+String url =
+&amp;#39;https://www.googleapis.com/books/v1/volumes?q=$query&amp;amp;startIndex=0&amp;amp;maxResults=40&amp;#39;;
+Response res = await Dio().get(url);
+if (res.statusCode != 200) {
+throw Exception(&amp;#39;http.get error: statusCode= ${res.statusCode}&amp;#39;);
+}
+return res.data[&amp;#39;items&amp;#39;];
+},
+save: (String payload) =&amp;gt; pref.setString(&amp;#39;likedBooks&amp;#39;, payload),
+load: () =&amp;gt; pref.getString(&amp;#39;likedBooks&amp;#39;),
+),
+),
+],
+child: const MainApp(),
+));
+}&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>설치 후 &lt;code>flutter&lt;/code> 명령어를 사용할 수 있습니다. &lt;code>doctor&lt;/code> 명령어로 정상적으로 설치됐는지 확인할 수 있습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
-&lt;span class="sr-only">Language:&lt;/span>bash
+&lt;span class="sr-only">Language:&lt;/span>dart
 &lt;/small>
-&lt;pre>&lt;code class="hljs language-bash">$ flutter doctor -v
-Doctor summary (to see all details, run flutter doctor -v):
-[✓] Flutter (Channel stable, 3.10.5, on macOS 13.4.1 22F82 darwin-arm64, locale en-KR)
-[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
-✗ cmdline-tools component is missing
-Run `path/to/sdkmanager --install &amp;#34;cmdline-tools;latest&amp;#34;`
-See https://developer.android.com/studio/command-line for more details.
-✗ Android license status unknown.
-Run `flutter doctor --android-licenses` to accept the SDK licenses.
-See https://flutter.dev/docs/get-started/install/macos#android-setup for more details.
-[✓] Xcode - develop for iOS and macOS (Xcode 14.3.1)
-[✓] Chrome - develop for the web
-[✓] Android Studio (version 2022.2)
-[✓] VS Code (version 1.79.2)
-[✓] Connected device (2 available)
-[✓] Network resources
-! Doctor found issues in 1 category.&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="hljs language-dart">// services/book.dart
+final Future&amp;lt;T&amp;gt; Function&amp;lt;T&amp;gt;(String url) get;
+final FutureOr Function(String payload)? save;
+final FutureOr Function()? load;
+BookService({required this.get, this.save, this.load}) {
+_load().then((_) =&amp;gt; notifyListeners());
+}&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>문제없이 실행하기 위해 필요한 도구 중 없는 것을 알려줍니다. 구글에서 제작한 flutter에서 vscode 설치 여부를 확인하고 있는게 좀 당황스럽긴 하지만 그만큼 vscode를 대신할만한 에디터가 없다는거겠죠.&lt;/p>
-&lt;p>Android에서 문제가 발생했지만 노트북 용량이 부족하니 그냥 넘어가줍니다.&lt;/p>
-&lt;p>VSCode에서는 다음 두 가지 Extension을 설치합니다. Flutter extension을 설치하면 dart는 알아서 설치됩니다.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code"
-target="_blank" rel="noopener noreferrer nofollow"
->Dart-Code.dart-code&lt;/a
->&lt;/li>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter"
-target="_blank" rel="noopener noreferrer nofollow"
->Dart-Code.flutter&lt;/a
->&lt;/li>
-&lt;/ul>
-&lt;p>Command Palette를 열고 &lt;code>Dart: Use Recommended Settings&lt;/code> 명령어를 수행합니다. 추천하는 다트 설정을 vscode 전역 설정에 추가되는데 전 그게 싫어서 Workspace에 &lt;code>.vscode/settings.json&lt;/code> 생성 후 옮겼습니다.&lt;/p>
+&lt;p>&lt;code>BookService&lt;/code> 클래스에서 책 정보를 가져오는 함수(&lt;code>get&lt;/code>)와 정보를 저장(&lt;code>save&lt;/code>)하고 불러오는(&lt;code>load&lt;/code>) 함수를 주입할 수 있도록 구현했습니다.&lt;/p>
+&lt;h3 id="webview-page" class="flex items-center gap-3">WebView Page &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="WebView Page" href="#webview-page"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>앱 상에서 외부 웹 링크 페이지를 띄우기 위해선 &lt;code>webview_flutter&lt;/code> 패키지를 사용해야 합니다. &lt;br>
+책 목록에서 책을 클릭하면 해당 책의 정보를 보여주는 페이지를 띄웁니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
-&lt;span class="sr-only">Language:&lt;/span>bash
+&lt;span class="sr-only">Language:&lt;/span>dart
 &lt;/small>
-&lt;pre>&lt;code class="hljs language-bash">$ flutter create hello_flutter --empty
-$ cd hello_flutter &amp;amp;&amp;amp; code .&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="hljs language-dart">// screens/webview.dart
+class WebViewScreen extends StatelessWidget {
+WebViewScreen({
+super.key,
+required this.url,
+});
+String url;
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(
+backgroundColor: Colors.grey,
+title: Text(url),
+),
+body: WebView(initialUrl: url),
+);
+}
+}&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>위 명령어로 프로젝트를 생성한 뒤 flutter 프로젝트를 시작합니다.&lt;/p>
-&lt;h3 id="practice" class="flex items-center gap-3">Practice &lt;i
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>dart
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-dart">// widgets/book_tile.dart
+onTap: () {
+Navigator.push(
+context,
+MaterialPageRoute(
+builder: (_) =&amp;gt; WebViewScreen(
+url: book.previewLink.replaceFirst(&amp;#39;http:&amp;#39;, &amp;#39;https:&amp;#39;)),
+),
+);
+},&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h3 id="watcha-pedia" class="flex items-center gap-3">Watcha Pedia &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Practice" href="#practice"
+>&lt;a title="Watcha Pedia" href="#watcha-pedia"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1802,28 +2090,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>Flutter는 Widget이라고 불리는 가장 작은 단위의 모듈이 겹겹이 쌓여 전체 프로젝트를 구성합니다. 이를 위젯 트리라 부릅니다.&lt;/p>
-&lt;p>&lt;a
-class="underline-lsre"
-href="https://docs.flutter.dev/ui/widgets"
-target="_blank" rel="noopener noreferrer nofollow"
->Widget Catalog&lt;/a
->에서 다양한 위젯을 제공합니다. &lt;a
-class="underline-lsre"
-href="https://docs.flutter.dev/ui/widgets/cupertino"
-target="_blank" rel="noopener noreferrer nofollow"
->iOS 스타일의 Cupertino 위젯&lt;/a
->과 &lt;a
-class="underline-lsre"
-href="https://docs.flutter.dev/ui/widgets/material"
-target="_blank" rel="noopener noreferrer nofollow"
->Android 스타일의 위젯&lt;/a
->을 활용하면 쉽게 네이티브 스타일을 구현할 수 있습니다.&lt;/p>
-&lt;p>Command Palette에서 &lt;code>Flutter: Launch Emulator&lt;/code> 명령을 실행하여 에뮬레이터의 실행을 마친 뒤, &lt;code>lib/main.dart&lt;/code> 파일을 열고 &lt;code>main&lt;/code> 함수 상단에 &lt;code>Run&lt;/code>을 클릭하여 프로젝트를 실행합니다.&lt;/p>
-&lt;p>첫 주차에선 다양한 위젯을 활용하여 로그인 페이지와 간단한 영화 리스트 페이지를 작성했습니다.&lt;/p>
-&lt;h4 id="simple-login-page" class="flex items-center gap-3">Simple Login Page &lt;i
+>&lt;/h3>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=7a51cd7685929c94d82ca0b707f69516&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
+&lt;p>| Dartpad에서 &lt;code>Image.network&lt;/code> 불러오기가 안 되는 문제가 있습니다. &lt;br>
+| &lt;code>dio&lt;/code>가 동작하지 않아, &lt;code>http&lt;/code> 모듈로 대체했습니다. &lt;br>
+| webview가 동작하지 않습니다.&lt;/p>
+&lt;h3 id="project-structure" class="flex items-center gap-3">Project Structure &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Simple Login Page" href="#simple-login-page"
+>&lt;a title="Project Structure" href="#project-structure"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1834,24 +2107,30 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=9b26d4ef17f9b7df5f125ccd9f3b976a&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
+>&lt;/h3>&lt;p>Dartpad에서는 확인할 수 없지만, 프로젝트 구조에 대해 고민해보았습니다.&lt;/p>
 &lt;ul>
-&lt;li>사용자가 입력하기 위해 입력폼을 클릭했을 때 올라오는 키보드에 입력폼이 가려지는 문제가 있습니다. &lt;code>ListView&lt;/code>와 같이 scrollable한 위젯에선 발생하지 않는 문제지만 스크롤이 없을 때 발생합니다. 스크롤이 없는 단일 페이지에서 해당 문제가 발생할 시 &lt;code>SingleChildScrollView&lt;/code> 위젯을 사용해야 합니다.&lt;/li>
+&lt;li>screens: 화면&lt;/li>
+&lt;li>models: 데이터 모델 (자료구조)&lt;/li>
+&lt;li>services: 서비스 (비즈니스 로직)&lt;/li>
+&lt;li>widgets: 위젯 (컴포넌트)&lt;/li>
 &lt;/ul>
-&lt;h4 id="simple-movie-list" class="flex items-center gap-3">Simple Movie List &lt;i
-class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Simple Movie List" href="#simple-movie-list"
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
-&lt;i class="">
-&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-&lt;path
-d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
-/>
-&lt;/svg>
-&lt;/i>
-&lt;/a
->&lt;/i
->&lt;/h4>&lt;iframe src="https://dartpad.dev/embed-flutter.html?id=a92d7ac36eae072383b19b8438df0a15&amp;split=60&amp;theme=dark" style="width:100%; height: 500px;">&lt;/iframe>
-&lt;ul>
-&lt;li>&lt;code>ListView.builder&lt;/code> 위젯으로 리스트를 그릴 수 있습니다. &lt;code>ListView&lt;/code>를 &lt;code>Column&lt;/code>가 내부에서 사용할 때 &lt;code>Vertical viewport was given unbounded height.&lt;/code> 에러가 발생할 수 있는데, &lt;code>ListView&lt;/code>가 항상 최대 공간을 차지하려는 성질이 있어 높이가 무한대로 계산되는 문제가 발생하기 때문입니다. &lt;code>Expanded&lt;/code> 위젯으로 감싸서 문제를 해결할 수 있습니다.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;span class="sr-only">Language:&lt;/span>txt
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-txt">lib/
+├── models/
+│ └── book.dart
+├── screens/
+│ ├── home.dart
+│ ├── like.dart
+│ ├── search.dart
+│ └── webview.dart
+├── services/
+│ └── book.dart
+├── widgets/
+│ └── book_tile.dart
+└── main.dart&lt;/code>&lt;/pre>
+&lt;/div></description></item></channel></rss>
