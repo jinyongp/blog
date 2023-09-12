@@ -1,16 +1,19 @@
 {{ define "main" }}
   <div class="layout">
     <header class="text-center">
-      <h1 class="relative mt-16 mb-12 flex justify-center">
+      <h1 class="relative mt-16 mb-12 flex justify-center items-center gap-2">
         {{ with .Params.repo }}
           <i
-            class="absolute translate-y-[-1.25em] text-base md:text-lg hover:text-accent"
+            class="absolute translate-y-[-1.8em] text-base md:text-lg hover:text-accent"
           >
             {{ $icon := partial "svg" (dict "name" "github-alt") }}
             {{ partial "link/external" (dict "title" "View on GitHub Repository" "link" . "content" $icon) }}
           </i>
         {{ end }}
         {{ .Title }}
+        {{ if and .Draft (not hugo.IsProduction) }}
+          {{ partial "svg" (dict "name" "person-digging" "class" "text-[0.8em] text-red-500") }}
+        {{ end }}
       </h1>
       <div class="flex justify-between items-center">
         <div>{{ partial "tags" . }}</div>
@@ -21,7 +24,7 @@
 
     {{ partial "series" . }}
 
-    {{ if .Draft }}
+    {{ if and .Draft hugo.IsProduction }}
       {{ partialCached "draft" . }}
     {{ else }}
       <article class="content">{{ .Content }}</article>
