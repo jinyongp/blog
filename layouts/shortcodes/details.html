@@ -1,0 +1,16 @@
+<details class="rounded group my-2">
+  <summary
+    class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+  >
+    {{ (.Get 0) | markdownify }}
+    <span
+      class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+    ></span>
+  </summary>
+  <div class="border-y">
+    <p>{{ .Inner | markdownify }}</p>
+  </div>
+  <div class="peer-hover:text-accent text-xs text-right text-slate-500">
+    {{ (.Get 0) | markdownify }}
+  </div>
+</details>
