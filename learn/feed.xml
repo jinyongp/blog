@@ -1,26 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learns on jinyongp.dev</title><link>https://jinyongp.dev/learn/</link><description>Recent content in Learns on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/learn/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 심화 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description/></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
-&lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. 그렇기에 과제 요구조건에 부합하는 최소한의 UI와 기능을 개발하기로 했습니다.&lt;/p>
-&lt;p>아무래도 팀 과제이고 팀원 개개인의 역량이 모두 다르다보니 갑자기 어려운 내용을 진행하게 되면 따라오지 못하는 팀원이 있어 걱정이 들었습니다. 팀 프로젝트를 수행하기 전 2주 간 개인 프로젝트를 진행하면서 팀원들의 역량을 잘 측정했다고 생각했는데, 제가 기대하던 것보다도 더 어려움을 겪고 있는 팀원이 있어 역할을 분배하는데 있어 어려움을 겪었습니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
-&lt;p>기본으로 제공되는 강의도 있었지만 프로젝트를 진행하기에 내용이 그리 충분치 않았기에 별도의 강의를 수강하면서 과제를 수행하였습니다. &lt;a
-class="underline-lsre"
-href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8"
-target="_blank" rel="noopener noreferrer nofollow"
->앨런 Swift 문법 마스터 스쿨&lt;/a
-> 과정을 어느 정도 수강하면 무료로 제공해주는 &lt;a
-class="underline-lsre"
-href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8-%ec%95%b1%eb%a7%8c%eb%93%a4%ea%b8%b0"
-target="_blank" rel="noopener noreferrer nofollow"
->15개 앱을 만들면서 근본원리부터 배우는 UIKit&lt;/a
-> 강의를 병행하였습니다. 프로젝트의 요구 조건을 충족하기 위해 필요한 몇몇 지식을 습득했습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learns on jinyongp.dev</title><link>https://jinyongp.dev/learn/</link><description>Recent content in Learns on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/learn/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 숙련 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description>&lt;p>2023년 8월 22일부터 9월 1일까지 UIKit 숙련 과정 개인 과제를 진행했습니다.&lt;/p>
+&lt;p>UIKit의 몇 가지 심화 내용을 학습하고 저번에 작성했던 입문 과제에서 작성했던 To-Do App을 개선하는 과제였습니다.&lt;/p>
+&lt;p>이번 프로젝트의 목표는 아래와 같습니다.&lt;/p>
 &lt;ul>
-&lt;li>UIKit의 기본적인 구조와 사용법&lt;/li>
-&lt;li>리스트를 표시하는 방법 (UITableView)&lt;/li>
-&lt;li>페이지 간 이동 및 데이터 전달 방법 (Segue)&lt;/li>
-&lt;li>Alert 표시 및 사용자로부터 입력 받는 방법 (UIAlertController)&lt;/li>
+&lt;li>URLSession을 활용하여 네트워크 통신으로 데이터를 불러옵니다.&lt;/li>
+&lt;li>MVC 아키텍처를 이해하고 적용합니다.&lt;/li>
+&lt;li>iOS 앱과 UIViewController의 Lifecycle을 이해합니다.&lt;/li>
+&lt;li>UserDefaults를 활용하여 데이터를 저장하고 불러옵니다.&lt;/li>
+&lt;li>Dependency, 라이브러리, 프레임워크, 모듈에 대해 이해합니다.&lt;/li>
+&lt;li>SPM을 사용하여 프로젝트의 의존성 관리를 할 수 있습니다.&lt;/li>
 &lt;/ul>
-&lt;h3 id="project-structure" class="flex items-center gap-3">Project Structure &lt;i
+&lt;p>특히나, MVC 아키텍처를 적용하며 많은 고민을 해봤습니다. 어떻게 하면 각 역할에 맞게 코드를 잘 분리하고 데이터나 이벤트 흐름을 관리할 수 있을지 고민하면서 작성했습니다.&lt;/p>
+&lt;p>&lt;strong>결과 미리보기&lt;/strong>&lt;/p>
+&lt;div class="grid" style="grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.5rem;">
+&lt;img class="mx-auto" alt="Empty Home Screen" src="https://jinyongp.dev/image/learn/nbcamp/7/empty-home.png" />
+&lt;img class="mx-auto" alt="Home Menu" src="https://jinyongp.dev/image/learn/nbcamp/7/home-menu.png" />
+&lt;img class="mx-auto" alt="Create New Task" src="https://jinyongp.dev/image/learn/nbcamp/7/create-new-task.png" />
+&lt;img class="mx-auto" alt="Color Picker" src="https://jinyongp.dev/image/learn/nbcamp/7/color-picker.png" />
+&lt;img class="mx-auto" alt="Collection View" src="https://jinyongp.dev/image/learn/nbcamp/7/collection-view.png" />
+&lt;img class="mx-auto" alt="Detail Tasks" src="https://jinyongp.dev/image/learn/nbcamp/7/detail-tasks.png" />
+&lt;img class="mx-auto" alt="List View" src="https://jinyongp.dev/image/learn/nbcamp/7/list-view.png" />
+&lt;img class="mx-auto" alt="Delete Group" src="https://jinyongp.dev/image/learn/nbcamp/7/delete-group.png" />
+&lt;/div>
+&lt;hr>
+&lt;h2 id="프로젝트-구조" class="flex items-center gap-3">프로젝트 구조 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Project Structure" href="#project-structure"
+>&lt;a title="프로젝트 구조" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -31,7 +35,593 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+>&lt;/h2>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>plaintext
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-plaintext">ToDoList/
+├── Resources/
+├── Models/
+├── ViewModels/
+├── Services/
+├── Views/
+│ ├── EditTaskGroup/
+│ ├── Shared/
+│ ├── TaskGroup/
+│ ├── TaskTable/
+│ ├── Identifier.swift
+│ └── RootView.swift
+├── Controllers/
+├── Utilities/
+└── Info.plist&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h2 id="프로젝트-구현" class="flex items-center gap-3">프로젝트 구현 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="프로젝트 구현" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ed%98%84"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;h3 id="제공하는-기능" class="flex items-center gap-3">제공하는 기능 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="제공하는 기능" href="#%ec%a0%9c%ea%b3%b5%ed%95%98%eb%8a%94-%ea%b8%b0%eb%8a%a5"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;ul>
+&lt;li>할 일 그룹 생성/변경/삭제&lt;/li>
+&lt;li>할 일 생성/변경/삭제&lt;/li>
+&lt;li>할 일 순서 변경&lt;/li>
+&lt;li>할 일 그룹 진행률 표시 (원형 진행바, 애니메이션 적용)&lt;/li>
+&lt;li>할 일 그룹 별 랜덤 이미지 설정 (The Dog/Cat API)&lt;/li>
+&lt;li>할 일 그룹 별 색상 설정&lt;/li>
+&lt;li>CollectionView / TableView 제공&lt;/li>
+&lt;li>Color Theme 대응 (Light/Dark)&lt;/li>
+&lt;/ul>
+&lt;h3 id="mvc-architecture" class="flex items-center gap-3">MVC Architecture &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="MVC Architecture" href="#mvc-architecture"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>해당 프로젝트는 Model - View - Controller 패턴을 적용하여 구현했습니다.&lt;/p>
+&lt;h4 id="model" class="flex items-center gap-3">Model &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Model" href="#model"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;ul>
+&lt;li>자료구조 및 클래스를 가지고 있는 Model과 ViewModel, 그리고 비즈니스 로직을 가진 Service입니다.&lt;/li>
+&lt;li>Models: &lt;code>Codable&lt;/code> 프로토콜을 채택한 자료구조를 가집니다. Storage에서 데이터를 불러오고 내보내기 위해 사용합니다.&lt;/li>
+&lt;li>ViewModels: Model의 데이터를 가공하여 View에게 전달합니다.
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="#publishable"
+>&lt;code>Publishable&lt;/code>&lt;/a
+>을 적용하여 구독자에게 변경사항을 알립니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Services: 비즈니스 로직을 담당합니다.
+&lt;ul>
+&lt;li>APIService: 네트워크 관련 로직을 담당합니다.&lt;/li>
+&lt;li>TaskService: &lt;code>ViewModels&lt;/code> 데이터를 관리합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="view" class="flex items-center gap-3">View &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="View" href="#view"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;ul>
+&lt;li>View는 사용자에게 보여지는 UI를 구성합니다.&lt;/li>
+&lt;li>&lt;code>RootView&lt;/code>
+&lt;ul>
+&lt;li>Controller와 1:1 관계로 연결되는 View입니다. &lt;code>TypedViewController&lt;/code>에게 전달됩니다.&lt;/li>
+&lt;li>프로토콜로서 &lt;code>initializeUI()&lt;/code>를 필수로 구현해야 합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>그 외 View는 &lt;code>RootView&lt;/code>에서 사용하는 하위 View입니다.&lt;/li>
+&lt;li>Model의 변경사항을 구독하고 있으며, 구독 중인 속성이 변경되면 UI를 변경합니다. (&lt;a
+class="underline-lsre"
+href="#publishable"
+>&lt;code>Publishable&lt;/code>&lt;/a
+>)&lt;/li>
+&lt;li>특정 이벤트가 발생하면 Controller에게 이를 알립니다. (&lt;a
+class="underline-lsre"
+href="#eventbus"
+>&lt;code>EventBus&lt;/code>&lt;/a
+>)&lt;/li>
+&lt;/ul>
+&lt;h4 id="controller" class="flex items-center gap-3">Controller &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Controller" href="#controller"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;ul>
+&lt;li>Controller는 View를 생성하고 연결합니다. 연결된 View는 &lt;code>typedView&lt;/code> 속성을 통해 접근할 수 있습니다.&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="#eventbus"
+>&lt;code>EventBus&lt;/code>&lt;/a
+>에 View에서 발생하는 모든 이벤트를 등록합니다. (&lt;code>ViewControllerEvents&lt;/code>, &lt;code>RootViewController&lt;/code>)&lt;/li>
+&lt;li>등록된 이벤트가 발생했을 때 Model에게 데이터 변경을 요청할 수 있습니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="scenarios" class="flex items-center gap-3">Scenarios &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Scenarios" href="#scenarios"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;h4 id="사용자가-앱을-접속했을-때" class="flex items-center gap-3">사용자가 앱을 접속했을 때 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="사용자가 앱을 접속했을 때" href="#%ec%82%ac%ec%9a%a9%ec%9e%90%ea%b0%80-%ec%95%b1%ec%9d%84-%ec%a0%91%ec%86%8d%ed%96%88%ec%9d%84-%eb%95%8c"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;pre class="mermaid">---
+title: MVC Architecture Sequence Diagram
+---
+sequenceDiagram
+participant User
+participant Controller
+participant View
+participant Model
+participant Storage
+Note over Model: Publishable
+autonumber
+User->>Controller: Open app &amp; Request UI
+Controller->>View: Create &amp; Connect (1:1 Relationship)
+View->>Model: Subscribe data changes
+Storage-->>Model: Load data (if exists)
+Controller->>+Model: Request data
+Model->>Model: Processing (to cause changes)
+Model-->>-View: Publish data
+View->>Controller: Build UI
+Controller->>User: Display
+&lt;/pre>
+&lt;ol>
+&lt;li>User가 앱을 실행하고 UI를 요청하면,
+&lt;ol>
+&lt;li>Controller가 View를 생성하고 자신에게 연결합니다. (&lt;code>TypedViewController&lt;/code>)&lt;/li>
+&lt;li>View를 생성하는 단계에서 Model의 변경사항을 구독합니다. (&lt;a
+class="underline-lsre"
+href="#publishable"
+>Publishable&lt;/a
+>)&lt;/li>
+&lt;li>Storage로부터 데이터를 불러와 Model을 준비합니다.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>Controller는 UI를 그리기 위해 필요한 데이터를 Model에 요청합니다.&lt;/li>
+&lt;li>Model은 필요한 데이터를 정리하여 View에게 발행합니다. View는 이를 토대로 UI를 구축합니다.&lt;/li>
+&lt;li>View와 연결된 Controller를 통해서 사용자에게 UI를 보여줍니다.&lt;/li>
+&lt;/ol>
+&lt;h4 id="사용자가-ui를-조작했을-때" class="flex items-center gap-3">사용자가 UI를 조작했을 때 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="사용자가 UI를 조작했을 때" href="#%ec%82%ac%ec%9a%a9%ec%9e%90%ea%b0%80-ui%eb%a5%bc-%ec%a1%b0%ec%9e%91%ed%96%88%ec%9d%84-%eb%95%8c"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;pre class="mermaid">---
+title: MVC Architecture Sequence Diagram
+---
+sequenceDiagram
+participant User
+participant View
+participant EventBus
+participant Controller
+participant Model
+participant Storage
+Note over Model: Publishable
+autonumber
+Controller->>EventBus: Register callback for events
+User->>View: Do specific actions
+View->>+EventBus: Emit events (with data)
+EventBus-->>-Controller: Run callback for the event
+Controller->>+Model: Request CRUD
+Model->>Model: Processing (to cause changes)
+Model-->>Storage: Save data (if exists)
+Model-->>-View: Publish changes with data
+View->>User: Update UI &amp; Display
+&lt;/pre>
+&lt;ol>
+&lt;li>Controller가 생성되는 과정에서 특정 이벤트에 실행할 동작을 정의합니다. (&lt;a
+class="underline-lsre"
+href="#eventbus"
+>EventBus&lt;/a
+>)&lt;/li>
+&lt;li>User가 View를 통해 특정 행동을 수행하면 EventBus에 등록된 이벤트를 발행합니다.&lt;/li>
+&lt;li>해당 이벤트를 구독 중인 Controller는 이벤트를 받아 데이터 생성/변경/삭제를 Model에게 요청합니다.&lt;/li>
+&lt;li>Model은 요청에 맞게 데이터를 적절히 처리한 후, 변환하여 Storage에 저장합니다.&lt;/li>
+&lt;li>Model은 변경사항을 데이터와 함께 구독 중인 View에게 알립니다. View는 이를 토대로 UI를 변경합니다.&lt;/li>
+&lt;li>View와 연결된 Controller를 통해서 사용자에게 UI를 보여줍니다.&lt;/li>
+&lt;/ol>
+&lt;h2 id="api-references" class="flex items-center gap-3">API References &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="API References" href="#api-references"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;h3 id="publishable" class="flex items-center gap-3">Publishable &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Publishable" href="#publishable"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>속성값의 변경사항을 구독자에게 자동으로 알려주는 Property Wrapper 클래스입니다.&lt;/p>
+&lt;blockquote>
+&lt;p>내부적으로 &lt;code>self&lt;/code>에 대한 참조를 &lt;a
+class="underline-lsre"
+href="#weakref"
+>&lt;code>WeakRef&lt;/code>&lt;/a
+>로 관리하고 있으므로, 메모리 해제 시 자동으로 구독을 해제합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>API&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Publishable&lt;/code>: 값의 변화를 구독자에게 알려주는 Property Wrapper 클래스입니다.&lt;/li>
+&lt;li>&lt;code>Publisher&lt;/code>: 발행자를 나타냅니다. &lt;code>Publishable&lt;/code>을 적용한 속성의 타입입니다.&lt;/li>
+&lt;li>&lt;code>Subscriber&lt;/code>: 구독자를 나타냅니다. &lt;code>Publishable&lt;/code>을 구독하는 타입입니다.&lt;/li>
+&lt;li>&lt;code>Changes&lt;/code>: 값의 변화를 나타냅니다. 변경이전 값 &lt;code>old&lt;/code>와 변경된 값 &lt;code>new&lt;/code>를 가집니다.&lt;/li>
+&lt;/ul>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">/// 구독자를 추가합니다. (immediate을 true로 설정하면 구독 즉시 이벤트를 발행합니다)
+/// 이미 구독 중인 경우, 기존 구독을 취소하고 새로운 구독을 추가합니다.
+func subscribe&amp;lt;Subscriber&amp;gt;(by: Subscriber, immediate: Bool, EventCallback&amp;lt;Subscriber&amp;gt;)
+/// 주어진 구독자의 구독을 취소합니다.
+func unsubscribe&amp;lt;Subscriber&amp;gt;(by: Subscriber)
+/// 구독자에게 변경 사항을 발행합니다. nil을 전달하면 현재 값으로 발행합니다.
+func publish(Changes?)&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;strong>Example&lt;/strong>&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class MyModel {
+@Publishable var name: String
+init(name: String) {
+self.name = name
+}
+}
+final class Main {
+static let shared = Main()
+private init() {}
+func run() {
+let model = MyModel(name: &amp;#34;Old Model&amp;#34;)
+model.$name.subscribe(by: self, immediate: true) { (subscriber, changes) in
+// 강한 순환 참조를 피하기 위해 self 대신 subscriber를 사용합니다.
+print(&amp;#34;Old Name: \(changes.old), New Name: \(changes.new)&amp;#34;)
+}
+model.name = &amp;#34;New Model&amp;#34; // 구독자에게 변경을 알립니다.
+}
+}
+Main.shared.run()
+// 출력 결과
+// Old Name: Old Model, New Name: Old Model
+// Old Name: Old Model, New Name: New Model&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h3 id="eventbus" class="flex items-center gap-3">EventBus &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="EventBus" href="#eventbus"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>이벤트를 관리하며, 구독 및 발행 기능을 제공합니다. 이벤트 기반의 프로그래밍 패턴을 제공합니다.&lt;/p>
+&lt;blockquote>
+&lt;p>내부적으로 &lt;code>self&lt;/code>에 대한 참조를 &lt;a
+class="underline-lsre"
+href="#weakref"
+>&lt;code>WeakRef&lt;/code>&lt;/a
+>로 관리하고 있으므로, 메모리 해제 시 자동으로 구독을 해제합니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>API&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>EventBus&lt;/code>: 이벤트를 구독 및 발행할 수 있는 싱글턴 클래스입니다.&lt;/li>
+&lt;li>&lt;code>EventProtocol&lt;/code>: 이벤트를 나타내는 프로토콜입니다. &lt;code>Payload&lt;/code> 연관 타입을 가집니다.&lt;/li>
+&lt;li>&lt;code>Emitter&lt;/code>: 이벤트를 발행할 수 있는 타입입니다.&lt;/li>
+&lt;li>&lt;code>Listener&lt;/code>: 이벤트를 구독할 수 있는 타입입니다.&lt;/li>
+&lt;/ul>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">/// 주어진 이벤트를 구독합니다.
+func on&amp;lt;Listener, Event: EventProtocol&amp;gt;(Event.Type, by: Listener, EventCallback&amp;lt;Listener, Event&amp;gt;)
+/// 주어진 구독자의 이벤트 구독을 취소합니다.
+func off&amp;lt;Listener, Event: EventProtocol&amp;gt;(Event, by: Listener)
+/// 주어진 구독자의 모든 구독을 취소합니다.
+func reset&amp;lt;Listener&amp;gt;(Listener)
+/// 주어진 이벤트를 발행합니다.
+func emit&amp;lt;Event: EventProtocol&amp;gt;(Event) &lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;strong>Example&lt;/strong>&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class Main {
+static let shared = Main()
+private init() {}
+func run() {
+struct MyEvent: EventProtocol {
+struct Payload {
+let text: String
+}
+let payload: Payload
+}
+// 이벤트 구독
+EventBus.shared.on(MyEvent.self, by: self) { (listener, payload) in
+// 강한 순환 참조를 피하기 위해 self 대신 listener를 사용합니다.
+print(&amp;#34;Payload: \(payload.text)&amp;#34;)
+}
+// 이벤트 발행
+EventBus.shared.emit(MyEvent(payload: .init(text: &amp;#34;Hello, World!&amp;#34;)))
+}
+}
+Main.shared.run()
+// 출력 결과
+// Payload: Hello, World!&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h3 id="weakref" class="flex items-center gap-3">WeakRef &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="WeakRef" href="#weakref"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>&lt;code>weak&lt;/code> 참조를 감싸는 구조체입니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">struct WeakRef&amp;lt;T: AnyObject&amp;gt; {
+weak var value: T?
+init(_ value: T?) {
+self.value = value
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h3 id="storage" class="flex items-center gap-3">Storage &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Storage" href="#storage"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>데이터를 (영속적으로) 저장하고, 불러오는 기능을 제공하는 타입이 채택하는 프로토콜입니다.&lt;/p>
+&lt;p>현재 &lt;code>UserDefaultsStorage&lt;/code>를 제공합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">protocol Storage {
+static var shared: Self { get }
+func save&amp;lt;T: Encodable&amp;gt;(_ object: T, forKey key: String)
+func load&amp;lt;T: Decodable&amp;gt;(forKey key: String) -&amp;gt; T?
+func remove(forKey key: String)
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;hr>
+&lt;h2 id="회고" class="flex items-center gap-3">회고 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="회고" href="#%ed%9a%8c%ea%b3%a0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>이번 개인 과제를 진행하면서 MVC 아키텍처에 대해 많은 경험을 해볼 수 있었습니다. UIKit에서 View와 Controller를 어떻게 분리할 수 있을지, 그리고 View에서 사용자 입력이 발생했을 때 Controller에게 어떻게 알려줄 수 있을지, 그리고 Model에서 데이터가 변경되었을 때 View에게 어떻게 알려줄 수 있을지 고민하면서 여러 시도를 해보았습니다. 이러한 문제를 해결하기 위해 &lt;code>TypedViewController&lt;/code>, &lt;code>EventBus&lt;/code> 그리고 &lt;code>Publishable&lt;/code>을 구현하고 프로젝트에 적용해보았는데요. 확실히 디자인 패턴이 문제를 해결하는데 도움을 주고 또 꽤 효율적이라고 느낄 수 있었습니다.&lt;/p>
+&lt;p>아쉬운 점은 튜터님께서 피드백을 주신대로 &lt;code>EventBus&lt;/code>의 이벤트가 너무 몰려있다는 점이었습니다. 다음 팀 프로젝트에서는 이러한 문제를 개선하고 보다 더 나은 MVC 아키텍처를 적용해보려고 합니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
+&lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. 그렇기에 UI는 최대한 심플하고 과제 요구조건에 부합하는 기능을 개발하기로 했습니다. Pinterest App에서 제공하는 UI와 기능이 가장 심플하여 선택하게 되었고, 요구 조건에 맞춰 최소한의 기능을 구현했습니다.&lt;/p>
+&lt;div class="grid" style="grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0px;">
+&lt;img class="mx-auto" alt="Main Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-main.png" />
+&lt;img class="mx-auto" alt="Completes Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-detail.png" />
+&lt;img class="mx-auto" alt="Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-profile.png" />
+&lt;img class="mx-auto" alt="Edit Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-edit-profile.png" />
+&lt;/div>
+&lt;hr>
+&lt;h2 id="프로젝트-목표" class="flex items-center gap-3">프로젝트 목표 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="프로젝트 목표" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%aa%a9%ed%91%9c"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;ul>
+&lt;li>UITableView / UICollectionView를 활용하며 피드 화면을 구현합니다.&lt;/li>
+&lt;li>UITabBarController를 활용해서 다양한 메뉴 화면에 접근할 수 있는 UI를 제공합니다.&lt;/li>
+&lt;li>UIStackView와 UIScrollView를 활용하여 프로필 화면을 구현합니다.&lt;/li>
+&lt;li>사용자가 상호작용할 수 있는 다양한 기능을 제공합니다&lt;/li>
+&lt;li>UITextView와 UITextField를 활용하여 화면을 구성합니다&lt;/li>
+&lt;li>UIImagePickerController 혹은 PHPickerViewController를 활용하여 사진을 가져옵니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="프로젝트-구현" class="flex items-center gap-3">프로젝트 구현 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="프로젝트 구현" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ed%98%84"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>MVC 아키텍처 패턴을 적용하여 프로젝트를 작성하였습니다.&lt;/p>
+&lt;p>아무래도 팀 과제이고 팀원 개개인의 역량이 모두 다르다보니 갑자기 어려운 내용을 진행하게 되면 따라오지 못하는 팀원이 있어 걱정이 들었습니다. 팀 프로젝트를 수행하기 전 2주 간 개인 프로젝트를 진행하면서 팀원들의 역량을 잘 측정했다고 생각했는데, 제가 기대하던 것보다도 더 어려움을 겪고 있는 팀원이 있어 역할을 분배하는데 있어 어려움을 겪었습니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
+&lt;p>내일배움캠프에서 제공하는 학습 자료와 함께 &lt;a
+class="underline-lsre"
+href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8-%ec%95%b1%eb%a7%8c%eb%93%a4%ea%b8%b0"
+target="_blank" rel="noopener noreferrer nofollow"
+>15개 앱을 만들면서 근본원리부터 배우는 UIKit&lt;/a
+> 강의를 병행하였습니다. 프로젝트의 요구 조건을 충족하기 위해 필요한 내용을 학습했습니다.&lt;/p>
+&lt;ul>
+&lt;li>UIKit의 기본적인 구조와 사용법&lt;/li>
+&lt;li>리스트를 표시하는 방법 (UITableView)&lt;/li>
+&lt;li>페이지 간 이동 및 데이터 전달 방법 (Segue)&lt;/li>
+&lt;li>Alert 표시 및 사용자로부터 입력 받는 방법 (UIAlertController)&lt;/li>
+&lt;/ul>
+&lt;h2 id="프로젝트-목표" class="flex items-center gap-3">프로젝트 목표 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="프로젝트 목표" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%aa%a9%ed%91%9c"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;ul>
+&lt;li>iOS 앱 개발도구인 xcode의 프로젝트 생성, 디버깅, 유틸리티 기능을 이해하고 활용합니다.&lt;/li>
+&lt;li>Swift 문법을 활용하여 iOS 앱 개발에 적용할 수 있습니다.&lt;/li>
+&lt;li>iOS의 UI를 구성하는 View와 ViewController에 대해 이해합니다.&lt;/li>
+&lt;li>ViewController의 세부 요소인 Container-View-Container에 대해 이해합니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="프로젝트-구조" class="flex items-center gap-3">프로젝트 구조 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="프로젝트 구조" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
@@ -59,9 +649,9 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;li>&lt;code>Services&lt;/code>: 데이터를 관리하는 비즈니스 로직을 담은 클래스를 가집니다&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
-&lt;h3 id="storyboard" class="flex items-center gap-3">Storyboard &lt;i
+&lt;h2 id="스토리보드" class="flex items-center gap-3">스토리보드 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Storyboard" href="#storyboard"
+>&lt;a title="스토리보드" href="#%ec%8a%a4%ed%86%a0%eb%a6%ac%eb%b3%b4%eb%93%9c"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -72,17 +662,17 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>&lt;img class="mx-auto" alt="Storyboard" src="https://jinyongp.dev/image/learn/nbcamp/5/storyboard.png" />
+>&lt;/h2>&lt;p>&lt;img class="mx-auto" alt="Storyboard" src="https://jinyongp.dev/image/learn/nbcamp/5/storyboard.png" />
 &lt;/p>
-&lt;div class="flex gap-2 md:gap-5 justify-center">
-&lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/main-page.png" width="23%" alt="Main Page">
-&lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/completes-page.png" width="23%" alt="Completes Page">
-&lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/add-new-item.png" width="23%" alt="Completes Page">
-&lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/edit-item.png" width="23%" alt="Completes Page">
+&lt;div class="grid" style="grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.5rem;">
+&lt;img class="mx-auto" alt="Main Page" src="https://jinyongp.dev/image/learn/nbcamp/5/main-page.png" />
+&lt;img class="mx-auto" alt="Completes Page" src="https://jinyongp.dev/image/learn/nbcamp/5/completes-page.png" />
+&lt;img class="mx-auto" alt="Add New Item" src="https://jinyongp.dev/image/learn/nbcamp/5/add-new-item.png" />
+&lt;img class="mx-auto" alt="Edit Item" src="https://jinyongp.dev/image/learn/nbcamp/5/edit-item.png" />
 &lt;/div>
-&lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
+&lt;h2 id="프로젝트-구현" class="flex items-center gap-3">프로젝트 구현 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Implementation" href="#implementation"
+>&lt;a title="프로젝트 구현" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ed%98%84"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -93,7 +683,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;h4 id="todoitem" class="flex items-center gap-3">TodoItem &lt;i
+>&lt;/h2>&lt;h3 id="todoitem" class="flex items-center gap-3">TodoItem &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="TodoItem" href="#todoitem"
 >
@@ -106,7 +696,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
@@ -125,8 +715,8 @@ self.createdAt = UInt(Date().timeIntervalSince1970)
 }
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>배열에서 인스턴스를 가져오는 과정에서 값의 복사가 아닌 참조를 가져오길 원했습니다. 그런 이유로 &lt;code>struct&lt;/code> 대신 &lt;code>class&lt;/code>를 사용했고, 상속할 여지가 없으므로 &lt;code>final&lt;/code> 키워드를 붙여 Dynamic Dispatch 대신 Static Dispatch 방식을 채택하였습니다.&lt;/p>
-&lt;h4 id="todoservice" class="flex items-center gap-3">TodoService &lt;i
+&lt;p>배열에서 인스턴스를 가져오는 과정에서 값의 복사가 아닌 참조를 가져오길 원했습니다. 그런 이유로 &lt;code>struct&lt;/code> 대신 &lt;code>class&lt;/code>를 사용했고, 상속할 여지가 없으므로 &lt;code>final&lt;/code> 키워드를 붙여 Dynamic Dispatch 대신 Static Dispatch 방식으로 동작하게끔 했습니다.&lt;/p>
+&lt;h3 id="todoservice" class="flex items-center gap-3">TodoService &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="TodoService" href="#todoservice"
 >
@@ -139,7 +729,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+>&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
@@ -167,7 +757,7 @@ item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>TodoService&lt;/code>의 경우, 대부분의 &lt;code>Views&lt;/code>에서 사용될 예정이므로 하나의 &lt;code>Items&lt;/code>만 생성되어야 함을 보장하기 위해 Singleton 패턴을 적용하였습니다.&lt;/p>
-&lt;h4 id="viewcontroller" class="flex items-center gap-3">ViewController &lt;i
+&lt;h3 id="viewcontroller" class="flex items-center gap-3">ViewController &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="ViewController" href="#viewcontroller"
 >
@@ -180,7 +770,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>&lt;code>ViewController&lt;/code>의 경우 Main Page의 View와 Logic을 담당합니다. UI 관련 로직은 생략했습니다.&lt;/p>
+>&lt;/h3>&lt;p>&lt;code>ViewController&lt;/code>의 경우 Main Page의 View와 Logic을 담당합니다. UI 관련 로직은 생략했습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -249,7 +839,7 @@ return cell
 &lt;/div>
 &lt;p>&lt;code>UITableViewDataSource&lt;/code>를 채택하여 TableView를 그리기 위해 필요한 최소 메서드를 구현하였습니다. 완료하지 않은 할 일 목록만 가져와서 표시하고 있습니다. &lt;code>TodoTableViewCell&lt;/code>에 데이터를 전달하고 어떠한 이벤트가 발생했을 때 실행할 함수를 클로저로 전달하고 있습니다. Delegate Pattern을 활용할 수 있겠지만, 단순하게 클로저를 전달하는 방법으로 구현하였습니다.&lt;/p>
 &lt;p>완료 버튼을 눌렀을 땐 애니메이션과 함께 목록에서 제거하도록 작성하였고, 라벨을 눌렀을 땐 Alert을 띄워 내용을 수정할 수 있도록 작성하였습니다.&lt;/p>
-&lt;h3 id="todotableviewcell" class="flex items-center gap-3">TodoTableViewCell &lt;i
+&lt;h2 id="todotableviewcell" class="flex items-center gap-3">TodoTableViewCell &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="TodoTableViewCell" href="#todotableviewcell"
 >
@@ -262,7 +852,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+>&lt;/h2>&lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
@@ -309,7 +899,7 @@ onCompleted?(self)
 &lt;/div>
 &lt;p>&lt;code>TodoTableViewCell&lt;/code>은 완료 여부를 뜻하는 &lt;code>completed&lt;/code>을 감시자 속성으로 가지고 있어, &lt;code>completed&lt;/code>가 변경됨에 따라 라벨에 &lt;code>strikethrough&lt;/code> 스타일을 추가/제거합니다.&lt;/p>
 &lt;p>라벨에 Touch Action을 등록하기 위해서 &lt;code>UITapGestureRecognizer&lt;/code>를 추가하였습니다.&lt;/p>
-&lt;h3 id="completesviewcontroller" class="flex items-center gap-3">CompletesViewController &lt;i
+&lt;h2 id="completesviewcontroller" class="flex items-center gap-3">CompletesViewController &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="CompletesViewController" href="#completesviewcontroller"
 >
@@ -322,7 +912,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>메인 페이지에서 &lt;code>completes&lt;/code> 버튼을 누르면 해당 페이지를 표시합니다. 버튼에 직접 등록하는 Segue 방식으로 연결하였습니다.&lt;/p>
+>&lt;/h2>&lt;p>메인 페이지에서 &lt;code>completes&lt;/code> 버튼을 누르면 해당 페이지를 표시합니다. 버튼에 직접 등록하는 Segue 방식으로 연결하였습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -398,7 +988,7 @@ self.tableView.reloadData()
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>CompletesViewController&lt;/code> 객체에 클로저를 전달하기 위해 &lt;code>ViewController&lt;/code>에 &lt;code>prepare&lt;/code> 메서드를 구현하였습니다. &lt;code>onDismissed&lt;/code>가 호출되면 메인 페이지의 &lt;code>tableView&lt;/code>를 갱신합니다.&lt;/p>
-&lt;h5 id="delegate-패턴-적용" class="flex items-center gap-3">Delegate 패턴 적용 &lt;i
+&lt;h3 id="delegate-패턴-적용" class="flex items-center gap-3">Delegate 패턴 적용 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="Delegate 패턴 적용" href="#delegate-%ed%8c%a8%ed%84%b4-%ec%a0%81%ec%9a%a9"
 >
@@ -411,7 +1001,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h5>&lt;p>클로저 전달 방식 대신 Delegate 패턴을 적용해보았습니다. &lt;code>onDismissed&lt;/code> 클로저를 전달하는 대신 &lt;code>CompletesViewControllerDelegate&lt;/code> 프로토콜을 정의하여 &lt;code>onDismissed&lt;/code> 메서드 동작을 위임하도록 해보았습니다.&lt;/p>
+>&lt;/h3>&lt;p>클로저 전달 방식 대신 Delegate 패턴을 적용해보았습니다. &lt;code>onDismissed&lt;/code> 클로저를 전달하는 대신 &lt;code>CompletesViewControllerDelegate&lt;/code> 프로토콜을 정의하여 &lt;code>onDismissed&lt;/code> 메서드 동작을 위임하도록 해보았습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -451,9 +1041,9 @@ tableView.reloadData()
 } &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>&lt;code>ViewController&lt;/code>가 &lt;code>prepare&lt;/code> 메서드에서 &lt;code>delegate&lt;/code> 인스턴스를 전달하고, &lt;code>CompletesViewControllerDelegate&lt;/code>를 채택하여 &lt;code>tableView&lt;/code>를 갱신하도록 작성했습니다. 위와 동일하게 동작함을 확인할 수 있습니다.&lt;/p>
-&lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
+&lt;h2 id="트러블슈팅" class="flex items-center gap-3">트러블슈팅 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Trouble Shooting" href="#trouble-shooting"
+>&lt;a title="트러블슈팅" href="#%ed%8a%b8%eb%9f%ac%eb%b8%94%ec%8a%88%ed%8c%85"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -464,7 +1054,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;h4 id="1-객체의-속성-변경이-반영되지-않는-문제" class="flex items-center gap-3">1. 객체의 속성 변경이 반영되지 않는 문제 &lt;i
+>&lt;/h2>&lt;h3 id="1-객체의-속성-변경이-반영되지-않는-문제" class="flex items-center gap-3">1. 객체의 속성 변경이 반영되지 않는 문제 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="1. 객체의 속성 변경이 반영되지 않는 문제" href="#1-%ea%b0%9d%ec%b2%b4%ec%9d%98-%ec%86%8d%ec%84%b1-%eb%b3%80%ea%b2%bd%ec%9d%b4-%eb%b0%98%ec%98%81%eb%90%98%ec%a7%80-%ec%95%8a%eb%8a%94-%eb%ac%b8%ec%a0%9c"
 >
@@ -477,7 +1067,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>&lt;code>TodoService&lt;/code>에서 &lt;code>TodoItem&lt;/code>의 속성을 변경할 때 제대로 변경되지 않는 문제가 있었습니다.&lt;/p>
+>&lt;/h3>&lt;p>&lt;code>TodoService&lt;/code>에서 &lt;code>TodoItem&lt;/code>의 속성을 변경할 때 제대로 변경되지 않는 문제가 있었습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -490,7 +1080,7 @@ item.completedAt = item.completed ? nil : UInt(Date().timeIntervalSince1970)
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>원인은 &lt;code>TodoItem&lt;/code>이 &lt;code>struct&lt;/code> 키워드로 선언되어 있어, &lt;code>first&lt;/code>를 통해 찾은 값을 &lt;code>item&lt;/code> 변수에 할당하는 과정에서 값의 복사가 발생하여 복사된 값의 속성을 변경하더라도 원본 값이 변경되지 않는 문제였습니다. &lt;code>struct&lt;/code> 대신 &lt;code>class&lt;/code>로 선언하는 방식으로 문제를 해결했습니다.&lt;/p>
-&lt;h4 id="2-unknown-class-_viewcontroller-in-interface-builder-file-에러" class="flex items-center gap-3">2. Unknown class _ViewController in Interface Builder file. 에러 &lt;i
+&lt;h3 id="2-unknown-class-_viewcontroller-in-interface-builder-file-에러" class="flex items-center gap-3">2. Unknown class _ViewController in Interface Builder file. 에러 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="2. Unknown class _ViewController in Interface Builder file. 에러" href="#2-unknown-class-_viewcontroller-in-interface-builder-file-%ec%97%90%eb%9f%ac"
 >
@@ -503,7 +1093,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>여러 ViewController를 생성하는 과정에서 xcode의 버그로 인해 Module이 제대로 설정되지 않아 발생한 문제였습니다.&lt;/p>
+>&lt;/h3>&lt;p>여러 ViewController를 생성하는 과정에서 xcode의 버그로 인해 Module이 제대로 설정되지 않아 발생한 문제였습니다.&lt;/p>
 &lt;img class="!my-0 !mx-auto md:!ml-4 md:w-1/3 md:float-right" src="https://jinyongp.dev/image/learn/nbcamp/5/unknown-class-error.png" alt="Unknown Class Error">
 &lt;p>Storyboard에서 문제가 발생하는 ViewController를 선택한 뒤, 우측 Inspector Pane의 Identifier Inspector에서 Custom Class 항목의 Module이 None인지 확인합니다. None이라면 프로젝트 이름으로 변경한 뒤 Inherit Module From Target을 활성화합니다.&lt;/p>
 &lt;p>참고: &lt;a
@@ -512,9 +1102,9 @@ href="https://points.tistory.com/10"
 target="_blank" rel="noopener noreferrer nofollow"
 >[iOS] Unknown class _ViewController in Interface Builder file.&lt;/a
 >&lt;/p>
-&lt;h3 id="retrospective" class="flex items-center gap-3">Retrospective &lt;i
+&lt;h2 id="회고" class="flex items-center gap-3">회고 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Retrospective" href="#retrospective"
+>&lt;a title="회고" href="#%ed%9a%8c%ea%b3%a0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -525,11 +1115,11 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>UIKit로 개발하면서 여태까지 해왔던 웹 개발과 많은 비교를 하게 되었습니다. UIKit으로 개발하는 건 웹 개발로 비유를 하자면 HTML, CSS 없이 JavaScript로만 모든 UI와 Style을 작성하는 것과 비슷했습니다. 웹에서 HTML과 CSS 그리고 JavaScript가 분리되어 있다는 게 굉장한 장점이구나 다시 한번 느끼게 되었습니다. UIKit의 경우 모든 내용을 선언형이 아닌 명령형으로 작성해야 하기 때문에 각 역할에 맞게 적절하게 코드를 분리하기 위한 노력이 필요함을 절실히 깨달았습니다.&lt;/p>
+>&lt;/h2>&lt;p>UIKit로 개발하면서 여태까지 해왔던 웹 개발과 많은 비교를 하게 되었습니다. UIKit으로 개발하는 건 웹 개발로 비유를 하자면 HTML, CSS 없이 JavaScript로만 모든 UI와 Style을 작성하는 것과 비슷했습니다. 웹에서 HTML과 CSS 그리고 JavaScript가 분리되어 있다는 게 굉장한 장점이구나 다시 한번 느끼게 되었습니다. UIKit의 경우 모든 내용을 선언형이 아닌 명령형으로 작성해야 하기 때문에 각 역할에 맞게 적절하게 코드를 분리하기 위한 노력이 필요함을 절실히 깨달았습니다.&lt;/p>
 &lt;p>Storyboard와 코드를 연동하여 작성되어야 하는 부분이 있기 때문에 코드가 실행되는데 눈에 보이는 부분보단 이렇게 동작할 것이다 추론해야 하는 경우가 많았고 에러가 발생해도 추적하기가 굉장히 어려워서 개발 경험이 그리 좋지 않았습니다. 아무래도 UIKit의 대부분이 Objective-C로 작성되어 있어 해당 내용을 알아야만 에러 내용을 통해 원인을 유추할 수 있는 것도 한몫 하다보니 어려웠던 듯 싶습니다. 협업 관점에서 보나 디버깅 관점에서 보나 웬만하면 Storyboard 방식보단 코드 방식의 개발이 더 유리하지 않을까 생각했습니다.&lt;/p>
-&lt;p>이후 기초 팀 프로젝트에서는 코드 방식으로 개발을 진행하며 Storyboard 개발 방식과 비교해보고자 합니다.&lt;/p></description></item><item><title>[내배캠] Swift 심화 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/4/</link><pubDate>Fri, Jul 21 09:25:11 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/4/</guid><description>&lt;p>3주차가 되었습니다!&lt;/p>
-&lt;p>이번 주차에서는 팀 프로젝트로서 Swift 심화 내용을 학습하고 간단한 키오스크 CLI 프로그램을 작성했습니다.&lt;/p>
-&lt;p>이번에도 저번 개인 프로젝트에서 진행했던대로 터미널 환경에서 Swift 프로젝트를 생성하여 진행했습니다.&lt;/p>
+&lt;p>이후 기초 팀 프로젝트에서는 코드 방식으로 개발을 진행하며 Storyboard 개발 방식과 비교해보고자 합니다.&lt;/p></description></item><item><title>[내배캠] Swift 심화 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/4/</link><pubDate>Fri, Jul 21 09:25:11 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/4/</guid><description>&lt;p>본 캠프가 시작되고 3주차가 되었습니다!&lt;/p>
+&lt;p>이번 주차에서는 팀 프로젝트로서 Swift 심화 내용을 학습하고 간단한 키오스크 CLI 프로그램을 작성했습니다. 저번 개인 프로젝트에서 진행했던대로 터미널 환경에서 Swift 프로젝트를 생성하여 진행했습니다.&lt;/p>
+&lt;p>팀 과제인만큼 소통에 보다 많은 노력을 쏟았습니다. 매일 오전 회의와 코드 리뷰를 진행하며 자신이 개발했던 내용과 어려움에 대해 공유했고, 페어 프로그래밍을 진행하며 하나의 기능을 함께 개발해보았습니다. 아무래도 부트캠프 과정 자체가 빠르게 진행되고 있기 때문에 프로그래밍을 처음 접한 팀원이 어려움을 많이 느꼈습니다. 정말 스파르타코딩클럽의 스&lt;/p>
 &lt;p>구현한 키오스크 프로그램은 다음의 기능을 제공합니다.&lt;/p>
 &lt;ol>
 &lt;li>메뉴 화면 및 세부 메뉴 화면 표시&lt;/li>
@@ -680,9 +1270,10 @@ No. 1
 주문 화면
 &lt;/div>
 &lt;/details>
-&lt;h3 id="directory-structure" class="flex items-center gap-3">Directory Structure &lt;i
+&lt;hr>
+&lt;h2 id="프로젝트-구조" class="flex items-center gap-3">프로젝트 구조 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Directory Structure" href="#directory-structure"
+>&lt;a title="프로젝트 구조" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -693,7 +1284,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+>&lt;/h2>&lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
@@ -713,9 +1304,9 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 ├── App.swift
 └── main.swift&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
+&lt;h2 id="프로젝트-구현" class="flex items-center gap-3">프로젝트 구현 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Implementation" href="#implementation"
+>&lt;a title="프로젝트 구현" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ed%98%84"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -726,7 +1317,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>이번 프로젝트에선 enum 형식의 Associated Value를 적극적으로 활용하여 메뉴 화면에 표시될 옵션을 구현했습니다.&lt;/p>
+>&lt;/h2>&lt;p>이번 프로젝트에선 enum 형식의 Associated Value를 적극적으로 활용하여 메뉴 화면에 표시될 옵션을 구현했습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -784,11 +1375,11 @@ actions: [
 )
 app.run()&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>프로토콜을 활용해서&lt;/p></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
-&lt;p>이번 주차에선 Swift 기초를 학습하고 간단한 연산 기능을 제공하는 CLI 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
-&lt;h3 id="requirements" class="flex items-center gap-3">Requirements &lt;i
+&lt;p>최대한 App 클래스가 구체적인 클래스에 의존하지 않도록 Protocol을 적극 사용하였습니다. 또한, 변경될 수 있는 세부 사항의 경우 &lt;code>main.swift&lt;/code>에서 주입할 수 있도록 작성해주었습니다.&lt;/p>
+&lt;p>&lt;code>Viewer&lt;/code>도 이와 마찬가지로 메뉴를 보여주는 화면의 경우 또한 콘솔창이든 실제 키오스크 기기든 언제 어떻게든 변경될 수 있으므로, 프로토콜로 작성해주어서 주입해주는 방식으로 작성하였습니다.&lt;/p>
+&lt;h2 id="회고" class="flex items-center gap-3">회고 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Requirements" href="#requirements"
+>&lt;a title="회고" href="#%ed%9a%8c%ea%b3%a0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -799,15 +1390,31 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;ul>
+>&lt;/h2>&lt;p>이번 프로젝트에서는 Swift 문법의 enum associated values 기능을 활용하여 메뉴 목록을 나열하고 여러가지 기능을 구현해보았습니다. OOP에 대해 처음 공부할 때 추상화, 캡슐화, 상속, 다형성 그리고 SOLID 원칙에 대해 암기하느라 바빴지 그 개념에 대한 이해나 활용을 전혀 하지 못했었는데, 이번 프로젝트를 진행하면서 프로토콜과 클래스를 적극 활용하며 현재 내가 구현하고 있는 코드가 OOP의 특징과 원칙을 잘 준수하고 있는지에 대해 고민해보며 깊은 이해를 할 수 있었습니다.&lt;/p></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
+&lt;p>이번 주차에선 Swift 기초를 학습하고 간단한 연산 기능을 제공하는 CLI 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="요구조건" class="flex items-center gap-3">요구조건 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="요구조건" href="#%ec%9a%94%ea%b5%ac%ec%a1%b0%ea%b1%b4"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;ul>
 &lt;li>1단계: 덧셈, 뺄셈, 곱셈, 나눗셈 연산 기능을 제공하는 Calculator 클래스 구현&lt;/li>
 &lt;li>2단계: 1단계에서 구현한 Calculator 클래스를에 나머지 연산 기능 추가&lt;/li>
 &lt;li>3단계: 각 연산을 개별 연산 클래스로 분리하고 Calculator와 연결 (feat. 단일 책임 원칙)&lt;/li>
 &lt;li>4단계: 연산 클래스를 추상화한 추상 클래스 작성 (feat. 결합도, 의존성 역전 원칙)&lt;/li>
 &lt;/ul>
-&lt;h3 id="directory-structure" class="flex items-center gap-3">Directory Structure &lt;i
+&lt;h2 id="프로젝트-구조" class="flex items-center gap-3">프로젝트 구조 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Directory Structure" href="#directory-structure"
+>&lt;a title="프로젝트 구조" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -818,7 +1425,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+>&lt;/h2>&lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
 >
@@ -838,9 +1445,9 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 ├── Package.swift
 └── README.md&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;h3 id="implementation" class="flex items-center gap-3">Implementation &lt;i
+&lt;h2 id="프로젝트-구현" class="flex items-center gap-3">프로젝트 구현 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Implementation" href="#implementation"
+>&lt;a title="프로젝트 구현" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ed%98%84"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -851,9 +1458,9 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;h4 id="setup" class="flex items-center gap-3">Setup &lt;i
+>&lt;/h2>&lt;h3 id="개발-환경설정" class="flex items-center gap-3">개발 환경설정 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Setup" href="#setup"
+>&lt;a title="개발 환경설정" href="#%ea%b0%9c%eb%b0%9c-%ed%99%98%ea%b2%bd%ec%84%a4%ec%a0%95"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -864,7 +1471,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>과제에서는 단순히 연산 후 출력하는 걸 요구하고 있지만, 저는 &lt;code>readLine&lt;/code> 함수를 활용하여 사용자로부터 입력을 받아 계속 연산이 가능하도록 구현했습니다.&lt;/p>
+>&lt;/h3>&lt;p>과제에서는 단순히 연산 후 출력하는 걸 요구하고 있지만, 저는 &lt;code>readLine&lt;/code> 함수를 활용하여 사용자로부터 입력을 받아 계속 연산이 가능하도록 구현했습니다.&lt;/p>
 &lt;p>실행 가능한 파일로 작성하기 위해 &lt;a
 class="underline-lsre"
 href="https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode"
@@ -903,9 +1510,9 @@ path: &amp;#34;Sources&amp;#34;
 &lt;/div>
 &lt;p>이 파일에서 프로젝트에 대한 의존성 관리 및 빌드 설정 등을 할 수 있습니다.&lt;/p>
 &lt;p>&lt;code>Sources&lt;/code> 폴더에 &lt;code>main.swift&lt;/code> 또한 생성되므로 &lt;code>swift run&lt;/code> 명령어를 실행하여 프로젝트를 실행할 수 있습니다.&lt;/p>
-&lt;h4 id="impl-operator-protocol" class="flex items-center gap-3">Impl Operator protocol &lt;i
+&lt;h3 id="operator-protocol-구현" class="flex items-center gap-3">Operator protocol 구현 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Impl Operator protocol" href="#impl-operator-protocol"
+>&lt;a title="Operator protocol 구현" href="#operator-protocol-%ea%b5%ac%ed%98%84"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -916,7 +1523,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>각 연산에 대한 클래스의 명세를 정하기 위해 &lt;code>Operator&lt;/code> 프로토콜을 작성했습니다.&lt;/p>
+>&lt;/h3>&lt;p>각 연산에 대한 클래스의 명세를 정하기 위해 &lt;code>Operator&lt;/code> 프로토콜을 작성했습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -987,9 +1594,9 @@ return lhs % rhs
 }&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이로써 나머지 연산에 대해서도 &lt;code>Double&lt;/code> 타입을 사용할 수 있게 되었고, &lt;code>Operator&lt;/code> 프로토콜을 준수하는 &lt;code>ModOperator&lt;/code> 클래스를 작성할 수 있게 되었습니다. (SPR. 단일 책임 원칙)&lt;/p>
-&lt;h4 id="impl-calculator-class" class="flex items-center gap-3">Impl Calculator class &lt;i
+&lt;h3 id="calculator-class-구현" class="flex items-center gap-3">Calculator class 구현 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Impl Calculator class" href="#impl-calculator-class"
+>&lt;a title="Calculator class 구현" href="#calculator-class-%ea%b5%ac%ed%98%84"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1000,7 +1607,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>작성한 연산자를 언제든 사용할 수 있는 형태로 하여 Dictionary 형태로 외부에서 주입할 수 있도록 작성했습니다.&lt;/p>
+>&lt;/h3>&lt;p>작성한 연산자를 언제든 사용할 수 있는 형태로 하여 Dictionary 형태로 외부에서 주입할 수 있도록 작성했습니다.&lt;/p>
 &lt;p>&lt;code>_result&lt;/code>는 여태까지 연산한 결과를 갖고 있는 저장 프로퍼티이고, &lt;code>calculate&lt;/code> 메서드를 호출하여 연산을 수행합니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
@@ -1044,9 +1651,9 @@ operators: [
 calculator.calculate(10, name: &amp;#34;&amp;#43;&amp;#34;)&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>이로써 &lt;code>Calculator&lt;/code>는 구체적인 클래스가 아닌 추상화된 프로토콜에 의존합니다. (DIP. 의존성 역전 원칙)&lt;/p>
-&lt;h3 id="trouble-shooting" class="flex items-center gap-3">Trouble Shooting &lt;i
+&lt;h2 id="트러블슈팅" class="flex items-center gap-3">트러블슈팅 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Trouble Shooting" href="#trouble-shooting"
+>&lt;a title="트러블슈팅" href="#%ed%8a%b8%eb%9f%ac%eb%b8%94%ec%8a%88%ed%8c%85"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1057,7 +1664,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;h4 id="1-0으로-초기화할-때-제네릭-타입으로-변환할-수-없는-문제" class="flex items-center gap-3">1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제 &lt;i
+>&lt;/h2>&lt;h3 id="1-0으로-초기화할-때-제네릭-타입으로-변환할-수-없는-문제" class="flex items-center gap-3">1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="1. 0으로 초기화할 때 제네릭 타입으로 변환할 수 없는 문제" href="#1-0%ec%9c%bc%eb%a1%9c-%ec%b4%88%ea%b8%b0%ed%99%94%ed%95%a0-%eb%95%8c-%ec%a0%9c%eb%84%a4%eb%a6%ad-%ed%83%80%ec%9e%85%ec%9c%bc%eb%a1%9c-%eb%b3%80%ed%99%98%ed%95%a0-%ec%88%98-%ec%97%86%eb%8a%94-%eb%ac%b8%ec%a0%9c"
 >
@@ -1070,7 +1677,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>계산기이니 &lt;code>clear&lt;/code> 메서드를 작성했고, 이는 결과를 0으로 초기화하는 단순한 작업을 수행합니다. &lt;code>Int&lt;/code> 타입은 0으로 초기화하는 반면에 &lt;code>Double&lt;/code>은 0.0으로 초기화해야 했기 때문입니다. 제네릭 타입으로부터 이를 확인할 수 있는 방법은 없었지만, 0과 0.0 이외에 경우는 없다고 가정하고 nullish coalescing operator를 사용하여 해결했습니다.&lt;/p>
+>&lt;/h3>&lt;p>계산기이니 &lt;code>clear&lt;/code> 메서드를 작성했고, 이는 결과를 0으로 초기화하는 단순한 작업을 수행합니다. &lt;code>Int&lt;/code> 타입은 0으로 초기화하는 반면에 &lt;code>Double&lt;/code>은 0.0으로 초기화해야 했기 때문입니다. 제네릭 타입으로부터 이를 확인할 수 있는 방법은 없었지만, 0과 0.0 이외에 경우는 없다고 가정하고 nullish coalescing operator를 사용하여 해결했습니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
 class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
@@ -1081,7 +1688,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 return 0 as? T ?? 0.0 as! T
 }&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;h4 id="2-첫-문자를-제외한-문자열-가져오기" class="flex items-center gap-3">2. 첫 문자를 제외한 문자열 가져오기 &lt;i
+&lt;h3 id="2-첫-문자를-제외한-문자열-가져오기" class="flex items-center gap-3">2. 첫 문자를 제외한 문자열 가져오기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="2. 첫 문자를 제외한 문자열 가져오기" href="#2-%ec%b2%ab-%eb%ac%b8%ec%9e%90%eb%a5%bc-%ec%a0%9c%ec%99%b8%ed%95%9c-%eb%ac%b8%ec%9e%90%ec%97%b4-%ea%b0%80%ec%a0%b8%ec%98%a4%ea%b8%b0"
 >
@@ -1094,7 +1701,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h4>&lt;p>Swift에서 문자열을 조작하기란 다른 언어에 비해 번거로운 점이 많았습니다&amp;hellip; index 또한 단순히 숫자가 아니라 String.Index를 생성하여 전달해야했고, 주어진 Index로부터 어느정도 떨어졌는지하는 방식으로 문자열을 가져와야했습니다.&lt;/p>
+>&lt;/h3>&lt;p>Swift에서 문자열을 조작하기란 다른 언어에 비해 번거로운 점이 많았습니다&amp;hellip; index 또한 단순히 숫자가 아니라 String.Index를 생성하여 전달해야했고, 주어진 Index로부터 어느정도 떨어졌는지하는 방식으로 문자열을 가져와야했습니다.&lt;/p>
 &lt;p>첫 문자를 제외하고 문자열을 가져오려면 다음 방식으로 가져와야 합니다.&lt;/p>
 &lt;div class="relative rounded-md overflow-hidden my-4 group">
 &lt;small
@@ -1124,9 +1731,9 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 &lt;pre>&lt;code class="hljs language-swift">input.dropFirst() // ello, World!&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;p>문자열 관련 메서드는 대개 &lt;code>Self.SubSequence&lt;/code> 타입을 반환합니다. 잘라낸 문자열을 저장하기 위헤 새로운 메모리 공간을 할당하는 것이 아닌 기존의 문자열에서 필요한 부분에 직접 접근하기 때문입니다. 따라서, 문자열로서 사용하고 싶다면 &lt;code>String&lt;/code>으로 변환해야 합니다.&lt;/p>
-&lt;h3 id="retrospective" class="flex items-center gap-3">Retrospective &lt;i
+&lt;h2 id="회고" class="flex items-center gap-3">회고 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
->&lt;a title="Retrospective" href="#retrospective"
+>&lt;a title="회고" href="#%ed%9a%8c%ea%b3%a0"
 >
 &lt;i class="">
 &lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -1137,12 +1744,37 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>객체 지향 프로그래밍의 5대 원칙 중 단일 책임 원칙(Single Responsibility Principle)과 의존성 역전 원칙(Dependency Inversion Principle)을 적용하여 계산기를 구현해보았습니다. 원칙을 적용해보기 위해 프로토콜로 명세를 작성하고 이를 준수하는 클래스는 작성하는 작업을 진행하면서 코드의 중복을 제거하고 확장성 높은 프로그램을 작성할 수 있었습니다.&lt;/p>
+>&lt;/h2>&lt;p>객체 지향 프로그래밍의 5대 원칙 중 단일 책임 원칙(Single Responsibility Principle)과 의존성 역전 원칙(Dependency Inversion Principle)을 적용하여 계산기를 구현해보았습니다. 원칙을 적용해보기 위해 프로토콜로 명세를 작성하고 이를 준수하는 클래스는 작성하는 작업을 진행하면서 코드의 중복을 제거하고 확장성 높은 프로그램을 작성할 수 있었습니다.&lt;/p>
 &lt;p>앞으로 이외에도 적용할 수 있는 원칙을 찾아보고 적합한 디자인 패턴 및 기법을 추가로 학습하여 적용해보려고 합니다.&lt;/p></description></item><item><title>[내배캠] 첫번째 팀 프로젝트</title><link>https://jinyongp.dev/learn/nbcamp/2/</link><pubDate>Wed, Jul 19 01:27:06 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/2/</guid><description>&lt;p>사전캠프에서 학습한 Flutter를 활용하여 첫번째 팀 프로젝트를 진행했습니다.&lt;/p>
 &lt;p>4일간 진행한 프로젝트로 목적은 앱 개발 전반의 과정을 익히기 위함이지만, 그보다 팀원분들과의 소통과 협업 관점에 비중으로 두고 프로젝트를 진행하였습니다.&lt;/p>
 &lt;p>프로젝트의 주제는 팀과 팀원의 소개를 담은 앱을 작성하는 것으로, 각자 자신의 소개를 담은 상세 페이지를 작성하고 합치기로 결정하였습니다.
 저는 상세 페이지와 더불어 메인 페이지와 각 상세 페이지에서 쓰일 댓글 관리 서비스를 맡았습니다.&lt;/p>
 &lt;p>그 중에서도 댓글 관리 서비스를 어떻게 구현했는지 정리해보고자 합니다.&lt;/p>
+&lt;hr>
+&lt;h2 id="프로젝트-목표" class="flex items-center gap-3">프로젝트 목표 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="프로젝트 목표" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%aa%a9%ed%91%9c"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;ul>
+&lt;li>앱 개발 전반의 흐름을 이해할 수 있습니다.&lt;/li>
+&lt;li>CRUD를 이해하고 활용할 수 있습니다.&lt;/li>
+&lt;li>상태 관리에 대해 이해하고 활용할 수 있습니다.&lt;/li>
+&lt;li>기술적 구현보다 프로젝트 진행 방법과 소통에 대해 고민해봅니다.
+&lt;ul>
+&lt;li>와이어 프레임 설계, 기능 분담&lt;/li>
+&lt;li>팀원과의 소통, 협업 방법, 도움 요청 및 제공&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="의존성-주입을-위해-인터페이스-적용하기" class="flex items-center gap-3">의존성 주입을 위해 인터페이스 적용하기 &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="의존성 주입을 위해 인터페이스 적용하기" href="#%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%a3%bc%ec%9e%85%ec%9d%84-%ec%9c%84%ed%95%b4-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0"
