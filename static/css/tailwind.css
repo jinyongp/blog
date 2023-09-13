@@ -44,6 +44,11 @@
     @apply text-base;
   }
 
+  kbd {
+    @apply px-1.5 py-0.5 text-xs text-[0.8em] font-mono  rounded shadow-sm;
+    @apply border border-gray-400 bg-gray-100;
+  }
+
   svg {
     @apply fill-current;
   }

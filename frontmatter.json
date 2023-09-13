@@ -68,6 +68,11 @@
           "type": "tags"
         },
         {
+          "title": "keywords",
+          "name": "keywords",
+          "type": "list"
+        },
+        {
           "title": "series",
           "name": "series",
           "type": "fields",

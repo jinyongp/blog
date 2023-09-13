@@ -1,0 +1,8 @@
+{{ $gridTemplateColumns := printf "grid-template-columns: repeat(%s, minmax(0, 1fr));" (.Get "cols" | default "1") }}
+{{ $gap := printf "gap: %s;" (.Get "gap" | default "0px") }}
+{{ $style := (delimit (slice $gridTemplateColumns $gap) " ") | safeCSS }}
+
+
+<div class="grid" style="{{ $style }}">
+  {{ .Inner | markdownify }}
+</div>
