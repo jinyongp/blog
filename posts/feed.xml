@@ -290,28 +290,7 @@ class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-whi
 let authService = AuthService.shared
 print(authService.user?.name) // jinyongp&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;p>이제 &lt;code>AuthService&lt;/code>의 인스턴스는 하나만 생성됨을 보장하고 인스턴스의 데이터를 유지할 수 있습니다.&lt;/p></description></item><item><title>Understanding Coordinator Pattern</title><link>https://jinyongp.dev/posts/uikit/2/</link><pubDate>Tue, Aug 15 05:56:30 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/2/</guid><description>&lt;p>AnyObject 사용이유&lt;/p>
-&lt;p>&lt;a
-class="underline-lsre"
-href="https://stackoverflow.com/a/64186834"
-target="_blank" rel="noopener noreferrer nofollow"
->https://stackoverflow.com/a/64186834&lt;/a
->&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://zeddios.medium.com/coordinator-pattern-bf4a1bc46930"
-target="_blank" rel="noopener noreferrer nofollow"
->Coordinator Pattern - Zedd&lt;/a
->&lt;/li>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://somevitalyz123.medium.com/coordinator-pattern-with-tab-bar-controller-33e08d39d7d"
-target="_blank" rel="noopener noreferrer nofollow"
->Coordinator pattern with Tab Bar Controller&lt;/a
->&lt;/li>
-&lt;/ul></description></item><item><title>Factory Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/4/</link><pubDate>Sun, Aug 13 14:15:28 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/4/</guid><description>&lt;p>&lt;strong>Factory Method Pattern&lt;/strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.&lt;/p>
+&lt;p>이제 &lt;code>AuthService&lt;/code>의 인스턴스는 하나만 생성됨을 보장하고 인스턴스의 데이터를 유지할 수 있습니다.&lt;/p></description></item><item><title>Factory Method Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/4/</link><pubDate>Sun, Aug 13 14:15:28 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/4/</guid><description>&lt;p>&lt;strong>Factory Method Pattern&lt;/strong>은 앞서 알아본 Template Method Pattern과 유사합니다. 특정 인스턴스를 생성하는 메서드를 템플릿 메서드로 정의한 것 뿐입니다. 그렇기에 Template Method Pattern의 특징 그대로 인스턴스를 생성하는 공통된 로직을 템플릿화하여 재사용할 수 있습니다. 동일한 유형의 다양한 객체를 생성하는데 여러 단계의 처리나 조건부 로직이 필요할 때 패턴을 적용해볼 수 있습니다.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>Factory Method Pattern&lt;/code>은 GoF의 분류 체계에서 생성(Creational) 패턴에 속합니다.&lt;/p>
 &lt;/blockquote>

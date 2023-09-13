@@ -1,25 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pattern on jinyongp.dev</title><link>https://jinyongp.dev/tags/pattern/</link><description>Recent content in pattern on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Tue, Aug 15 05:56:30 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/pattern/feed.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Coordinator Pattern</title><link>https://jinyongp.dev/posts/uikit/2/</link><pubDate>Tue, Aug 15 05:56:30 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/2/</guid><description>&lt;p>AnyObject 사용이유&lt;/p>
-&lt;p>&lt;a
-class="underline-lsre"
-href="https://stackoverflow.com/a/64186834"
-target="_blank" rel="noopener noreferrer nofollow"
->https://stackoverflow.com/a/64186834&lt;/a
->&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://zeddios.medium.com/coordinator-pattern-bf4a1bc46930"
-target="_blank" rel="noopener noreferrer nofollow"
->Coordinator Pattern - Zedd&lt;/a
->&lt;/li>
-&lt;li>&lt;a
-class="underline-lsre"
-href="https://somevitalyz123.medium.com/coordinator-pattern-with-tab-bar-controller-33e08d39d7d"
-target="_blank" rel="noopener noreferrer nofollow"
->Coordinator pattern with Tab Bar Controller&lt;/a
->&lt;/li>
-&lt;/ul></description></item><item><title>Understanding Delegate Pattern</title><link>https://jinyongp.dev/posts/uikit/1/</link><pubDate>Tue, Aug 01 03:32:29 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/1/</guid><description>&lt;h2 id="introduce-delegate-pattern" class="flex items-center gap-3">Introduce Delegate Pattern &lt;i
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pattern on jinyongp.dev</title><link>https://jinyongp.dev/tags/pattern/</link><description>Recent content in pattern on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Tue, Aug 01 03:32:29 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/tags/pattern/feed.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Delegate Pattern</title><link>https://jinyongp.dev/posts/uikit/1/</link><pubDate>Tue, Aug 01 03:32:29 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/uikit/1/</guid><description>&lt;h2 id="introduce-delegate-pattern" class="flex items-center gap-3">Introduce Delegate Pattern &lt;i
 class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
 >&lt;a title="Introduce Delegate Pattern" href="#introduce-delegate-pattern"
 >
