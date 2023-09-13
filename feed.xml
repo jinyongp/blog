@@ -1,4 +1,185 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jinyongp.dev</title><link>https://jinyongp.dev/</link><description>Recent content on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 심화 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description/></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jinyongp.dev</title><link>https://jinyongp.dev/</link><description>Recent content on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Wed, Sep 13 02:37:04 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/feed.xml" rel="self" type="application/rss+xml"/><item><title>SwiftFormat로 코드 품질 높이기</title><link>https://jinyongp.dev/posts/xcode/1/</link><pubDate>Wed, Sep 13 02:37:04 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/xcode/1/</guid><description>&lt;h2 id="들어가기-전에" class="flex items-center gap-3">들어가기 전에 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="들어가기 전에" href="#%eb%93%a4%ec%96%b4%ea%b0%80%ea%b8%b0-%ec%a0%84%ec%97%90"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>Swift 언어로 개발하며 애플이 제공하는 프레임워크나 라이브러리를 활용하기 위해서 Xcode IDE 말고는 다른 선택지가 없습니다. 웹 개발을 해오면서 항상 VSCode만 사용해왔었는데, iOS 앱 개발을 시작하고 Xcode에 적응하면서 여러가지 불편한 점이 있었습니다.&lt;/p>
+&lt;p>그 중 하나는 VSCode에서 기본으로 제공되는 Code Formatter가 Xcode에는 없다는 건데요. 모든 코드를 드래그한 뒤, &lt;kbd>Ctrl ⌃&lt;/kbd>
++ &lt;kbd>I&lt;/kbd>
+를 눌러 Tab Indent를 맞추는 정도의 포맷팅은 가능하지만 공백을 없애거나 만들어주는 등 세부적인 format 기능을 설정할 수 없고 제공하지 않는게 참 불편했습니다. 이를 해소하기 위해 Swift 언어의 formatter 도구를 찾아봤습니다.&lt;/p>
+&lt;p>Code Formatter는 코드를 정해진 규칙(널리 쓰이는 컨벤션)에 맞춰 자동으로 정렬해주는 기능을 제공하는 도구입니다. 웹 개발 생태계에서는 다양한 formatter를 사용했었고 더 나아가 코드의 문제를 미리 찾고 방지할 수 있도록 도와주는 linter까지 활용하며 코드의 품질을 높였습니다. Swift에서도 마찬가지로 이러한 기능을 제공하는 도구가 있습니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://github.com/nicklockwood/SwiftFormat"
+target="_blank" rel="noopener noreferrer nofollow"
+>SwiftFormat&lt;/a
+>&lt;/li>
+&lt;li>&lt;a
+class="underline-lsre"
+href="https://github.com/realm/SwiftLint"
+target="_blank" rel="noopener noreferrer nofollow"
+>SwiftLint&lt;/a
+>&lt;/li>
+&lt;/ul>
+&lt;p>SwiftLint에 대해선 나중에 기회가 된다면 알아보도록 하고, 이 글에선 SwiftFormat을 설치하는 방법과 Xcode에서 사용하는 방법에 대해 알아보려고 합니다.&lt;/p>
+&lt;h2 id="swiftformat-설치하기" class="flex items-center gap-3">SwiftFormat 설치하기 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="SwiftFormat 설치하기" href="#swiftformat-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>&lt;a
+class="underline-lsre"
+href="https://github.com/nicklockwood/SwiftFormat"
+target="_blank" rel="noopener noreferrer nofollow"
+>SwiftFormat&lt;/a
+> 저장소에서 설치 가능한 패키지는 기본적으로 Command Line 도구로 제공하고 있습니다. Xcode 용 &lt;a
+class="underline-lsre"
+href="https://github.com/nicklockwood/SwiftFormat#xcode-source-editor-extension"
+target="_blank" rel="noopener noreferrer nofollow"
+>설치 가이드&lt;/a
+>를 따라 설치해보도록 하겠습니다.&lt;/p>
+&lt;p>MacOS를 사용하는 개발자라면 &lt;a
+class="underline-lsre"
+href="https://brew.sh/"
+target="_blank" rel="noopener noreferrer nofollow"
+>Homebrew&lt;/a
+>를 반드시 사용하고 계시리라 생각합니다. &lt;code>brew&lt;/code> 명령어로 설치해줍니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>bash
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-bash">$ brew install --cask swiftformat-for-xcode&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>Homebrew를 사용하고 있지 않다면, 저장소의 &lt;a
+class="underline-lsre"
+href="https://github.com/nicklockwood/SwiftFormat/releases"
+target="_blank" rel="noopener noreferrer nofollow"
+>Releases&lt;/a
+>에서 설치한 다음 Applications 폴더로 옮겨줍니다.&lt;/p>
+&lt;h2 id="swiftformat-적용하기" class="flex items-center gap-3">SwiftFormat 적용하기 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="SwiftFormat 적용하기" href="#swiftformat-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>설치를 완료하셨다면 Spotlight를 열고 &lt;code>SwiftFormat for Xcode&lt;/code>를 한번 실행합니다. (혹은, Applications 폴더에서 직접 실행해주세요.)&lt;/p>
+&lt;blockquote>
+&lt;p>저는 기본으로 제공되는 Spotlight 대신 &lt;a
+class="underline-lsre"
+href="https://raycast.com/"
+target="_blank" rel="noopener noreferrer nofollow"
+>Raycast&lt;/a
+>를 사용하고 있습니다.&lt;/p>
+&lt;/blockquote>
+&lt;div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0px;">
+&lt;img class="mx-auto" alt="Open SwiftFormat using Spotlight" src="https://jinyongp.dev/image/posts/xcode/1/open-swiftformat.png" />
+&lt;img class="mx-auto" alt="SwiftFormat for Xcode - About" src="https://jinyongp.dev/image/posts/xcode/1/swiftformat-for-xcode-about.png" />
+&lt;/div>
+&lt;p>실행하며 프로그램이 열리면 About 화면에서 설치 방법을 보여주고 있습니다. 이를 따라 설치를 진행해보겠습니다.&lt;/p>
+&lt;p>다시 Spotlight를 열어 MacOS의 System Settings(설정)를 열고 Extensions(확장)를 검색합니다.&lt;/p>
+&lt;div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0px;">
+&lt;img class="mx-auto" alt="Open Extensions Setting" src="https://jinyongp.dev/image/posts/xcode/1/open-extensions.png" />
+&lt;img class="mx-auto" alt="Activate SwiftFormat on Settings" src="https://jinyongp.dev/image/posts/xcode/1/activate-swiftformat.png" />
+&lt;/div>
+&lt;p>Xcode Source Editor를 클릭하면 SwiftFormat 항목이 있습니다. 체크하여 활성화합니다.&lt;/p>
+&lt;p>이제 Xcode를 실행하면 상단 Menubar의 Editor 최하단에 SwiftFormat 항목이 추가된 걸 확인할 수 있습니다. Format File를 클릭하면 현재 열려있는 파일을 포맷팅합니다.&lt;/p>
+&lt;h2 id="단축키-등록하기" class="flex items-center gap-3">단축키 등록하기 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="단축키 등록하기" href="#%eb%8b%a8%ec%b6%95%ed%82%a4-%eb%93%b1%eb%a1%9d%ed%95%98%ea%b8%b0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>매번 Format File을 실행할 수는 없으니, 단축키를 등록하여 해당 명령어를 손쉽게 실행할 수 있도록 해보겠습니다.&lt;/p>
+&lt;p>설정을 열고 keyboard를 검색한 뒤, Keyboard Shortcuts -&amp;gt; App Shortcuts를 클릭합니다.&lt;/p>
+&lt;div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0px;">
+&lt;img class="mx-auto" alt="Search keyboard" src="https://jinyongp.dev/image/posts/xcode/1/search-keyboard.png" />
+&lt;img class="mx-auto" alt="Open App Shortcuts" src="https://jinyongp.dev/image/posts/xcode/1/open-app-shortcuts.png" />
+&lt;/div>
+&lt;p>&lt;kbd>+&lt;/kbd>
+버튼을 눌러 새로운 단축키를 추가합니다.&lt;/p>
+&lt;ul>
+&lt;li>Application을 Xcode.app으로 설정합니다.&lt;/li>
+&lt;li>Menu Title을 &lt;code>Editor-&amp;gt;SwiftFormat-&amp;gt;Format File&lt;/code>을 오타에 주의하며 작성합니다.&lt;/li>
+&lt;li>Keyboard Shortcuts를 클릭하고 원하는 단축키를 누릅니다. 저는 &lt;kbd>⌘&lt;/kbd>
++ &lt;kbd>S&lt;/kbd>
+로 설정했습니다. (사용 중인 Xcode의 기존 단축키와 겹치는지 확인해주세요.)&lt;/li>
+&lt;li>&lt;code>Done&lt;/code>를 눌러 저장합니다.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img class="mx-auto" alt="Set Xcode Shortcut" src="https://jinyongp.dev/image/posts/xcode/1/set-xcode-shortcut.png" />
+&lt;/p>
+&lt;p>마지막으로 Xcode를 재실행하여 아래처럼 망가진 코드를 작성한 뒤, 설정했던 단축키를 눌러 포맷팅이 잘 동작하는지 확인해봅니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// before
+func foo () {
+print (&amp;#34;test&amp;#34;)}
+// ... ⌘ &amp;#43; S
+// after
+func foo() {
+print(&amp;#34;test&amp;#34;)
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>엉망으로 작성되어 있던 코드가 깔끔하게 정렬된 것을 확인할 수 있습니다.&lt;/p>
+&lt;h2 id="마치며" class="flex items-center gap-3">마치며 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="마치며" href="#%eb%a7%88%ec%b9%98%eb%a9%b0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>SwiftFormat for Xcode의 rules 탭을 선택하면 세부적인 규칙 설정이 가능합니다. 세세한 규칙 설정에 따라 단순히 간격 조정이나 괄호 유무 뿐만 아니라 Swift의 문법에 따라 불필요한 코드를 제거해주기도 하고, 컨벤션에 맞게 코드를 수정해주기도 합니다.&lt;/p>
+&lt;p>&lt;img class="mx-auto" alt="SwiftFormat for Xcode - Rules" src="https://jinyongp.dev/image/posts/xcode/1/swiftformat-for-xcode-rules.png" />
+&lt;/p>
+&lt;p>한 예로 stringOutlet이라는 설정이 있는데, 기본적으로 활성화되어 있습니다. 이 설정은 &lt;code>@IBOutlet&lt;/code>에서 &lt;code>weak&lt;/code> 키워드를 제거합니다. &lt;a
+class="underline-lsre"
+href="https://github.com/nicklockwood/SwiftFormat/issues/740#issuecomment-692558057"
+target="_blank" rel="noopener noreferrer nofollow"
+>해당 이슈&lt;/a
+>를 확인해보면 WWDC2015에서 추천했던 방식으로 오히려 &lt;code>weak&lt;/code>를 제거하는 것으로 약간의 성능 향상을 얻을 수 있다고 말합니다.&lt;/p>
+&lt;p>이렇듯 Code Formatter를 적용하면 단순히 코드를 깔끔히 작성하는 것을 넘어서 성능 향상과 잠재적 버그를 사전에 방지하는 등의 긍정적인 효과를 얻을 수 있습니다.&lt;/p></description></item><item><title>[내배캠] UIKit 심화 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description/></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
 &lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. 그렇기에 과제 요구조건에 부합하는 최소한의 UI와 기능을 개발하기로 했습니다.&lt;/p>
 &lt;p>아무래도 팀 과제이고 팀원 개개인의 역량이 모두 다르다보니 갑자기 어려운 내용을 진행하게 되면 따라오지 못하는 팀원이 있어 걱정이 들었습니다. 팀 프로젝트를 수행하기 전 2주 간 개인 프로젝트를 진행하면서 팀원들의 역량을 잘 측정했다고 생각했는데, 제가 기대하던 것보다도 더 어려움을 겪고 있는 팀원이 있어 역할을 분배하는데 있어 어려움을 겪었습니다.&lt;/p></description></item><item><title>Prototype Pattern in Swift</title><link>https://jinyongp.dev/posts/design-pattern/6/</link><pubDate>Fri, Aug 18 14:05:34 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/posts/design-pattern/6/</guid><description>&lt;p>&lt;strong>Prototype Pattern&lt;/strong>은&lt;/p>
 &lt;blockquote>
@@ -434,7 +615,8 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>&lt;img src="https://jinyongp.dev/image/learn/nbcamp/5/storyboard.png" alt="Storyboard">&lt;/p>
+>&lt;/h3>&lt;p>&lt;img class="mx-auto" alt="Storyboard" src="https://jinyongp.dev/image/learn/nbcamp/5/storyboard.png" />
+&lt;/p>
 &lt;div class="flex gap-2 md:gap-5 justify-center">
 &lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/main-page.png" width="23%" alt="Main Page">
 &lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/completes-page.png" width="23%" alt="Completes Page">
@@ -2318,7 +2500,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Flutter는 크로스 플랫폼 개발을 위한 프레임워크로 Dart라는 언어로 작성합니다. 동일한 역할을 수행하는 React Native와 비교했을 때 등장 시기는 늦지만 등장부터 빠르게 치고 올라가 Github Star 수는 이미 압도적이라 할 수 있습니다.&lt;/p>
-&lt;p>&lt;img src="https://api.star-history.com/svg?repos=flutter/flutter,facebook/react-native&amp;amp;type=Date" alt="Star History Chart">
+&lt;p>&lt;img class="mx-auto" alt="Star History Chart" src="https://api.star-history.com/svg?repos=flutter/flutter,facebook/react-native&amp;amp;type=Date" />
 &lt;a
 class="underline-lsre"
 href="https://star-history.com/#flutter/flutter&amp;amp;facebook/react-native"
@@ -3089,7 +3271,8 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h1>&lt;p>저번 시리즈에서 필요한 기능은 전부 구현해보았지만, &lt;code>svg&lt;/code> 요소의 개수가 증가할수록 성능이 하락하는 모습을 확인했습니다. 50개의 &lt;code>nodes&lt;/code>에 대해 DevTools로 측정해본 결과, 렌더링 연산에 굉장히 많은 CPU, GPU 작업을 필요로 하고 있었습니다.&lt;/p>
-&lt;p>&lt;img src="https://jinyongp.dev/image/posts/d3js/4/d3-force-svg-50-performance.png" alt="SVG 50 Performance">&lt;/p>
+&lt;p>&lt;img class="mx-auto" alt="SVG 50 Performance" src="https://jinyongp.dev/image/posts/d3js/4/d3-force-svg-50-performance.png" />
+&lt;/p>
 &lt;p>이를 해결하기 위해서 &lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API"
@@ -3426,7 +3609,8 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h2>&lt;p>성능 향상을 위해 여태까지 작업했던 내용을 Canvas API로 다시 작성해보았습니다. 단순히 그려보는 건 쉬웠지만 zoom과 drag 기능을 적용하는 건 여러 시행착오를 거쳐야했고 다양한 함수를 적용할 필요가 있어 svg 구현 방식보다 어려움을 겪었습니다.&lt;/p>
 &lt;p>성능을 측정해보겠습니다. 50개의 &lt;code>node&lt;/code>를 테스트했던 svg 방식과 달리 200개의 &lt;code>node&lt;/code>를 생성하고 측정해봤음에도 굉장한 성능 향상을 보여줍니다. 대부분은 함수 실행 시간이고 랜더링 연산은 거의 영향을 미치지 않습니다.&lt;/p>
-&lt;p>&lt;img src="https://jinyongp.dev/image/posts/d3js/4/d3-force-canvas-200-performance.png" alt="Canvas 200 Performance">&lt;/p>
+&lt;p>&lt;img class="mx-auto" alt="Canvas 200 Performance" src="https://jinyongp.dev/image/posts/d3js/4/d3-force-canvas-200-performance.png" />
+&lt;/p>
 &lt;p>지금까지 d3-force, selection, zoom, drag 등 다양한 d3.js 모듈을 사용해보았고 Canvas API로 작성해보며 성능 향상 또한 진행해보았습니다. d3.js에는 이 외에도 무수히 많은 모듈이 있습니다. 데이터를 시각화하는데 무궁무궁진 잠재력을 지닌만큼 더 다양하게 활용해보며 여러 프로젝트에서 활용해보시면 좋을 듯 싶습니다. 긴 글 읽어주셔서 감사합니다.&lt;/p>
 &lt;hr>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i

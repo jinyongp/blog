@@ -93,7 +93,8 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h3>&lt;p>&lt;img src="https://jinyongp.dev/image/learn/nbcamp/5/storyboard.png" alt="Storyboard">&lt;/p>
+>&lt;/h3>&lt;p>&lt;img class="mx-auto" alt="Storyboard" src="https://jinyongp.dev/image/learn/nbcamp/5/storyboard.png" />
+&lt;/p>
 &lt;div class="flex gap-2 md:gap-5 justify-center">
 &lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/main-page.png" width="23%" alt="Main Page">
 &lt;img class="shadow-md" src="https://jinyongp.dev/image/learn/nbcamp/5/completes-page.png" width="23%" alt="Completes Page">

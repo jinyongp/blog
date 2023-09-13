@@ -52,7 +52,11 @@
   }
 
   :is(blockquote, img, iframe) {
-    @apply rounded-md my-4;
+    @apply rounded-md;
+  }
+
+  :is(blockquote, iframe) {
+    @apply my-4;
   }
 
   code:not([class]) {

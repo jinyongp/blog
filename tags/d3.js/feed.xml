@@ -12,7 +12,8 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h1>&lt;p>저번 시리즈에서 필요한 기능은 전부 구현해보았지만, &lt;code>svg&lt;/code> 요소의 개수가 증가할수록 성능이 하락하는 모습을 확인했습니다. 50개의 &lt;code>nodes&lt;/code>에 대해 DevTools로 측정해본 결과, 렌더링 연산에 굉장히 많은 CPU, GPU 작업을 필요로 하고 있었습니다.&lt;/p>
-&lt;p>&lt;img src="https://jinyongp.dev/image/posts/d3js/4/d3-force-svg-50-performance.png" alt="SVG 50 Performance">&lt;/p>
+&lt;p>&lt;img class="mx-auto" alt="SVG 50 Performance" src="https://jinyongp.dev/image/posts/d3js/4/d3-force-svg-50-performance.png" />
+&lt;/p>
 &lt;p>이를 해결하기 위해서 &lt;a
 class="underline-lsre"
 href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API"
@@ -349,7 +350,8 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h2>&lt;p>성능 향상을 위해 여태까지 작업했던 내용을 Canvas API로 다시 작성해보았습니다. 단순히 그려보는 건 쉬웠지만 zoom과 drag 기능을 적용하는 건 여러 시행착오를 거쳐야했고 다양한 함수를 적용할 필요가 있어 svg 구현 방식보다 어려움을 겪었습니다.&lt;/p>
 &lt;p>성능을 측정해보겠습니다. 50개의 &lt;code>node&lt;/code>를 테스트했던 svg 방식과 달리 200개의 &lt;code>node&lt;/code>를 생성하고 측정해봤음에도 굉장한 성능 향상을 보여줍니다. 대부분은 함수 실행 시간이고 랜더링 연산은 거의 영향을 미치지 않습니다.&lt;/p>
-&lt;p>&lt;img src="https://jinyongp.dev/image/posts/d3js/4/d3-force-canvas-200-performance.png" alt="Canvas 200 Performance">&lt;/p>
+&lt;p>&lt;img class="mx-auto" alt="Canvas 200 Performance" src="https://jinyongp.dev/image/posts/d3js/4/d3-force-canvas-200-performance.png" />
+&lt;/p>
 &lt;p>지금까지 d3-force, selection, zoom, drag 등 다양한 d3.js 모듈을 사용해보았고 Canvas API로 작성해보며 성능 향상 또한 진행해보았습니다. d3.js에는 이 외에도 무수히 많은 모듈이 있습니다. 데이터를 시각화하는데 무궁무궁진 잠재력을 지닌만큼 더 다양하게 활용해보며 여러 프로젝트에서 활용해보시면 좋을 듯 싶습니다. 긴 글 읽어주셔서 감사합니다.&lt;/p>
 &lt;hr>
 &lt;h2 id="references" class="flex items-center gap-3">References &lt;i

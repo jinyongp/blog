@@ -74,7 +74,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h3>&lt;p>Flutter는 크로스 플랫폼 개발을 위한 프레임워크로 Dart라는 언어로 작성합니다. 동일한 역할을 수행하는 React Native와 비교했을 때 등장 시기는 늦지만 등장부터 빠르게 치고 올라가 Github Star 수는 이미 압도적이라 할 수 있습니다.&lt;/p>
-&lt;p>&lt;img src="https://api.star-history.com/svg?repos=flutter/flutter,facebook/react-native&amp;amp;type=Date" alt="Star History Chart">
+&lt;p>&lt;img class="mx-auto" alt="Star History Chart" src="https://api.star-history.com/svg?repos=flutter/flutter,facebook/react-native&amp;amp;type=Date" />
 &lt;a
 class="underline-lsre"
 href="https://star-history.com/#flutter/flutter&amp;amp;facebook/react-native"
