@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learns on jinyongp.dev</title><link>https://jinyongp.dev/learn/</link><description>Recent content in Learns on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/learn/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 숙련 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description>&lt;p>2023년 8월 22일부터 9월 1일까지 UIKit 숙련 과정 개인 과제를 진행했습니다.&lt;/p>
-&lt;p>UIKit의 몇 가지 심화 내용을 학습하고 저번에 작성했던 입문 과제에서 작성했던 To-Do App을 개선하는 과제였습니다.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learns on jinyongp.dev</title><link>https://jinyongp.dev/learn/</link><description>Recent content in Learns on jinyongp.dev</description><generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>dev.jinyongp@gmail.com (Jinyong Park)</managingEditor><webMaster>dev.jinyongp@gmail.com (Jinyong Park)</webMaster><copyright>Copyright 2023. Jinyong Park. All rights reserved.</copyright><lastBuildDate>Mon, Sep 04 16:52:52 2023 +0000</lastBuildDate><atom:link href="https://jinyongp.dev/learn/feed.xml" rel="self" type="application/rss+xml"/><item><title>[내배캠] UIKit 숙련 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/7/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/7/</guid><description>&lt;p>이번 7, 8주차에선 UIKit 숙련 과정 개인 과제를 진행했습니다. (2023년 8월 22일 ~ 9월 1일)&lt;br>
+UIKit의 몇 가지 심화 내용을 학습하고 저번 입문 과제에서 작성했던 To-Do App을 개선했습니다.&lt;/p>
 &lt;p>이번 프로젝트의 목표는 아래와 같습니다.&lt;/p>
 &lt;ul>
 &lt;li>URLSession을 활용하여 네트워크 통신으로 데이터를 불러옵니다.&lt;/li>
@@ -532,13 +532,23 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>이번 개인 과제를 진행하면서 MVC 아키텍처에 대해 많은 경험을 해볼 수 있었습니다. UIKit에서 View와 Controller를 어떻게 분리할 수 있을지, 그리고 View에서 사용자 입력이 발생했을 때 Controller에게 어떻게 알려줄 수 있을지, 그리고 Model에서 데이터가 변경되었을 때 View에게 어떻게 알려줄 수 있을지 고민하면서 여러 시도를 해보았습니다. 이러한 문제를 해결하기 위해 &lt;code>TypedViewController&lt;/code>, &lt;code>EventBus&lt;/code> 그리고 &lt;code>Publishable&lt;/code>을 구현하고 프로젝트에 적용해보았는데요. 확실히 디자인 패턴이 문제를 해결하는데 도움을 주고 또 꽤 효율적이라고 느낄 수 있었습니다.&lt;/p>
-&lt;p>아쉬운 점은 튜터님께서 피드백을 주신대로 &lt;code>EventBus&lt;/code>의 이벤트가 너무 몰려있다는 점이었습니다. 다음 팀 프로젝트에서는 이러한 문제를 개선하고 보다 더 나은 MVC 아키텍처를 적용해보려고 합니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>개인 과제 때 학습한 내용을 토대로 2023년 8월 14일부터 8월 21일까지 UIKit을 활용하여 팀 과제로서 Pinterest App을 클론 코딩해보았습니다.&lt;/p>
-&lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. 그렇기에 UI는 최대한 심플하고 과제 요구조건에 부합하는 기능을 개발하기로 했습니다. Pinterest App에서 제공하는 UI와 기능이 가장 심플하여 선택하게 되었고, 요구 조건에 맞춰 최소한의 기능을 구현했습니다.&lt;/p>
+&lt;p>아쉬운 점은 튜터님께서 피드백을 주신대로 &lt;code>EventBus&lt;/code>의 이벤트를 하나의 파일에서 관리한 부분이었습니다. 다음 팀 프로젝트에서는 이러한 문제를 개선하고 보다 더 나은 MVC 아키텍처를 적용해보려고 합니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 팀 프로젝트</title><link>https://jinyongp.dev/learn/nbcamp/6/</link><pubDate>Mon, Sep 04 16:52:52 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/6/</guid><description>&lt;p>6주차가 되었습니다. (2023년 8월 14일 ~ 21일)&lt;br>
+개인 과제 때 학습한 내용을 기반으로 UIKit을 활용하여 팀 프로젝트를 진행했습니다.&lt;/p>
+&lt;p>이번 과제는 팀원의 의견을 수렴하여 스토리보드 없이 코드로 UI를 작성하기로 결정하였습니다. UI 개발에 어려움을 겪을 것이 예상되어, 최대한 심플한 UI와 함께 과제 요구조건에 부합하는 최소 기능을 개발하기로 했습니다. Pinterest App에서 제공하는 UI와 기능이 가장 심플하여 선택하게 되었습니다.&lt;/p>
+&lt;p>&lt;strong>핀터레스트 앱 디자인&lt;/strong>&lt;/p>
 &lt;div class="grid" style="grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0px;">
-&lt;img class="mx-auto" alt="Main Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-main.png" />
-&lt;img class="mx-auto" alt="Completes Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-detail.png" />
-&lt;img class="mx-auto" alt="Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-profile.png" />
-&lt;img class="mx-auto" alt="Edit Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-edit-profile.png" />
+&lt;img class="mx-auto" alt="Pinterest Main Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-main.png" />
+&lt;img class="mx-auto" alt="Pinterest Detail Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-detail.png" />
+&lt;img class="mx-auto" alt="Pinterest Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-profile.png" />
+&lt;img class="mx-auto" alt="Pinterest Edit Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/pinterest-edit-profile.png" />
+&lt;/div>
+&lt;p>&lt;strong>과제 결과&lt;/strong>&lt;/p>
+&lt;div class="grid" style="grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.5rem;">
+&lt;img class="mx-auto" alt="Main Page" src="https://jinyongp.dev/image/learn/nbcamp/6/result-main-page.png" />
+&lt;img class="mx-auto" alt="Create New Item Page" src="https://jinyongp.dev/image/learn/nbcamp/6/result-create-page.png" />
+&lt;img class="mx-auto" alt="Detail Page" src="https://jinyongp.dev/image/learn/nbcamp/6/result-detail-page.png" />
+&lt;img class="mx-auto" alt="Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/result-profile-page.png" />
+&lt;img class="mx-auto" alt="Edit Profile Page" src="https://jinyongp.dev/image/learn/nbcamp/6/result-edit-profile-page.png" />
 &lt;/div>
 &lt;hr>
 &lt;h2 id="프로젝트-목표" class="flex items-center gap-3">프로젝트 목표 &lt;i
@@ -558,8 +568,8 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;li>UITableView / UICollectionView를 활용하며 피드 화면을 구현합니다.&lt;/li>
 &lt;li>UITabBarController를 활용해서 다양한 메뉴 화면에 접근할 수 있는 UI를 제공합니다.&lt;/li>
 &lt;li>UIStackView와 UIScrollView를 활용하여 프로필 화면을 구현합니다.&lt;/li>
-&lt;li>사용자가 상호작용할 수 있는 다양한 기능을 제공합니다&lt;/li>
-&lt;li>UITextView와 UITextField를 활용하여 화면을 구성합니다&lt;/li>
+&lt;li>사용자가 상호작용할 수 있는 다양한 기능을 제공합니다.&lt;/li>
+&lt;li>UITextView와 UITextField를 활용하여 화면을 구성합니다.&lt;/li>
 &lt;li>UIImagePickerController 혹은 PHPickerViewController를 활용하여 사진을 가져옵니다.&lt;/li>
 &lt;/ul>
 &lt;h2 id="프로젝트-구현" class="flex items-center gap-3">프로젝트 구현 &lt;i
@@ -575,8 +585,304 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h2>&lt;p>MVC 아키텍처 패턴을 적용하여 프로젝트를 작성하였습니다.&lt;/p>
-&lt;p>아무래도 팀 과제이고 팀원 개개인의 역량이 모두 다르다보니 갑자기 어려운 내용을 진행하게 되면 따라오지 못하는 팀원이 있어 걱정이 들었습니다. 팀 프로젝트를 수행하기 전 2주 간 개인 프로젝트를 진행하면서 팀원들의 역량을 잘 측정했다고 생각했는데, 제가 기대하던 것보다도 더 어려움을 겪고 있는 팀원이 있어 역할을 분배하는데 있어 어려움을 겪었습니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>2023년 7월 31일부터 8월 11일까지 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보았습니다.&lt;/p>
+>&lt;/h2>&lt;p>저는 Main.storyboard 없이 코드로 UI를 작성하기 위해 개발환경을 셋업하는 작업과 UICollectionView를 활용하여 Pinterest 스타일의 CollectionView를 구현하는 작업을 진행했습니다.&lt;/p>
+&lt;h3 id="개발환경-셋업" class="flex items-center gap-3">개발환경 셋업 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="개발환경 셋업" href="#%ea%b0%9c%eb%b0%9c%ed%99%98%ea%b2%bd-%ec%85%8b%ec%97%85"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>첫번째로 Main.storyboard와 함께 Info.plist와 Targets의 Info 탭에서 Main을 제거했습니다. 그 후, SceneDelegate.swift에서 ViewController를 직접 생성하여 화면에 보여주도록 작성했습니다.&lt;/p>
+&lt;p>화면에 첫번째로 보여줄 ContainerViewController인 TabBarController를 작성했습니다. 각 탭에 해당하는 ViewController를 생성하여 TabBarController에 추가해주었습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">final class TabBarController: UITabBarController {
+override func viewDidLoad() {
+super.viewDidLoad()
+let tabs: [(vc: UIViewController.Type, icon: String)] = [
+(HomeViewController.self, &amp;#34;house&amp;#34;),
+(NewPostViewController.self, &amp;#34;plus.app&amp;#34;),
+(ProfileViewController.self, &amp;#34;person&amp;#34;),
+]
+setViewControllers(tabs.map { vc, icon in
+let navigationController = UINavigationController(rootViewController: vc.init())
+let tabBarItem = UITabBarItem(title: nil, image: .init(systemName: icon), selectedImage: .init(systemName: &amp;#34;\(icon).fill&amp;#34;))
+navigationController.tabBarItem = tabBarItem
+return navigationController
+}, animated: false)
+}
+override func viewDidLayoutSubviews() {
+super.viewDidLayoutSubviews()
+let paddingTop: CGFloat = 10.0
+tabBar.frame = .init(
+x: tabBar.frame.origin.x,
+y: tabBar.frame.origin.y - paddingTop,
+width: tabBar.frame.width,
+height: tabBar.frame.height &amp;#43; paddingTop
+)
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>그리고 SceneDelegate에서 TabBarController를 생성하여 화면에 보여주도록 작성했습니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">// SceneDelegate.swift
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+var window: UIWindow?
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+guard let windowScene = (scene as? UIWindowScene) else { return }
+window = UIWindow(windowScene: windowScene)
+window?.makeKeyAndVisible()
+AuthService.shared.login()
+let tabBarController = TabBarController()
+window?.rootViewController = tabBarController
+}
+// ...
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h3 id="pinterest-스타일의-collectionview-구현" class="flex items-center gap-3">Pinterest 스타일의 CollectionView 구현 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="Pinterest 스타일의 CollectionView 구현" href="#pinterest-%ec%8a%a4%ed%83%80%ec%9d%bc%ec%9d%98-collectionview-%ea%b5%ac%ed%98%84"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h3>&lt;p>Pinterest Style의 CollectionView를 구현하기 위해 Custom FlowLayout을 작성해주었습니다. 또한, JSON 형식의 데이터를 준비하여 메인 페이지에 그려주는 방식으로 구현하였습니다. 네트워크에서 불러온다고 가정하여 비동기로 불러오도록 구현하고 UI를 보여주기 전에 Progress Bar를 작성하여 변환 진척도를 사용자에게 보여주었습니다.&lt;/p>
+&lt;h4 id="uicollectionview" class="flex items-center gap-3">UICollectionView &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="UICollectionView" href="#uicollectionview"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;p>&lt;code>UICollectionView&lt;/code>에서 기본으로 사용되는 &lt;code>UICollectionViewFlowLayout&lt;/code>은 높이가 유동적으로 변하는 Cell을 구현하기에 적합하지 않습니다. &lt;a
+class="underline-lsre"
+href="https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/CollectionViewPGforIOS/UsingtheFlowLayout/UsingtheFlowLayout.html"
+target="_blank" rel="noopener noreferrer nofollow"
+>해당 문서&lt;/a
+>에 따르면 FlowLayout은 항상 동일한 높이에 아이템을 배치하기 때문에, Cell 간 간격이 일정하지 않고 Cell의 높이에 따라 달라지게 됩니다. 그런 이유로 Pinterest 스타일의 CollectionView를 구현하기 위해서는 Custom FlowLayout을 작성해야 합니다.&lt;/p>
+&lt;p>&lt;img class="mx-auto" alt="CollectionViewFlowLayout" src="https://jinyongp.dev/image/learn/nbcamp/6/collection-view-flow-layout.png" />
+&lt;/p>
+&lt;h4 id="pinterestcollectionviewflowlayout" class="flex items-center gap-3">PinterestCollectionViewFlowLayout &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="PinterestCollectionViewFlowLayout" href="#pinterestcollectionviewflowlayout"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h4>&lt;details class="rounded group my-2 border border-accent/20 p-2 px-3">
+&lt;summary
+class="peer list-none flex items-center justify-between cursor-pointer text-slate-600 hover:text-accent transition-colors"
+>
+전체 코드 보기
+&lt;span
+class="text-xs text-current before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+>&lt;/span>
+&lt;/summary>
+&lt;div class="border-y">
+&lt;p>&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">import UIKit
+@objc protocol PinterestCollectionViewDelegateFlowLayout: AnyObject {
+@objc optional func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, contentHeightAt indexPath: IndexPath) -&amp;gt; CGFloat
+@objc optional func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, contentPaddingForSectionAt section: Int) -&amp;gt; CGFloat
+}
+final class PinterestCollectionViewFlowLayout: UICollectionViewFlowLayout {
+var numberOfColumns = 1
+var contentPadding: CGFloat = 0
+var headerHeight: CGFloat = 0
+weak var delegate: PinterestCollectionViewDelegateFlowLayout?
+private var attributesCache: [UICollectionViewLayoutAttributes] = []
+private var columnHeights: [CGFloat] = []
+override var collectionViewContentSize: CGSize {
+guard let collectionView else { return .zero }
+return .init(
+width: collectionView.bounds.width,
+height: (columnHeights.max() ?? 0) &amp;#43; headerHeight * 2)
+}
+override func prepare() {
+super.prepare()
+guard let collectionView else { return }
+attributesCache = []
+columnHeights = .init(repeating: 0, count: numberOfColumns)
+for section in 0..&amp;lt;collectionView.numberOfSections {
+let contentPadding = delegate?.collectionView?(collectionView, layout: self, contentPaddingForSectionAt: section) ?? contentPadding
+let contentWidth = (collectionView.bounds.width - (CGFloat(numberOfColumns &amp;#43; 1) * contentPadding)) / CGFloat(numberOfColumns)
+let columnOffsets: [CGFloat] = (0..&amp;lt;numberOfColumns).map { CGFloat($0) * (contentWidth &amp;#43; contentPadding) &amp;#43; contentPadding }
+var column = 0
+for item in 0..&amp;lt;collectionView.numberOfItems(inSection: section) {
+let indexPath = IndexPath(item: item, section: section)
+let contentHeight = contentPadding * 2 &amp;#43; (delegate?.collectionView?(collectionView, layout: self, contentHeightAt: indexPath) ?? contentWidth)
+let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+attributes.frame = CGRect(x: columnOffsets[column], y: columnHeights[column] &amp;#43; headerHeight &amp;#43; contentPadding, width: contentWidth, height: contentHeight)
+attributesCache.append(attributes)
+columnHeights[column] = columnHeights[column] &amp;#43; contentHeight &amp;#43; contentPadding
+column = (column &amp;#43; 1) % numberOfColumns
+}
+}
+}
+override func layoutAttributesForElements(in rect: CGRect) -&amp;gt; [UICollectionViewLayoutAttributes]? {
+var attributes = attributesCache.filter { $0.frame.intersects(rect) }
+if let headerAttributes = layoutAttributesForSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, at: IndexPath(item: 0, section: 0)) {
+attributes.append(headerAttributes)
+}
+return attributes
+}
+override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -&amp;gt; UICollectionViewLayoutAttributes? {
+if elementKind == UICollectionView.elementKindSectionHeader {
+let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, with: indexPath)
+attributes.frame = .init(x: 0, y: 0, width: collectionView?.frame.width ?? 0, height: headerHeight)
+return attributes
+}
+return nil
+}
+override func layoutAttributesForItem(at indexPath: IndexPath) -&amp;gt; UICollectionViewLayoutAttributes? {
+attributesCache[indexPath.item]
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;/div>
+&lt;div class="text-slate-500 transition-colors text-xs text-right">
+전체 코드 보기
+&lt;/div>
+&lt;/details>
+&lt;p>Custom FlowLayout을 작성하기 위해서 &lt;code>UICollectionViewFlowLayout&lt;/code>을 상속합니다. 그리고 몇가지 프로퍼티와 함수를 오버라이드해야 합니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>collectionViewContentSize&lt;/code>: CollectionView의 ContentSize를 반환합니다. Cell의 높이에 따라 CollectionView의 높이가 유동적으로 변하므로 이를 계산해야 합니다.&lt;/li>
+&lt;li>&lt;code>prepare&lt;/code>: CollectionView의 레이아웃을 준비합니다. Cell의 위치를 계산하고, CollectionView의 ContentSize를 계산한 뒤에 메모리에 저장해둡니다. &lt;code>IndexPath&lt;/code>에 대응하는 레이아웃 속성을 저장합니다.&lt;/li>
+&lt;li>&lt;code>layoutAttributesForElements&lt;/code>: CollectionView의 레이아웃을 반환합니다. &lt;code>prepare&lt;/code>에서 계산한 레이아웃을 반환합니다.&lt;/li>
+&lt;li>&lt;code>layoutAttributesForItem&lt;/code>: &lt;code>IndexPath&lt;/code>에 대응하는 레이아웃을 반환합니다. &lt;code>prepare&lt;/code>에서 계산한 레이아웃을 반환합니다.&lt;/li>
+&lt;/ul>
+&lt;p>모든 Cell의 높이가 다르므로 Cell의 높이를 저장하고 있을 속성이 필요합니다. 클래스에 &lt;code>contentHeights&lt;/code> 속성을 선언하고 &lt;code>prepare&lt;/code>에서 계산한 높이를 저장합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">private var columnHeights: [CGFloat] = []&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>prepare&lt;/code>이 실행되면 &lt;code>contentHeights&lt;/code>를 column의 개수만큼의 요소를 가진 배열로 초기화합니다. 그리고 CollectionView가 가진 요소를 모두 순회하며 너비와 높이를 계산합니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>contentWidth&lt;/code>: CollectionView의 너비와 열 개수를 통해 구한 하나의 열의 너비입니다.&lt;/li>
+&lt;li>&lt;code>contentHeight&lt;/code>: 외부에서 주입된 높이 값입니다.&lt;/li>
+&lt;/ul>
+&lt;p>이를 기반으로 Cell의 위치를 계산하여 frame을 생성한 뒤, &lt;code>attributesCache&lt;/code>에 저장합니다.&lt;/p>
+&lt;p>&lt;code>contentHeights&lt;/code>에 Cell의 높이를 모두 저장합니다. &lt;code>column&lt;/code> 속성을 통해 현재 순회가 몇 번째 위치에 열인지 저장합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">override func prepare() {
+super.prepare()
+guard let collectionView else { return }
+attributesCache = []
+columnHeights = .init(repeating: 0, count: numberOfColumns)
+for section in 0..&amp;lt;collectionView.numberOfSections {
+let contentPadding = delegate?.collectionView?(collectionView, layout: self, contentPaddingForSectionAt: section) ?? contentPadding
+let contentWidth = (collectionView.bounds.width - (CGFloat(numberOfColumns &amp;#43; 1) * contentPadding)) / CGFloat(numberOfColumns)
+let columnOffsets: [CGFloat] = (0..&amp;lt;numberOfColumns).map { CGFloat($0) * (contentWidth &amp;#43; contentPadding) &amp;#43; contentPadding }
+var column = 0
+for item in 0..&amp;lt;collectionView.numberOfItems(inSection: section) {
+let indexPath = IndexPath(item: item, section: section)
+let contentHeight = contentPadding * 2 &amp;#43; (delegate?.collectionView?(collectionView, layout: self, contentHeightAt: indexPath) ?? contentWidth)
+let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+attributes.frame = CGRect(x: columnOffsets[column], y: columnHeights[column] &amp;#43; headerHeight &amp;#43; contentPadding, width: contentWidth, height: contentHeight)
+attributesCache.append(attributes)
+columnHeights[column] = columnHeights[column] &amp;#43; contentHeight &amp;#43; contentPadding
+column = (column &amp;#43; 1) % numberOfColumns
+}
+}
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>&lt;code>attributesCache&lt;/code>는 &lt;code>UICollectionViewLayoutAttributes&lt;/code> 타입으로 Cell의 위치와 크기를 저장합니다. 이는 &lt;code>layoutAttributesForElements&lt;/code>와 &lt;code>layoutAttributesForItem&lt;/code>에서 사용됩니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>layoutAttributesForElements&lt;/code>: &lt;code>attributesCache&lt;/code>에서 현재 보이는 화면인 &lt;code>rect&lt;/code>와 겹치는 레이아웃을 반환합니다.&lt;/li>
+&lt;li>&lt;code>layoutAttributesForItem&lt;/code>: &lt;code>attributesCache&lt;/code>에서 &lt;code>indexPath&lt;/code>에 해당하는 레이아웃을 반환합니다.&lt;/li>
+&lt;/ul>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">override func layoutAttributesForElements(in rect: CGRect) -&amp;gt; [UICollectionViewLayoutAttributes]? {
+attributesCache.filter { $0.frame.intersects(rect) }
+}
+override func layoutAttributesForItem(at indexPath: IndexPath) -&amp;gt; UICollectionViewLayoutAttributes? {
+attributesCache[indexPath.item]
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>마지막으로 &lt;code>collectionViewContentSize&lt;/code>를 오버라이드하여 CollectionView의 ContentSize를 반환합니다. &lt;code>columnHeights&lt;/code>에서 최대 높이를 가져와서 반환합니다.&lt;/p>
+&lt;div class="relative rounded-md overflow-hidden my-4 group">
+&lt;small
+class="absolute top-0 right-0 bg-black/30 capitalize font-black text-xs text-white rounded-bl-md px-2 py-1 transition-opacity opacity-0 group-hover:opacity-100"
+>
+&lt;span class="sr-only">Language:&lt;/span>swift
+&lt;/small>
+&lt;pre>&lt;code class="hljs language-swift">override var collectionViewContentSize: CGSize {
+guard let collectionView else { return .zero }
+return .init(
+width: collectionView.bounds.width,
+height: (columnHeights.max() ?? 0) &amp;#43; headerHeight * 2)
+}&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>이로써 Pinterest 스타일의 CollectionView를 구현할 수 있습니다.&lt;/p>
+&lt;h2 id="회고" class="flex items-center gap-3">회고 &lt;i
+class="transition opacity-10 hover:opacity-100 text-[0.8em] scale-90 hover:scale-100 -rotate-45 hover:-rotate-90"
+>&lt;a title="회고" href="#%ed%9a%8c%ea%b3%a0"
+>
+&lt;i class="">
+&lt;svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+&lt;path
+d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-96 96s-96-43-96-96V160H0zm0-32H128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v64zm320 0H448V64c0-17.7-14.3-32-32-32H352c-17.7 0-32 14.3-32 32v64z"
+/>
+&lt;/svg>
+&lt;/i>
+&lt;/a
+>&lt;/i
+>&lt;/h2>&lt;p>이번 과제에서는 CollectionViewFlowLayout에 대해 알아보고 Pinterest 스타일의 레이아웃을 직접 작성해보았습니다. &lt;code>frame&lt;/code>을 활용해서 Cell의 높이와 너비 그리고 x, y 좌표를 설정해서 직접 배치하는 방법으로 UI을 그리는 방법이 생각보다 동작을 잘해서 놀라웠던 경험이었습니다. 이를 구현하기 위해 여러 UICollectionView 사용방법을 보면서 이 뿐만 아니라 굉장히 다양한 용도로 사용하고 있었고, 또 애플에서 제공하는 기능이 훨씬 방대해서 UICollectionView를 더 많이 다양하게 사용해볼 필요성을 느꼈습니다.&lt;/p></description></item><item><title>[내배캠] UIKit 입문 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/5/</link><pubDate>Fri, Aug 11 06:52:27 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/5/</guid><description>&lt;p>이번 과제는 4, 5주차로 진행했습니다. (2023년 7월 31일 ~ 8월 11일)&lt;br>
+지금까지 배운 Swift 문법을 기반으로 하여 UIKit의 기초적인 내용을 학습하고 간단한 ToDo App을 만들어보는 과제입니다.&lt;/p>
 &lt;p>내일배움캠프에서 제공하는 학습 자료와 함께 &lt;a
 class="underline-lsre"
 href="https://www.inflearn.com/course/%ec%8a%a4%ec%9c%84%ed%94%84%ed%8a%b8-%eb%ac%b8%eb%b2%95-%eb%a7%88%ec%8a%a4%ed%84%b0-%ec%8a%a4%ec%bf%a8-%ec%95%b1%eb%a7%8c%eb%93%a4%ea%b8%b0"
@@ -1117,7 +1423,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 >&lt;/i
 >&lt;/h2>&lt;p>UIKit로 개발하면서 여태까지 해왔던 웹 개발과 많은 비교를 하게 되었습니다. UIKit으로 개발하는 건 웹 개발로 비유를 하자면 HTML, CSS 없이 JavaScript로만 모든 UI와 Style을 작성하는 것과 비슷했습니다. 웹에서 HTML과 CSS 그리고 JavaScript가 분리되어 있다는 게 굉장한 장점이구나 다시 한번 느끼게 되었습니다. UIKit의 경우 모든 내용을 선언형이 아닌 명령형으로 작성해야 하기 때문에 각 역할에 맞게 적절하게 코드를 분리하기 위한 노력이 필요함을 절실히 깨달았습니다.&lt;/p>
 &lt;p>Storyboard와 코드를 연동하여 작성되어야 하는 부분이 있기 때문에 코드가 실행되는데 눈에 보이는 부분보단 이렇게 동작할 것이다 추론해야 하는 경우가 많았고 에러가 발생해도 추적하기가 굉장히 어려워서 개발 경험이 그리 좋지 않았습니다. 아무래도 UIKit의 대부분이 Objective-C로 작성되어 있어 해당 내용을 알아야만 에러 내용을 통해 원인을 유추할 수 있는 것도 한몫 하다보니 어려웠던 듯 싶습니다. 협업 관점에서 보나 디버깅 관점에서 보나 웬만하면 Storyboard 방식보단 코드 방식의 개발이 더 유리하지 않을까 생각했습니다.&lt;/p>
-&lt;p>이후 기초 팀 프로젝트에서는 코드 방식으로 개발을 진행하며 Storyboard 개발 방식과 비교해보고자 합니다.&lt;/p></description></item><item><title>[내배캠] Swift 심화 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/4/</link><pubDate>Fri, Jul 21 09:25:11 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/4/</guid><description>&lt;p>본 캠프가 시작되고 3주차가 되었습니다!&lt;/p>
+&lt;p>이후 기초 팀 프로젝트에서는 코드 방식으로 개발을 진행하며 Storyboard 개발 방식과 비교해보고자 합니다.&lt;/p></description></item><item><title>[내배캠] Swift 심화 팀 과제</title><link>https://jinyongp.dev/learn/nbcamp/4/</link><pubDate>Fri, Jul 21 09:25:11 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/4/</guid><description>&lt;p>본 캠프가 시작되고 3주차가 되었습니다! (2023년 7월 24일 ~ 28일)&lt;/p>
 &lt;p>이번 주차에서는 팀 프로젝트로서 Swift 심화 내용을 학습하고 간단한 키오스크 CLI 프로그램을 작성했습니다. 저번 개인 프로젝트에서 진행했던대로 터미널 환경에서 Swift 프로젝트를 생성하여 진행했습니다.&lt;/p>
 &lt;p>팀 과제인만큼 소통에 보다 많은 노력을 쏟았습니다. 매일 오전 회의와 코드 리뷰를 진행하며 자신이 개발했던 내용과 어려움에 대해 공유했고, 페어 프로그래밍을 진행하며 하나의 기능을 함께 개발해보았습니다. 아무래도 부트캠프 과정 자체가 빠르게 진행되고 있기 때문에 프로그래밍을 처음 접한 팀원이 어려움을 많이 느꼈습니다. 정말 스파르타코딩클럽의 스&lt;/p>
 &lt;p>구현한 키오스크 프로그램은 다음의 기능을 제공합니다.&lt;/p>
@@ -1129,13 +1435,13 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/ol>
 &lt;hr>
 &lt;p>&lt;strong>결과 미리보기&lt;/strong>&lt;/p>
-&lt;details class="rounded group my-2">
+&lt;details class="rounded group my-2 border border-accent/20 p-2 px-3">
 &lt;summary
-class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+class="peer list-none flex items-center justify-between cursor-pointer text-slate-600 hover:text-accent transition-colors"
 >
 SHAEKSHACK 메뉴 선택 화면
 &lt;span
-class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+class="text-xs text-current before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
 >&lt;/span>
 &lt;/summary>
 &lt;div class="border-y">
@@ -1159,17 +1465,17 @@ No. 1&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;/p>
 &lt;/div>
-&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+&lt;div class="text-slate-500 transition-colors text-xs text-right">
 SHAEKSHACK 메뉴 선택 화면
 &lt;/div>
 &lt;/details>
-&lt;details class="rounded group my-2">
+&lt;details class="rounded group my-2 border border-accent/20 p-2 px-3">
 &lt;summary
-class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+class="peer list-none flex items-center justify-between cursor-pointer text-slate-600 hover:text-accent transition-colors"
 >
 Burger 메뉴 선택 화면
 &lt;span
-class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+class="text-xs text-current before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
 >&lt;/span>
 &lt;/summary>
 &lt;div class="border-y">
@@ -1196,17 +1502,17 @@ No. 3
 &lt;/div>
 &lt;/p>
 &lt;/div>
-&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+&lt;div class="text-slate-500 transition-colors text-xs text-right">
 Burger 메뉴 선택 화면
 &lt;/div>
 &lt;/details>
-&lt;details class="rounded group my-2">
+&lt;details class="rounded group my-2 border border-accent/20 p-2 px-3">
 &lt;summary
-class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+class="peer list-none flex items-center justify-between cursor-pointer text-slate-600 hover:text-accent transition-colors"
 >
 장바구니 화면
 &lt;span
-class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+class="text-xs text-current before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
 >&lt;/span>
 &lt;/summary>
 &lt;div class="border-y">
@@ -1231,17 +1537,17 @@ No. 6&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;/p>
 &lt;/div>
-&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+&lt;div class="text-slate-500 transition-colors text-xs text-right">
 장바구니 화면
 &lt;/div>
 &lt;/details>
-&lt;details class="rounded group my-2">
+&lt;details class="rounded group my-2 border border-accent/20 p-2 px-3">
 &lt;summary
-class="peer list-none flex items-center justify-between cursor-pointer hover:text-accent"
+class="peer list-none flex items-center justify-between cursor-pointer text-slate-600 hover:text-accent transition-colors"
 >
 주문 화면
 &lt;span
-class="text-xs text-slate-500 hover:text-accent before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
+class="text-xs text-current before:content-['EXPAND'] before:group-open:content-['COLLAPSE']"
 >&lt;/span>
 &lt;/summary>
 &lt;div class="border-y">
@@ -1266,7 +1572,7 @@ No. 1
 &lt;/div>
 &lt;/p>
 &lt;/div>
-&lt;div class="peer-hover:text-accent text-xs text-right text-slate-500">
+&lt;div class="text-slate-500 transition-colors text-xs text-right">
 주문 화면
 &lt;/div>
 &lt;/details>
@@ -1390,7 +1696,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/i>
 &lt;/a
 >&lt;/i
->&lt;/h2>&lt;p>이번 프로젝트에서는 Swift 문법의 enum associated values 기능을 활용하여 메뉴 목록을 나열하고 여러가지 기능을 구현해보았습니다. OOP에 대해 처음 공부할 때 추상화, 캡슐화, 상속, 다형성 그리고 SOLID 원칙에 대해 암기하느라 바빴지 그 개념에 대한 이해나 활용을 전혀 하지 못했었는데, 이번 프로젝트를 진행하면서 프로토콜과 클래스를 적극 활용하며 현재 내가 구현하고 있는 코드가 OOP의 특징과 원칙을 잘 준수하고 있는지에 대해 고민해보며 깊은 이해를 할 수 있었습니다.&lt;/p></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다.&lt;/p>
+>&lt;/h2>&lt;p>이번 프로젝트에서는 Swift 문법의 enum associated values 기능을 활용하여 메뉴 목록을 나열하고 여러가지 기능을 구현해보았습니다. OOP에 대해 처음 공부할 때 추상화, 캡슐화, 상속, 다형성 그리고 SOLID 원칙에 대해 암기하느라 바빴지 그 개념에 대한 이해나 활용을 전혀 하지 못했었는데, 이번 프로젝트를 진행하면서 프로토콜과 클래스를 적극 활용하며 현재 내가 구현하고 있는 코드가 OOP의 특징과 원칙을 잘 준수하고 있는지에 대해 고민해보며 깊은 이해를 할 수 있었습니다.&lt;/p></description></item><item><title>[내배캠] Swift 기초 개인 과제</title><link>https://jinyongp.dev/learn/nbcamp/3/</link><pubDate>Wed, Jul 19 04:26:26 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/3/</guid><description>&lt;p>본 캠프가 시작되고 2주차가 되었습니다. (2023년 7월 17일 ~ 21일)&lt;/p>
 &lt;p>이번 주차에선 Swift 기초를 학습하고 간단한 연산 기능을 제공하는 CLI 계산기를 만들어 보는 과제를 수행했습니다.&lt;/p>
 &lt;hr>
 &lt;h2 id="요구조건" class="flex items-center gap-3">요구조건 &lt;i
@@ -1745,7 +2051,7 @@ d="M0 160v96C0 379.7 100.3 480 224 480s224-100.3 224-224V160H320v96c0 53-43 96-9
 &lt;/a
 >&lt;/i
 >&lt;/h2>&lt;p>객체 지향 프로그래밍의 5대 원칙 중 단일 책임 원칙(Single Responsibility Principle)과 의존성 역전 원칙(Dependency Inversion Principle)을 적용하여 계산기를 구현해보았습니다. 원칙을 적용해보기 위해 프로토콜로 명세를 작성하고 이를 준수하는 클래스는 작성하는 작업을 진행하면서 코드의 중복을 제거하고 확장성 높은 프로그램을 작성할 수 있었습니다.&lt;/p>
-&lt;p>앞으로 이외에도 적용할 수 있는 원칙을 찾아보고 적합한 디자인 패턴 및 기법을 추가로 학습하여 적용해보려고 합니다.&lt;/p></description></item><item><title>[내배캠] 첫번째 팀 프로젝트</title><link>https://jinyongp.dev/learn/nbcamp/2/</link><pubDate>Wed, Jul 19 01:27:06 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/2/</guid><description>&lt;p>사전캠프에서 학습한 Flutter를 활용하여 첫번째 팀 프로젝트를 진행했습니다.&lt;/p>
+&lt;p>앞으로 이외에도 적용할 수 있는 원칙을 찾아보고 적합한 디자인 패턴 및 기법을 추가로 학습하여 적용해보려고 합니다.&lt;/p></description></item><item><title>[내배캠] 첫번째 팀 프로젝트</title><link>https://jinyongp.dev/learn/nbcamp/2/</link><pubDate>Wed, Jul 19 01:27:06 2023 +0000</pubDate><author>dev.jinyongp@gmail.com (Jinyong Park)</author><guid>https://jinyongp.dev/learn/nbcamp/2/</guid><description>&lt;p>사전캠프에서 학습한 Flutter를 활용하여 첫번째 팀 프로젝트를 진행했습니다. (2023년 7월 10일 ~ 14일)&lt;/p>
 &lt;p>4일간 진행한 프로젝트로 목적은 앱 개발 전반의 과정을 익히기 위함이지만, 그보다 팀원분들과의 소통과 협업 관점에 비중으로 두고 프로젝트를 진행하였습니다.&lt;/p>
 &lt;p>프로젝트의 주제는 팀과 팀원의 소개를 담은 앱을 작성하는 것으로, 각자 자신의 소개를 담은 상세 페이지를 작성하고 합치기로 결정하였습니다.
 저는 상세 페이지와 더불어 메인 페이지와 각 상세 페이지에서 쓰일 댓글 관리 서비스를 맡았습니다.&lt;/p>
