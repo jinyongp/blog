@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ko">
   <head>
+    {{ partialCached "analytics" . }}
     {{ block "opening/head" . }}{{ end }}
     {{ partial "meta" . }}
     <title>
