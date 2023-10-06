@@ -1,0 +1,28 @@
+<link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />
+
+{{ $style := resources.Get "/main.css" | minify }}
+{{ partial "load-style" (dict "url" $style.Permalink ) }}
+
+{{ with .Site.Params.highlight }}
+  {{ $cdn := printf "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@%s/build" .version }}
+  {{ partial "load-style" (dict "url" (printf "%s/styles/%s.min.css" $cdn .theme)) }}
+  <script defer type="module">
+    import hljs from "{{ $cdn }}/es/highlight.min.js";
+    import dart from "{{ $cdn }}/es/languages/dart.min.js";
+    hljs.configure({})
+    hljs.registerLanguage("dart", dart);
+    hljs.highlightAll();
+    console.log("highlight.js loaded")
+  </script>
+{{ end }}
+
+{{ with .Site.Params.style }}
+  {{ partial "load-style" (dict "url" (printf "https://fonts.googleapis.com/css?family=%s&display=swap" .Font)) }}
+
+  <style>
+    :root {
+      --accent: {{ .accent | default "black" }};
+      --font: {{ .font | default "Raleway" }};
+    }
+  </style>
+{{ end }}

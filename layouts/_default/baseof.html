@@ -12,8 +12,8 @@
       {{- end -}}
     </title>
 
-    {{ partial "script" . }}
-    {{ partial "css" . }}
+    {{ partialCached "script" . }}
+    {{ partialCached "style" . }}
     {{ block "closing/head" . }}{{ end }}
   </head>
 
