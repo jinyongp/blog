@@ -74,9 +74,14 @@ name = "square-velog"
 weight = 2
 
 [[menu.icon]]
+url = "/feed.xml"
+name = "square-rss"
+weight = 3
+
+[[menu.icon]]
 url = "https://github.com/jinyongp/"
 name = "square-github"
-weight = 3
+weight = 4
 
 [outputs]
 home = ['HTML', 'RSS']
