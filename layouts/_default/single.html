@@ -17,7 +17,7 @@
       </h1>
       <div class="flex justify-between items-center">
         <div>{{ partial "tags" . }}</div>
-        <span>Written on {{ .Date.Format "Jan 2, 2006" }}</span>
+        <span>Written on {{ .Date.Local.Format "Jan 2, 2006" }}</span>
       </div>
       <hr class="my-4 w-full" />
     </header>

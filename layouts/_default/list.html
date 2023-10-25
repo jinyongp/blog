@@ -6,7 +6,7 @@
       {{ with $paginator }}
         <ul class="divide-y">
           {{ range .Pages }}
-            {{ .Date.Format "Jan 2, 2006" | $.Scratch.Set "description" }}
+            {{ .Date.Local.Format "Jan 2, 2006" | $.Scratch.Set "description" }}
             {{ with .Description }}{{ $.Scratch.Set "description" . }}{{ end }}
 
 

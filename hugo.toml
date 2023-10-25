@@ -4,6 +4,7 @@ copyright = "Copyright 2023. Jinyong Park. All rights reserved."
 
 defaultContentLanguage = "ko"
 hasCJKLanguage = true
+timeZone = "Asia/Seoul"
 
 googleAnalytics = "G-SH0YPW4E1C"
 enableRobotsTXT = true
