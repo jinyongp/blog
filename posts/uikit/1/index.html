@@ -54,7 +54,7 @@ extension ViewController: UITextFieldDelegate {
 }
 
 class UITextField {
-    var delegate: UITextFieldDelegate?
+    weak var delegate: UITextFieldDelegate?
 
     func userTextFieldTapped() {
         guard let delegate else { return }

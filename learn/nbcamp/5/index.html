@@ -246,7 +246,7 @@ extension CompletesViewController: UITableViewDataSource {
 }
 
 final class CompletesViewController: UIViewController {
-    var delegate: CompletesViewControllerDelegate?
+    weak var delegate: CompletesViewControllerDelegate?
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
