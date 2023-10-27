@@ -1527,6 +1527,7 @@ delegate.textFieldDidBeginEditing(self)
 class ViewController {
 let textField = UITextField()
 func viewDidLoad() {
+super.viewDidLoad()
 textField.delegate = self
 }
 }
