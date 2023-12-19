@@ -5,23 +5,24 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '18'
           cache: 'npm'
       - name: Install Dependencies
         run: |
           npm ci
           npm run build:css
 
-      
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -29,9 +30,9 @@ jobs:
           # extended: true
 
       - name: Cache Hugo Modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
-          path: /tmp/hugo_cache
+          path: /home/runner/.cache/hugo_cache
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
